@@ -85,12 +85,12 @@ Os tablets enviam o estado para uma base de dados Firebase (gratuita, da Google)
 
 1. Em https://console.firebase.google.com cria um projeto (não precisa do Google Analytics).
 2. No menu, abre **Realtime Database** e carrega em **Criar base de dados**. Escolhe a localização na Europa e começa no **modo bloqueado**.
-3. No separador **Regras**, substitui tudo por isto (troca `semana-ciencias-2026` por um nome difícil de adivinhar) e publica:
+3. No separador **Regras**, substitui tudo por isto (troca `o-nome-do-evento` por um nome difícil de adivinhar) e publica:
 
    ```json
    {
      "rules": {
-       "semana-ciencias-2026": { ".read": true, ".write": true }
+       "o-nome-do-evento": { ".read": true, ".write": true }
      }
    }
    ```
