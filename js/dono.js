@@ -393,6 +393,8 @@
     zona.appendChild(c);
   }
 
+  raiz.innerHTML = '';
+  raiz.dataset.pronto = '1';
   var ok = false;
   try { ok = sessionStorage.getItem('dono-ok') === '1'; } catch (e) { /* ignorar */ }
   if (ok) iniciar(); else entrar();

@@ -51,13 +51,28 @@
     .codigos h3 { margin: 20px 0 8px; }
     @media (max-width: 1400px) { .colunas { grid-template-columns: 1fr; } }
     .entrada-dono { max-width: 420px; margin: 15vh auto 0; }
+    .carregar { text-align: center; color: var(--suave); margin-top: 20vh; }
   </style>
 </head>
 <body>
-  <div id="raiz"></div>
+  <div id="raiz"><p class="carregar">A carregar a área do dono…</p></div>
+  <noscript>Esta página precisa de JavaScript.</noscript>
+  <script>
+    // Se algum ficheiro não carregar, mostra o problema em vez de uma página em branco.
+    window.addEventListener('error', function (e) {
+      var r = document.getElementById('raiz');
+      if (r && !r.dataset.pronto) {
+        r.innerHTML = '<div class="cartao entrada-dono"><h2>Não foi possível abrir</h2><p>Faltam ficheiros da aplicação. Abre esta página a partir do site do jogo (GitHub Pages), não o ficheiro isolado.</p></div>';
+        r.dataset.pronto = '1';
+      }
+    }, true);
+  </script>
   <script src="dados/caches.js"></script>
   <script src="js/sync.js"></script>
   <script src="js/jogo.js"></script>
   <script src="js/dono.js"></script>
+  <script>
+    if (!window.JOGO || !window.Geocaching) window.dispatchEvent(new Event('error'));
+  </script>
 </body>
 </html>
