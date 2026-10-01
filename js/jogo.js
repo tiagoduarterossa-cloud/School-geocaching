@@ -2,7 +2,7 @@
   'use strict';
 
   var DADOS = window.JOGO;
-  var CHAVE = 'geocaching-escola-v2';
+  var CHAVE = 'geocaching-escola-v3';
   var app = document.getElementById('app');
   var estado = carregar();
   var temporizador = null;
@@ -72,31 +72,112 @@
 
   // ---------- jogo ----------
 
-  // Cada equipa começa numa cache diferente (pela posição na lista de equipas,
-  // ou pelo campo "inicio" se o professor o definir) e segue em roda.
-  function ordemParaEquipa(indice) {
-    var n = DADOS.caches.length;
-    var eq = DADOS.equipas[indice];
-    var inicio = eq && eq.inicio ? eq.inicio - 1 : indice;
-    var ordem = [];
-    for (var i = 0; i < n; i++) ordem.push((inicio + i) % n);
-    return ordem;
-  }
+  // Palavras para gerar códigos. Os de entrada não dizem a turma, para
+  // ninguém adivinhar o código de outro grupo.
+  var ANIMAIS = ['LINCE', 'LONTRA', 'TEXUGO', 'RAPOSA', 'GAMO', 'LOBO', 'FALCAO', 'CORUJA',
+    'GARCA', 'CEGONHA', 'ABUTRE', 'MILHAFRE', 'SALMAO', 'TRUTA', 'ENGUIA', 'POLVO', 'LULA',
+    'GOLFINHO', 'ORCA', 'FOCA', 'LAGARTO', 'SAPO', 'TRITAO', 'MORCEGO', 'ESQUILO', 'OURICO',
+    'TOUPEIRA', 'JAVALI', 'VEADO', 'GAIVOTA', 'PARDAL', 'MELRO', 'ANDORINHA', 'POMBO', 'PEGA',
+    'CORVO', 'CAVALO', 'BURRO', 'CABRA', 'OVELHA'];
+  var CIENCIA = ['ATOMO', 'CELULA', 'ORBITA', 'PRISMA', 'VETOR', 'ELIPSE', 'FRACAO', 'CUBO',
+    'ANGULO', 'NEURONIO', 'PLANETA', 'COMETA', 'CRISTAL', 'MAGNETE', 'ENERGIA', 'FOTAO',
+    'PROTAO', 'ELETRAO', 'GALAXIA', 'ECLIPSE', 'VULCAO', 'FOSSIL', 'MOLECULA', 'ENZIMA',
+    'POLIGONO', 'ESFERA', 'CILINDRO', 'CONE', 'PIRAMIDE', 'RAIO', 'DIAMETRO', 'VERTICE'];
 
-  function procurarEquipa(codigo) {
-    var c = normalizar(codigo);
-    for (var i = 0; i < DADOS.equipas.length; i++) {
-      if (normalizar(DADOS.equipas[i].codigo) === c) return i;
+  function hash(texto) {
+    var h = 2166136261;
+    for (var i = 0; i < texto.length; i++) {
+      h ^= texto.charCodeAt(i);
+      h = Math.imul(h, 16777619);
     }
-    return -1;
+    return h >>> 0;
   }
 
-  function nomeEquipa(eq) {
-    return eq.turma + (eq.grupo ? ' · Grupo ' + eq.grupo : '');
+  function gerarCodigo(palavras, semente, usados) {
+    var h = hash(semente);
+    var codigo;
+    do {
+      codigo = palavras[h % palavras.length] + (10 + Math.floor(h / palavras.length) % 90);
+      h = (h + 7919) >>> 0;
+    } while (usados[codigo]);
+    usados[codigo] = true;
+    return codigo;
+  }
+
+  // Todos os grupos com o seu código de entrada. Os códigos são sempre os
+  // mesmos para os mesmos dados, e acrescentar turmas no fim da lista não muda
+  // os códigos das que já existiam.
+  function listaGrupos() {
+    var usados = {};
+    var lista = [];
+    DADOS.turmas.forEach(function (t, ti) {
+      for (var g = 1; g <= (t.grupos || 1); g++) {
+        lista.push({
+          codigo: gerarCodigo(ANIMAIS, 'entrada|' + t.turma + '|' + g, usados),
+          turmaIndice: ti,
+          turma: t.turma,
+          ano: String(t.ano),
+          grupo: g
+        });
+      }
+    });
+    return lista;
+  }
+
+  // Código escondido numa cache, diferente para cada turma.
+  function codigosCache(indiceCache) {
+    var c = DADOS.caches[indiceCache];
+    var usados = {};
+    var codigos = {};
+    DADOS.turmas.forEach(function (t) {
+      codigos[t.turma] = c.codigo || gerarCodigo(CIENCIA, 'cache|' + indiceCache + '|' + t.turma, usados);
+    });
+    return codigos;
+  }
+
+  // A versão do problema que cabe a esta turma: a 1ª turma do ano recebe a
+  // 1ª versão, a 2ª turma a 2ª versão, e assim por diante.
+  function versaoProblema(ano, posicao, turma) {
+    var lista = (DADOS.problemas[ano] || [])[posicao];
+    if (!lista) return null;
+    var versoes = Array.isArray(lista) ? lista : [lista];
+    var turmasDoAno = DADOS.turmas
+      .filter(function (t) { return String(t.ano) === String(ano); })
+      .map(function (t) { return t.turma; });
+    var i = Math.max(0, turmasDoAno.indexOf(turma));
+    return versoes[i % versoes.length];
+  }
+
+  // Os grupos da mesma turma fazem as mesmas caches, cada um a começar numa diferente.
+  function percursoGrupo(grupo) {
+    var caches = DADOS.turmas[grupo.turmaIndice].caches;
+    var passos = [];
+    for (var i = 0; i < caches.length; i++) {
+      var pos = (grupo.grupo - 1 + i) % caches.length;
+      passos.push({ posicao: pos, cache: caches[pos] - 1 });
+    }
+    return passos;
+  }
+
+  function procurarGrupo(codigo) {
+    var c = normalizar(codigo);
+    var grupos = listaGrupos();
+    for (var i = 0; i < grupos.length; i++) {
+      if (normalizar(grupos[i].codigo) === c) return grupos[i];
+    }
+    return null;
+  }
+
+  function nomeEquipa(g) {
+    return g.turma + ' · Grupo ' + g.grupo;
+  }
+
+  function passoAtual() {
+    return estado.passos[estado.passo];
   }
 
   function cacheAtual() {
-    return DADOS.caches[estado.ordem[estado.passo]];
+    return DADOS.caches[passoAtual().cache];
   }
 
   function agora() {
@@ -121,14 +202,13 @@
     return (fim - estado.inicio) / 1000;
   }
 
-  function comecar(indice) {
-    var eq = DADOS.equipas[indice];
+  function comecar(g) {
     estado = {
-      equipa: nomeEquipa(eq),
-      turma: eq.turma,
-      grupo: eq.grupo || '',
-      ano: String(eq.ano),
-      ordem: ordemParaEquipa(indice),
+      equipa: nomeEquipa(g),
+      turma: g.turma,
+      grupo: g.grupo,
+      ano: g.ano,
+      passos: percursoGrupo(g),
       passo: 0,
       fase: 'problema',
       inicio: agora(),
@@ -150,7 +230,7 @@
       estado.passo++;
       estado.dicaVista = false;
       estado.errosSeguidos = 0;
-      if (estado.passo >= estado.ordem.length) {
+      if (estado.passo >= estado.passos.length) {
         estado.fase = 'fim';
         estado.fim = agora();
       } else {
@@ -206,7 +286,7 @@
         atualizarBloqueio();
       }, 1000);
     }
-    var total = estado.ordem.length;
+    var total = estado.passos.length;
     var feitas = estado.passo;
     var barra = el('div', { class: 'progresso' }, [
       el('div', { class: 'progresso-cheio', style: 'width:' + (100 * feitas / total) + '%' })
@@ -230,17 +310,16 @@
     var erro = el('p', { class: 'erro', role: 'alert' });
     var zona = el('div');
 
-    function confirmar(indice) {
-      var eq = DADOS.equipas[indice];
+    function confirmar(eq) {
       zona.innerHTML = '';
       zona.appendChild(el('div', { class: 'cartao confirmar' }, [
         el('p', { class: 'etapa', texto: 'Vocês são' }),
         el('p', { class: 'quem', texto: eq.turma }),
-        eq.grupo ? el('p', { class: 'quem-grupo', texto: 'Grupo ' + eq.grupo }) : null,
+        el('p', { class: 'quem-grupo', texto: 'Grupo ' + eq.grupo }),
         el('p', { class: 'instrucao', texto: 'Está certo? Se não, chamem o professor.' }),
         el('div', { class: 'opcoes' }, [
           el('button', { type: 'button', class: 'secundario', onclick: function () { zona.innerHTML = ''; zona.appendChild(form); codigo.value = ''; codigo.focus(); }, texto: 'Voltar' }),
-          el('button', { type: 'button', class: 'principal', onclick: function () { comecar(indice); }, texto: 'Começar' })
+          el('button', { type: 'button', class: 'principal', onclick: function () { comecar(eq); }, texto: 'Começar' })
         ])
       ]));
     }
@@ -250,9 +329,9 @@
       onsubmit: function (ev) {
         ev.preventDefault();
         if (!codigo.value.trim()) return mostrar(erro, 'Escrevam o código que o professor vos deu.');
-        var indice = procurarEquipa(codigo.value);
-        if (indice < 0) { codigo.select(); return mostrar(erro, 'Este código não existe. Confirmem as letras no papel.'); }
-        confirmar(indice);
+        var grupo = procurarGrupo(codigo.value);
+        if (!grupo) { codigo.select(); return mostrar(erro, 'Este código não existe. Confirmem as letras e os números no papel.'); }
+        confirmar(grupo);
       }
     }, [
       el('label', { for: 'codigo', texto: 'Código de entrada' }),
@@ -295,11 +374,10 @@
   }
 
   function ecraProblema() {
-    var cache = cacheAtual();
-    var p = cache.problemas[estado.ano];
+    var p = versaoProblema(estado.ano, passoAtual().posicao, estado.turma);
     if (!p) {
       app.appendChild(el('main', { class: 'cartao' }, [
-        el('p', { class: 'erro', texto: 'Esta cache não tem problema para o ' + estado.ano + 'º ano. Chamem o professor.' })
+        el('p', { class: 'erro', texto: 'Falta o problema ' + (passoAtual().posicao + 1) + ' do ' + estado.ano + 'º ano. Chamem o professor.' })
       ]));
       return;
     }
@@ -384,10 +462,10 @@
       el('p', { class: 'certo', texto: '✔ Resposta certa!' }),
       el('p', { class: 'etapa', texto: 'A cache está em' })
     ];
-    if (cache.local.coordenada) filhos.push(el('p', { class: 'coordenada', texto: cache.local.coordenada }));
-    if (cache.local.texto) filhos.push(el('p', { class: 'local', texto: cache.local.texto }));
-    if (cache.local.imagem) filhos.push(el('img', { class: 'imagem-local', src: cache.local.imagem, alt: 'Pista do local' }));
-    if (DADOS.mapa && cache.local.coordenada) {
+    if (cache.coordenada) filhos.push(el('p', { class: 'coordenada', texto: cache.coordenada }));
+    if (cache.texto) filhos.push(el('p', { class: 'local', texto: cache.texto }));
+    if (cache.imagem) filhos.push(el('img', { class: 'imagem-local', src: cache.imagem, alt: 'Pista do local' }));
+    if (DADOS.mapa && cache.coordenada) {
       filhos.push(el('details', { class: 'mapa' }, [
         el('summary', { texto: 'Ver mapa da escola' }),
         el('img', { src: DADOS.mapa, alt: 'Mapa da escola' })
@@ -399,7 +477,7 @@
         class: 'linha-resposta',
         onsubmit: function (ev) {
           ev.preventDefault();
-          if (normalizar(campo.value) === normalizar(cache.codigo)) {
+          if (normalizar(campo.value) === normalizar(codigosCache(passoAtual().cache)[estado.turma])) {
             avancar();
           } else {
             campo.select();
@@ -422,7 +500,7 @@
       el('p', { texto: DADOS.mensagemFinal }),
       el('table', { class: 'resumo' }, [
         linha('Turma', estado.turma),
-        estado.grupo ? linha('Grupo', String(estado.grupo)) : null,
+        linha('Grupo', String(estado.grupo)),
         linha('Tempo', formatarTempo(tempo)),
         linha('Respostas erradas', estado.erros + ' (+' + formatarTempo(estado.erros * DADOS.penalizacaoErroSegundos) + ')'),
         linha('Dicas', estado.dicas + ' (+' + formatarTempo(estado.dicas * DADOS.penalizacaoDicaSegundos) + ')'),
@@ -488,7 +566,14 @@
   }
 
   // Exposto para testes e para a página do professor.
-  window.Geocaching = { respostaCerta: respostaCerta, ordemParaEquipa: ordemParaEquipa, normalizar: normalizar };
+  window.Geocaching = {
+    respostaCerta: respostaCerta,
+    normalizar: normalizar,
+    listaGrupos: listaGrupos,
+    percursoGrupo: percursoGrupo,
+    versaoProblema: versaoProblema,
+    codigosCache: codigosCache
+  };
 
   if (app) desenhar();
 

@@ -9,27 +9,33 @@
     main { max-width: 960px; margin: 0 auto; }
     h1 { margin-top: 0; }
     h2 { margin-top: 32px; border-bottom: 2px solid #1f6f5c; padding-bottom: 4px; }
+    h3 { margin: 24px 0 8px; }
     .nota { background: #fff6dc; padding: 12px 16px; border-radius: 8px; }
+    .avisos { background: #fbe5e2; color: #8e2a1f; padding: 12px 16px; border-radius: 8px; margin: 16px 0; }
+    .avisos ul { margin: 8px 0 0; }
     .acoes button { font: inherit; padding: 10px 16px; border-radius: 8px; border: 0; background: #1f6f5c; color: #fff; cursor: pointer; margin-right: 8px; }
+    .rolar { overflow-x: auto; }
     table { border-collapse: collapse; width: 100%; font-size: 15px; }
     th, td { border: 1px solid #cfdcd7; padding: 6px 8px; text-align: left; vertical-align: top; }
     th { background: #eef4f1; }
     .enunciado { white-space: pre-line; }
-    .rolar { overflow-x: auto; }
-    .avisos { background: #fbe5e2; color: #8e2a1f; padding: 12px 16px; border-radius: 8px; margin: 16px 0; }
-    .avisos ul { margin: 8px 0 0; }
-    #resultados td { height: 32px; }
-    h3 { margin: 24px 0 8px; }
-    .cartoes { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
-    .cartao-cache { border: 3px dashed #1f6f5c; border-radius: 12px; padding: 16px; text-align: center; break-inside: avoid; }
-    .cartao-cache .titulo { font-size: 18px; color: #5b6d68; }
-    .cartao-cache .codigo { font-size: 40px; font-weight: 800; letter-spacing: .08em; margin: 8px 0; overflow-wrap: anywhere; }
-    .cartao-cache .rodape { font-size: 14px; color: #5b6d68; }
-    @media (max-width: 600px) { .cartoes { grid-template-columns: 1fr; } table { font-size: 13px; } }
+    .registo td { height: 32px; }
+    .cartoes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .papel { border: 3px dashed #1f6f5c; border-radius: 12px; padding: 16px; text-align: center; break-inside: avoid; }
+    .papel .titulo { font-size: 16px; color: #5b6d68; }
+    .papel .codigo { font-size: 32px; font-weight: 800; letter-spacing: .05em; margin: 6px 0; overflow-wrap: anywhere; }
+    .papel .rodape { font-size: 13px; color: #5b6d68; }
+    .cartao-cache { border: 3px solid #1f6f5c; border-radius: 12px; padding: 16px; break-inside: avoid; }
+    .cartao-cache .titulo { font-size: 22px; font-weight: 800; text-align: center; margin-bottom: 8px; }
+    .cartao-cache table { font-size: 18px; }
+    .cartao-cache td { font-weight: 800; letter-spacing: .05em; }
+    .cartao-cache .rodape { font-size: 13px; color: #5b6d68; text-align: center; margin-top: 8px; }
+    .cartoes-cache { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    @media (max-width: 700px) { .cartoes, .cartoes-cache { grid-template-columns: 1fr; } table { font-size: 13px; } }
     @media print {
       .acoes, .nota { display: none; }
       body { padding: 0; }
-      section { break-after: page; }
+      section, .folha-turma { break-after: page; }
       h2 { margin-top: 0; }
     }
   </style>
@@ -37,37 +43,31 @@
 <body>
 <main>
   <h1>Geocaching: material do professor</h1>
-  <p class="nota">Esta página tem as soluções. Não a abras nos tablets dos alunos. Para alterar problemas, locais ou códigos edita <code>dados/caches.js</code>.</p>
+  <p class="nota">Esta página tem as soluções. Não a abras nos tablets dos alunos. Para alterar turmas, caches ou problemas edita <code>dados/caches.js</code>.</p>
+  <div id="avisos"></div>
   <p class="acoes"><button type="button" onclick="window.print()">Imprimir tudo</button></p>
 
   <section>
-    <h2>Códigos de entrada</h2>
-    <p>Recorta e entrega um papel a cada grupo no início.</p>
-    <div class="cartoes" id="entradas"></div>
+    <h2>Plano da semana</h2>
+    <p>Turmas que partilham caches não devem jogar à mesma hora.</p>
+    <div class="rolar" id="plano"></div>
   </section>
 
   <section>
     <h2>Cartões para dentro das caches</h2>
-    <p>Recorta e coloca cada cartão na cache correspondente.</p>
-    <div class="cartoes" id="cartoes"></div>
+    <p>Um cartão por cache. Cada turma tem o seu código, por isso passar o código a outra turma não serve de nada.</p>
+    <div class="cartoes-cache" id="cartoes"></div>
   </section>
 
   <section>
-    <h2>Percurso de cada grupo</h2>
-    <p>Cada grupo começa numa cache diferente dos outros grupos da mesma turma.</p>
-    <div class="rolar" id="ordens"></div>
+    <h2>Códigos de entrada</h2>
+    <p>Recorta e entrega um papel a cada grupo no início da sessão da turma.</p>
+    <div id="entradas"></div>
   </section>
 
-  <section>
-    <h2>Soluções</h2>
-    <div class="rolar" id="solucoes"></div>
-  </section>
-
-  <section>
-    <h2>Registo de resultados</h2>
-    <p>Aponta o tempo final que aparece no tablet de cada grupo.</p>
-    <div class="rolar" id="resultados"></div>
-  </section>
+  <h2>Folhas por turma</h2>
+  <p>Uma folha para o professor que acompanha cada turma: percurso, soluções e registo dos tempos.</p>
+  <div id="turmas"></div>
 </main>
 
 <script src="dados/caches.js"></script>
@@ -75,101 +75,147 @@
 <script>
   (function () {
     var D = window.JOGO;
-    var caches = D.caches;
-    var equipas = D.equipas;
-    var anos = [];
-    equipas.forEach(function (e) { var a = String(e.ano); if (anos.indexOf(a) < 0) anos.push(a); });
+    var G = window.Geocaching;
+    var grupos = G.listaGrupos();
+    var codigos = D.caches.map(function (_, i) { return G.codigosCache(i); });
 
     function el(tag, texto, cls) {
       var n = document.createElement(tag);
-      if (texto !== undefined) n.textContent = texto;
+      if (texto !== undefined && texto !== null) n.textContent = texto;
       if (cls) n.className = cls;
       return n;
     }
     function resposta(r) { return Array.isArray(r) ? r.join(' ou ') : String(r); }
-    function nomeGrupo(e) { return e.turma + (e.grupo ? ' · Grupo ' + e.grupo : ''); }
-    function tabela(cabecalho, linhas) {
-      var t = el('table');
+    function tabela(cabecalho, linhas, cls) {
+      var t = el('table', null, cls);
       var h = el('tr');
       cabecalho.forEach(function (x) { h.appendChild(el('th', x)); });
       t.appendChild(h);
       linhas.forEach(function (l) {
         var tr = el('tr');
-        l.forEach(function (x, i) { tr.appendChild(el(i === 0 ? 'th' : 'td', x)); });
+        l.forEach(function (x, i) {
+          var c = el(i === 0 ? 'th' : 'td', typeof x === 'object' && x ? x.texto : x);
+          if (x && x.cls) c.className = x.cls;
+          tr.appendChild(c);
+        });
         t.appendChild(tr);
       });
-      return t;
+      var caixa = el('div', null, 'rolar');
+      caixa.appendChild(t);
+      return caixa;
+    }
+    function nomeCache(i) {
+      var c = D.caches[i];
+      return c ? c.nome + (c.coordenada ? ' (' + c.coordenada + ')' : '') : '?';
     }
 
-    // Avisos de configuração
+    // ---------- verificação dos dados ----------
     var avisos = [];
-    var vistos = {};
-    equipas.forEach(function (e) {
-      var c = Geocaching.normalizar(e.codigo);
-      if (vistos[c]) avisos.push('O código ' + e.codigo + ' está repetido.');
-      vistos[c] = true;
+    var nomes = {};
+    D.turmas.forEach(function (t) {
+      if (nomes[t.turma]) avisos.push('A turma ' + t.turma + ' aparece duas vezes.');
+      nomes[t.turma] = true;
+      if (!t.caches || !t.caches.length) avisos.push('A turma ' + t.turma + ' não tem caches.');
+      (t.caches || []).forEach(function (n) {
+        if (!D.caches[n - 1]) avisos.push('A turma ' + t.turma + ' usa a cache ' + n + ', que não existe.');
+      });
+      var probs = D.problemas[String(t.ano)] || [];
+      if (t.caches && probs.length < t.caches.length) {
+        avisos.push('O ' + t.ano + 'º ano tem ' + probs.length + ' problemas, mas a turma ' + t.turma + ' tem ' + t.caches.length + ' caches.');
+      }
     });
-    caches.forEach(function (c) {
-      if (vistos[Geocaching.normalizar(c.codigo)]) avisos.push('O código ' + c.codigo + ' é usado como código de entrada e de cache.');
-      anos.forEach(function (a) {
-        if (!c.problemas[a]) avisos.push(c.nome + ' não tem problema para o ' + a + 'º ano.');
+    Object.keys(D.problemas).forEach(function (ano) {
+      var turmasDoAno = D.turmas.filter(function (t) { return String(t.ano) === ano; }).map(function (t) { return t.turma; });
+      D.problemas[ano].forEach(function (p, i) {
+        var n = Array.isArray(p) ? p.length : 1;
+        if (n < turmasDoAno.length) {
+          avisos.push(ano + 'º ano, problema ' + (i + 1) + ': tem ' + n + (n === 1 ? ' versão' : ' versões') + ' para ' +
+            turmasDoAno.length + ' turmas (' + turmasDoAno.join(', ') + '). Algumas turmas vão ter a mesma pergunta.');
+        }
       });
     });
     if (avisos.length) {
-      var caixa = el('div', undefined, 'avisos');
+      var caixa = el('div', null, 'avisos');
       caixa.appendChild(el('strong', 'Corrige antes do evento:'));
       var ul = el('ul');
       avisos.forEach(function (a) { ul.appendChild(el('li', a)); });
       caixa.appendChild(ul);
-      document.querySelector('main').insertBefore(caixa, document.querySelector('section'));
+      document.getElementById('avisos').appendChild(caixa);
     }
 
-    var entradas = document.getElementById('entradas');
-    equipas.forEach(function (e) {
-      var d = el('div', undefined, 'cartao-cache');
-      d.appendChild(el('div', nomeGrupo(e), 'titulo'));
-      d.appendChild(el('div', e.codigo, 'codigo'));
-      d.appendChild(el('div', 'Escrevam este código no tablet para começar.', 'rodape'));
-      entradas.appendChild(d);
-    });
-
-    var cartoes = document.getElementById('cartoes');
-    caches.forEach(function (c) {
-      var d = el('div', undefined, 'cartao-cache');
-      d.appendChild(el('div', D.titulo + ' · ' + c.nome, 'titulo'));
-      d.appendChild(el('div', c.codigo, 'codigo'));
-      d.appendChild(el('div', 'Escrevam este código no tablet. Deixem o cartão na cache!', 'rodape'));
-      cartoes.appendChild(d);
-    });
-
-    document.getElementById('ordens').appendChild(tabela(
-      ['Grupo', 'Código'].concat(caches.map(function (_, i) { return (i + 1) + 'ª'; })),
-      equipas.map(function (e, i) {
-        return [nomeGrupo(e), e.codigo].concat(Geocaching.ordemParaEquipa(i).map(function (k) {
-          return caches[k].nome + (caches[k].local.coordenada ? ' (' + caches[k].local.coordenada + ')' : '');
-        }));
+    // ---------- plano ----------
+    document.getElementById('plano').appendChild(tabela(
+      ['Turma', 'Ano', 'Grupos', 'Caches', 'Partilha caches com'],
+      D.turmas.map(function (t) {
+        var partilha = D.turmas.filter(function (o) {
+          return o !== t && o.caches.some(function (c) { return t.caches.indexOf(c) >= 0; });
+        }).map(function (o) { return o.turma; });
+        return [t.turma, t.ano + 'º', String(t.grupos || 1), t.caches.join(', '), partilha.join(', ') || '—'];
       })
     ));
 
-    var sol = document.getElementById('solucoes');
-    sol.appendChild(tabela(['Cache', 'Local', 'Código'], caches.map(function (c) {
-      return [c.nome, (c.local.coordenada ? c.local.coordenada + ': ' : '') + (c.local.texto || ''), c.codigo];
-    })));
-    anos.forEach(function (a) {
-      sol.appendChild(el('h3', a + 'º ano'));
-      var t = tabela(['Cache', 'Problema', 'Resposta'], caches.map(function (c) {
-        var p = c.problemas[a] || {};
-        return [c.nome, p.enunciado || '—', p.resposta !== undefined ? resposta(p.resposta) : '—'];
-      }));
-      t.querySelectorAll('td:nth-child(2)').forEach(function (td) { td.className = 'enunciado'; });
-      sol.appendChild(t);
+    // ---------- cartões das caches ----------
+    var cartoes = document.getElementById('cartoes');
+    D.caches.forEach(function (c, i) {
+      var turmas = D.turmas.filter(function (t) { return t.caches.indexOf(i + 1) >= 0; });
+      var d = el('div', null, 'cartao-cache');
+      d.appendChild(el('div', c.nome, 'titulo'));
+      if (turmas.length) {
+        d.appendChild(tabela(['Turma', 'Código'], turmas.map(function (t) { return [t.turma, codigos[i][t.turma]]; })));
+      } else {
+        d.appendChild(el('p', 'Nenhuma turma usa esta cache.'));
+      }
+      d.appendChild(el('div', 'Escrevam no tablet o código da vossa turma. Deixem o cartão na cache!', 'rodape'));
+      cartoes.appendChild(d);
     });
-    sol.appendChild(el('p', 'PIN do professor nos tablets: ' + D.pinProfessor));
 
-    document.getElementById('resultados').appendChild(tabela(
-      ['Turma', 'Grupo', 'Tempo final', 'Observações'],
-      equipas.map(function (e) { return [e.turma, String(e.grupo || ''), '', '']; })
-    ));
+    // ---------- códigos de entrada ----------
+    var entradas = document.getElementById('entradas');
+    D.turmas.forEach(function (t) {
+      entradas.appendChild(el('h3', t.turma));
+      var grelha = el('div', null, 'cartoes');
+      grupos.filter(function (g) { return g.turma === t.turma; }).forEach(function (g) {
+        var d = el('div', null, 'papel');
+        d.appendChild(el('div', g.turma + ' · Grupo ' + g.grupo, 'titulo'));
+        d.appendChild(el('div', g.codigo, 'codigo'));
+        d.appendChild(el('div', 'Escrevam este código no tablet para começar.', 'rodape'));
+        grelha.appendChild(d);
+      });
+      entradas.appendChild(grelha);
+    });
+
+    // ---------- folhas por turma ----------
+    var zona = document.getElementById('turmas');
+    D.turmas.forEach(function (t) {
+      var folha = el('div', null, 'folha-turma');
+      folha.appendChild(el('h3', t.turma + ' (' + t.ano + 'º ano)'));
+
+      folha.appendChild(tabela(['Nº', 'Problema', 'Resposta', 'Revela', 'Código na cache'],
+        t.caches.map(function (n, pos) {
+          var p = G.versaoProblema(t.ano, pos, t.turma) || {};
+          var c = D.caches[n - 1] || {};
+          return [
+            String(pos + 1),
+            { texto: p.enunciado || '— falta o problema —', cls: 'enunciado' },
+            p.resposta !== undefined ? resposta(p.resposta) : '—',
+            nomeCache(n - 1) + (c.texto ? ': ' + c.texto : ''),
+            codigos[n - 1] ? codigos[n - 1][t.turma] : '—'
+          ];
+        })));
+
+      var dosGrupos = grupos.filter(function (g) { return g.turma === t.turma; });
+      folha.appendChild(el('p', 'Percurso de cada grupo (pela ordem dos problemas que vão resolver):'));
+      folha.appendChild(tabela(['Grupo', 'Código de entrada', 'Ordem dos problemas'],
+        dosGrupos.map(function (g) {
+          return ['Grupo ' + g.grupo, g.codigo, G.percursoGrupo(g).map(function (p) { return p.posicao + 1; }).join(' → ')];
+        })));
+
+      folha.appendChild(el('p', 'Registo de tempos (tempo final que aparece no tablet):'));
+      folha.appendChild(tabela(['Grupo', 'Tempo final', 'Observações'],
+        dosGrupos.map(function (g) { return ['Grupo ' + g.grupo, '', '']; }), 'registo'));
+      folha.appendChild(el('p', 'PIN do professor nos tablets: ' + D.pinProfessor));
+      zona.appendChild(folha);
+    });
   })();
 </script>
 </body>
