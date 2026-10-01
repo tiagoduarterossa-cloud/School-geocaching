@@ -1,8 +1,8 @@
 (function () {
   'use strict';
 
-  var D = window.JOGO;
-  var G = window.Geocaching;
+  var D = null;               // conteúdo completo, depois de decifrado
+  var G = window.Organizador;
   var raiz = document.getElementById('raiz');
 
   var grupos = {};      // estado enviado por cada tablet, por código de entrada
@@ -12,7 +12,7 @@
   var separador = 'direto';
   var filtroTurma = '';
   var filtroAno = '';
-  var todos = G.listaGrupos();
+  var todos = [];
 
   // ---------- utilitários ----------
 
@@ -90,32 +90,16 @@
 
   // ---------- desenho ----------
 
-  function entrar() {
-    var pin = el('input', { id: 'pin-dono', type: 'password', inputmode: 'numeric', class: 'resposta', placeholder: 'PIN do dono', 'aria-label': 'PIN do dono' });
-    var erro = el('p', { class: 'erro', role: 'alert' });
-    raiz.appendChild(el('div', { class: 'entrada-dono cartao' }, [
-      el('h2', { texto: 'Área do dono' }),
-      el('form', {
-        class: 'linha-resposta',
-        onsubmit: function (ev) {
-          ev.preventDefault();
-          if (pin.value !== String(D.pinDono)) { erro.textContent = 'PIN errado.'; pin.select(); return; }
-          try { sessionStorage.setItem('dono-ok', '1'); } catch (e) { /* ignorar */ }
-          iniciar();
-        }
-      }, [pin, el('button', { type: 'submit', class: 'principal', texto: 'Entrar' })]),
-      erro
-    ]));
-    pin.focus();
-  }
-
   function iniciar() {
     raiz.innerHTML = '';
     var estadoLigacao = el('span', { id: 'ligacao', class: 'ligacao' });
     raiz.appendChild(el('div', { class: 'painel' }, [
       el('div', { class: 'linha-topo' }, [
         el('h1', { texto: D.titulo + ': área do dono' }),
-        estadoLigacao
+        el('div', { class: 'acoes-topo' }, [
+          estadoLigacao,
+          el('button', { type: 'button', class: 'secundario', onclick: function () { G.fechar(); location.reload(); }, texto: 'Bloquear' })
+        ])
       ]),
       el('div', { class: 'separadores', role: 'tablist' }, [
         botaoSeparador('direto', 'Em direto'),
@@ -173,7 +157,7 @@
   function montarDireto(zona) {
     zona.innerHTML = '';
     if (!Sync.ativo) {
-      zona.appendChild(el('p', { class: 'cartao aviso', texto: 'O direto ainda não está ligado. Preenche "sincronizacao.url" em dados/caches.js (ver README, secção "Acompanhar em direto"). Os códigos já funcionam.' }));
+      zona.appendChild(el('p', { class: 'cartao aviso', texto: 'O direto ainda não está ligado. Preenche "sincronizacao.url" em privado/conteudo.js e volta a gerar os ficheiros (ver README, secção "Acompanhar em direto"). Os códigos já funcionam.' }));
     }
     var selTurma = el('select', { id: 'filtro-turma', onchange: function (ev) { filtroTurma = ev.target.value; desenharTabela(); } },
       [el('option', { value: '', texto: 'Todas as turmas' })].concat(D.turmas.map(function (t) {
@@ -395,7 +379,9 @@
 
   raiz.innerHTML = '';
   raiz.dataset.pronto = '1';
-  var ok = false;
-  try { ok = sessionStorage.getItem('dono-ok') === '1'; } catch (e) { /* ignorar */ }
-  if (ok) iniciar(); else entrar();
+  G.desbloquear(raiz, function () {
+    D = window.JOGO_COMPLETO;
+    todos = G.listaGrupos();
+    iniciar();
+  });
 })();

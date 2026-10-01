@@ -2,12 +2,14 @@
   'use strict';
 
   var DADOS = window.JOGO;
-  var CHAVE = 'geocaching-escola-v3';
+  var IT = Cripto.ITERACOES;
+  var CHAVE = 'geocaching-escola-v4';
   var app = document.getElementById('app');
   var estado = carregar();
   var temporizador = null;
   var escutaControlo = null;
   var wakeLock = null;
+  var chaveProfessor = null; // só em memória, depois de o professor escrever o PIN
 
   // ---------- armazenamento ----------
 
@@ -35,145 +37,46 @@
     estado = null;
   }
 
-  // ---------- respostas ----------
+  // ---------- percurso ----------
 
-  function normalizar(s) {
-    return String(s)
-      .trim()
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[̀-ͯ]/g, '')
-      .replace(/\s+/g, '')
-      .replace(/,/g, '.')
-      .replace(/^[a-z]=/, '');
-  }
+  var normalizar = Cripto.normalizar;
 
-  // Devolve o valor numérico de "12", "12.5", "3/8", "36cm²", "30€"; ou null.
-  function paraNumero(s) {
-    var m = /^(-?\d+(?:\.\d+)?)(?:\/(-?\d+(?:\.\d+)?))?([^\d]*)$/.exec(s);
-    if (!m) return null;
-    var n = parseFloat(m[1]);
-    if (m[2] !== undefined) {
-      var d = parseFloat(m[2]);
-      if (d === 0) return null;
-      n = n / d;
-    }
-    return n;
-  }
-
-  function respostaCerta(dada, esperada) {
-    var lista = Array.isArray(esperada) ? esperada : [esperada];
-    var a = normalizar(dada);
-    if (!a) return false;
-    var na = paraNumero(a);
-    return lista.some(function (r) {
-      var b = normalizar(r);
-      var nb = paraNumero(b);
-      if (na !== null && nb !== null) return Math.abs(na - nb) < 1e-6;
-      return a === b;
-    });
-  }
-
-  // ---------- jogo ----------
-
-  // Palavras para gerar códigos. Os de entrada não dizem a turma, para
-  // ninguém adivinhar o código de outro grupo.
-  var ANIMAIS = ['LINCE', 'LONTRA', 'TEXUGO', 'RAPOSA', 'GAMO', 'LOBO', 'FALCAO', 'CORUJA',
-    'GARCA', 'CEGONHA', 'ABUTRE', 'MILHAFRE', 'SALMAO', 'TRUTA', 'ENGUIA', 'POLVO', 'LULA',
-    'GOLFINHO', 'ORCA', 'FOCA', 'LAGARTO', 'SAPO', 'TRITAO', 'MORCEGO', 'ESQUILO', 'OURICO',
-    'TOUPEIRA', 'JAVALI', 'VEADO', 'GAIVOTA', 'PARDAL', 'MELRO', 'ANDORINHA', 'POMBO', 'PEGA',
-    'CORVO', 'CAVALO', 'BURRO', 'CABRA', 'OVELHA'];
-  var CIENCIA = ['ATOMO', 'CELULA', 'ORBITA', 'PRISMA', 'VETOR', 'ELIPSE', 'FRACAO', 'CUBO',
-    'ANGULO', 'NEURONIO', 'PLANETA', 'COMETA', 'CRISTAL', 'MAGNETE', 'ENERGIA', 'FOTAO',
-    'PROTAO', 'ELETRAO', 'GALAXIA', 'ECLIPSE', 'VULCAO', 'FOSSIL', 'MOLECULA', 'ENZIMA',
-    'POLIGONO', 'ESFERA', 'CILINDRO', 'CONE', 'PIRAMIDE', 'RAIO', 'DIAMETRO', 'VERTICE'];
-
-  function hash(texto) {
-    var h = 2166136261;
-    for (var i = 0; i < texto.length; i++) {
-      h ^= texto.charCodeAt(i);
-      h = Math.imul(h, 16777619);
-    }
-    return h >>> 0;
-  }
-
-  function gerarCodigo(palavras, semente, usados) {
-    var h = hash(semente);
-    var codigo;
-    do {
-      codigo = palavras[h % palavras.length] + (10 + Math.floor(h / palavras.length) % 90);
-      h = (h + 7919) >>> 0;
-    } while (usados[codigo]);
-    usados[codigo] = true;
-    return codigo;
-  }
-
-  // Todos os grupos com o seu código de entrada. Os códigos são sempre os
-  // mesmos para os mesmos dados, e acrescentar turmas no fim da lista não muda
-  // os códigos das que já existiam.
-  function listaGrupos() {
-    var usados = {};
-    var lista = [];
-    DADOS.turmas.forEach(function (t, ti) {
-      for (var g = 1; g <= (t.grupos || 1); g++) {
-        lista.push({
-          codigo: gerarCodigo(ANIMAIS, 'entrada|' + t.turma + '|' + g, usados),
-          turmaIndice: ti,
-          turma: t.turma,
-          ano: String(t.ano),
-          grupo: g
-        });
-      }
-    });
-    return lista;
-  }
-
-  // Código escondido numa cache, diferente para cada turma.
-  function codigosCache(indiceCache) {
-    var c = DADOS.caches[indiceCache];
-    var usados = {};
-    var codigos = {};
-    DADOS.turmas.forEach(function (t) {
-      codigos[t.turma] = c.codigo || gerarCodigo(CIENCIA, 'cache|' + indiceCache + '|' + t.turma, usados);
-    });
-    return codigos;
-  }
-
-  // A versão do problema que cabe a esta turma: a 1ª turma do ano recebe a
-  // 1ª versão, a 2ª turma a 2ª versão, e assim por diante.
-  function versaoProblema(ano, posicao, turma) {
-    var lista = (DADOS.problemas[ano] || [])[posicao];
-    if (!lista) return null;
-    var versoes = Array.isArray(lista) ? lista : [lista];
-    var turmasDoAno = DADOS.turmas
-      .filter(function (t) { return String(t.ano) === String(ano); })
-      .map(function (t) { return t.turma; });
-    var i = Math.max(0, turmasDoAno.indexOf(turma));
-    return versoes[i % versoes.length];
-  }
-
-  // Os grupos da mesma turma fazem as mesmas caches, cada um a começar numa
-  // diferente e o mais afastado possível dos outros (com 2 grupos e 5 caches,
-  // um começa no problema 1 e o outro no 3).
-  function percursoGrupo(grupo) {
-    var turma = DADOS.turmas[grupo.turmaIndice];
-    var caches = turma.caches;
-    var inicio = Math.floor((grupo.grupo - 1) * caches.length / (turma.grupos || 1));
+  // Os grupos da mesma turma fazem as mesmas caches, cada um a começar o mais
+  // afastado possível dos outros (com 2 grupos e 5 caches: problemas 1 e 3).
+  function percursoGrupo(g) {
+    var n = (DADOS.percursos[g.turma] || []).length;
+    var turma = DADOS.turmas[g.turmaIndice] || {};
+    var inicio = Math.floor((g.grupo - 1) * n / (turma.grupos || 1));
     var passos = [];
-    for (var i = 0; i < caches.length; i++) {
-      var pos = (inicio + i) % caches.length;
-      passos.push({ posicao: pos, cache: caches[pos] - 1 });
-    }
+    for (var i = 0; i < n; i++) passos.push({ posicao: (inicio + i) % n });
     return passos;
   }
 
+  // O código de entrada só existe no ficheiro como resumo: calcula-se o resumo
+  // do que foi escrito e procura-se na lista.
   function procurarGrupo(codigo) {
-    var c = normalizar(codigo);
-    var grupos = listaGrupos();
-    for (var i = 0; i < grupos.length; i++) {
-      if (normalizar(grupos[i].codigo) === c) return grupos[i];
-    }
-    return null;
+    return Cripto.resumo(normalizar(codigo), DADOS.sal, 'entrada', IT.entrada).then(function (h) {
+      return DADOS.entradas.filter(function (e) { return e.h === h; })[0] || null;
+    });
+  }
+
+  function contexto(pos) {
+    return estado.turma + '|' + pos;
+  }
+
+  // Tenta abrir o local da cache com a resposta escrita. Devolve o local, ou null.
+  function abrirComResposta(problema, pos, resposta) {
+    return Cripto.chave(Cripto.canonica(resposta), DADOS.sal, 'resposta|' + contexto(pos), IT.resposta).then(function (k) {
+      return (problema.fechos || []).reduce(function (anterior, fecho) {
+        return anterior.then(function (achado) { return achado || Cripto.decifrarCom(k, fecho); });
+      }, Promise.resolve(null));
+    }).then(function (t) { return t ? JSON.parse(t) : null; });
+  }
+
+  function codigoDaCacheCerto(pos, escrito) {
+    return Cripto.resumo(normalizar(escrito), DADOS.sal, 'cache|' + contexto(pos), IT.codigo).then(function (h) {
+      return h === estado.revelado.codigo;
+    });
   }
 
   function nomeEquipa(g) {
@@ -184,8 +87,8 @@
     return estado.passos[estado.passo];
   }
 
-  function cacheAtual() {
-    return DADOS.caches[passoAtual().cache];
+  function problemaAtual() {
+    return (DADOS.percursos[estado.turma] || [])[passoAtual().posicao];
   }
 
   function agora() {
@@ -200,7 +103,7 @@
     return (saidas || []).filter(function (s) { return s.penalizada; }).length;
   }
 
-  // A mesma conta é usada no tablet e na página do dono.
+  // A mesma conta é usada na página do dono (js/organizador.js).
   function penalizacao(r, ctrl) {
     return (r.dicas || 0) * DADOS.penalizacaoDicaSegundos +
       (r.erros || 0) * DADOS.penalizacaoErroSegundos +
@@ -214,8 +117,15 @@
 
   // ---------- ligação ao dono ----------
 
+  // Um envio de cada vez, sempre com o estado mais recente: assim um envio
+  // antigo nunca chega depois de um novo e o dono vê sempre o último.
+  var aEnviar = false;
+  var enviarDeNovo = false;
+
   function publicar() {
     if (!window.Sync || !Sync.ativo || !estado || !estado.codigo) return;
+    if (aEnviar) { enviarDeNovo = true; return; }
+    aEnviar = true;
     Sync.guardar('grupos/' + estado.codigo, {
       turma: estado.turma,
       grupo: estado.grupo,
@@ -232,6 +142,9 @@
       foraDaApp: estado.saidaInicio || null,
       limite: limiteSegundos(),
       atualizado: agora()
+    }).then(function () {
+      aEnviar = false;
+      if (enviarDeNovo) { enviarDeNovo = false; publicar(); }
     });
   }
 
@@ -306,7 +219,7 @@
 
   function comecar(g) {
     estado = {
-      codigo: g.codigo,
+      codigo: g.codigo.toUpperCase(),
       equipa: nomeEquipa(g),
       turma: g.turma,
       grupo: g.grupo,
@@ -334,6 +247,7 @@
       estado.fase = 'procurar';
     } else if (estado.fase === 'procurar') {
       estado.passo++;
+      delete estado.revelado;
       estado.dicaVista = false;
       estado.errosSeguidos = 0;
       if (estado.passo >= estado.passos.length) {
@@ -491,9 +405,13 @@
       onsubmit: function (ev) {
         ev.preventDefault();
         if (!codigo.value.trim()) return mostrar(erro, 'Escrevam o código que o professor vos deu.');
-        var grupo = procurarGrupo(codigo.value);
-        if (!grupo) { codigo.select(); return mostrar(erro, 'Este código não existe. Confirmem as letras e os números no papel.'); }
-        confirmar(grupo);
+        var botao = form.querySelector('button');
+        botao.disabled = true;
+        procurarGrupo(codigo.value).then(function (g) {
+          botao.disabled = false;
+          if (!g) { codigo.select(); return mostrar(erro, 'Este código não existe. Confirmem as letras e os números no papel.'); }
+          confirmar(Object.assign({ codigo: normalizar(codigo.value) }, g));
+        });
       }
     }, [
       el('label', { for: 'codigo', texto: 'Código de entrada' }),
@@ -536,14 +454,14 @@
   }
 
   function ecraProblema() {
-    var p = versaoProblema(estado.ano, passoAtual().posicao, estado.turma);
-    if (!p) {
+    var p = problemaAtual();
+    if (!p || p.falta) {
       app.appendChild(el('main', { class: 'cartao' }, [
         el('p', { class: 'erro', texto: 'Falta o problema ' + (passoAtual().posicao + 1) + ' do ' + estado.ano + 'º ano. Chamem o professor.' })
       ]));
       return;
     }
-    var numerica = paraNumero(normalizar(Array.isArray(p.resposta) ? p.resposta[0] : p.resposta)) !== null;
+    var numerica = !!p.numerica;
     var campo = el('input', {
       type: 'text',
       class: 'resposta',
@@ -587,16 +505,23 @@
         class: 'linha-resposta',
         onsubmit: function (ev) {
           ev.preventDefault();
-          if (agora() < estado.bloqueadoAte) return;
-          if (respostaCerta(campo.value, p.resposta)) {
-            estado.errosSeguidos = 0;
-            avancar();
-          } else {
-            registarErro();
-            campo.select();
-            mostrar(aviso, 'Ainda não. Verifiquem as contas.');
-            atualizarBloqueio();
-          }
+          if (agora() < estado.bloqueadoAte || botao.disabled || !campo.value.trim()) return;
+          botao.disabled = true;
+          botao.textContent = 'A verificar…';
+          abrirComResposta(p, passoAtual().posicao, campo.value).then(function (local) {
+            botao.disabled = false;
+            botao.textContent = 'Verificar';
+            if (local) {
+              estado.revelado = local;
+              estado.errosSeguidos = 0;
+              avancar();
+            } else {
+              registarErro();
+              campo.select();
+              mostrar(aviso, 'Ainda não. Verifiquem as contas.');
+              atualizarBloqueio();
+            }
+          });
         }
       }, [campo, botao]),
       aviso,
@@ -608,7 +533,7 @@
 
   function ecraProcurar() {
     refsBloqueio = null;
-    var cache = cacheAtual();
+    var cache = estado.revelado || {};
     var campo = el('input', {
       type: 'text',
       class: 'resposta',
@@ -639,12 +564,15 @@
         class: 'linha-resposta',
         onsubmit: function (ev) {
           ev.preventDefault();
-          if (normalizar(campo.value) === normalizar(codigosCache(passoAtual().cache)[estado.turma])) {
-            avancar();
-          } else {
+          var botao = ev.target.querySelector('button');
+          if (botao.disabled || !campo.value.trim()) return;
+          botao.disabled = true;
+          codigoDaCacheCerto(passoAtual().posicao, campo.value).then(function (certo) {
+            botao.disabled = false;
+            if (certo) return avancar();
             campo.select();
             mostrar(aviso, 'Esse código não é desta cache.');
-          }
+          });
         }
       }, [campo, el('button', { type: 'submit', class: 'principal', texto: 'Confirmar' })]),
       aviso
@@ -692,10 +620,18 @@
     function opcoes() {
       caixa.innerHTML = '';
       var acoes = [el('h2', { texto: 'Professor' })];
-      if (estado.fase !== 'fim') {
+      if (estado.fase !== 'fim' && !(problemaAtual() || {}).falta) {
         acoes.push(el('button', {
           type: 'button', class: 'secundario',
-          onclick: function () { fechar(); avancar(); },
+          onclick: function () {
+            if (estado.fase !== 'problema') { fechar(); return avancar(); }
+            Cripto.decifrarCom(chaveProfessor, problemaAtual().professor).then(function (t) {
+              fechar();
+              if (!t) return;
+              estado.revelado = JSON.parse(t);
+              avancar();
+            });
+          },
           texto: estado.fase === 'problema' ? 'Mostrar o local desta cache' : 'Dar esta cache como encontrada'
         }));
       }
@@ -720,8 +656,13 @@
       class: 'linha-resposta',
       onsubmit: function (ev) {
         ev.preventDefault();
-        if (pin.value === String(DADOS.pinProfessor)) opcoes();
-        else mostrar(aviso, 'PIN errado.');
+        aviso.textContent = 'A verificar…';
+        Cripto.chave(pin.value, DADOS.sal, 'professor', IT.professor).then(function (k) {
+          return Cripto.decifrarCom(k, DADOS.verificacaoProfessor).then(function (t) {
+            if (t === 'ok') { chaveProfessor = k; aviso.textContent = ''; opcoes(); }
+            else { pin.select(); mostrar(aviso, 'PIN errado.'); }
+          });
+        });
       }
     }, [pin, el('button', { type: 'submit', class: 'principal', texto: 'Entrar' })]));
     caixa.appendChild(aviso);
@@ -733,14 +674,9 @@
     pin.focus();
   }
 
-  // Exposto para testes e para a página do professor.
+  // Exposto para testes.
   window.Geocaching = {
-    respostaCerta: respostaCerta,
-    normalizar: normalizar,
-    listaGrupos: listaGrupos,
     percursoGrupo: percursoGrupo,
-    versaoProblema: versaoProblema,
-    codigosCache: codigosCache,
     penalizacao: penalizacao
   };
 

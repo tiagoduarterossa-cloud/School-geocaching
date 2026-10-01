@@ -19,6 +19,12 @@
     th, td { border: 1px solid #cfdcd7; padding: 6px 8px; text-align: left; vertical-align: top; }
     th { background: #eef4f1; }
     .enunciado { white-space: pre-line; }
+    .entrada-organizador { max-width: 460px; margin: 15vh auto 0; border: 2px solid #1f6f5c; border-radius: 12px; padding: 24px; }
+    .entrada-organizador .linha-resposta { display: flex; gap: 8px; }
+    .entrada-organizador input { flex: 1; min-width: 0; font: inherit; padding: 10px 12px; border: 2px solid #cfdcd7; border-radius: 8px; }
+    .entrada-organizador button { font: inherit; padding: 10px 16px; border: 0; border-radius: 8px; background: #1f6f5c; color: #fff; cursor: pointer; }
+    .entrada-organizador .erro { color: #c0392b; font-weight: 600; min-height: 1.4em; }
+    @media print { #cadeado { display: none; } }
     .registo td { height: 32px; }
     .cartoes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .papel { border: 3px dashed #1f6f5c; border-radius: 12px; padding: 16px; text-align: center; break-inside: avoid; }
@@ -41,9 +47,10 @@
   </style>
 </head>
 <body>
-<main>
+<div id="cadeado"></div>
+<main hidden>
   <h1>Geocaching: material do professor</h1>
-  <p class="nota">Esta página tem as soluções. Não a abras nos tablets dos alunos. Para alterar turmas, caches ou problemas edita <code>dados/caches.js</code>.</p>
+  <p class="nota">Esta página tem as soluções. Não a abras nos tablets dos alunos. Para alterar turmas, caches ou problemas edita <code>privado/conteudo.js</code> e corre <code>ferramentas/construir.js</code> (ver README).</p>
   <div id="avisos"></div>
   <p class="acoes"><button type="button" onclick="window.print()">Imprimir tudo</button></p>
 
@@ -70,12 +77,16 @@
   <div id="turmas"></div>
 </main>
 
-<script src="dados/caches.js"></script>
-<script src="js/jogo.js"></script>
+<script src="dados/jogo.js"></script>
+<script src="js/cripto.js"></script>
+<script src="dados/organizador.js"></script>
+<script src="js/organizador.js"></script>
 <script>
-  (function () {
-    var D = window.JOGO;
-    var G = window.Geocaching;
+  Organizador.desbloquear(document.getElementById('cadeado'), function () {
+    document.getElementById('cadeado').hidden = true;
+    document.querySelector('main').hidden = false;
+    var D = window.JOGO_COMPLETO;
+    var G = window.Organizador;
     var grupos = G.listaGrupos();
     var codigos = D.caches.map(function (_, i) { return G.codigosCache(i); });
 
@@ -218,7 +229,7 @@
       folha.appendChild(el('p', 'PIN do professor nos tablets: ' + D.pinProfessor));
       zona.appendChild(folha);
     });
-  })();
+  });
 </script>
 </body>
 </html>

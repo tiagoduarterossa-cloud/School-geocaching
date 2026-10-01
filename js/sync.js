@@ -1,6 +1,6 @@
 // Ligação em direto entre os tablets e a página do dono, através de uma base
 // de dados Firebase Realtime Database (API REST, sem bibliotecas).
-// Se "sincronizacao.url" estiver vazio em dados/caches.js, nada é enviado e o
+// Se "sincronizacao.url" estiver vazio em privado/conteudo.js, nada é enviado e o
 // jogo funciona só no tablet, como antes.
 window.Sync = (function () {
   'use strict';

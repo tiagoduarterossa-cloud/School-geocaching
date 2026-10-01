@@ -26,24 +26,41 @@ Pensado para uma semana inteira, com uma turma a jogar de cada vez:
 - Há um conjunto de caches fixas (15 no exemplo). Cada turma faz um percurso de 5. Turmas que joguem à mesma hora devem usar caches diferentes; o plano da semana em `professor.html` mostra que turmas partilham caches.
 - Dentro da turma, cada grupo começa num problema diferente.
 
+## Respostas e códigos protegidos
+
+O site e este repositório são públicos, por isso nenhuma resposta, código ou local está publicado em claro:
+
+- `dados/jogo.js` (o que os tablets usam) só tem os enunciados e as dicas. O local de cada cache está cifrado e a chave é a resposta certa: o tablet tenta abrir com o que o grupo escreveu e só abre se estiver certo. Os códigos de entrada, os códigos das caches e o PIN dos professores só existem como resumos que não se conseguem reverter.
+- `dados/organizador.js` tem o conteúdo completo, cifrado com a palavra-passe do organizador. As páginas `professor.html` e `dono.html` pedem essa palavra-passe e decifram no próprio browser.
+- `privado/conteudo.js` é o conteúdo em claro, onde se editam turmas, caches e problemas. A pasta `privado/` nunca vai para o GitHub.
+
+Até onde vai a proteção: chega para alunos curiosos, mesmo com jeito para informática. Alguém que saiba programar e tenha tempo pode experimentar respostas numéricas uma a uma no seu computador até acertar; cada tentativa foi tornada lenta de propósito, mas as respostas de matemática são números pequenos. Para um jogo de escola, é suficiente.
+
 ## Preparar o evento
 
-1. Edita `dados/caches.js`, que tem três partes:
+1. Edita `privado/conteudo.js`, que tem três partes:
    - `caches`: os sítios da escola (nome, coordenada no mapa, descrição);
-   - `turmas`: cada turma com o ano, o número de grupos e a lista das suas caches;
+   - `turmas`: cada turma com o ano, o número de grupos, a lista das suas caches e (opcional) a sessão;
    - `problemas`: para cada ano, um problema por cache do percurso, com uma versão por turma desse ano.
-2. (Opcional) Põe uma imagem do mapa da escola com quadrícula em `dados/mapa.jpg` e escreve `mapa: 'dados/mapa.jpg'` no ficheiro.
-3. Abre `professor.html` num computador. Se faltar alguma coisa (um problema, versões a menos, uma cache que não existe), avisa no topo. Imprime:
+2. Gera os ficheiros publicados (precisa do Node.js 20 ou mais recente):
+
+   ```sh
+   GEO_PASSE='palavra-passe do organizador' node ferramentas/construir.js
+   ```
+
+   Num computador sem a pasta `privado/`, recupera primeiro o conteúdo com o mesmo comando e `--extrair` no fim.
+3. (Opcional) Põe uma imagem do mapa da escola com quadrícula em `dados/mapa.jpg` e escreve `mapa: 'dados/mapa.jpg'` no conteúdo.
+4. Abre `professor.html` e escreve a palavra-passe. Se faltar alguma coisa (um problema, versões a menos, uma cache que não existe), avisa no topo. Imprime:
    - os cartões para dentro das caches (com o código de cada turma);
    - os papéis com os códigos de entrada dos grupos;
    - uma folha por turma, com problemas, respostas, percurso de cada grupo e registo dos tempos.
-4. Esconde as caches e abre `index.html` em cada tablet.
+5. Esconde as caches e abre o site em cada tablet.
 
-Os códigos são gerados automaticamente a partir dos nomes das turmas. Se mudares o nome de uma turma ou a ordem das turmas depois de imprimir, volta a imprimir os cartões e os papéis.
+Os códigos são gerados a partir de um segredo (`semente`) e dos nomes das turmas. Enquanto a semente e os nomes não mudarem, os códigos ficam iguais, mesmo que se altere o resto. Se mudares a semente ou o nome de uma turma depois de imprimir, volta a imprimir os cartões e os papéis.
 
 ## Calculadoras e IA
 
-O tablet deteta quando o grupo sai da página do jogo a meio de um problema (para abrir a calculadora, o ChatGPT, outra app). Quando voltam, aparece um aviso e o tempo final leva +5 minutos. Saídas com menos de 3 segundos não contam, e durante a procura da cache o ecrã pode apagar-se sem penalização. Os valores estão em `dados/caches.js` (`penalizacaoSaidaSegundos`, `toleranciaSaidaSegundos`).
+O tablet deteta quando o grupo sai da página do jogo a meio de um problema (para abrir a calculadora, o ChatGPT, outra app). Quando voltam, aparece um aviso e o tempo final leva +5 minutos. Saídas com menos de 3 segundos não contam, e durante a procura da cache o ecrã pode apagar-se sem penalização. Os valores estão em `privado/conteudo.js` (`penalizacaoSaidaSegundos`, `toleranciaSaidaSegundos`).
 
 O que a app não consegue ver: um telemóvel no bolso, uma calculadora a sério, ou uma app em ecrã dividido. Para o ecrã dividido, a solução é bloquear o tablet no browser antes do evento (o professor de informática faz isto em cada tablet):
 
@@ -54,7 +71,7 @@ Com o tablet bloqueado, os alunos não conseguem sair do jogo, e a deteção fic
 
 ## Área do dono
 
-`dono.html`, protegida pelo `pinDono` (diferente do PIN dos professores). Tem três separadores:
+`dono.html`, protegida pela palavra-passe do organizador. Fica aberta até fechares o separador do browser ou carregares em "Bloquear". Tem três separadores:
 
 - **Em direto**: cada grupo com estado (a jogar, fora da app agora, terminou, desclassificado, sem ligação), caches encontradas, tempo que falta, erros, dicas, saídas da app e penalização. Ao lado, a lista de todas as saídas da app com hora e duração. Em "Gerir" podes dar +5 min ou anular 5 min, mandar uma mensagem que aparece no tablet do grupo, e desclassificar o grupo (com motivo) ou readmiti-lo.
 - **Classificação**: mais caches primeiro, depois o menor tempo com penalizações. Pode filtrar por ano.
@@ -78,7 +95,7 @@ Os tablets enviam o estado para uma base de dados Firebase (gratuita, da Google)
    }
    ```
 
-4. Copia o endereço da base de dados (algo como `https://nome-default-rtdb.europe-west1.firebasedatabase.app`) para `sincronizacao.url` em `dados/caches.js`, e põe o mesmo nome do passo 3 em `sincronizacao.evento`.
+4. Copia o endereço da base de dados (algo como `https://nome-default-rtdb.europe-west1.firebasedatabase.app`) para `sincronizacao.url` em `privado/conteudo.js`, põe o mesmo nome do passo 3 em `sincronizacao.evento`, e volta a gerar os ficheiros.
 5. Abre `dono.html`: o indicador no canto deve dizer "Ligado".
 
 Na base de dados só fica a turma, o número do grupo e o progresso no jogo. Não há nomes de alunos. Quem souber o endereço e o nome do evento consegue ler e escrever lá, por isso, no fim da semana, apaga o projeto ou muda as regras para `false`.
@@ -92,13 +109,12 @@ Se a rede falhar, o jogo continua no tablet. A página do dono mostra "sem liga�
 
 ## Botão do professor
 
-O ⚙ no canto do ecrã pede o PIN (`pinProfessor` em `dados/caches.js`, por defeito `2468`). Com ele podes:
+O ⚙ no canto do ecrã pede o PIN dos professores (`pinProfessor` em `privado/conteudo.js`, pelo menos 6 algarismos; também aparece nas folhas por turma). Com ele podes:
 
 - mostrar o local de uma cache se a equipa estiver presa no problema;
 - dar uma cache como encontrada (se o cartão desaparecer, por exemplo);
 - reiniciar o tablet para o grupo seguinte.
 
-Muda o PIN antes do evento.
 
 ## Publicar
 
@@ -108,7 +124,6 @@ Também funciona a abrir o `index.html` diretamente, mas assim não fica dispon�
 
 ## Limitações
 
-- As respostas estão no código da página. Um aluno com muito jeito e um computador conseguia encontrá-las. Num tablet, aos 10 a 15 anos, o risco é baixo.
 - Um aluno que fotografe o cartão de uma cache fica com os códigos de todas as turmas que a usam. Como os problemas mudam de turma para turma, continua a ter de os resolver; só poupa a caminhada.
 - Sem a ligação Firebase, não há direto: o professor regista o resultado de cada tablet na folha de resultados.
-- **Tudo o que está no site é público**, incluindo `dados/caches.js` (com as respostas), `professor.html` e `dono.html`. Os PIN só impedem que se abra a página por engano, não protegem os dados. Um aluno que adivinhe o endereço e saiba ler código vê as respostas. Não divulgues o endereço do site para além dos tablets.
+- A palavra-passe do organizador não se recupera. Sem ela, não se abrem as páginas do professor e do dono, nem se recupera o conteúdo a partir do GitHub. Guarda-a num sítio seguro.

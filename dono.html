@@ -51,6 +51,8 @@
     .codigos h3 { margin: 20px 0 8px; }
     @media (max-width: 1400px) { .colunas { grid-template-columns: 1fr; } }
     .entrada-dono { max-width: 420px; margin: 15vh auto 0; }
+    .acoes-topo { display: flex; gap: 8px; align-items: center; }
+    .acoes-topo button { padding: 6px 12px; font-size: .85rem; }
     .carregar { text-align: center; color: var(--suave); margin-top: 20vh; }
   </style>
 </head>
@@ -67,12 +69,14 @@
       }
     }, true);
   </script>
-  <script src="dados/caches.js"></script>
+  <script src="dados/jogo.js"></script>
   <script src="js/sync.js"></script>
-  <script src="js/jogo.js"></script>
+  <script src="js/cripto.js"></script>
+  <script src="dados/organizador.js"></script>
+  <script src="js/organizador.js"></script>
   <script src="js/dono.js"></script>
   <script>
-    if (!window.JOGO || !window.Geocaching) window.dispatchEvent(new Event('error'));
+    if (!window.JOGO || !window.ORGANIZADOR || !window.Organizador) window.dispatchEvent(new Event('error'));
   </script>
 </body>
 </html>
