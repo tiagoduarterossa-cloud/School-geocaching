@@ -117,7 +117,8 @@ form.cartao .principal { margin-top: 16px; font-size: 1.2rem; }
 .topo { margin-bottom: 16px; }
 .topo-linha { display: flex; align-items: center; gap: 12px; }
 .equipa { font-weight: 700; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.relogio { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--primaria-escura); }
+.relogio { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--primaria-escura); white-space: nowrap; }
+.relogio.pouco-tempo { color: var(--erro); }
 .botao-prof { background: transparent; color: var(--suave); padding: 6px 10px; font-size: 1.2rem; }
 .progresso { height: 10px; background: var(--trilho); border-radius: 99px; overflow: hidden; margin-top: 10px; }
 .progresso-cheio { height: 100%; background: var(--destaque); transition: width .4s; }

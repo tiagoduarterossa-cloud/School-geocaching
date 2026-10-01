@@ -210,9 +210,10 @@
           return ['Grupo ' + g.grupo, g.codigo, G.percursoGrupo(g).map(function (p) { return p.posicao + 1; }).join(' → ')];
         })));
 
-      folha.appendChild(el('p', 'Registo de tempos (tempo final que aparece no tablet):'));
-      folha.appendChild(tabela(['Grupo', 'Tempo final', 'Observações'],
-        dosGrupos.map(function (g) { return ['Grupo ' + g.grupo, '', '']; }), 'registo'));
+      folha.appendChild(el('p', 'Registo de resultados (o que aparece no tablet no fim):'));
+      folha.appendChild(tabela(['Grupo', 'Início', 'Caches encontradas', 'Tempo final', 'Observações'],
+        dosGrupos.map(function (g) { return ['Grupo ' + g.grupo, '', '', '', '']; }), 'registo'));
+      folha.appendChild(el('p', 'Ganha quem encontrar mais caches; em caso de empate, o menor tempo final.'));
       folha.appendChild(el('p', 'PIN do professor nos tablets: ' + D.pinProfessor));
       zona.appendChild(folha);
     });

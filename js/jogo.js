@@ -148,12 +148,16 @@
     return versoes[i % versoes.length];
   }
 
-  // Os grupos da mesma turma fazem as mesmas caches, cada um a começar numa diferente.
+  // Os grupos da mesma turma fazem as mesmas caches, cada um a começar numa
+  // diferente e o mais afastado possível dos outros (com 2 grupos e 5 caches,
+  // um começa no problema 1 e o outro no 3).
   function percursoGrupo(grupo) {
-    var caches = DADOS.turmas[grupo.turmaIndice].caches;
+    var turma = DADOS.turmas[grupo.turmaIndice];
+    var caches = turma.caches;
+    var inicio = Math.floor((grupo.grupo - 1) * caches.length / (turma.grupos || 1));
     var passos = [];
     for (var i = 0; i < caches.length; i++) {
-      var pos = (grupo.grupo - 1 + i) % caches.length;
+      var pos = (inicio + i) % caches.length;
       passos.push({ posicao: pos, cache: caches[pos] - 1 });
     }
     return passos;
@@ -195,6 +199,21 @@
     var s = seg % 60;
     var mm = (h ? String(m).padStart(2, '0') : String(m));
     return (h ? h + ':' : '') + mm + ':' + String(s).padStart(2, '0');
+  }
+
+  function limiteSegundos() {
+    return (DADOS.tempoLimiteMinutos || 0) * 60;
+  }
+
+  // Termina o jogo se o tempo limite já passou. Devolve true se terminou.
+  function verificarLimite() {
+    var limite = limiteSegundos();
+    if (!estado || estado.fim || !limite || tempoDecorrido() < limite) return false;
+    estado.fase = 'fim';
+    estado.fim = estado.inicio + limite * 1000;
+    estado.esgotado = true;
+    guardar();
+    return true;
   }
 
   function tempoDecorrido() {
@@ -272,6 +291,7 @@
     clearInterval(temporizador);
     app.innerHTML = '';
     if (!estado) return ecraInicio();
+    verificarLimite();
     app.appendChild(cabecalho());
     if (estado.fase === 'problema') ecraProblema();
     else if (estado.fase === 'procurar') ecraProcurar();
@@ -279,10 +299,22 @@
   }
 
   function cabecalho() {
-    var relogio = el('span', { class: 'relogio', texto: formatarTempo(tempoDecorrido()) });
+    var relogio = el('span', { class: 'relogio' });
+    function mostrarRelogio() {
+      var limite = limiteSegundos();
+      if (limite && !estado.fim) {
+        var falta = limite - tempoDecorrido();
+        relogio.textContent = 'Faltam ' + formatarTempo(falta);
+        relogio.classList.toggle('pouco-tempo', falta <= 300);
+      } else {
+        relogio.textContent = formatarTempo(tempoDecorrido());
+      }
+    }
+    mostrarRelogio();
     if (!estado.fim) {
       temporizador = setInterval(function () {
-        relogio.textContent = formatarTempo(tempoDecorrido());
+        if (verificarLimite()) return desenhar();
+        mostrarRelogio();
         atualizarBloqueio();
       }, 1000);
     }
@@ -494,13 +526,15 @@
     refsBloqueio = null;
     var tempo = tempoDecorrido();
     var pen = segundosPenalizacao();
+    var total = estado.passos.length;
     app.appendChild(el('main', { class: 'cartao fim' }, [
-      el('p', { class: 'trofeu', texto: '🏆' }),
-      el('h2', { texto: 'Parabéns, ' + estado.equipa + '!' }),
-      el('p', { texto: DADOS.mensagemFinal }),
+      el('p', { class: 'trofeu', texto: estado.esgotado ? '⏰' : '🏆' }),
+      el('h2', { texto: estado.esgotado ? 'Acabou o tempo!' : 'Parabéns, ' + estado.equipa + '!' }),
+      el('p', { texto: estado.esgotado ? 'Voltem à base e mostrem este ecrã ao professor.' : DADOS.mensagemFinal }),
       el('table', { class: 'resumo' }, [
         linha('Turma', estado.turma),
         linha('Grupo', String(estado.grupo)),
+        linha('Caches encontradas', estado.passo + ' de ' + total, true),
         linha('Tempo', formatarTempo(tempo)),
         linha('Respostas erradas', estado.erros + ' (+' + formatarTempo(estado.erros * DADOS.penalizacaoErroSegundos) + ')'),
         linha('Dicas', estado.dicas + ' (+' + formatarTempo(estado.dicas * DADOS.penalizacaoDicaSegundos) + ')'),
