@@ -430,8 +430,11 @@
       acoes.push(
         el('button', {
           type: 'button', class: 'perigo',
-          onclick: function () {
-            if (confirm('Apagar o progresso desta equipa e voltar ao início?')) { fechar(); apagar(); desenhar(); }
+          onclick: function (ev) {
+            var b = ev.currentTarget;
+            if (b.dataset.confirmar) { fechar(); apagar(); desenhar(); return; }
+            b.dataset.confirmar = '1';
+            b.textContent = 'Tocar outra vez para apagar o progresso';
           },
           texto: 'Reiniciar tablet'
         }),
