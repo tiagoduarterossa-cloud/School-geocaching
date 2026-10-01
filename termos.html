@@ -60,7 +60,7 @@
     <ul id="conduta"></ul>
 
     <h2>5. Acidentes</h2>
-    <p>Sendo uma atividade escolar aprovada, os acidentes durante o jogo estão abrangidos pelo Seguro Escolar. Se alguém se magoar:</p>
+    <p>Sendo uma atividade escolar aprovada, os acidentes durante o jogo estão abrangidos pelo seguro de acidentes que cobre as atividades escolares <span class="da-escola">da escola</span>. Se alguém se magoar:</p>
     <ul>
       <li>o grupo para de jogar, fica junto, carrega em "Pedir ajuda" no tablet e chama o adulto mais próximo;</li>
       <li>o organizador recebe o aviso com o local do grupo e avisa os adultos responsáveis;</li>
@@ -97,6 +97,7 @@
     if (D.semana && D.semana.nome) partes.push(D.semana.nome);
     document.getElementById('sub').textContent = partes.join(' · ');
     if (D.organizador) document.querySelectorAll('.organizador').forEach(function (n) { n.textContent = D.organizador; });
+    if (D.escola) document.querySelectorAll('.da-escola').forEach(function (n) { n.textContent = 'do ' + D.escola; });
     [['seguranca', R.seguranca], ['conduta', R.conduta]].forEach(function (x) {
       var ul = document.getElementById(x[0]);
       x[1].forEach(function (t) { var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
