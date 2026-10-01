@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geocaching: Professor</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; margin: 0; padding: 16px; color: #1b2a26; background: #fff; }
+    main { max-width: 960px; margin: 0 auto; }
+    h1 { margin-top: 0; }
+    h2 { margin-top: 32px; border-bottom: 2px solid #1f6f5c; padding-bottom: 4px; }
+    .nota { background: #fff6dc; padding: 12px 16px; border-radius: 8px; }
+    .acoes button { font: inherit; padding: 10px 16px; border-radius: 8px; border: 0; background: #1f6f5c; color: #fff; cursor: pointer; margin-right: 8px; }
+    table { border-collapse: collapse; width: 100%; font-size: 15px; }
+    th, td { border: 1px solid #cfdcd7; padding: 6px 8px; text-align: left; vertical-align: top; }
+    th { background: #eef4f1; }
+    .enunciado { white-space: pre-line; }
+    .cartoes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .cartao-cache { border: 3px dashed #1f6f5c; border-radius: 12px; padding: 24px; text-align: center; break-inside: avoid; }
+    .cartao-cache .titulo { font-size: 18px; color: #5b6d68; }
+    .cartao-cache .codigo { font-size: 48px; font-weight: 800; letter-spacing: .08em; margin: 8px 0; overflow-wrap: anywhere; }
+    .cartao-cache .rodape { font-size: 14px; color: #5b6d68; }
+    @media (max-width: 600px) { .cartoes { grid-template-columns: 1fr; } table { font-size: 13px; } }
+    @media print {
+      .acoes, .nota { display: none; }
+      body { padding: 0; }
+      section { break-after: page; }
+      h2 { margin-top: 0; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Geocaching: material do professor</h1>
+  <p class="nota">Esta página tem as soluções. Não a abras nos tablets dos alunos. Para alterar problemas, locais ou códigos edita <code>dados/caches.js</code>.</p>
+  <p class="acoes"><button type="button" onclick="window.print()">Imprimir tudo</button></p>
+
+  <section>
+    <h2>Cartões para dentro das caches</h2>
+    <p>Recorta e coloca cada cartão na cache correspondente.</p>
+    <div class="cartoes" id="cartoes"></div>
+  </section>
+
+  <section>
+    <h2>Ordem de cada equipa</h2>
+    <p>Cada equipa começa numa cache diferente para não haver filas. Dá a cada equipa o seu número antes de começar.</p>
+    <div id="ordens"></div>
+  </section>
+
+  <section>
+    <h2>Soluções</h2>
+    <div id="solucoes"></div>
+  </section>
+</main>
+
+<script src="dados/caches.js"></script>
+<script src="js/jogo.js"></script>
+<script>
+  (function () {
+    var D = window.JOGO;
+    var caches = D.caches;
+
+    function el(tag, texto, cls) {
+      var n = document.createElement(tag);
+      if (texto !== undefined) n.textContent = texto;
+      if (cls) n.className = cls;
+      return n;
+    }
+    function resposta(r) { return Array.isArray(r) ? r.join(' ou ') : String(r); }
+
+    var cartoes = document.getElementById('cartoes');
+    caches.forEach(function (c) {
+      var d = el('div', undefined, 'cartao-cache');
+      d.appendChild(el('div', D.titulo + ' · ' + c.nome, 'titulo'));
+      d.appendChild(el('div', c.codigo, 'codigo'));
+      d.appendChild(el('div', 'Escrevam este código no tablet. Deixem o cartão na cache!', 'rodape'));
+      cartoes.appendChild(d);
+    });
+
+    var t = el('table');
+    var cab = el('tr');
+    cab.appendChild(el('th', 'Equipa'));
+    caches.forEach(function (_, i) { cab.appendChild(el('th', (i + 1) + 'ª')); });
+    t.appendChild(cab);
+    caches.forEach(function (_, i) {
+      var tr = el('tr');
+      tr.appendChild(el('th', String(i + 1)));
+      Geocaching.ordemParaEquipa(i + 1).forEach(function (k) {
+        tr.appendChild(el('td', caches[k].nome + ' (' + (caches[k].local.coordenada || '') + ')'));
+      });
+      t.appendChild(tr);
+    });
+    document.getElementById('ordens').appendChild(t);
+    document.getElementById('ordens').appendChild(el('p',
+      'Com mais de ' + caches.length + ' equipas, a ordem repete: a equipa ' + (caches.length + 1) +
+      ' faz o mesmo percurso que a equipa 1, e assim por diante.'));
+
+    var s = el('table');
+    var h = el('tr');
+    ['Cache', 'Local', 'Código', '2º ciclo', 'Resp.', '3º ciclo', 'Resp.'].forEach(function (x) { h.appendChild(el('th', x)); });
+    s.appendChild(h);
+    caches.forEach(function (c) {
+      var tr = el('tr');
+      tr.appendChild(el('td', c.nome));
+      tr.appendChild(el('td', (c.local.coordenada ? c.local.coordenada + ': ' : '') + (c.local.texto || '')));
+      tr.appendChild(el('td', c.codigo));
+      ['2', '3'].forEach(function (ci) {
+        var p = c.problemas[ci] || {};
+        tr.appendChild(el('td', p.enunciado || '—', 'enunciado'));
+        tr.appendChild(el('td', p.resposta !== undefined ? resposta(p.resposta) : '—'));
+      });
+      s.appendChild(tr);
+    });
+    document.getElementById('solucoes').appendChild(s);
+    document.getElementById('solucoes').appendChild(el('p', 'PIN do professor nos tablets: ' + D.pinProfessor));
+  })();
+</script>
+</body>
+</html>
