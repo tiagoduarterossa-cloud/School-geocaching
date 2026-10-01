@@ -7,7 +7,8 @@
 //
 // TURMAS: cada turma faz um percurso pelas caches da sua lista ("caches", pelo
 // número da cache). Turmas que joguem à mesma hora devem ter caches diferentes.
-// "grupos" é o número de grupos (e de tablets) da turma; 2 = turma a meio. Cada grupo recebe um
+// "grupos" é o número de grupos (e de tablets) da turma; 2 = turma a meio.
+// "sessao" (opcional) é o dia e a hora em que a turma joga; aparece no convite. Cada grupo recebe um
 // código de entrada, gerado automaticamente e impresso em professor.html.
 //
 // PROBLEMAS: para cada ano, um problema por cache do percurso (o problema 1
@@ -30,6 +31,20 @@ window.JOGO = {
   // Tempo de jogo de cada grupo, em minutos. Quando acaba, o tablet mostra o
   // resultado. 0 = sem limite.
   tempoLimiteMinutos: 60,
+  // Sair da página a meio de um problema (para usar calculadora ou IA) dá
+  // esta penalização. Saídas mais curtas do que a tolerância não contam.
+  penalizacaoSaidaSegundos: 300,
+  toleranciaSaidaSegundos: 3,
+  // PIN da página do dono (dono.html). Diferente do PIN dos professores.
+  pinDono: '13579',
+  // Ligação em direto à página do dono. Ver README, secção "Acompanhar em direto".
+  // url: endereço da Firebase Realtime Database; evento: um nome difícil de adivinhar.
+  // Semana do evento: o ecrã dos quadros (quadro.html) faz a contagem decrescente até "inicio".
+  semana: { nome: 'Semana das Ciências', inicio: '2026-11-16T08:15' },
+  sincronizacao: {
+    url: '',
+    evento: 'semana-ciencias-2026'
+  },
   // Imagem opcional com o mapa da escola dividido em quadrícula (ex.: 'dados/mapa.jpg').
   mapa: '',
   mensagemFinal: 'Encontraram todas as caches! Voltem à base e mostrem este ecrã ao professor.',
@@ -53,16 +68,16 @@ window.JOGO = {
   ],
 
   turmas: [
-    { turma: '5ºA', ano: 5, grupos: 2, caches: [1, 2, 3, 4, 5] },
-    { turma: '5ºB', ano: 5, grupos: 2, caches: [6, 7, 8, 9, 10] },
-    { turma: '6ºA', ano: 6, grupos: 2, caches: [11, 12, 13, 14, 15] },
-    { turma: '6ºB', ano: 6, grupos: 2, caches: [1, 2, 3, 4, 5] },
-    { turma: '7ºA', ano: 7, grupos: 2, caches: [6, 7, 8, 9, 10] },
-    { turma: '7ºB', ano: 7, grupos: 2, caches: [11, 12, 13, 14, 15] },
-    { turma: '8ºA', ano: 8, grupos: 2, caches: [1, 3, 5, 7, 9] },
-    { turma: '8ºB', ano: 8, grupos: 2, caches: [2, 4, 6, 8, 10] },
-    { turma: '9ºA', ano: 9, grupos: 2, caches: [11, 13, 15, 2, 4] },
-    { turma: '9ºB', ano: 9, grupos: 2, caches: [12, 14, 1, 3, 5] }
+    { turma: '5ºA', ano: 5, grupos: 2, caches: [1, 2, 3, 4, 5], sessao: { dia: '2026-11-16', hora: '10:15' } },
+    { turma: '5ºB', ano: 5, grupos: 2, caches: [6, 7, 8, 9, 10], sessao: { dia: '2026-11-16', hora: '11:55' } },
+    { turma: '6ºA', ano: 6, grupos: 2, caches: [11, 12, 13, 14, 15], sessao: { dia: '2026-11-17', hora: '08:15' } },
+    { turma: '6ºB', ano: 6, grupos: 2, caches: [1, 2, 3, 4, 5], sessao: { dia: '2026-11-17', hora: '10:15' } },
+    { turma: '7ºA', ano: 7, grupos: 2, caches: [6, 7, 8, 9, 10], sessao: { dia: '2026-11-18', hora: '08:15' } },
+    { turma: '7ºB', ano: 7, grupos: 2, caches: [11, 12, 13, 14, 15], sessao: { dia: '2026-11-18', hora: '10:15' } },
+    { turma: '8ºA', ano: 8, grupos: 2, caches: [1, 3, 5, 7, 9], sessao: { dia: '2026-11-19', hora: '10:15' } },
+    { turma: '8ºB', ano: 8, grupos: 2, caches: [2, 4, 6, 8, 10], sessao: { dia: '2026-11-19', hora: '11:55' } },
+    { turma: '9ºA', ano: 9, grupos: 2, caches: [11, 13, 15, 2, 4], sessao: { dia: '2026-11-20', hora: '08:15' } },
+    { turma: '9ºB', ano: 9, grupos: 2, caches: [12, 14, 1, 3, 5], sessao: { dia: '2026-11-20', hora: '10:15' } }
   ],
 
   problemas: {

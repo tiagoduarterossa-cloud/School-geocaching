@@ -6,6 +6,8 @@
   var app = document.getElementById('app');
   var estado = carregar();
   var temporizador = null;
+  var escutaControlo = null;
+  var wakeLock = null;
 
   // ---------- armazenamento ----------
 
@@ -22,12 +24,14 @@
     try {
       localStorage.setItem(CHAVE, JSON.stringify(estado));
     } catch (e) { /* sem armazenamento: o jogo continua, só não sobrevive a um recarregar */ }
+    publicar();
   }
 
   function apagar() {
     try {
       localStorage.removeItem(CHAVE);
     } catch (e) { /* ignorar */ }
+    if (escutaControlo) { escutaControlo.close(); escutaControlo = null; }
     estado = null;
   }
 
@@ -188,8 +192,87 @@
     return Date.now();
   }
 
+  function controlo() {
+    return (estado && estado.controlo) || {};
+  }
+
+  function saidasPenalizadas(saidas) {
+    return (saidas || []).filter(function (s) { return s.penalizada; }).length;
+  }
+
+  // A mesma conta é usada no tablet e na página do dono.
+  function penalizacao(r, ctrl) {
+    return (r.dicas || 0) * DADOS.penalizacaoDicaSegundos +
+      (r.erros || 0) * DADOS.penalizacaoErroSegundos +
+      saidasPenalizadas(r.saidas) * (DADOS.penalizacaoSaidaSegundos || 0) +
+      ((ctrl && ctrl.extraSegundos) || 0);
+  }
+
   function segundosPenalizacao() {
-    return estado.dicas * DADOS.penalizacaoDicaSegundos + estado.erros * DADOS.penalizacaoErroSegundos;
+    return penalizacao(estado, controlo());
+  }
+
+  // ---------- ligação ao dono ----------
+
+  function publicar() {
+    if (!window.Sync || !Sync.ativo || !estado || !estado.codigo) return;
+    Sync.guardar('grupos/' + estado.codigo, {
+      turma: estado.turma,
+      grupo: estado.grupo,
+      ano: estado.ano,
+      fase: estado.fase,
+      passo: estado.passo,
+      total: estado.passos.length,
+      inicio: estado.inicio,
+      fim: estado.fim || null,
+      esgotado: !!estado.esgotado,
+      erros: estado.erros,
+      dicas: estado.dicas,
+      saidas: estado.saidas || [],
+      foraDaApp: estado.saidaInicio || null,
+      limite: limiteSegundos(),
+      atualizado: agora()
+    });
+  }
+
+  function ouvirControlo() {
+    if (!window.Sync || !Sync.ativo || !estado || !estado.codigo || escutaControlo) return;
+    escutaControlo = Sync.ouvir('controlo/' + estado.codigo, function (v) {
+      if (!estado) return;
+      var novo = v || {};
+      if (JSON.stringify(novo) === JSON.stringify(estado.controlo || {})) return;
+      estado.controlo = novo;
+      guardar();
+      desenhar();
+    });
+  }
+
+  // ---------- saídas da app ----------
+
+  // Só conta como saída durante um problema: é aí que dava jeito uma
+  // calculadora ou uma IA. A andar à procura da cache o ecrã pode apagar-se
+  // sem penalização.
+  function aResolver() {
+    return estado && !estado.fim && estado.fase === 'problema' && !controlo().desclassificado;
+  }
+
+  function registarRegresso() {
+    if (!estado || !estado.saidaInicio) return;
+    var inicio = estado.saidaInicio;
+    var duracao = agora() - inicio;
+    delete estado.saidaInicio;
+    var penalizada = duracao >= (DADOS.toleranciaSaidaSegundos || 0) * 1000;
+    estado.saidas = estado.saidas || [];
+    estado.saidas.push({ inicio: inicio, duracao: Math.round(duracao / 1000), penalizada: penalizada });
+    if (penalizada) estado.avisoSaida = true;
+    guardar();
+  }
+
+  function manterEcraLigado() {
+    try {
+      if (!navigator.wakeLock || !estado || estado.fim || document.hidden) return;
+      navigator.wakeLock.request('screen').then(function (w) { wakeLock = w; }).catch(function () {});
+    } catch (e) { /* sem suporte */ }
   }
 
   function formatarTempo(seg) {
@@ -223,6 +306,7 @@
 
   function comecar(g) {
     estado = {
+      codigo: g.codigo,
       equipa: nomeEquipa(g),
       turma: g.turma,
       grupo: g.grupo,
@@ -236,9 +320,12 @@
       errosSeguidos: 0,
       dicas: 0,
       dicaVista: false,
-      bloqueadoAte: 0
+      bloqueadoAte: 0,
+      saidas: []
     };
     guardar();
+    ouvirControlo();
+    manterEcraLigado();
     desenhar();
   }
 
@@ -293,9 +380,47 @@
     if (!estado) return ecraInicio();
     verificarLimite();
     app.appendChild(cabecalho());
+    if (controlo().desclassificado) return ecraDesclassificado();
     if (estado.fase === 'problema') ecraProblema();
     else if (estado.fase === 'procurar') ecraProcurar();
     else ecraFim();
+    avisos();
+  }
+
+  function ecraDesclassificado() {
+    refsBloqueio = null;
+    app.appendChild(el('main', { class: 'cartao fim' }, [
+      el('p', { class: 'trofeu', texto: '⛔' }),
+      el('h2', { texto: 'Grupo desclassificado' }),
+      controlo().motivo ? el('p', { class: 'motivo', texto: controlo().motivo }) : null,
+      el('p', { texto: 'Desliguem o tablet do jogo e dirijam-se ao professor.' })
+    ]));
+  }
+
+  function janela(titulo, texto, aoFechar, cls) {
+    var fundo = el('div', { class: 'modal-fundo' });
+    var botao = el('button', { type: 'button', class: 'principal', texto: 'Percebido', onclick: function () { fundo.remove(); aoFechar(); } });
+    fundo.appendChild(el('div', { class: 'modal ' + (cls || ''), role: 'alertdialog', 'aria-modal': 'true' }, [
+      el('h2', { texto: titulo }),
+      el('p', { class: 'modal-texto', texto: texto }),
+      botao
+    ]));
+    document.body.appendChild(fundo);
+    botao.focus();
+  }
+
+  // Avisos que aparecem por cima do jogo: penalização por saída e mensagens do organizador.
+  function avisos() {
+    if (document.querySelector('.modal-fundo')) return;
+    var msg = controlo().mensagem;
+    if (estado.avisoSaida) {
+      janela('Saíram da app',
+        'Saíram desta página a meio de um problema. Isso conta como usar calculadora ou outra ajuda: +' +
+        Math.round((DADOS.penalizacaoSaidaSegundos || 0) / 60) + ' minutos no tempo final.',
+        function () { estado.avisoSaida = false; guardar(); }, 'modal-alerta');
+    } else if (msg && msg.id && msg.id !== estado.mensagemVista) {
+      janela('Mensagem do organizador', msg.texto, function () { estado.mensagemVista = msg.id; guardar(); });
+    }
   }
 
   function cabecalho() {
@@ -348,6 +473,11 @@
         el('p', { class: 'etapa', texto: 'Vocês são' }),
         el('p', { class: 'quem', texto: eq.turma }),
         el('p', { class: 'quem-grupo', texto: 'Grupo ' + eq.grupo }),
+        el('ul', { class: 'regras' }, [
+          el('li', { texto: 'Têm ' + (DADOS.tempoLimiteMinutos || 60) + ' minutos.' }),
+          el('li', { texto: 'Nada de calculadoras, telemóveis ou IA. Contas em papel.' }),
+          el('li', { texto: 'Sair desta página a meio de um problema dá +' + Math.round((DADOS.penalizacaoSaidaSegundos || 0) / 60) + ' minutos.' })
+        ]),
         el('p', { class: 'instrucao', texto: 'Está certo? Se não, chamem o professor.' }),
         el('div', { class: 'opcoes' }, [
           el('button', { type: 'button', class: 'secundario', onclick: function () { zona.innerHTML = ''; zona.appendChild(form); codigo.value = ''; codigo.focus(); }, texto: 'Voltar' }),
@@ -538,6 +668,10 @@
         linha('Tempo', formatarTempo(tempo)),
         linha('Respostas erradas', estado.erros + ' (+' + formatarTempo(estado.erros * DADOS.penalizacaoErroSegundos) + ')'),
         linha('Dicas', estado.dicas + ' (+' + formatarTempo(estado.dicas * DADOS.penalizacaoDicaSegundos) + ')'),
+        saidasPenalizadas(estado.saidas) ? linha('Saídas da app', saidasPenalizadas(estado.saidas) + ' (+' +
+          formatarTempo(saidasPenalizadas(estado.saidas) * (DADOS.penalizacaoSaidaSegundos || 0)) + ')') : null,
+        controlo().extraSegundos ? linha('Ajuste do organizador', (controlo().extraSegundos > 0 ? '+' : '−') +
+          formatarTempo(Math.abs(controlo().extraSegundos))) : null,
         linha('Tempo final', formatarTempo(tempo + pen), true)
       ])
     ]));
@@ -606,10 +740,28 @@
     listaGrupos: listaGrupos,
     percursoGrupo: percursoGrupo,
     versaoProblema: versaoProblema,
-    codigosCache: codigosCache
+    codigosCache: codigosCache,
+    penalizacao: penalizacao
   };
 
-  if (app) desenhar();
+  if (app) {
+    document.addEventListener('visibilitychange', function () {
+      if (!estado) return;
+      if (document.hidden) {
+        if (aResolver()) { estado.saidaInicio = agora(); guardar(); }
+      } else {
+        registarRegresso();
+        manterEcraLigado();
+        desenhar();
+      }
+    });
+    // Se o tablet fechou a página enquanto estavam fora, conta na mesma.
+    registarRegresso();
+    ouvirControlo();
+    manterEcraLigado();
+    setInterval(publicar, 30000);
+    desenhar();
+  }
 
   if ('serviceWorker' in navigator && location.protocol !== 'file:') {
     navigator.serviceWorker.register('sw.js').catch(function () {});

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mensagem Escondida</title>
+  <style>
+    /* Ecrã para projetar no quadro de cada sala. Fundo escuro: lê-se melhor num projetor. */
+    :root {
+      --fundo: #0d1714;
+      --linha: rgba(143, 214, 194, .09);
+      --texto: #e9f3ef;
+      --suave: #8fb3a8;
+      --sinal: #f2b134;
+      color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--fundo); color: var(--texto); font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; overflow: hidden; }
+    .grelha {
+      position: fixed; inset: 0;
+      background-image: linear-gradient(var(--linha) 1px, transparent 1px), linear-gradient(90deg, var(--linha) 1px, transparent 1px);
+      background-size: 8vmin 8vmin;
+    }
+    .ponto {
+      position: fixed; width: 2.4vmin; height: 2.4vmin; border-radius: 50%;
+      background: var(--sinal); box-shadow: 0 0 0 0 rgba(242, 177, 52, .6);
+      animation: pulsar 2s infinite; transition: left 1.2s ease, top 1.2s ease;
+    }
+    @keyframes pulsar { 70% { box-shadow: 0 0 0 4vmin rgba(242, 177, 52, 0); } 100% { box-shadow: 0 0 0 0 rgba(242, 177, 52, 0); } }
+    main {
+      position: relative; height: 100%;
+      display: flex; flex-direction: column; justify-content: center;
+      padding-block: 6vh; padding-inline: max(16px, 8vw); gap: 3vh;
+    }
+    .etiqueta { font-size: clamp(14px, 2.2vmin, 28px); letter-spacing: .3em; text-transform: uppercase; color: var(--sinal); font-weight: 700; margin: 0; }
+    h1 { font-size: clamp(32px, 9vmin, 120px); line-height: 1.02; margin: 0; max-width: 14ch; text-wrap: balance; font-weight: 800; }
+    .sub { font-size: clamp(18px, 3.4vmin, 44px); color: var(--suave); margin: 0; max-width: 30ch; }
+    .contagem { display: flex; gap: 4vmin; margin-top: 2vh; flex-wrap: wrap; }
+    .contagem div { display: flex; flex-direction: column; }
+    .contagem strong { font-size: clamp(32px, 8vmin, 110px); font-variant-numeric: tabular-nums; line-height: 1; font-weight: 800; }
+    .contagem span { font-size: clamp(12px, 1.8vmin, 22px); color: var(--suave); text-transform: uppercase; letter-spacing: .15em; }
+    .coordenadas { position: fixed; right: 16px; bottom: 12px; font: 600 clamp(11px, 1.6vmin, 18px) ui-monospace, Menlo, Consolas, monospace; color: var(--suave); }
+    @media (prefers-reduced-motion: reduce) { .ponto { animation: none; transition: none; } }
+  </style>
+</head>
+<body>
+  <div class="grelha" aria-hidden="true"></div>
+  <div class="ponto" id="ponto" aria-hidden="true"></div>
+  <main>
+    <p class="etiqueta" id="etiqueta">Semana das Ciências</p>
+    <h1 id="titulo">Há uma mensagem escondida nesta sala.</h1>
+    <p class="sub">Encontrem-na. Não contem às outras turmas.</p>
+    <div class="contagem" id="contagem" aria-live="off"></div>
+  </main>
+  <div class="coordenadas" id="coordenadas" aria-hidden="true"></div>
+
+  <script src="dados/caches.js"></script>
+  <script>
+    (function () {
+      var D = window.JOGO || {};
+      var semana = D.semana || {};
+      var turma = new URLSearchParams(location.search).get('turma');
+      if (semana.nome) document.getElementById('etiqueta').textContent = semana.nome + (turma ? ' · ' + turma : '');
+      else if (turma) document.getElementById('etiqueta').textContent = turma;
+
+      var alvo = semana.inicio ? new Date(semana.inicio).getTime() : NaN;
+      var cont = document.getElementById('contagem');
+      function bloco(n, rotulo) {
+        var d = document.createElement('div');
+        var s = document.createElement('strong'); s.textContent = n;
+        var r = document.createElement('span'); r.textContent = rotulo;
+        d.appendChild(s); d.appendChild(r); return d;
+      }
+      function contar() {
+        cont.innerHTML = '';
+        if (isNaN(alvo)) return;
+        var f = Math.max(0, Math.floor((alvo - Date.now()) / 1000));
+        if (!f) { cont.appendChild(bloco('Já', 'começou')); return; }
+        var d = Math.floor(f / 86400), h = Math.floor(f % 86400 / 3600), m = Math.floor(f % 3600 / 60), s = f % 60;
+        if (d) cont.appendChild(bloco(d, d === 1 ? 'dia' : 'dias'));
+        cont.appendChild(bloco(String(h).padStart(2, '0'), 'horas'));
+        cont.appendChild(bloco(String(m).padStart(2, '0'), 'min'));
+        cont.appendChild(bloco(String(s).padStart(2, '0'), 'seg'));
+      }
+      contar(); setInterval(contar, 1000);
+
+      // O ponto salta pela grelha como um sinal de GPS, com coordenadas no canto.
+      var ponto = document.getElementById('ponto');
+      var coords = document.getElementById('coordenadas');
+      function mover() {
+        var x = 10 + Math.random() * 80, y = 10 + Math.random() * 80;
+        ponto.style.left = x + 'vw'; ponto.style.top = y + 'vh';
+        coords.textContent = String.fromCharCode(65 + Math.floor(x / 20)) + (1 + Math.floor(y / 20)) +
+          '  ·  40.' + String(Math.floor(Math.random() * 1e5)).padStart(5, '0') + '° N';
+      }
+      mover(); setInterval(mover, 4000);
+
+      document.addEventListener('keydown', function (e) {
+        if ((e.key === 'f' || e.key === 'F') && document.documentElement.requestFullscreen) {
+          document.documentElement.requestFullscreen().catch(function () {});
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

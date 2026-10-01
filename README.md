@@ -41,6 +41,55 @@ Pensado para uma semana inteira, com uma turma a jogar de cada vez:
 
 Os códigos são gerados automaticamente a partir dos nomes das turmas. Se mudares o nome de uma turma ou a ordem das turmas depois de imprimir, volta a imprimir os cartões e os papéis.
 
+## Calculadoras e IA
+
+O tablet deteta quando o grupo sai da página do jogo a meio de um problema (para abrir a calculadora, o ChatGPT, outra app). Quando voltam, aparece um aviso e o tempo final leva +5 minutos. Saídas com menos de 3 segundos não contam, e durante a procura da cache o ecrã pode apagar-se sem penalização. Os valores estão em `dados/caches.js` (`penalizacaoSaidaSegundos`, `toleranciaSaidaSegundos`).
+
+O que a app não consegue ver: um telemóvel no bolso, uma calculadora a sério, ou uma app em ecrã dividido. Para o ecrã dividido, a solução é bloquear o tablet no browser antes do evento (o professor de informática faz isto em cada tablet):
+
+- iPad: Definições → Acessibilidade → Acesso guiado. Abre o jogo e carrega três vezes no botão lateral.
+- Android: Definições → Segurança → Fixação de ecrã (ou "Afixar aplicação"). Abre o jogo, vai às apps recentes e escolhe "Fixar".
+
+Com o tablet bloqueado, os alunos não conseguem sair do jogo, e a deteção fica só como reserva.
+
+## Área do dono
+
+`dono.html`, protegida pelo `pinDono` (diferente do PIN dos professores). Tem três separadores:
+
+- **Em direto**: cada grupo com estado (a jogar, fora da app agora, terminou, desclassificado, sem ligação), caches encontradas, tempo que falta, erros, dicas, saídas da app e penalização. Ao lado, a lista de todas as saídas da app com hora e duração. Em "Gerir" podes dar +5 min ou anular 5 min, mandar uma mensagem que aparece no tablet do grupo, e desclassificar o grupo (com motivo) ou readmiti-lo.
+- **Classificação**: mais caches primeiro, depois o menor tempo com penalizações. Pode filtrar por ano.
+- **Códigos**: todos os códigos de entrada e os códigos dentro de cada cache, por turma.
+
+O direto precisa da ligação descrita a seguir. Sem ela, o separador dos códigos funciona na mesma.
+
+## Acompanhar em direto (configurar uma vez)
+
+Os tablets enviam o estado para uma base de dados Firebase (gratuita, da Google). Demora uns 10 minutos:
+
+1. Em https://console.firebase.google.com cria um projeto (não precisa do Google Analytics).
+2. No menu, abre **Realtime Database** e carrega em **Criar base de dados**. Escolhe a localização na Europa e começa no **modo bloqueado**.
+3. No separador **Regras**, substitui tudo por isto (troca `semana-ciencias-2026` por um nome difícil de adivinhar) e publica:
+
+   ```json
+   {
+     "rules": {
+       "semana-ciencias-2026": { ".read": true, ".write": true }
+     }
+   }
+   ```
+
+4. Copia o endereço da base de dados (algo como `https://nome-default-rtdb.europe-west1.firebasedatabase.app`) para `sincronizacao.url` em `dados/caches.js`, e põe o mesmo nome do passo 3 em `sincronizacao.evento`.
+5. Abre `dono.html`: o indicador no canto deve dizer "Ligado".
+
+Na base de dados só fica a turma, o número do grupo e o progresso no jogo. Não há nomes de alunos. Quem souber o endereço e o nome do evento consegue ler e escrever lá, por isso, no fim da semana, apaga o projeto ou muda as regras para `false`.
+
+Se a rede falhar, o jogo continua no tablet. A página do dono mostra "sem ligação" nesse grupo, e o estado é enviado quando a rede voltar.
+
+## Convites e mensagem nos quadros
+
+- `convites.html`: um convite por turma para imprimir e esconder na sala. Tem o dia e a hora da sessão da turma escritos como contas (vêm de `sessao` em cada turma). Sem `sessao`, ficam linhas em branco para preencher à mão.
+- `quadro.html`: ecrã para projetar no quadro de cada sala ("Há uma mensagem escondida nesta sala"), com contagem decrescente até ao início da semana (`semana.inicio`). Para mostrar a turma, acrescenta ao endereço `?turma=7ºA`. A tecla F põe em ecrã inteiro.
+
 ## Botão do professor
 
 O ⚙ no canto do ecrã pede o PIN (`pinProfessor` em `dados/caches.js`, por defeito `2468`). Com ele podes:
@@ -61,4 +110,5 @@ Também funciona a abrir o `index.html` diretamente, mas assim não fica dispon�
 
 - As respostas estão no código da página. Um aluno com muito jeito e um computador conseguia encontrá-las. Num tablet, aos 10 a 15 anos, o risco é baixo.
 - Um aluno que fotografe o cartão de uma cache fica com os códigos de todas as turmas que a usam. Como os problemas mudam de turma para turma, continua a ter de os resolver; só poupa a caminhada.
-- Não há ranking em tempo real entre tablets. O professor regista o tempo final que aparece em cada tablet na folha de resultados.
+- Sem a ligação Firebase, não há direto: o professor regista o resultado de cada tablet na folha de resultados.
+- **Tudo o que está no site é público**, incluindo `dados/caches.js` (com as respostas), `professor.html` e `dono.html`. Os PIN só impedem que se abra a página por engano, não protegem os dados. Um aluno que adivinhe o endereço e saiba ler código vê as respostas. Não divulgues o endereço do site para além dos tablets.

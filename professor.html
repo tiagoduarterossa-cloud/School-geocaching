@@ -145,12 +145,13 @@
 
     // ---------- plano ----------
     document.getElementById('plano').appendChild(tabela(
-      ['Turma', 'Ano', 'Grupos', 'Caches', 'Partilha caches com'],
+      ['Turma', 'Ano', 'Sessão', 'Grupos', 'Caches', 'Partilha caches com'],
       D.turmas.map(function (t) {
         var partilha = D.turmas.filter(function (o) {
           return o !== t && o.caches.some(function (c) { return t.caches.indexOf(c) >= 0; });
         }).map(function (o) { return o.turma; });
-        return [t.turma, t.ano + 'º', String(t.grupos || 1), t.caches.join(', '), partilha.join(', ') || '—'];
+        var sessao = t.sessao && t.sessao.dia ? t.sessao.dia.split('-').reverse().join('/') + ' ' + (t.sessao.hora || '') : '—';
+        return [t.turma, t.ano + 'º', sessao, String(t.grupos || 1), t.caches.join(', '), partilha.join(', ') || '—'];
       })
     ));
 

@@ -165,6 +165,11 @@ form.cartao .principal { margin-top: 16px; font-size: 1.2rem; }
 .confirmar .quem-grupo { font-size: 1.5rem; font-weight: 700; margin: 0; }
 .confirmar .opcoes { margin-top: 12px; }
 
+.regras { text-align: left; margin: 12px auto 0; padding-left: 1.2em; color: var(--suave); font-size: .9rem; max-width: 30em; }
+.motivo { font-weight: 700; color: var(--erro); }
+.modal-alerta h2 { color: var(--erro); }
+.modal-texto { margin: 0; }
+
 .fim { text-align: center; }
 .trofeu { font-size: 4rem; margin: 0; }
 .resumo { margin: 20px auto 0; border-collapse: collapse; text-align: left; }

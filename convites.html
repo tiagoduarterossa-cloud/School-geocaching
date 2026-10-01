@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Convites Secretos</title>
+  <style>
+    /* Um convite por turma, dois por folha A4, para esconder na sala. */
+    :root { --tinta: #1b2a26; --suave: #5b6d68; --verde: #1f6f5c; --ouro: #b07d12; --papel: #fffdf6; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding-block: 16px; padding-inline: 16px; background: #e9eeec; color: var(--tinta); font-family: Georgia, "Times New Roman", serif; }
+    .barra { max-width: 760px; margin: 0 auto 16px; font-family: system-ui, sans-serif; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+    .barra button { font: inherit; padding: 10px 16px; border: 0; border-radius: 8px; background: var(--verde); color: #fff; cursor: pointer; }
+    .convite {
+      max-width: 760px; margin: 0 auto 16px; background: var(--papel);
+      border: 2px solid var(--tinta); padding: 28px 32px; position: relative; break-inside: avoid;
+    }
+    .convite::before { content: ""; position: absolute; inset: 6px; border: 1px dashed var(--suave); pointer-events: none; }
+    .selo { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; letter-spacing: .25em; text-transform: uppercase; color: var(--ouro); margin: 0; }
+    h2 { font-size: 30px; margin: 6px 0 4px; }
+    .turma { font-family: system-ui, sans-serif; font-weight: 800; color: var(--verde); font-size: 18px; margin: 0 0 14px; }
+    p { margin: 0 0 10px; line-height: 1.45; font-size: 16px; }
+    .enigma { border-top: 1px solid var(--suave); border-bottom: 1px solid var(--suave); padding: 10px 0; margin: 14px 0; }
+    .enigma p { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 15px; margin: 4px 0; }
+    .regras { font-family: system-ui, sans-serif; font-size: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; margin: 10px 0; padding: 0; list-style: none; }
+    .rodape { font-family: system-ui, sans-serif; font-size: 12px; color: var(--suave); margin: 12px 0 0; }
+    @media (max-width: 600px) { .regras { grid-template-columns: 1fr; } .convite { padding: 20px; } }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .barra { display: none; }
+      .convite { margin: 0 0 8mm; max-width: none; }
+      .convite:nth-of-type(2n) { break-after: page; }
+    }
+  </style>
+</head>
+<body>
+  <div class="barra">
+    <button type="button" onclick="window.print()">Imprimir</button>
+    <span>Um convite por turma. Esconde cada um na sala da turma antes de a mensagem aparecer no quadro.</span>
+  </div>
+  <div id="convites"></div>
+
+  <script src="dados/caches.js"></script>
+  <script>
+    (function () {
+      var D = window.JOGO;
+      var MESES = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
+      var DIAS = ['domingo', 'segunda-feira', 'terça-feira', 'quarta-feira', 'quinta-feira', 'sexta-feira', 'sábado'];
+
+      function hash(t) {
+        var h = 2166136261;
+        for (var i = 0; i < t.length; i++) { h ^= t.charCodeAt(i); h = Math.imul(h, 16777619); }
+        return h >>> 0;
+      }
+      // Escreve um número como conta (ex.: 18 → "4 × 4 + 2"), diferente de turma para turma.
+      function conta(n, semente) {
+        if (n < 4) return String(n);
+        var a = 2 + hash(semente) % 4;
+        var b = Math.floor(n / a), c = n - a * b;
+        return a + ' × ' + b + (c ? ' + ' + c : '');
+      }
+      function el(tag, texto, cls) {
+        var n = document.createElement(tag);
+        if (texto) n.textContent = texto;
+        if (cls) n.className = cls;
+        return n;
+      }
+
+      var zona = document.getElementById('convites');
+      D.turmas.forEach(function (t) {
+        var c = el('article', null, 'convite');
+        c.appendChild(el('p', 'Missão secreta · ' + ((D.semana && D.semana.nome) || ''), 'selo'));
+        c.appendChild(el('h2', 'Encontraram-me.'));
+        c.appendChild(el('p', 'Convite para a turma ' + t.turma, 'turma'));
+        c.appendChild(el('p', 'Este é o primeiro desafio, e já o resolveram. A vossa turma foi escolhida para o ' + D.titulo +
+          ': caches escondidas pela escola, problemas para resolver e uma hora contra o relógio.'));
+
+        var enigma = el('div', null, 'enigma');
+        var s = t.sessao || {};
+        if (s.dia) {
+          var d = new Date(s.dia + 'T12:00:00');
+          var hm = (s.hora || '').split(':').map(Number);
+          enigma.appendChild(el('p', 'Quando? Façam as contas.'));
+          enigma.appendChild(el('p', 'Dia:  (' + conta(d.getDate(), t.turma + 'd') + ') de ' + MESES[d.getMonth()] + ', ' + DIAS[d.getDay()]));
+          if (hm.length === 2 && !isNaN(hm[0])) {
+            enigma.appendChild(el('p', 'Hora: (' + conta(hm[0], t.turma + 'h') + ') h ' + (hm[1] ? '(' + conta(hm[1], t.turma + 'm') + ') min' : 'em ponto')));
+          }
+        } else {
+          enigma.appendChild(el('p', 'Dia:  ____________________'));
+          enigma.appendChild(el('p', 'Hora: ____________________'));
+        }
+        c.appendChild(enigma);
+
+        var regras = el('ul', null, 'regras');
+        ['Tragam: lápis, borracha e papel', 'Deixem em casa: a calculadora', 'A IA também não vem',
+          (t.grupos || 1) === 2 ? 'Grupos: a turma dividida a meio' : 'Grupos: ' + (t.grupos || 1)]
+          .forEach(function (r) { regras.appendChild(el('li', '· ' + r)); });
+        c.appendChild(regras);
+        c.appendChild(el('p', 'Não mostrem este papel às outras turmas. Elas ainda o estão a procurar.', 'rodape'));
+        zona.appendChild(c);
+      });
+    })();
+  </script>
+</body>
+</html>
