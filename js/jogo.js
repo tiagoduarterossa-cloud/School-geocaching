@@ -2,7 +2,7 @@
   'use strict';
 
   var DADOS = window.JOGO;
-  var CHAVE = 'geocaching-escola-v1';
+  var CHAVE = 'geocaching-escola-v2';
   var app = document.getElementById('app');
   var estado = carregar();
   var temporizador = null;
@@ -72,11 +72,27 @@
 
   // ---------- jogo ----------
 
-  function ordemParaEquipa(numero) {
+  // Cada equipa começa numa cache diferente (pela posição na lista de equipas,
+  // ou pelo campo "inicio" se o professor o definir) e segue em roda.
+  function ordemParaEquipa(indice) {
     var n = DADOS.caches.length;
+    var eq = DADOS.equipas[indice];
+    var inicio = eq && eq.inicio ? eq.inicio - 1 : indice;
     var ordem = [];
-    for (var i = 0; i < n; i++) ordem.push((numero - 1 + i) % n);
+    for (var i = 0; i < n; i++) ordem.push((inicio + i) % n);
     return ordem;
+  }
+
+  function procurarEquipa(codigo) {
+    var c = normalizar(codigo);
+    for (var i = 0; i < DADOS.equipas.length; i++) {
+      if (normalizar(DADOS.equipas[i].codigo) === c) return i;
+    }
+    return -1;
+  }
+
+  function nomeEquipa(eq) {
+    return eq.turma + (eq.grupo ? ' · Grupo ' + eq.grupo : '');
   }
 
   function cacheAtual() {
@@ -105,12 +121,14 @@
     return (fim - estado.inicio) / 1000;
   }
 
-  function comecar(nome, numero, ciclo) {
+  function comecar(indice) {
+    var eq = DADOS.equipas[indice];
     estado = {
-      equipa: nome,
-      numero: numero,
-      ciclo: ciclo,
-      ordem: ordemParaEquipa(numero),
+      equipa: nomeEquipa(eq),
+      turma: eq.turma,
+      grupo: eq.grupo || '',
+      ano: String(eq.ano),
+      ordem: ordemParaEquipa(indice),
       passo: 0,
       fase: 'problema',
       inicio: agora(),
@@ -195,7 +213,7 @@
     ]);
     return el('header', { class: 'topo' }, [
       el('div', { class: 'topo-linha' }, [
-        el('span', { class: 'equipa', texto: estado.equipa + ' · ' + estado.ciclo + 'º ciclo' }),
+        el('span', { class: 'equipa', texto: estado.equipa + ' · ' + estado.ano + 'º ano' }),
         relogio,
         el('button', { class: 'botao-prof', type: 'button', onclick: painelProfessor, 'aria-label': 'Professor', texto: '⚙' })
       ]),
@@ -205,49 +223,50 @@
   }
 
   function ecraInicio() {
-    var nome = el('input', { id: 'nome', type: 'text', maxlength: '30', autocomplete: 'off', placeholder: 'Ex.: Os Pitagóricos' });
-    var numero = el('input', { id: 'numero', type: 'number', inputmode: 'numeric', min: '1', max: '99', placeholder: 'Dado pelo professor' });
-    var cicloEscolhido = null;
+    var codigo = el('input', {
+      id: 'codigo', type: 'text', class: 'resposta', maxlength: '30', autocomplete: 'off',
+      autocapitalize: 'characters', spellcheck: 'false', placeholder: 'Código do grupo'
+    });
     var erro = el('p', { class: 'erro', role: 'alert' });
+    var zona = el('div');
 
-    function botaoCiclo(c, rotulo) {
-      return el('button', {
-        type: 'button',
-        class: 'opcao',
-        'data-ciclo': c,
-        onclick: function (ev) {
-          cicloEscolhido = c;
-          app.querySelectorAll('.opcao').forEach(function (b) { b.classList.remove('escolhida'); });
-          ev.currentTarget.classList.add('escolhida');
-        },
-        texto: rotulo
-      });
+    function confirmar(indice) {
+      var eq = DADOS.equipas[indice];
+      zona.innerHTML = '';
+      zona.appendChild(el('div', { class: 'cartao confirmar' }, [
+        el('p', { class: 'etapa', texto: 'Vocês são' }),
+        el('p', { class: 'quem', texto: eq.turma }),
+        eq.grupo ? el('p', { class: 'quem-grupo', texto: 'Grupo ' + eq.grupo }) : null,
+        el('p', { class: 'instrucao', texto: 'Está certo? Se não, chamem o professor.' }),
+        el('div', { class: 'opcoes' }, [
+          el('button', { type: 'button', class: 'secundario', onclick: function () { zona.innerHTML = ''; zona.appendChild(form); codigo.value = ''; codigo.focus(); }, texto: 'Voltar' }),
+          el('button', { type: 'button', class: 'principal', onclick: function () { comecar(indice); }, texto: 'Começar' })
+        ])
+      ]));
     }
 
     var form = el('form', {
       class: 'cartao',
       onsubmit: function (ev) {
         ev.preventDefault();
-        var n = parseInt(numero.value, 10);
-        if (!nome.value.trim()) return mostrar(erro, 'Escrevam o nome da equipa.');
-        if (!(n >= 1)) return mostrar(erro, 'Escrevam o número da equipa.');
-        if (!cicloEscolhido) return mostrar(erro, 'Escolham o ciclo.');
-        comecar(nome.value.trim(), n, cicloEscolhido);
+        if (!codigo.value.trim()) return mostrar(erro, 'Escrevam o código que o professor vos deu.');
+        var indice = procurarEquipa(codigo.value);
+        if (indice < 0) { codigo.select(); return mostrar(erro, 'Este código não existe. Confirmem as letras no papel.'); }
+        confirmar(indice);
       }
     }, [
-      el('label', { for: 'nome', texto: 'Nome da equipa' }), nome,
-      el('label', { for: 'numero', texto: 'Número da equipa' }), numero,
-      el('span', { class: 'rotulo', texto: 'Ciclo' }),
-      el('div', { class: 'opcoes' }, [botaoCiclo('2', '2º ciclo'), botaoCiclo('3', '3º ciclo')]),
-      erro,
-      el('button', { type: 'submit', class: 'principal', texto: 'Começar' })
+      el('label', { for: 'codigo', texto: 'Código de entrada' }),
+      el('div', { class: 'linha-resposta' }, [codigo, el('button', { type: 'submit', class: 'principal', texto: 'Entrar' })]),
+      erro
     ]);
+    zona.appendChild(form);
 
     app.appendChild(el('div', { class: 'inicio' }, [
       el('h1', { texto: DADOS.titulo }),
       el('p', { class: 'intro', texto: 'Resolvam cada problema para descobrir onde está escondida a próxima cache. Dentro de cada cache há um código: escrevam-no aqui para continuar.' }),
-      form
+      zona
     ]));
+    codigo.focus();
   }
 
   function mostrar(no, texto) {
@@ -277,7 +296,13 @@
 
   function ecraProblema() {
     var cache = cacheAtual();
-    var p = cache.problemas[estado.ciclo];
+    var p = cache.problemas[estado.ano];
+    if (!p) {
+      app.appendChild(el('main', { class: 'cartao' }, [
+        el('p', { class: 'erro', texto: 'Esta cache não tem problema para o ' + estado.ano + 'º ano. Chamem o professor.' })
+      ]));
+      return;
+    }
     var numerica = paraNumero(normalizar(Array.isArray(p.resposta) ? p.resposta[0] : p.resposta)) !== null;
     var campo = el('input', {
       type: 'text',
@@ -396,7 +421,8 @@
       el('h2', { texto: 'Parabéns, ' + estado.equipa + '!' }),
       el('p', { texto: DADOS.mensagemFinal }),
       el('table', { class: 'resumo' }, [
-        linha('Equipa nº', String(estado.numero)),
+        linha('Turma', estado.turma),
+        estado.grupo ? linha('Grupo', String(estado.grupo)) : null,
         linha('Tempo', formatarTempo(tempo)),
         linha('Respostas erradas', estado.erros + ' (+' + formatarTempo(estado.erros * DADOS.penalizacaoErroSegundos) + ')'),
         linha('Dicas', estado.dicas + ' (+' + formatarTempo(estado.dicas * DADOS.penalizacaoDicaSegundos) + ')'),
@@ -462,7 +488,7 @@
   }
 
   // Exposto para testes e para a página do professor.
-  window.Geocaching = { respostaCerta: respostaCerta, ordemParaEquipa: ordemParaEquipa };
+  window.Geocaching = { respostaCerta: respostaCerta, ordemParaEquipa: ordemParaEquipa, normalizar: normalizar };
 
   if (app) desenhar();
 

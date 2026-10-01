@@ -15,10 +15,15 @@
     th, td { border: 1px solid #cfdcd7; padding: 6px 8px; text-align: left; vertical-align: top; }
     th { background: #eef4f1; }
     .enunciado { white-space: pre-line; }
-    .cartoes { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-    .cartao-cache { border: 3px dashed #1f6f5c; border-radius: 12px; padding: 24px; text-align: center; break-inside: avoid; }
+    .rolar { overflow-x: auto; }
+    .avisos { background: #fbe5e2; color: #8e2a1f; padding: 12px 16px; border-radius: 8px; margin: 16px 0; }
+    .avisos ul { margin: 8px 0 0; }
+    #resultados td { height: 32px; }
+    h3 { margin: 24px 0 8px; }
+    .cartoes { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    .cartao-cache { border: 3px dashed #1f6f5c; border-radius: 12px; padding: 16px; text-align: center; break-inside: avoid; }
     .cartao-cache .titulo { font-size: 18px; color: #5b6d68; }
-    .cartao-cache .codigo { font-size: 48px; font-weight: 800; letter-spacing: .08em; margin: 8px 0; overflow-wrap: anywhere; }
+    .cartao-cache .codigo { font-size: 40px; font-weight: 800; letter-spacing: .08em; margin: 8px 0; overflow-wrap: anywhere; }
     .cartao-cache .rodape { font-size: 14px; color: #5b6d68; }
     @media (max-width: 600px) { .cartoes { grid-template-columns: 1fr; } table { font-size: 13px; } }
     @media print {
@@ -36,20 +41,32 @@
   <p class="acoes"><button type="button" onclick="window.print()">Imprimir tudo</button></p>
 
   <section>
+    <h2>Códigos de entrada</h2>
+    <p>Recorta e entrega um papel a cada grupo no início.</p>
+    <div class="cartoes" id="entradas"></div>
+  </section>
+
+  <section>
     <h2>Cartões para dentro das caches</h2>
     <p>Recorta e coloca cada cartão na cache correspondente.</p>
     <div class="cartoes" id="cartoes"></div>
   </section>
 
   <section>
-    <h2>Ordem de cada equipa</h2>
-    <p>Cada equipa começa numa cache diferente para não haver filas. Dá a cada equipa o seu número antes de começar.</p>
-    <div id="ordens"></div>
+    <h2>Percurso de cada grupo</h2>
+    <p>Cada grupo começa numa cache diferente dos outros grupos da mesma turma.</p>
+    <div class="rolar" id="ordens"></div>
   </section>
 
   <section>
     <h2>Soluções</h2>
-    <div id="solucoes"></div>
+    <div class="rolar" id="solucoes"></div>
+  </section>
+
+  <section>
+    <h2>Registo de resultados</h2>
+    <p>Aponta o tempo final que aparece no tablet de cada grupo.</p>
+    <div class="rolar" id="resultados"></div>
   </section>
 </main>
 
@@ -59,6 +76,9 @@
   (function () {
     var D = window.JOGO;
     var caches = D.caches;
+    var equipas = D.equipas;
+    var anos = [];
+    equipas.forEach(function (e) { var a = String(e.ano); if (anos.indexOf(a) < 0) anos.push(a); });
 
     function el(tag, texto, cls) {
       var n = document.createElement(tag);
@@ -67,6 +87,51 @@
       return n;
     }
     function resposta(r) { return Array.isArray(r) ? r.join(' ou ') : String(r); }
+    function nomeGrupo(e) { return e.turma + (e.grupo ? ' · Grupo ' + e.grupo : ''); }
+    function tabela(cabecalho, linhas) {
+      var t = el('table');
+      var h = el('tr');
+      cabecalho.forEach(function (x) { h.appendChild(el('th', x)); });
+      t.appendChild(h);
+      linhas.forEach(function (l) {
+        var tr = el('tr');
+        l.forEach(function (x, i) { tr.appendChild(el(i === 0 ? 'th' : 'td', x)); });
+        t.appendChild(tr);
+      });
+      return t;
+    }
+
+    // Avisos de configuração
+    var avisos = [];
+    var vistos = {};
+    equipas.forEach(function (e) {
+      var c = Geocaching.normalizar(e.codigo);
+      if (vistos[c]) avisos.push('O código ' + e.codigo + ' está repetido.');
+      vistos[c] = true;
+    });
+    caches.forEach(function (c) {
+      if (vistos[Geocaching.normalizar(c.codigo)]) avisos.push('O código ' + c.codigo + ' é usado como código de entrada e de cache.');
+      anos.forEach(function (a) {
+        if (!c.problemas[a]) avisos.push(c.nome + ' não tem problema para o ' + a + 'º ano.');
+      });
+    });
+    if (avisos.length) {
+      var caixa = el('div', undefined, 'avisos');
+      caixa.appendChild(el('strong', 'Corrige antes do evento:'));
+      var ul = el('ul');
+      avisos.forEach(function (a) { ul.appendChild(el('li', a)); });
+      caixa.appendChild(ul);
+      document.querySelector('main').insertBefore(caixa, document.querySelector('section'));
+    }
+
+    var entradas = document.getElementById('entradas');
+    equipas.forEach(function (e) {
+      var d = el('div', undefined, 'cartao-cache');
+      d.appendChild(el('div', nomeGrupo(e), 'titulo'));
+      d.appendChild(el('div', e.codigo, 'codigo'));
+      d.appendChild(el('div', 'Escrevam este código no tablet para começar.', 'rodape'));
+      entradas.appendChild(d);
+    });
 
     var cartoes = document.getElementById('cartoes');
     caches.forEach(function (c) {
@@ -77,42 +142,34 @@
       cartoes.appendChild(d);
     });
 
-    var t = el('table');
-    var cab = el('tr');
-    cab.appendChild(el('th', 'Equipa'));
-    caches.forEach(function (_, i) { cab.appendChild(el('th', (i + 1) + 'ª')); });
-    t.appendChild(cab);
-    caches.forEach(function (_, i) {
-      var tr = el('tr');
-      tr.appendChild(el('th', String(i + 1)));
-      Geocaching.ordemParaEquipa(i + 1).forEach(function (k) {
-        tr.appendChild(el('td', caches[k].nome + ' (' + (caches[k].local.coordenada || '') + ')'));
-      });
-      t.appendChild(tr);
-    });
-    document.getElementById('ordens').appendChild(t);
-    document.getElementById('ordens').appendChild(el('p',
-      'Com mais de ' + caches.length + ' equipas, a ordem repete: a equipa ' + (caches.length + 1) +
-      ' faz o mesmo percurso que a equipa 1, e assim por diante.'));
+    document.getElementById('ordens').appendChild(tabela(
+      ['Grupo', 'Código'].concat(caches.map(function (_, i) { return (i + 1) + 'ª'; })),
+      equipas.map(function (e, i) {
+        return [nomeGrupo(e), e.codigo].concat(Geocaching.ordemParaEquipa(i).map(function (k) {
+          return caches[k].nome + (caches[k].local.coordenada ? ' (' + caches[k].local.coordenada + ')' : '');
+        }));
+      })
+    ));
 
-    var s = el('table');
-    var h = el('tr');
-    ['Cache', 'Local', 'Código', '2º ciclo', 'Resp.', '3º ciclo', 'Resp.'].forEach(function (x) { h.appendChild(el('th', x)); });
-    s.appendChild(h);
-    caches.forEach(function (c) {
-      var tr = el('tr');
-      tr.appendChild(el('td', c.nome));
-      tr.appendChild(el('td', (c.local.coordenada ? c.local.coordenada + ': ' : '') + (c.local.texto || '')));
-      tr.appendChild(el('td', c.codigo));
-      ['2', '3'].forEach(function (ci) {
-        var p = c.problemas[ci] || {};
-        tr.appendChild(el('td', p.enunciado || '—', 'enunciado'));
-        tr.appendChild(el('td', p.resposta !== undefined ? resposta(p.resposta) : '—'));
-      });
-      s.appendChild(tr);
+    var sol = document.getElementById('solucoes');
+    sol.appendChild(tabela(['Cache', 'Local', 'Código'], caches.map(function (c) {
+      return [c.nome, (c.local.coordenada ? c.local.coordenada + ': ' : '') + (c.local.texto || ''), c.codigo];
+    })));
+    anos.forEach(function (a) {
+      sol.appendChild(el('h3', a + 'º ano'));
+      var t = tabela(['Cache', 'Problema', 'Resposta'], caches.map(function (c) {
+        var p = c.problemas[a] || {};
+        return [c.nome, p.enunciado || '—', p.resposta !== undefined ? resposta(p.resposta) : '—'];
+      }));
+      t.querySelectorAll('td:nth-child(2)').forEach(function (td) { td.className = 'enunciado'; });
+      sol.appendChild(t);
     });
-    document.getElementById('solucoes').appendChild(s);
-    document.getElementById('solucoes').appendChild(el('p', 'PIN do professor nos tablets: ' + D.pinProfessor));
+    sol.appendChild(el('p', 'PIN do professor nos tablets: ' + D.pinProfessor));
+
+    document.getElementById('resultados').appendChild(tabela(
+      ['Turma', 'Grupo', 'Tempo final', 'Observações'],
+      equipas.map(function (e) { return [e.turma, String(e.grupo || ''), '', '']; })
+    ));
   })();
 </script>
 </body>

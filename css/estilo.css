@@ -159,6 +159,11 @@ form.cartao .principal { margin-top: 16px; font-size: 1.2rem; }
 .mapa summary { cursor: pointer; color: var(--primaria); font-weight: 600; padding: 8px 0; }
 .instrucao { color: var(--suave); margin: 8px 0 12px; }
 
+.confirmar { text-align: center; display: flex; flex-direction: column; gap: 4px; }
+.confirmar .quem { font-size: 3rem; font-weight: 800; color: var(--primaria-escura); margin: 0; line-height: 1.1; }
+.confirmar .quem-grupo { font-size: 1.5rem; font-weight: 700; margin: 0; }
+.confirmar .opcoes { margin-top: 12px; }
+
 .fim { text-align: center; }
 .trofeu { font-size: 4rem; margin: 0; }
 .resumo { margin: 20px auto 0; border-collapse: collapse; text-align: left; }
