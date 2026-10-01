@@ -140,6 +140,8 @@
       dicas: estado.dicas,
       saidas: estado.saidas || [],
       foraDaApp: estado.saidaInicio || null,
+      ajuda: estado.ajuda || null,
+      regras: estado.regrasAceites || null,
       limite: limiteSegundos(),
       atualizado: agora()
     }).then(function () {
@@ -155,6 +157,7 @@
       var novo = v || {};
       if (JSON.stringify(novo) === JSON.stringify(estado.controlo || {})) return;
       estado.controlo = novo;
+      if (estado.ajuda && (novo.ajudaResolvida || 0) >= estado.ajuda.t) delete estado.ajuda;
       guardar();
       desenhar();
     });
@@ -166,7 +169,7 @@
   // calculadora ou uma IA. A andar à procura da cache o ecrã pode apagar-se
   // sem penalização.
   function aResolver() {
-    return estado && !estado.fim && estado.fase === 'problema' && !controlo().desclassificado;
+    return estado && !estado.fim && estado.fase === 'problema' && !controlo().desclassificado && !estado.ajuda;
   }
 
   function registarRegresso() {
@@ -217,8 +220,9 @@
     return (fim - estado.inicio) / 1000;
   }
 
-  function comecar(g) {
+  function comecar(g, regrasAceites) {
     estado = {
+      regrasAceites: regrasAceites,
       codigo: g.codigo.toUpperCase(),
       equipa: nomeEquipa(g),
       turma: g.turma,
@@ -247,6 +251,7 @@
       estado.fase = 'procurar';
     } else if (estado.fase === 'procurar') {
       estado.passo++;
+      if (estado.revelado) estado.ultimoLocal = descricaoLocal(estado.revelado);
       delete estado.revelado;
       estado.dicaVista = false;
       estado.errosSeguidos = 0;
@@ -294,6 +299,7 @@
     if (!estado) return ecraInicio();
     verificarLimite();
     app.appendChild(cabecalho());
+    if (estado.ajuda) app.appendChild(avisoAjuda());
     if (controlo().desclassificado) return ecraDesclassificado();
     if (estado.fase === 'problema') ecraProblema();
     else if (estado.fase === 'procurar') ecraProcurar();
@@ -337,6 +343,54 @@
     }
   }
 
+  // ---------- pedir ajuda ----------
+
+  function descricaoLocal(l) {
+    return l.nome + (l.coordenada ? ' (' + l.coordenada + ')' : '') + (l.texto ? ': ' + l.texto : '');
+  }
+
+  // Onde o grupo está, pelo que o tablet sabe: a caminho da cache revelada, ou
+  // perto da última cache encontrada.
+  function ondeEstao() {
+    if (estado.fase === 'procurar' && estado.revelado) return 'a caminho de ' + descricaoLocal(estado.revelado);
+    if (estado.ultimoLocal) return 'perto de ' + estado.ultimoLocal;
+    return 'perto do ponto de partida';
+  }
+
+  function pedirAjuda() {
+    if (document.querySelector('.modal-fundo')) return;
+    var fundo = el('div', { class: 'modal-fundo' });
+    function fechar() { fundo.remove(); }
+    function enviar(tipo) {
+      estado.ajuda = { t: agora(), tipo: tipo, onde: ondeEstao() };
+      if (estado.saidaInicio) delete estado.saidaInicio;
+      guardar();
+      fechar();
+      desenhar();
+    }
+    fundo.appendChild(el('div', { class: 'modal', role: 'dialog', 'aria-modal': 'true' }, [
+      el('h2', { texto: 'Pedir ajuda' }),
+      el('p', { class: 'modal-texto', texto: 'O organizador recebe o aviso logo, com o sítio onde estão.' }),
+      el('button', { type: 'button', class: 'perigo', onclick: function () { enviar('magoado'); }, texto: 'Alguém se magoou' }),
+      el('button', { type: 'button', class: 'secundario', onclick: function () { enviar('outro'); }, texto: 'Outro problema (perdidos, cache estragada, tablet)' }),
+      el('button', { type: 'button', class: 'secundario', onclick: fechar, texto: 'Cancelar' })
+    ]));
+    fundo.addEventListener('click', function (ev) { if (ev.target === fundo) fechar(); });
+    document.body.appendChild(fundo);
+  }
+
+  function avisoAjuda() {
+    var hora = new Date(estado.ajuda.t);
+    var hh = String(hora.getHours()).padStart(2, '0') + ':' + String(hora.getMinutes()).padStart(2, '0');
+    return el('div', { class: 'aviso-ajuda', role: 'alert' }, [
+      el('strong', { texto: 'Pedido de ajuda enviado às ' + hh + '.' }),
+      el('p', { texto: window.Sync && Sync.ativo
+        ? 'Fiquem juntos e onde estão. Chamem também o adulto mais próximo.'
+        : 'Este tablet não está ligado ao organizador: vão já ter com o adulto mais próximo.' }),
+      el('button', { type: 'button', class: 'secundario', onclick: function () { delete estado.ajuda; guardar(); desenhar(); }, texto: 'Já está resolvido' })
+    ]);
+  }
+
   function cabecalho() {
     var relogio = el('span', { class: 'relogio' });
     function mostrarRelogio() {
@@ -366,6 +420,7 @@
       el('div', { class: 'topo-linha' }, [
         el('span', { class: 'equipa', texto: estado.equipa + ' · ' + estado.ano + 'º ano' }),
         relogio,
+        el('button', { class: 'botao-ajuda', type: 'button', onclick: pedirAjuda, texto: 'Pedir ajuda' }),
         el('button', { class: 'botao-prof', type: 'button', onclick: painelProfessor, 'aria-label': 'Professor', texto: '⚙' })
       ]),
       barra,
@@ -382,20 +437,33 @@
     var zona = el('div');
 
     function confirmar(eq) {
+      var R = window.REGRAS || { seguranca: [], conduta: [] };
+      var botaoComecar = el('button', { type: 'button', class: 'principal', disabled: 'disabled', onclick: function () { comecar(eq, agora()); }, texto: 'Começar' });
+      var aceitar = el('input', { type: 'checkbox', id: 'aceitar-regras', onchange: function (ev) { botaoComecar.disabled = !ev.target.checked; } });
+      function listaRegras(titulo, itens) {
+        return el('div', { class: 'bloco-regras' }, [
+          el('p', { class: 'etapa', texto: titulo }),
+          el('ul', { class: 'regras' }, itens.map(function (t) { return el('li', { texto: t }); }))
+        ]);
+      }
       zona.innerHTML = '';
       zona.appendChild(el('div', { class: 'cartao confirmar' }, [
         el('p', { class: 'etapa', texto: 'Vocês são' }),
         el('p', { class: 'quem', texto: eq.turma }),
         el('p', { class: 'quem-grupo', texto: 'Grupo ' + eq.grupo }),
-        el('ul', { class: 'regras' }, [
-          el('li', { texto: 'Têm ' + (DADOS.tempoLimiteMinutos || 60) + ' minutos.' }),
-          el('li', { texto: 'Nada de calculadoras, telemóveis ou IA. Contas em papel.' }),
-          el('li', { texto: 'Sair desta página a meio de um problema dá +' + Math.round((DADOS.penalizacaoSaidaSegundos || 0) / 60) + ' minutos.' })
+        el('p', { class: 'instrucao', texto: 'Se não são vocês, chamem o professor.' }),
+        listaRegras('Segurança', R.seguranca),
+        listaRegras('Comportamento', R.conduta),
+        listaRegras('Jogo', [
+          'Têm ' + (DADOS.tempoLimiteMinutos || 60) + ' minutos.',
+          'Nada de calculadoras, telemóveis ou IA. Contas em papel.',
+          'Sair desta página a meio de um problema dá +' + Math.round((DADOS.penalizacaoSaidaSegundos || 0) / 60) + ' minutos.'
         ]),
-        el('p', { class: 'instrucao', texto: 'Está certo? Se não, chamem o professor.' }),
+        el('p', { class: 'instrucao' }, ['Regras completas: ', el('a', { href: 'termos.html', target: '_blank', rel: 'noopener', texto: 'termos de utilização' }), '.']),
+        el('label', { class: 'aceitar', for: 'aceitar-regras' }, [aceitar, ' Lemos as regras em grupo e vamos cumpri-las.']),
         el('div', { class: 'opcoes' }, [
           el('button', { type: 'button', class: 'secundario', onclick: function () { zona.innerHTML = ''; zona.appendChild(form); codigo.value = ''; codigo.focus(); }, texto: 'Voltar' }),
-          el('button', { type: 'button', class: 'principal', onclick: function () { comecar(eq); }, texto: 'Começar' })
+          botaoComecar
         ])
       ]));
     }

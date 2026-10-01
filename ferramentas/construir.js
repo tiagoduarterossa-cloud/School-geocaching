@@ -130,6 +130,8 @@ async function construir(passe) {
   }
   const publico = {
     titulo: C.titulo,
+    escola: C.escola || '',
+    organizador: C.organizador || '',
     tempoLimiteMinutos: C.tempoLimiteMinutos,
     penalizacaoDicaSegundos: C.penalizacaoDicaSegundos,
     penalizacaoErroSegundos: C.penalizacaoErroSegundos,

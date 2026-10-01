@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Termos de Utilização</title>
+  <style>
+    /* Documento de leitura: uma coluna estreita, tipografia sóbria, imprime bem. */
+    :root {
+      --fundo: #f6f8f7; --papel: #ffffff; --texto: #1b2a26; --suave: #5b6d68;
+      --linha: #d8e2de; --marca: #1f6f5c; --alerta-fundo: #fff6dc; --alerta: #7a5600;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --fundo: #111917; --papel: #1a2522; --texto: #e4eeea; --suave: #9db1ab;
+        --linha: #33453f; --marca: #8fd6c2; --alerta-fundo: #3a321b; --alerta: #f2c96b; color-scheme: dark;
+      }
+    }
+    :root[data-theme="dark"] {
+      --fundo: #111917; --papel: #1a2522; --texto: #e4eeea; --suave: #9db1ab;
+      --linha: #33453f; --marca: #8fd6c2; --alerta-fundo: #3a321b; --alerta: #f2c96b; color-scheme: dark;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--fundo); color: var(--texto); font-family: Georgia, "Times New Roman", serif; line-height: 1.6; }
+    main { max-width: 42rem; margin: 0 auto; padding-block: 32px 64px; padding-inline: 16px; }
+    article { background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; padding: 28px 32px; }
+    h1 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 1.7rem; line-height: 1.2; margin: 0 0 4px; text-wrap: balance; }
+    .sub { color: var(--suave); margin: 0 0 24px; font-family: system-ui, sans-serif; font-size: .95rem; }
+    h2 { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; font-size: 1.05rem; color: var(--marca); margin: 28px 0 8px; }
+    p, li { font-size: 1.02rem; }
+    ul { padding-left: 1.2em; margin: 8px 0; }
+    li { margin: 4px 0; }
+    .nota { background: var(--alerta-fundo); color: var(--alerta); border-radius: 8px; padding: 12px 16px; font-family: system-ui, sans-serif; font-size: .9rem; }
+    .voltar { font-family: system-ui, sans-serif; display: inline-block; margin-bottom: 16px; color: var(--marca); }
+    @media (max-width: 520px) { article { padding: 20px; } }
+    @media print { body { background: #fff; } .voltar { display: none; } article { border: 0; padding: 0; } }
+  </style>
+</head>
+<body>
+<main>
+  <a class="voltar" href="./">← Voltar ao jogo</a>
+  <article>
+    <h1 id="titulo">Termos de utilização</h1>
+    <p class="sub" id="sub"></p>
+
+    <h2>1. O que é</h2>
+    <p><span class="nome-jogo">O jogo</span> é uma atividade educativa de matemática: os grupos resolvem problemas num tablet para descobrir onde estão escondidas caixas (caches) dentro da escola. A aplicação foi criada por <span class="organizador">um organizador</span> e é cedida à escola para esta atividade, sem custos.</p>
+
+    <h2>2. Quem é responsável por quê</h2>
+    <ul>
+      <li><strong>A atividade</strong> só se realiza com a aprovação da direção da escola. Decorre em tempo letivo, dentro do recinto escolar, e é supervisionada presencialmente pelos professores e funcionários da escola.</li>
+      <li><strong>O organizador</strong> fornece a aplicação, os problemas e a lista dos locais das caches, combinados com os professores responsáveis. Não substitui a supervisão dos adultos da escola.</li>
+      <li><strong>Os participantes</strong> comprometem-se a cumprir as regras abaixo e as instruções dos adultos presentes.</li>
+    </ul>
+
+    <h2>3. Regras de segurança</h2>
+    <ul id="seguranca"></ul>
+
+    <h2>4. Regras de comportamento</h2>
+    <ul id="conduta"></ul>
+
+    <h2>5. Acidentes</h2>
+    <p>Sendo uma atividade escolar aprovada, os acidentes durante o jogo estão abrangidos pelo Seguro Escolar. Se alguém se magoar:</p>
+    <ul>
+      <li>o grupo para de jogar, fica junto, carrega em "Pedir ajuda" no tablet e chama o adulto mais próximo;</li>
+      <li>o organizador recebe o aviso com o local do grupo e avisa os adultos responsáveis;</li>
+      <li>o tempo perdido não prejudica o grupo na classificação.</li>
+    </ul>
+
+    <h2>6. Danos</h2>
+    <p>As caches estão escondidas de forma a nunca ser preciso mexer em equipamento, abrir armários ou mudar móveis de sítio. Os danos causados por quem não cumpra as regras são tratados pela escola, segundo o seu regulamento interno e a lei.</p>
+
+    <h2>7. Dados</h2>
+    <p>A aplicação não pede nem guarda nomes, fotografias ou contactos. Regista apenas a turma, o número do grupo e o progresso no jogo (caches encontradas, tempos, erros, dicas, saídas da aplicação e pedidos de ajuda). Estes registos servem só para acompanhar o jogo e fazer a classificação, e são apagados no fim da atividade.</p>
+
+    <h2>8. A aplicação</h2>
+    <p>A aplicação é fornecida tal como está. Pode haver falhas técnicas (rede, tablets, baterias); nesses casos, os professores e o organizador decidem como continuar e como ajustar a classificação. As decisões do organizador sobre penalizações e classificação são finais.</p>
+
+    <h2>9. Aceitação</h2>
+    <p>Antes de começar, cada grupo lê as regras no tablet e confirma que as vai cumprir. A hora dessa confirmação fica registada.</p>
+
+    <p class="nota">Estes termos descrevem como a atividade funciona e quem faz o quê. Não afastam direitos que a lei garante a quem participa.</p>
+  </article>
+</main>
+<script src="dados/jogo.js"></script>
+<script src="js/regras.js"></script>
+<script>
+  (function () {
+    var D = window.JOGO || {};
+    var R = window.REGRAS || { seguranca: [], conduta: [] };
+    if (D.titulo) {
+      document.getElementById('titulo').textContent = 'Termos de utilização: ' + D.titulo;
+      document.querySelectorAll('.nome-jogo').forEach(function (n) { n.textContent = D.titulo; });
+    }
+    var partes = [];
+    if (D.escola) partes.push(D.escola);
+    if (D.semana && D.semana.nome) partes.push(D.semana.nome);
+    document.getElementById('sub').textContent = partes.join(' · ');
+    if (D.organizador) document.querySelectorAll('.organizador').forEach(function (n) { n.textContent = D.organizador; });
+    [['seguranca', R.seguranca], ['conduta', R.conduta]].forEach(function (x) {
+      var ul = document.getElementById(x[0]);
+      x[1].forEach(function (t) { var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
+    });
+  })();
+</script>
+</body>
+</html>

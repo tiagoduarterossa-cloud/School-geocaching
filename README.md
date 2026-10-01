@@ -102,6 +102,16 @@ Na base de dados só fica a turma, o número do grupo e o progresso no jogo. Nã
 
 Se a rede falhar, o jogo continua no tablet. A página do dono mostra "sem ligação" nesse grupo, e o estado é enviado quando a rede voltar.
 
+## Segurança e termos de utilização
+
+- **Regras antes de começar**: no tablet, o grupo vê as regras de segurança, de comportamento e do jogo, e só pode carregar em "Começar" depois de confirmar que as leu. A hora da confirmação fica registada. O texto das regras está em `js/regras.js`.
+- **Pedir ajuda**: botão sempre visível no tablet ("Alguém se magoou" ou "Outro problema"). Na área do dono aparece um alerta vermelho com som, o grupo e o local onde está (perto da última cache encontrada, ou a caminho da seguinte). "Resolvido" faz desaparecer o aviso no tablet. Enquanto o pedido está ativo, sair da app não é penalizado. Se o tablet não tiver ligação, diz ao grupo para ir ter com o adulto mais próximo.
+- **`termos.html`**: termos de utilização públicos, com o papel de cada um (escola, organizador, participantes), as regras, o que acontece em caso de acidente ou dano e que dados são registados. Os campos `escola` e `organizador` em `privado/conteudo.js` aparecem no topo.
+
+Os termos não afastam a responsabilidade por danos a pessoas: em Portugal, cláusulas desse tipo são nulas (Decreto-Lei n.º 446/85, art. 18.º, alínea a); Código Civil, art. 809.º). O que protege o organizador é a atividade ser aprovada e supervisionada pela escola, o que também a coloca sob o Seguro Escolar (Portaria n.º 413/99). Os termos registam essa divisão de papéis.
+
+Os locais das caches nunca devem obrigar a mexer em equipamento (extintores, quadros elétricos, armários de laboratório), a subir a nada, ou a entrar em zonas fechadas.
+
 ## Convites e mensagem nos quadros
 
 - `convites.html`: um convite por turma para imprimir e esconder na sala. Tem o dia e a hora da sessão da turma escritos como contas (vêm de `sessao` em cada turma). Sem `sessao`, ficam linhas em branco para preencher à mão.

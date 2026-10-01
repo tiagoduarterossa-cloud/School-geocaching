@@ -34,6 +34,15 @@
     .chip.fora { background: var(--perigo-fundo); color: var(--erro); }
     .chip.fim { background: var(--dica-fundo); color: var(--aviso); }
     .chip.ban { background: var(--erro); color: #fff; }
+    .chip.ajuda { background: var(--erro); color: #fff; animation: piscar 1s infinite; }
+    @keyframes piscar { 50% { opacity: .55; } }
+    @media (prefers-reduced-motion: reduce) { .chip.ajuda { animation: none; } }
+    .alertas { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+    .alertas:empty { display: none; }
+    .alerta-ajuda { display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+      background: var(--perigo-fundo); border: 2px solid var(--erro); border-radius: 14px; padding: 12px 16px; }
+    .alerta-ajuda strong { color: var(--erro); font-size: 1.1rem; }
+    .alerta-ajuda p { margin: 4px 0 0; }
     .chip.offline { background: transparent; color: var(--erro); border: 1px solid var(--erro); }
     .grelha button { padding: 6px 12px; font-size: .8rem; }
     .gestao { background: var(--cartao); border-radius: 14px; padding: 16px; margin-bottom: 16px; border: 2px solid var(--primaria); display: flex; flex-direction: column; gap: 12px; }

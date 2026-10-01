@@ -59,7 +59,9 @@
     r.tempoFinal = decorrido + r.pen;
     r.decorrido = decorrido;
     r.semLigacao = !s.fim && agora - (s.atualizado || 0) > 75000;
+    r.ajuda = s.ajuda && !((c.ajudaResolvida || 0) >= s.ajuda.t) ? s.ajuda : null;
     if (c.desclassificado) { r.estado = 'desclassificado'; r.classe = 'ban'; }
+    else if (r.ajuda) { r.estado = 'pede ajuda'; r.classe = 'ajuda'; }
     else if (s.foraDaApp) { r.estado = 'fora da app'; r.classe = 'fora'; }
     else if (s.fim) { r.estado = s.esgotado ? 'tempo esgotado' : 'terminou'; r.classe = 'fim'; }
     else { r.estado = 'a jogar'; r.classe = 'jogo'; }
@@ -143,6 +145,7 @@
     if (!zona) return;
     if (separador === 'direto') {
       if (mudouSeparador || !document.getElementById('tabela')) montarDireto(zona);
+      desenharAlertas();
       desenharResumo();
       desenharTabela();
       desenharFeed();
@@ -164,6 +167,7 @@
         return el('option', { value: t.turma, texto: t.turma });
       })));
     selTurma.value = filtroTurma;
+    zona.appendChild(el('div', { id: 'alertas', class: 'alertas', role: 'alert' }));
     zona.appendChild(el('div', { id: 'resumo', class: 'resumo-topo' }));
     zona.appendChild(el('div', { id: 'gestao' }));
     zona.appendChild(el('div', { class: 'filtros' }, [el('label', { for: 'filtro-turma', texto: 'Mostrar' }), selTurma]));
@@ -173,13 +177,59 @@
     ]));
   }
 
+  // ---------- pedidos de ajuda ----------
+
+  var ajudasVistas = {};
+  var tituloOriginal = document.title;
+
+  function apitar() {
+    try {
+      var Ctx = window.AudioContext || window.webkitAudioContext;
+      var ctx = new Ctx();
+      [0, 0.35, 0.7].forEach(function (t) {
+        var o = ctx.createOscillator();
+        var g = ctx.createGain();
+        o.frequency.value = 880;
+        g.gain.setValueAtTime(0.25, ctx.currentTime + t);
+        g.gain.setValueAtTime(0, ctx.currentTime + t + 0.2);
+        o.connect(g); g.connect(ctx.destination);
+        o.start(ctx.currentTime + t); o.stop(ctx.currentTime + t + 0.2);
+      });
+    } catch (e) { /* sem som */ }
+  }
+
+  function desenharAlertas() {
+    var n = document.getElementById('alertas');
+    if (!n) return;
+    var ativos = todos.map(info).filter(function (r) { return r.ajuda; });
+    var novo = false;
+    ativos.forEach(function (r) {
+      var id = r.g.codigo + '|' + r.ajuda.t;
+      if (!ajudasVistas[id]) { ajudasVistas[id] = true; novo = true; }
+    });
+    if (novo) apitar();
+    document.title = ativos.length ? '(' + ativos.length + ') AJUDA · ' + tituloOriginal : tituloOriginal;
+    n.innerHTML = '';
+    ativos.forEach(function (r) {
+      var min = Math.max(0, Math.round((Date.now() - r.ajuda.t) / 60000));
+      n.appendChild(el('div', { class: 'alerta-ajuda' }, [
+        el('div', null, [
+          el('strong', { texto: nome(r.g) + ': ' + (r.ajuda.tipo === 'magoado' ? 'alguém se magoou' : 'pede ajuda') }),
+          el('p', { texto: (r.ajuda.onde || 'local desconhecido') + ' · há ' + min + ' min (' + hora(r.ajuda.t) + ')' })
+        ]),
+        el('button', { type: 'button', class: 'principal', onclick: function () { mandar(r.g.codigo, { ajudaResolvida: Date.now() }); }, texto: 'Resolvido' })
+      ]));
+    });
+  }
+
   function desenharResumo() {
     var lista = todos.map(info);
     function conta(f) { return lista.filter(f).length; }
     var n = document.getElementById('resumo');
     n.innerHTML = '';
     [
-      ['A jogar', conta(function (r) { return r.classe === 'jogo' || r.classe === 'fora'; }), false],
+      ['Pedidos de ajuda', conta(function (r) { return r.ajuda; }), true],
+      ['A jogar', conta(function (r) { return r.classe === 'jogo' || r.classe === 'fora' || r.classe === 'ajuda'; }), false],
       ['Fora da app agora', conta(function (r) { return r.classe === 'fora'; }), true],
       ['Sem ligação', conta(function (r) { return r.semLigacao; }), true],
       ['Terminaram', conta(function (r) { return r.classe === 'fim'; }), false],

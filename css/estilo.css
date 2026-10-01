@@ -165,8 +165,18 @@ form.cartao .principal { margin-top: 16px; font-size: 1.2rem; }
 .confirmar .quem-grupo { font-size: 1.5rem; font-weight: 700; margin: 0; }
 .confirmar .opcoes { margin-top: 12px; }
 
-.regras { text-align: left; margin: 12px auto 0; padding-left: 1.2em; color: var(--suave); font-size: .9rem; max-width: 30em; }
+.regras { text-align: left; margin: 12px auto 0; padding-left: 1.2em; color: var(--texto); font-size: .9rem; max-width: 30em; }
 .motivo { font-weight: 700; color: var(--erro); }
+.instrucao a { color: var(--primaria-escura); font-weight: 600; }
+.bloco-regras { text-align: left; margin-top: 12px; }
+.bloco-regras .etapa { margin: 0 0 4px; }
+.bloco-regras .regras { margin: 0; max-width: none; }
+.aceitar { display: flex; gap: 10px; align-items: flex-start; text-align: left; font-weight: 600; margin: 16px 0 4px; cursor: pointer; }
+.aceitar input { width: 24px; height: 24px; flex: none; margin-top: 2px; accent-color: var(--primaria); }
+.botao-ajuda { background: var(--perigo-fundo); color: var(--erro); font-weight: 700; padding: 6px 12px; font-size: .85rem; white-space: nowrap; }
+.aviso-ajuda { background: var(--perigo-fundo); border: 2px solid var(--erro); border-radius: var(--raio); padding: 16px; margin-bottom: 16px; display: flex; flex-direction: column; gap: 8px; }
+.aviso-ajuda strong { color: var(--erro); }
+.aviso-ajuda p { margin: 0; }
 .modal-alerta h2 { color: var(--erro); }
 .modal-texto { margin: 0; }
 
