@@ -29,6 +29,7 @@
     .cartoes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .papel { border: 3px dashed #1f6f5c; border-radius: 12px; padding: 16px; text-align: center; break-inside: avoid; }
     .papel .titulo { font-size: 16px; color: #5b6d68; }
+    .braille { font-size: 28px; letter-spacing: .1em; line-height: 1.2; }
     .papel .codigo { font-size: 32px; font-weight: 800; letter-spacing: .05em; margin: 6px 0; overflow-wrap: anywhere; }
     .papel .rodape { font-size: 13px; color: #5b6d68; }
     .cartao-cache { border: 3px solid #1f6f5c; border-radius: 12px; padding: 16px; break-inside: avoid; }
@@ -69,6 +70,7 @@
   <section>
     <h2>Códigos de entrada</h2>
     <p>Recorta e entrega um papel a cada grupo no início da sessão da turma.</p>
+    <p class="nota">Braille: o que aparece aqui impresso em tinta não se sente com os dedos. Para os alunos cegos, passa os códigos (de entrada e das caches) numa impressora braille ou na máquina Perkins, ou pede à equipa de educação especial.</p>
     <div id="entradas"></div>
   </section>
 
@@ -81,6 +83,7 @@
 <script src="js/cripto.js"></script>
 <script src="dados/organizador.js"></script>
 <script src="js/organizador.js"></script>
+<script src="js/acessivel.js"></script>
 <script>
   Organizador.desbloquear(document.getElementById('cadeado'), function () {
     document.getElementById('cadeado').hidden = true;
@@ -173,7 +176,9 @@
       var d = el('div', null, 'cartao-cache');
       d.appendChild(el('div', c.nome, 'titulo'));
       if (turmas.length) {
-        d.appendChild(tabela(['Turma', 'Código'], turmas.map(function (t) { return [t.turma, codigos[i][t.turma]]; })));
+        d.appendChild(tabela(['Turma', 'Código', 'Braille'], turmas.map(function (t) {
+          return [t.turma, codigos[i][t.turma], { texto: Acessivel.braille(codigos[i][t.turma]), cls: 'braille' }];
+        })));
       } else {
         d.appendChild(el('p', 'Nenhuma turma usa esta cache.'));
       }
@@ -190,6 +195,7 @@
         var d = el('div', null, 'papel');
         d.appendChild(el('div', g.turma + ' · Grupo ' + g.grupo, 'titulo'));
         d.appendChild(el('div', g.codigo, 'codigo'));
+        d.appendChild(el('div', Acessivel.braille(g.codigo), 'braille'));
         d.appendChild(el('div', 'Escrevam este código no tablet para começar.', 'rodape'));
         grelha.appendChild(d);
       });

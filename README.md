@@ -112,6 +112,15 @@ Os termos não afastam a responsabilidade por danos a pessoas: em Portugal, clá
 
 Os locais das caches nunca devem obrigar a mexer em equipamento (extintores, quadros elétricos, armários de laboratório), a subir a nada, ou a entrar em zonas fechadas.
 
+## Acessibilidade (alunos cegos e com baixa visão)
+
+- **Botão "Aa"** (no ecrã inicial e no topo do jogo): letra grande e alto contraste, e leitura automática em voz alta. A escolha fica guardada no tablet.
+- **"Ouvir o problema" e "Ouvir onde está a cache"**: o tablet lê em voz alta, em português. A matemática é dita como se diz: 3/4 é "3 quartos", 2⁻³ é "2 elevado a menos 3", × é "vezes", ÷ é "a dividir por". Escrevam os enunciados com estes símbolos para serem bem lidos.
+- **Leitores de ecrã** (VoiceOver no iPad, TalkBack no Android): o enunciado tem uma versão escrita para ser lida em voz alta; quando o grupo acerta, o leitor salta para "Resposta certa!". Com o leitor de ecrã ligado, deixem desligada a leitura automática da app, para não falarem os dois ao mesmo tempo.
+- **Braille**: os papéis com os códigos de entrada e os cartões das caches, em `professor.html`, mostram o código também em braille. O braille impresso em tinta não se sente: passa-o numa impressora braille ou na máquina Perkins.
+- **Locais das caches**: descreve-os para se encontrarem sem ver, com referências que se tocam, à altura da mão e sem escadas.
+- **Grupos**: os alunos cegos jogam nos grupos da turma, um por grupo, com um papel ativo (por exemplo, ouvir e resolver o problema, ou ler o código em braille). Nas regras, o grupo é lembrado de oferecer o braço para guiar e de avisar antes de escadas e portas.
+
 ## Convites e mensagem nos quadros
 
 - `convites.html`: um convite por turma para imprimir e esconder na sala. Tem o dia e a hora da sessão da turma escritos como contas (vêm de `sessao` em cada turma). Sem `sessao`, ficam linhas em branco para preencher à mão.

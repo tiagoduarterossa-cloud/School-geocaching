@@ -2,6 +2,7 @@
   'use strict';
 
   var DADOS = window.JOGO;
+  var A = window.Acessivel || { fala: String, falar: function () {}, falarSeAtivo: function () {}, temVoz: false, painel: function () {} };
   var IT = Cripto.ITERACOES;
   var CHAVE = 'geocaching-escola-v4';
   var app = document.getElementById('app');
@@ -305,6 +306,29 @@
     else if (estado.fase === 'procurar') ecraProcurar();
     else ecraFim();
     avisos();
+    anunciarMudanca();
+  }
+
+  // Quando o ecrã muda (novo problema, local revelado, fim), o leitor de ecrã
+  // vai para o título e, se a leitura automática estiver ligada, o tablet lê-o.
+  var ultimoEcra = null;
+  function anunciarMudanca() {
+    var id = estado.fase + '|' + estado.passo;
+    if (id === ultimoEcra) return;
+    var primeira = ultimoEcra === null;
+    ultimoEcra = id;
+    if (primeira) return;
+    var titulo = app.querySelector('main h2');
+    if (estado.fase === 'procurar' && titulo) titulo.focus();
+    if (estado.fase === 'problema') {
+      var p = problemaAtual();
+      if (p && !p.falta) A.falarSeAtivo('Problema ' + (estado.passo + 1) + '. ' + p.enunciado);
+    } else if (estado.fase === 'procurar' && estado.revelado) {
+      var c = estado.revelado;
+      A.falarSeAtivo('Resposta certa! A cache está em ' + (c.coordenada ? c.coordenada + '. ' : '') + (c.texto || ''));
+    } else if (estado.fase === 'fim') {
+      A.falarSeAtivo(estado.esgotado ? 'Acabou o tempo. Voltem à base.' : 'Parabéns! Encontraram todas as caches.');
+    }
   }
 
   function ecraDesclassificado() {
@@ -420,6 +444,7 @@
       el('div', { class: 'topo-linha' }, [
         el('span', { class: 'equipa', texto: estado.equipa + ' · ' + estado.ano + 'º ano' }),
         relogio,
+        el('button', { class: 'botao-prof', type: 'button', onclick: A.painel, 'aria-label': 'Acessibilidade', title: 'Acessibilidade', texto: 'Aa' }),
         el('button', { class: 'botao-ajuda', type: 'button', onclick: pedirAjuda, texto: 'Pedir ajuda' }),
         el('button', { class: 'botao-prof', type: 'button', onclick: painelProfessor, 'aria-label': 'Professor', texto: '⚙' })
       ]),
@@ -490,6 +515,7 @@
 
     app.appendChild(el('div', { class: 'inicio' }, [
       el('h1', { texto: DADOS.titulo }),
+      el('p', { class: 'acess-inicio' }, [el('button', { type: 'button', class: 'secundario', onclick: A.painel, texto: 'Aa · Acessibilidade' })]),
       el('p', { class: 'intro', texto: 'Resolvam cada problema para descobrir onde está escondida a próxima cache. Dentro de cada cache há um código: escrevam-no aqui para continuar.' }),
       zona
     ]));
@@ -549,7 +575,7 @@
       zonaDica.innerHTML = '';
       if (!p.dica) return;
       if (estado.dicaVista) {
-        zonaDica.appendChild(el('p', { class: 'dica', texto: '💡 ' + p.dica }));
+        zonaDica.appendChild(el('p', { class: 'dica', 'aria-label': 'Dica: ' + A.fala(p.dica), texto: '💡 ' + p.dica }));
       } else {
         zonaDica.appendChild(el('button', {
           type: 'button',
@@ -559,6 +585,7 @@
             estado.dicas++;
             guardar();
             desenharDica();
+            A.falarSeAtivo('Dica: ' + p.dica);
           },
           texto: 'Pedir dica (+' + Math.round(DADOS.penalizacaoDicaSegundos / 60) + ' min)'
         }));
@@ -567,8 +594,10 @@
     desenharDica();
 
     app.appendChild(el('main', { class: 'cartao' }, [
-      el('p', { class: 'etapa', texto: 'Problema ' + (estado.passo + 1) }),
-      el('p', { class: 'enunciado', texto: p.enunciado }),
+      el('h2', { class: 'etapa', tabindex: '-1', texto: 'Problema ' + (estado.passo + 1) + ' de ' + estado.passos.length }),
+      el('p', { class: 'enunciado', 'aria-hidden': 'true', texto: p.enunciado }),
+      el('p', { class: 'so-leitor', texto: A.fala(p.enunciado) }),
+      A.temVoz ? el('button', { type: 'button', class: 'botao-ouvir', onclick: function () { A.falar(p.enunciado); }, texto: 'Ouvir o problema' }) : null,
       el('form', {
         class: 'linha-resposta',
         onsubmit: function (ev) {
@@ -587,6 +616,7 @@
               registarErro();
               campo.select();
               mostrar(aviso, 'Ainda não. Verifiquem as contas.');
+              A.falarSeAtivo('Ainda não. Verifiquem as contas.');
               atualizarBloqueio();
             }
           });
@@ -613,8 +643,9 @@
     });
     var aviso = el('p', { class: 'erro', role: 'alert' });
 
+    var textoLocal = 'Resposta certa! A cache está em ' + (cache.coordenada ? cache.coordenada + '. ' : '') + (cache.texto || '');
     var filhos = [
-      el('p', { class: 'certo', texto: '✔ Resposta certa!' }),
+      el('h2', { class: 'certo', tabindex: '-1', texto: '✔ Resposta certa!' }),
       el('p', { class: 'etapa', texto: 'A cache está em' })
     ];
     if (cache.coordenada) filhos.push(el('p', { class: 'coordenada', texto: cache.coordenada }));
@@ -627,6 +658,7 @@
       ]));
     }
     filhos.push(
+      A.temVoz ? el('button', { type: 'button', class: 'botao-ouvir', onclick: function () { A.falar(textoLocal); }, texto: 'Ouvir onde está a cache' }) : null,
       el('p', { class: 'instrucao', texto: 'Quando encontrarem a cache, escrevam o código que está lá dentro.' }),
       el('form', {
         class: 'linha-resposta',
@@ -640,6 +672,7 @@
             if (certo) return avancar();
             campo.select();
             mostrar(aviso, 'Esse código não é desta cache.');
+            A.falarSeAtivo('Esse código não é desta cache.');
           });
         }
       }, [campo, el('button', { type: 'submit', class: 'principal', texto: 'Confirmar' })]),

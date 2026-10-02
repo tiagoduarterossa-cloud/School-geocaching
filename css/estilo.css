@@ -168,6 +168,35 @@ form.cartao .principal { margin-top: 16px; font-size: 1.2rem; }
 .regras { text-align: left; margin: 12px auto 0; padding-left: 1.2em; color: var(--texto); font-size: .9rem; max-width: 30em; }
 .motivo { font-weight: 700; color: var(--erro); }
 .instrucao a { color: var(--primaria-escura); font-weight: 600; }
+.so-leitor { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.botao-ouvir { background: var(--suave-fundo); color: var(--primaria-escura); font-weight: 700; margin: -12px 0 20px; }
+.botao-ouvir::before { content: "🔊 "; }
+.acess-inicio { text-align: center; margin: -8px 0 16px; }
+.acess-inicio button { padding: 8px 14px; font-size: .9rem; }
+h2.etapa, h2.certo { font-family: inherit; }
+h2.etapa { font-size: .8rem; }
+h2.certo { font-size: 1.2rem; }
+main h2:focus { outline: none; }
+.nota-acess { font-size: .85rem; color: var(--suave); margin: -4px 0 8px 34px; }
+
+/* Letra grande e alto contraste */
+html.grande { font-size: 26px; }
+html.grande:root {
+  --fundo: #ffffff; --cartao: #ffffff; --texto: #000000; --suave: #1a1a1a;
+  --primaria: #00463a; --primaria-escura: #00332a; --borda: #000000;
+  --campo: #ffffff; --suave-fundo: #e8e8e8; --realce-fundo: #fff200; --erro: #a00000;
+}
+@media (prefers-color-scheme: dark) {
+  html.grande:root:not([data-theme="light"]) {
+    --fundo: #000000; --cartao: #000000; --texto: #ffffff; --suave: #f0f0f0;
+    --primaria: #ffe600; --primaria-escura: #ffe600; --borda: #ffffff;
+    --campo: #000000; --suave-fundo: #2a2a2a; --realce-fundo: #333300; --erro: #ff6b6b;
+  }
+  html.grande .principal { color: #000; }
+}
+html.grande .enunciado { font-size: 1.6rem; font-weight: 600; }
+html.grande .cartao { border: 3px solid var(--borda); box-shadow: none; }
+html.grande input { border-width: 3px; }
 .bloco-regras { text-align: left; margin-top: 12px; }
 .bloco-regras .etapa { margin: 0 0 4px; }
 .bloco-regras .regras { margin: 0; max-width: none; }
