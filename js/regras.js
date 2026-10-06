@@ -7,7 +7,7 @@ window.REGRAS = {
     'Não mexam em extintores, quadros elétricos, armários de laboratório nem equipamento da cozinha.',
     'O grupo anda sempre junto. Ninguém fica sozinho.',
     'Se no grupo houver um colega cego, ofereçam-lhe o braço para guiar e avisem antes de escadas, portas e obstáculos.',
-    'Se alguém se magoar ou houver um problema, carreguem em "Pedir ajuda" e chamem o adulto mais próximo.'
+    'Se alguém se magoar ou houver um problema, ninguém fica sozinho: um fica com o colega e outro vem à base chamar o professor.'
   ],
   conduta: [
     'Não entrem em salas com aulas a decorrer e falem baixo nos corredores.',

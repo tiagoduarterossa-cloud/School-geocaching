@@ -481,6 +481,7 @@
         listaRegras('Comportamento', R.conduta),
         listaRegras('Jogo', [
           'Têm ' + (DADOS.tempoLimiteMinutos || 60) + ' minutos.',
+          'Os problemas resolvem-se na base e o tablet fica sempre na base. À cache levam só a folha do grupo e o lápis.',
           'Nada de calculadoras, telemóveis ou IA. Contas em papel.',
           'Sair desta página a meio de um problema dá +' + Math.round((DADOS.penalizacaoSaidaSegundos || 0) / 60) + ' minutos.'
         ]),
@@ -659,7 +660,7 @@
     }
     filhos.push(
       A.temVoz ? el('button', { type: 'button', class: 'botao-ouvir', onclick: function () { A.falar(textoLocal); }, texto: 'Ouvir onde está a cache' }) : null,
-      el('p', { class: 'instrucao', texto: 'Quando encontrarem a cache, escrevam o código que está lá dentro.' }),
+      el('p', { class: 'instrucao', texto: 'Copiem este local para a folha do grupo e vão todos à cache. Copiem o código do cartão para a folha, deixem o cartão onde estava e voltem à base para o escrever aqui.' }),
       el('form', {
         class: 'linha-resposta',
         onsubmit: function (ev) {

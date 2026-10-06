@@ -26,6 +26,11 @@
     .entrada-organizador .erro { color: #c0392b; font-weight: 600; min-height: 1.4em; }
     @media print { #cadeado { display: none; } }
     .registo td { height: 32px; }
+    .folha td { height: 48px; }
+    .folha td:nth-child(2) { width: 60%; }
+    .folha-grupo { break-inside: avoid; margin-bottom: 24px; }
+    .rodape-folha { font-size: 13px; color: #5b6d68; }
+    @media print { .folha-grupo { break-after: page; } }
     .cartoes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
     .papel { border: 3px dashed #1f6f5c; border-radius: 12px; padding: 16px; text-align: center; break-inside: avoid; }
     .papel .titulo { font-size: 16px; color: #5b6d68; }
@@ -72,6 +77,12 @@
     <p>Recorta e entrega um papel a cada grupo no início da sessão da turma.</p>
     <p class="nota">Braille: o que aparece aqui impresso em tinta não se sente com os dedos. Para os alunos cegos, passa os códigos (de entrada e das caches) numa impressora braille ou na máquina Perkins, ou pede à equipa de educação especial.</p>
     <div id="entradas"></div>
+  </section>
+
+  <section>
+    <h2>Folhas dos grupos</h2>
+    <p>Uma por grupo, com um lápis. Os tablets ficam na base: o grupo copia aqui o local de cada cache e o código do cartão, e escreve o código no tablet quando volta.</p>
+    <div id="folhas-grupos"></div>
   </section>
 
   <h2>Folhas por turma</h2>
@@ -200,6 +211,18 @@
         grelha.appendChild(d);
       });
       entradas.appendChild(grelha);
+    });
+
+    // ---------- folhas dos grupos ----------
+    var folhasGrupos = document.getElementById('folhas-grupos');
+    grupos.forEach(function (g) {
+      var t = D.turmas[g.turmaIndice];
+      var f = el('div', null, 'folha-grupo');
+      f.appendChild(el('h3', g.turma + ' · Grupo ' + g.grupo));
+      f.appendChild(tabela(['Cache', 'Local (copiado do tablet)', 'Código do cartão'],
+        t.caches.map(function (_, i) { return [String(i + 1) + 'ª', '', '']; }), 'registo folha'));
+      f.appendChild(el('p', 'Contas em papel, no verso. Nada de calculadoras nem telemóveis.', 'rodape-folha'));
+      folhasGrupos.appendChild(f);
     });
 
     // ---------- folhas por turma ----------
