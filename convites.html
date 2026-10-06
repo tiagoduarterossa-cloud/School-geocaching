@@ -73,7 +73,7 @@
         c.appendChild(el('h2', 'Encontraram-me.'));
         c.appendChild(el('p', 'Convite para a turma ' + t.turma, 'turma'));
         c.appendChild(el('p', 'Este é o primeiro desafio, e já o resolveram. A vossa turma foi escolhida para o ' + D.titulo +
-          ': caches escondidas pela escola, problemas para resolver e uma hora contra o relógio.'));
+          ': caches escondidas pela escola, problemas para resolver e ' + (D.tempoLimiteMinutos ? D.tempoLimiteMinutos + ' minutos' : 'pouco tempo') + ' contra o relógio.'));
 
         var enigma = el('div', null, 'enigma');
         var s = t.sessao || {};
