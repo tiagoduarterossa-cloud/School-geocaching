@@ -4,7 +4,7 @@
   var DADOS = window.JOGO;
   var A = window.Acessivel || { fala: String, falar: function () {}, falarSeAtivo: function () {}, temVoz: false, painel: function () {} };
   var IT = Cripto.ITERACOES;
-  var CHAVE = 'geocaching-escola-v4';
+  var CHAVE = 'geocaching-escola-v5';
   var app = document.getElementById('app');
   var estado = carregar();
   var temporizador = null;
@@ -40,13 +40,24 @@
 
   // ---------- percurso ----------
 
+  // O conteúdo está dividido em eventos (teste, Semana das Ciências, Dia da
+  // Matemática); o código de entrada diz a que evento pertence o grupo.
+  function eventoDe(id) {
+    return (DADOS.eventos || []).filter(function (e) { return e.id === id; })[0] || null;
+  }
+
+  function eventoAtual() {
+    return (estado && eventoDe(estado.evento)) || { percursos: {}, turmas: [] };
+  }
+
   var normalizar = Cripto.normalizar;
 
   // Os grupos da mesma turma fazem as mesmas caches, cada um a começar o mais
   // afastado possível dos outros (com 2 grupos e 5 caches: problemas 1 e 3).
   function percursoGrupo(g) {
-    var n = (DADOS.percursos[g.turma] || []).length;
-    var turma = DADOS.turmas[g.turmaIndice] || {};
+    var ev = eventoDe(g.evento) || { percursos: {}, turmas: [] };
+    var n = (ev.percursos[g.turma] || []).length;
+    var turma = ev.turmas[g.turmaIndice] || {};
     var inicio = Math.floor((g.grupo - 1) * n / (turma.grupos || 1));
     var passos = [];
     for (var i = 0; i < n; i++) passos.push({ posicao: (inicio + i) % n });
@@ -62,7 +73,7 @@
   }
 
   function contexto(pos) {
-    return estado.turma + '|' + pos;
+    return estado.evento + '|' + estado.turma + '|' + pos;
   }
 
   // Tenta abrir o local da cache com a resposta escrita. Devolve o local, ou null.
@@ -89,7 +100,7 @@
   }
 
   function problemaAtual() {
-    return (DADOS.percursos[estado.turma] || [])[passoAtual().posicao];
+    return (eventoAtual().percursos[estado.turma] || [])[passoAtual().posicao];
   }
 
   function agora() {
@@ -127,7 +138,7 @@
     if (!window.Sync || !Sync.ativo || !estado || !estado.codigo) return;
     if (aEnviar) { enviarDeNovo = true; return; }
     aEnviar = true;
-    Sync.guardar('grupos/' + estado.codigo, {
+    Sync.guardar('eventos/' + estado.evento + '/grupos/' + estado.codigo, {
       turma: estado.turma,
       grupo: estado.grupo,
       ano: estado.ano,
@@ -153,7 +164,7 @@
 
   function ouvirControlo() {
     if (!window.Sync || !Sync.ativo || !estado || !estado.codigo || escutaControlo) return;
-    escutaControlo = Sync.ouvir('controlo/' + estado.codigo, function (v) {
+    escutaControlo = Sync.ouvir('eventos/' + estado.evento + '/controlo/' + estado.codigo, function (v) {
       if (!estado) return;
       var novo = v || {};
       if (JSON.stringify(novo) === JSON.stringify(estado.controlo || {})) return;
@@ -202,7 +213,8 @@
   }
 
   function limiteSegundos() {
-    return (DADOS.tempoLimiteMinutos || 0) * 60;
+    var ev = estado && eventoDe(estado.evento);
+    return ((ev && ev.tempoLimiteMinutos) || DADOS.tempoLimiteMinutos || 0) * 60;
   }
 
   // Termina o jogo se o tempo limite já passou. Devolve true se terminou.
@@ -223,6 +235,7 @@
 
   function comecar(g, regrasAceites) {
     estado = {
+      evento: g.evento,
       regrasAceites: regrasAceites,
       codigo: g.codigo.toUpperCase(),
       equipa: nomeEquipa(g),
@@ -473,14 +486,14 @@
       }
       zona.innerHTML = '';
       zona.appendChild(el('div', { class: 'cartao confirmar' }, [
-        el('p', { class: 'etapa', texto: 'Vocês são' }),
+        el('p', { class: 'etapa', texto: ((eventoDe(eq.evento) || {}).nome ? eventoDe(eq.evento).nome + ' · ' : '') + 'Vocês são' }),
         el('p', { class: 'quem', texto: eq.turma }),
         el('p', { class: 'quem-grupo', texto: 'Grupo ' + eq.grupo }),
         el('p', { class: 'instrucao', texto: 'Se não são vocês, chamem o professor.' }),
         listaRegras('Segurança', R.seguranca),
         listaRegras('Comportamento', R.conduta),
         listaRegras('Jogo', [
-          'Têm ' + (DADOS.tempoLimiteMinutos || 60) + ' minutos.',
+          'Têm ' + ((eventoDe(eq.evento) || {}).tempoLimiteMinutos || DADOS.tempoLimiteMinutos || 60) + ' minutos.',
           'Os problemas resolvem-se na base e o tablet fica sempre na base. À cache levam só a folha do grupo e o lápis.',
           'Nada de calculadoras, telemóveis ou IA. Contas em papel.',
           'Sair desta página a meio de um problema dá +' + Math.round((DADOS.penalizacaoSaidaSegundos || 0) / 60) + ' minutos.'

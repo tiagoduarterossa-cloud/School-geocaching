@@ -58,7 +58,11 @@
   <script>
     (function () {
       var D = window.JOGO || {};
-      var semana = D.semana || {};
+      var eventos = D.eventos || [];
+      var pedido = new URLSearchParams(location.search).get('evento');
+      var EV = eventos.filter(function (e) { return e.id === pedido; })[0] ||
+        eventos.filter(function (e) { return e.semana && e.semana.inicio; })[0] || {};
+      var semana = EV.semana || { nome: EV.nome };
       var turma = new URLSearchParams(location.search).get('turma');
       if (semana.nome) document.getElementById('etiqueta').textContent = semana.nome + (turma ? ' · ' + turma : '');
       else if (turma) document.getElementById('etiqueta').textContent = turma;

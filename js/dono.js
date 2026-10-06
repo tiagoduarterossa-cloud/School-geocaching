@@ -16,6 +16,11 @@
 
   // ---------- utilitários ----------
 
+  // Cada evento tem o seu direto no Firebase.
+  function caminho(resto) {
+    return 'eventos/' + D.id + '/' + resto;
+  }
+
   function el(tag, atributos, filhos) {
     var n = document.createElement(tag);
     if (atributos) {
@@ -85,7 +90,7 @@
     controlos[codigo] = Object.assign({}, controlos[codigo] || {}, alteracao);
     Object.keys(alteracao).forEach(function (k) { if (alteracao[k] === null) delete controlos[codigo][k]; });
     desenharConteudo();
-    Sync.atualizar('controlo/' + codigo, alteracao).then(function (ok) {
+    Sync.atualizar(caminho('controlo/' + codigo), alteracao).then(function (ok) {
       if (aviso) aviso.textContent = ok ? 'Enviado.' : 'Não foi enviado: sem ligação à base de dados.';
     });
   }
@@ -97,7 +102,10 @@
     var estadoLigacao = el('span', { id: 'ligacao', class: 'ligacao' });
     raiz.appendChild(el('div', { class: 'painel' }, [
       el('div', { class: 'linha-topo' }, [
-        el('h1', { texto: D.titulo + ': área do dono' }),
+        el('div', { class: 'titulo-evento' }, [
+          el('h1', { texto: D.titulo + ': área do dono' }),
+          G.seletorEventos()
+        ]),
         el('div', { class: 'acoes-topo' }, [
           estadoLigacao,
           el('button', { type: 'button', class: 'secundario', onclick: function () { G.fechar(); location.reload(); }, texto: 'Bloquear' })
@@ -113,8 +121,8 @@
     mostrarLigacao();
 
     if (Sync.ativo) {
-      Sync.ouvir('grupos', function (v) { grupos = v || {}; desenharConteudo(); }, function (ok) { ligado = ok; mostrarLigacao(); });
-      Sync.ouvir('controlo', function (v) { controlos = v || {}; desenharConteudo(); });
+      Sync.ouvir(caminho('grupos'), function (v) { grupos = v || {}; desenharConteudo(); }, function (ok) { ligado = ok; mostrarLigacao(); });
+      Sync.ouvir(caminho('controlo'), function (v) { controlos = v || {}; desenharConteudo(); });
     }
     desenharConteudo();
     setInterval(atualizarTempos, 1000);

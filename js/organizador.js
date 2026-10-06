@@ -6,7 +6,10 @@
   'use strict';
 
   var CHAVE_SESSAO = 'geocaching-organizador';
-  var B = null; // conteúdo decifrado
+  var CHAVE_EVENTO = 'geocaching-evento';
+  var B = null;      // conteúdo decifrado: { conteudo, eventos: [{ id, entradas, codigosCache }] }
+  var EV = null;     // o evento escolhido, já junto com as definições gerais
+  var EVP = null;    // os códigos desse evento
 
   // ---------- regras do jogo (iguais no browser e no script de construção) ----------
 
@@ -63,10 +66,47 @@
     try { return sessionStorage.getItem(CHAVE_SESSAO); } catch (e) { return null; }
   }
 
+  // O evento vem do endereço (?evento=…), senão do último escolhido, senão o primeiro.
+  function idPedido() {
+    var id = null;
+    try { id = new URLSearchParams(location.search).get('evento'); } catch (e) { /* ignorar */ }
+    if (!id) { try { id = sessionStorage.getItem(CHAVE_EVENTO); } catch (e) { /* ignorar */ } }
+    return id;
+  }
+
   function usar(texto) {
     B = JSON.parse(texto);
-    raiz.JOGO_COMPLETO = B.conteudo;
+    var eventos = B.conteudo.eventos || [];
+    var pedido = idPedido();
+    var ev = eventos.filter(function (e) { return e.id === pedido; })[0] || eventos[0];
+    var gerais = Object.assign({}, B.conteudo);
+    delete gerais.eventos;
+    EV = Object.assign(gerais, ev);
+    EVP = B.eventos.filter(function (e) { return e.id === ev.id; })[0];
+    try { sessionStorage.setItem(CHAVE_EVENTO, ev.id); } catch (e) { /* ignorar */ }
+    raiz.JOGO_COMPLETO = EV;
     return B;
+  }
+
+  // Lista para escolher o evento; mudar de evento recarrega a página nesse evento.
+  function seletorEventos() {
+    var sel = document.createElement('select');
+    sel.className = 'seletor-evento';
+    sel.setAttribute('aria-label', 'Evento');
+    (B.conteudo.eventos || []).forEach(function (e) {
+      var o = document.createElement('option');
+      o.value = e.id;
+      o.textContent = e.nome;
+      if (e.id === EV.id) o.selected = true;
+      sel.appendChild(o);
+    });
+    sel.addEventListener('change', function () {
+      try { sessionStorage.setItem(CHAVE_EVENTO, sel.value); } catch (e) { /* ignorar */ }
+      var u = new URL(location.href);
+      u.searchParams.set('evento', sel.value);
+      location.href = u.toString();
+    });
+    return sel;
   }
 
   function decifrar(palavraPasse) {
@@ -145,11 +185,13 @@
     // páginas do organizador
     desbloquear: desbloquear,
     fechar: fechar,
-    listaGrupos: function () { return B.entradas; },
-    codigosCache: function (i) { return B.codigosCache[i] || {}; },
-    versaoProblema: function (ano, pos, turma) { return versaoProblema(B.conteudo, ano, pos, turma); },
-    percursoGrupo: function (g) { return percursoGrupo(B.conteudo, g); },
-    penalizacao: function (r, ctrl) { return penalizacao(B.conteudo, r, ctrl); },
+    seletorEventos: seletorEventos,
+    evento: function () { return EV; },
+    listaGrupos: function () { return EVP.entradas; },
+    codigosCache: function (i) { return EVP.codigosCache[i] || {}; },
+    versaoProblema: function (ano, pos, turma) { return versaoProblema(EV, ano, pos, turma); },
+    percursoGrupo: function (g) { return percursoGrupo(EV, g); },
+    penalizacao: function (r, ctrl) { return penalizacao(EV, r, ctrl); },
     normalizar: function (s) { return Cripto.normalizar(s); }
   };
 })(typeof window !== 'undefined' ? window : globalThis);

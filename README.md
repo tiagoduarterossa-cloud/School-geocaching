@@ -26,6 +26,18 @@ Pensado para uma semana inteira, com uma turma a jogar de cada vez:
 - Há um conjunto de caches fixas (15 no exemplo). Cada turma faz um percurso de 5. Turmas que joguem à mesma hora devem usar caches diferentes; o plano da semana em `professor.html` mostra que turmas partilham caches.
 - Dentro da turma, cada grupo começa num problema diferente.
 
+## Eventos
+
+O conteúdo está dividido em eventos, cada um com as suas caches, turmas, problemas e códigos:
+
+- **Teste 8ºB**: um teste com uma turma, antes dos eventos maiores.
+- **Semana das Ciências**: 3 dias, turmas do 5º ao 8º ano.
+- **Dia da Matemática**: um dia, com caches noutros sítios e problemas diferentes, porque os alunos são os mesmos.
+
+Cada turma está dividida em 2 grupos. O código de entrada diz ao tablet a que evento pertence o grupo, por isso os tablets não precisam de ser configurados para cada evento. A área do dono, o material do professor e os convites têm um seletor de eventos (ou `?evento=<id>` no endereço, por exemplo `dono.html?evento=dia-matematica`), e o direto de cada evento fica separado no Firebase. O ecrã dos quadros usa o evento com data de início, ou o que estiver em `?evento=`.
+
+Para acrescentar um evento, copia um bloco de `eventos` em `privado/conteudo.js`, dá-lhe um `id` e uma `semente` novos, e volta a gerar os ficheiros. Os códigos de entrada são sempre diferentes entre eventos.
+
 ## Respostas e códigos protegidos
 
 O site e este repositório são públicos, por isso nenhuma resposta, código ou local está publicado em claro:

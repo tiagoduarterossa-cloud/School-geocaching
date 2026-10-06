@@ -15,6 +15,9 @@
     .avisos ul { margin: 8px 0 0; }
     .acoes button { font: inherit; padding: 10px 16px; border-radius: 8px; border: 0; background: #1f6f5c; color: #fff; cursor: pointer; margin-right: 8px; }
     .rolar { overflow-x: auto; }
+    .seletor-evento { font: inherit; font-weight: 700; padding: 8px 12px; border-radius: 8px; border: 2px solid #1f6f5c; margin-bottom: 8px; }
+    .so-impressao { display: none; font-weight: 700; }
+    @media print { .seletor-evento { display: none; } .so-impressao { display: block; } }
     table { border-collapse: collapse; width: 100%; font-size: 15px; }
     th, td { border: 1px solid #cfdcd7; padding: 6px 8px; text-align: left; vertical-align: top; }
     th { background: #eef4f1; }
@@ -99,6 +102,12 @@
   Organizador.desbloquear(document.getElementById('cadeado'), function () {
     document.getElementById('cadeado').hidden = true;
     document.querySelector('main').hidden = false;
+    var titulo = document.querySelector('main h1');
+    titulo.parentNode.insertBefore(Organizador.seletorEventos(), titulo.nextSibling);
+    var impresso = document.createElement('p');
+    impresso.className = 'so-impressao';
+    impresso.textContent = 'Evento: ' + window.JOGO_COMPLETO.nome;
+    titulo.parentNode.insertBefore(impresso, titulo.nextSibling);
     var D = window.JOGO_COMPLETO;
     var G = window.Organizador;
     var grupos = G.listaGrupos();
