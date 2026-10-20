@@ -46,13 +46,22 @@ window.Acessivel = (function () {
   // "3/4 × 2⁻³" → "3 quartos vezes 2 elevado a menos 3"
   function fala(texto) {
     return String(texto)
+      // um número sozinho entre parênteses, como (−4) ou (−5/7), lê-se sem os parênteses
+      .replace(/\(\s*([−-]?\s*\d+(?:,\d+)?(?:\s*\/\s*\d+)?)\s*\)(?![⁻⁰¹²³⁴⁵⁶⁷⁸⁹])/g, '$1')
       .replace(/(\d+)\s*\/\s*(\d+)/g, function (_, n, d) { return fracao(n, d); })
       .replace(/([⁻⁰¹²³⁴⁵⁶⁷⁸⁹]+)/g, function (_, e) { return potencia(e); })
       .replace(/√\s*/g, 'raiz quadrada de ')
       .replace(/×/g, ' vezes ')
       .replace(/÷/g, ' a dividir por ')
+      .replace(/\s:\s/g, ' a dividir por ')
       .replace(/(\d)\s*:\s*(\d)/g, '$1 a dividir por $2')
       .replace(/\s[−-]\s/g, ' menos ')
+      .replace(/(^|[\s(\[])[−-]\s*(?=\d)/g, '$1menos ')
+      .replace(/\s\+\s/g, ' mais ')
+      .replace(/\[/g, ' abre parênteses retos ')
+      .replace(/\]/g, ' fecha parênteses retos ')
+      .replace(/\(/g, ' abre parênteses ')
+      .replace(/\)/g, ' fecha parênteses ')
       .replace(/=/g, ' igual a ')
       .replace(/π/g, 'pi')
       .replace(/°/g, ' graus')
@@ -60,6 +69,53 @@ window.Acessivel = (function () {
       .replace(/\s*\n+/g, '. ')
       .replace(/\s+/g, ' ')
       .trim();
+  }
+
+  // ---------- contas desenhadas como no manual ----------
+
+  // "3/7 × (−5/2)" → frações com o numerador por cima do traço e o
+  // denominador por baixo, e parênteses à altura da fração.
+  var CONTA = /\(\s*([−-]?)\s*(\d+(?:,\d+)?)\s*\/\s*(\d+(?:,\d+)?)\s*\)([⁻⁰¹²³⁴⁵⁶⁷⁸⁹]*)|(\d+(?:,\d+)?)\s*\/\s*(\d+(?:,\d+)?)/g;
+
+  function span(cls, texto) {
+    var s = document.createElement('span');
+    if (cls) s.className = cls;
+    if (texto !== undefined) s.textContent = texto;
+    return s;
+  }
+
+  function fracaoDesenhada(n, d) {
+    var f = span('fr');
+    f.appendChild(span('fr-num', n));
+    f.appendChild(span('fr-den', d));
+    return f;
+  }
+
+  function desenharConta(texto) {
+    var frag = document.createDocumentFragment();
+    String(texto).split('\n').forEach(function (linha, i) {
+      if (i) frag.appendChild(document.createElement('br'));
+      var ultimo = 0, m;
+      CONTA.lastIndex = 0;
+      while ((m = CONTA.exec(linha))) {
+        if (m.index > ultimo) frag.appendChild(document.createTextNode(linha.slice(ultimo, m.index)));
+        if (m[2] !== undefined) {
+          var g = span('par');
+          g.appendChild(span('par-sinal', '('));
+          if (m[1]) g.appendChild(document.createTextNode('−'));
+          g.appendChild(fracaoDesenhada(m[2], m[3]));
+          g.appendChild(span('par-sinal', ')'));
+          // o expoente fica no canto de cima do parêntese, como no manual
+          if (m[4]) g.appendChild(span('expoente', m[4].split('').map(function (c) { return c === '⁻' ? '−' : SOBRESCRITOS[c]; }).join('')));
+          frag.appendChild(g);
+        } else {
+          frag.appendChild(fracaoDesenhada(m[5], m[6]));
+        }
+        ultimo = CONTA.lastIndex;
+      }
+      if (ultimo < linha.length) frag.appendChild(document.createTextNode(linha.slice(ultimo)));
+    });
+    return frag;
   }
 
   // ---------- voz ----------
@@ -189,6 +245,7 @@ window.Acessivel = (function () {
     falarSeAtivo: falarSeAtivo,
     temVoz: temVoz,
     braille: braille,
+    desenharConta: desenharConta,
     painel: painel
   };
 })();

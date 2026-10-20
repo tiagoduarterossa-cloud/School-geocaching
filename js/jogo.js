@@ -3,6 +3,11 @@
 
   var DADOS = window.JOGO;
   var A = window.Acessivel || { fala: String, falar: function () {}, falarSeAtivo: function () {}, temVoz: false, painel: function () {} };
+
+  // As contas dos enunciados aparecem como no manual (frações empilhadas).
+  function conta(texto) {
+    return A.desenharConta ? A.desenharConta(texto) : document.createTextNode(texto);
+  }
   var IT = Cripto.ITERACOES;
   var CHAVE = 'geocaching-escola-v5';
   var app = document.getElementById('app');
@@ -569,16 +574,16 @@
       ]));
       return;
     }
-    var numerica = !!p.numerica;
     var campo = el('input', {
       type: 'text',
       class: 'resposta',
-      inputmode: numerica ? 'decimal' : 'text',
+      // Teclado completo: o numérico do iPad não tem o "−" nem o "/".
+      inputmode: 'text',
       autocomplete: 'off',
       autocapitalize: 'off',
       spellcheck: 'false',
       'aria-label': 'Resposta',
-      placeholder: 'Resposta'
+      placeholder: 'Resposta (ex.: -3/4)'
     });
     var botao = el('button', { type: 'submit', class: 'principal', texto: 'Verificar' });
     var aviso = el('p', { class: 'erro', role: 'alert' });
@@ -589,7 +594,7 @@
       zonaDica.innerHTML = '';
       if (!p.dica) return;
       if (estado.dicaVista) {
-        zonaDica.appendChild(el('p', { class: 'dica', 'aria-label': 'Dica: ' + A.fala(p.dica), texto: '💡 ' + p.dica }));
+        zonaDica.appendChild(el('p', { class: 'dica', 'aria-label': 'Dica: ' + A.fala(p.dica) }, ['💡 ', conta(p.dica)]));
       } else {
         zonaDica.appendChild(el('button', {
           type: 'button',
@@ -609,7 +614,7 @@
 
     app.appendChild(el('main', { class: 'cartao' }, [
       el('h2', { class: 'etapa', tabindex: '-1', texto: 'Problema ' + (estado.passo + 1) + ' de ' + estado.passos.length }),
-      el('p', { class: 'enunciado', 'aria-hidden': 'true', texto: p.enunciado }),
+      el('p', { class: 'enunciado', 'aria-hidden': 'true' }, [conta(p.enunciado)]),
       el('p', { class: 'so-leitor', texto: A.fala(p.enunciado) }),
       A.temVoz ? el('button', { type: 'button', class: 'botao-ouvir', onclick: function () { A.falar(p.enunciado); }, texto: 'Ouvir o problema' }) : null,
       el('form', {

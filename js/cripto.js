@@ -43,6 +43,8 @@
       .replace(/[̀-ͯ]/g, '')
       .replace(/\s+/g, '')
       .replace(/,/g, '.')
+      .replace(/[−–—]/g, '-')
+      .replace(/[()]/g, '')
       .replace(/^[a-z]=/, '');
   }
 
