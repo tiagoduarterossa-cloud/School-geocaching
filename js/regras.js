@@ -3,6 +3,8 @@
 window.REGRAS = {
   // Onde ficam os tablets e o professor durante o jogo.
   base: 'nos bancos castanhos junto ao 2.º ciclo',
+  // Aparece no ecrã final do jogo.
+  creditos: 'Esta atividade foi projetada por Tiago Rossa, com a ajuda dos professores João Letras e Susana Guerra.',
   seguranca: [
     'Andem, não corram. Nas escadas, devagar e pelo corrimão.',
     'As caches nunca estão em sítios perigosos. Não subam a nada, não entrem em zonas fechadas e não saiam da escola.',

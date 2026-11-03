@@ -220,6 +220,7 @@ html.grande input { border-width: 3px; }
 .entrada-organizador h2 { margin-top: 0; }
 
 .fim { text-align: center; }
+.creditos { margin-top: 24px; padding-top: 16px; border-top: 1px solid currentColor; opacity: .8; font-style: italic; }
 .trofeu { font-size: 4rem; margin: 0; }
 .resumo { margin: 20px auto 0; border-collapse: collapse; text-align: left; }
 .resumo th, .resumo td { padding: 8px 14px; border-bottom: 1px solid var(--borda); }

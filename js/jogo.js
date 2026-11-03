@@ -725,7 +725,8 @@
         controlo().extraSegundos ? linha('Ajuste do organizador', (controlo().extraSegundos > 0 ? '+' : '−') +
           formatarTempo(Math.abs(controlo().extraSegundos))) : null,
         linha('Tempo final', formatarTempo(tempo + pen), true)
-      ])
+      ]),
+      window.REGRAS && window.REGRAS.creditos ? el('p', { class: 'creditos', texto: window.REGRAS.creditos }) : null
     ]));
   }
 
