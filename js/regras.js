@@ -3,6 +3,8 @@
 window.REGRAS = {
   // Onde ficam os tablets e o professor durante o jogo.
   base: 'nos bancos castanhos junto ao 2.º ciclo',
+  // Mapa da escola com a quadrícula das coordenadas (A1, C4...).
+  mapa: 'dados/mapa.svg',
   // Aparece no ecrã final do jogo.
   creditos: 'Esta atividade foi projetada por Tiago Rossa, com a ajuda dos professores João Letras e Susana Guerra.',
   seguranca: [

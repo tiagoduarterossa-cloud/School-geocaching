@@ -61,7 +61,7 @@ Até onde vai a proteção: chega para alunos curiosos, mesmo com jeito para inf
    ```
 
    Num computador sem a pasta `privado/`, recupera primeiro o conteúdo com o mesmo comando e `--extrair` no fim.
-3. (Opcional) Põe uma imagem do mapa da escola com quadrícula em `dados/mapa.jpg` e escreve `mapa: 'dados/mapa.jpg'` no conteúdo.
+3. O mapa da escola, com quadrícula de A a F e de 1 a 10, está em `dados/mapa.svg` (aparece no tablet em "Ver mapa da escola" e no separador "Onde estão" da área do dono). É um esboço aproximado: as coordenadas das caches (`coordenada`) devem ser lidas neste mapa. Para caches dentro de edifícios, acrescenta `andar` (0 = rés-do-chão, 1, 2, 3): o tablet mostra o andar ao lado do local.
 4. Abre `professor.html` e escreve a palavra-passe. Se faltar alguma coisa (um problema, versões a menos, uma cache que não existe), avisa no topo. Imprime:
    - os cartões para dentro das caches (com o código de cada turma);
    - os papéis com os códigos de entrada dos grupos;

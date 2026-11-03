@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="60 490 624 1040" font-family="system-ui, -apple-system, Segoe UI, sans-serif">
+  <title>Mapa aproximado do colégio, com quadrícula</title>
+  <!-- Esboço feito à mão a partir de uma vista aérea. Medidas aproximadas: serve para orientar, não para medir. -->
+  <defs>
+    <pattern id="arvores" width="26" height="26" patternUnits="userSpaceOnUse">
+      <rect width="26" height="26" fill="#cfe3c6"/>
+      <circle cx="8" cy="8" r="5" fill="#a9cf9b"/>
+      <circle cx="20" cy="19" r="5" fill="#a9cf9b"/>
+    </pattern>
+  </defs>
+
+  <!-- fundo e ruas à volta -->
+  <rect x="60" y="490" width="624" height="1040" fill="#eef1ec"/>
+  <path d="M150 490 C 120 700 90 950 72 1180 L 60 1530 L 60 490 Z" fill="#d9d9d4"/>
+  <path d="M60 1420 C 250 1440 450 1470 684 1520 L 684 1530 L 60 1530 Z" fill="#d9d9d4"/>
+  <text x="96" y="900" font-size="18" fill="#7b7b74" transform="rotate(-80 96 900)">Av. Dr. Mário Moutinho</text>
+  <text x="330" y="1500" font-size="18" fill="#7b7b74" transform="rotate(4 330 1500)">Rua</text>
+
+  <!-- recinto (limite aproximado) -->
+  <path d="M265 570 L485 505 L550 600 L605 780 L605 840 L530 850 L545 1035 L655 1050 L655 1215 L598 1212 L598 1478 L470 1440 L330 1392 L195 1382 L130 1392 L98 1150 L108 1080 L150 1000 L182 950 L190 860 L222 780 L262 690 Z"
+        fill="#f8f8f4" stroke="#c0392b" stroke-width="5" stroke-dasharray="14 8" stroke-linejoin="round"/>
+
+  <!-- bosque -->
+  <path d="M268 585 L482 522 L540 612 L592 788 L522 846 L470 878 L400 902 L330 930 L200 952 L205 858 L235 782 L268 700 Z"
+        fill="url(#arvores)" stroke="#8fb883" stroke-width="2"/>
+  <text x="420" y="700" font-size="26" font-weight="700" fill="#4d7a43" text-anchor="middle">Bosque</text>
+
+  <!-- parque infantil -->
+  <path d="M258 852 L372 828 L388 896 L272 922 Z" fill="#e7b8b0" stroke="#b0685c" stroke-width="2"/>
+  <text x="322" y="882" font-size="15" font-weight="700" fill="#7d3d33" text-anchor="middle">Parque</text>
+  <text x="322" y="900" font-size="15" font-weight="700" fill="#7d3d33" text-anchor="middle">infantil</text>
+
+  <!-- edifícios -->
+  <g fill="#c9ced2" stroke="#7d868c" stroke-width="2">
+    <rect x="545" y="842" width="78" height="172" rx="3"/>
+    <rect x="590" y="1056" width="64" height="140" rx="3"/>
+    <path d="M335 965 L395 952 L472 1030 L420 1092 L318 1040 Z"/>
+    <path d="M215 1100 L388 1100 L385 1300 L330 1300 L330 1362 L192 1345 L192 1262 L212 1262 Z"/>
+    <rect x="120" y="1186" width="80" height="120" rx="3"/>
+    <rect x="575" y="1240" width="64" height="120" rx="3"/>
+  </g>
+  <g font-size="20" font-weight="700" fill="#3b4348" text-anchor="middle">
+    <text x="584" y="934">E1</text>
+    <text x="622" y="1132">E2</text>
+    <text x="395" y="1028">E3</text>
+    <text x="290" y="1210">E4</text>
+    <text x="160" y="1252">E5</text>
+    <text x="607" y="1306">E6</text>
+  </g>
+
+  <!-- campo -->
+  <rect x="475" y="1155" width="90" height="165" rx="4" fill="#9cc3e6" stroke="#4a7fb0" stroke-width="2"/>
+  <text x="520" y="1244" font-size="18" font-weight="700" fill="#24527e" text-anchor="middle">Campo</text>
+
+  <!-- quadrícula: colunas A-F, linhas 1-10 -->
+  <g stroke="#1f6f5c" stroke-opacity=".45" stroke-width="1.5">
+    <line x1="164" y1="490" x2="164" y2="1530"/><line x1="268" y1="490" x2="268" y2="1530"/>
+    <line x1="372" y1="490" x2="372" y2="1530"/><line x1="476" y1="490" x2="476" y2="1530"/>
+    <line x1="580" y1="490" x2="580" y2="1530"/>
+    <line x1="60" y1="594" x2="684" y2="594"/><line x1="60" y1="698" x2="684" y2="698"/>
+    <line x1="60" y1="802" x2="684" y2="802"/><line x1="60" y1="906" x2="684" y2="906"/>
+    <line x1="60" y1="1010" x2="684" y2="1010"/><line x1="60" y1="1114" x2="684" y2="1114"/>
+    <line x1="60" y1="1218" x2="684" y2="1218"/><line x1="60" y1="1322" x2="684" y2="1322"/>
+    <line x1="60" y1="1426" x2="684" y2="1426"/>
+  </g>
+  <g font-size="22" font-weight="800" fill="#165244" text-anchor="middle">
+    <text x="112" y="516">A</text><text x="216" y="516">B</text><text x="320" y="516">C</text>
+    <text x="424" y="516">D</text><text x="528" y="516">E</text><text x="632" y="516">F</text>
+  </g>
+  <g font-size="22" font-weight="800" fill="#165244">
+    <text x="68" y="552">1</text><text x="68" y="656">2</text><text x="68" y="760">3</text>
+    <text x="68" y="864">4</text><text x="68" y="968">5</text><text x="68" y="1072">6</text>
+    <text x="68" y="1176">7</text><text x="68" y="1280">8</text><text x="68" y="1384">9</text>
+    <text x="62" y="1488">10</text>
+  </g>
+
+  <!-- norte -->
+  <g transform="translate(646 556)">
+    <circle r="22" fill="#fff" stroke="#165244" stroke-width="2"/>
+    <path d="M0 -16 L8 8 L0 3 L-8 8 Z" fill="#165244"/>
+    <text y="-26" font-size="16" font-weight="800" fill="#165244" text-anchor="middle">N</text>
+  </g>
+
+  <!-- legenda -->
+  <g font-size="14" fill="#3b4348">
+    <rect x="420" y="1450" width="252" height="70" rx="8" fill="#fff" fill-opacity=".92" stroke="#cfdcd7"/>
+    <line x1="432" y1="1472" x2="466" y2="1472" stroke="#c0392b" stroke-width="4" stroke-dasharray="8 5"/>
+    <text x="474" y="1477">Limite do jogo (aproximado)</text>
+    <text x="432" y="1504">Mapa aproximado, para orientar.</text>
+  </g>
+</svg>

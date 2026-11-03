@@ -451,6 +451,12 @@
     });
     var porComecar = todos.filter(function (g) { return !grupos[g.codigo]; }).length;
     zona.appendChild(grelha);
+    if (window.REGRAS && window.REGRAS.mapa) {
+      zona.appendChild(el('details', { class: 'mapa-dono', open: 'open' }, [
+        el('summary', { texto: 'Mapa da escola' }),
+        el('img', { src: window.REGRAS.mapa, alt: 'Mapa da escola com quadrícula' })
+      ]));
+    }
     if (porComecar) zona.appendChild(el('p', { class: 'nota-onde', texto: porComecar + ' grupo(s) ainda não começaram.' }));
   }
 

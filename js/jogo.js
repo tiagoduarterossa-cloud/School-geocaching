@@ -696,10 +696,11 @@
       onde.forEach(function (n) { filhos.push(n); });
     }
     if (cache.imagem) filhos.push(el('img', { class: 'imagem-local', src: cache.imagem, alt: 'Pista do local' }));
-    if (DADOS.mapa && cache.coordenada) {
+    var mapa = DADOS.mapa || (window.REGRAS && window.REGRAS.mapa) || '';
+    if (mapa && cache.coordenada) {
       filhos.push(el('details', { class: 'mapa' }, [
         el('summary', { texto: 'Ver mapa da escola' }),
-        el('img', { src: DADOS.mapa, alt: 'Mapa da escola' })
+        el('img', { src: mapa, alt: 'Mapa da escola com quadrícula de A a F e de 1 a 10' })
       ]));
     }
     filhos.push(
