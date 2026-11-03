@@ -113,6 +113,7 @@
       ]),
       el('div', { class: 'separadores', role: 'tablist' }, [
         botaoSeparador('direto', 'Em direto'),
+        botaoSeparador('onde', 'Onde estão'),
         botaoSeparador('classificacao', 'Classificação'),
         botaoSeparador('codigos', 'Códigos')
       ]),
@@ -126,6 +127,7 @@
     }
     desenharConteudo();
     setInterval(atualizarTempos, 1000);
+    setInterval(function () { if (separador === 'onde') desenharConteudo(); }, 15000);
   }
 
   function mostrarLigacao() {
@@ -160,7 +162,8 @@
       atualizarGestao();
     } else {
       zona.innerHTML = '';
-      if (separador === 'classificacao') desenharClassificacao(zona);
+      if (separador === 'onde') desenharOnde(zona);
+      else if (separador === 'classificacao') desenharClassificacao(zona);
       else desenharCodigos(zona);
     }
   }
@@ -240,6 +243,7 @@
       ['A jogar', conta(function (r) { return r.classe === 'jogo' || r.classe === 'fora' || r.classe === 'ajuda'; }), false],
       ['Fora da app agora', conta(function (r) { return r.classe === 'fora'; }), true],
       ['Sem ligação', conta(function (r) { return r.semLigacao; }), true],
+      ['Fora da base há ' + MIN_FORA + '+ min', conta(function (r) { var o = onde(r); return o && !o.naBase && o.minutos >= MIN_FORA; }), true],
       ['Terminaram', conta(function (r) { return r.classe === 'fim'; }), false],
       ['Desclassificados', conta(function (r) { return r.classe === 'ban'; }), true]
     ].forEach(function (x) {
@@ -372,6 +376,81 @@
     }
     var b = document.getElementById('botao-ban');
     if (b && !b.dataset.confirmar) b.textContent = c.desclassificado ? 'Readmitir grupo' : 'Desclassificar';
+  }
+
+  // ---------- onde estão ----------
+
+  // Os alunos não levam o tablet, por isso não há GPS: o sítio de cada grupo
+  // vem da fase do jogo. A resolver um problema, estão na base; depois de
+  // acertarem, estão a ir ou a voltar da cache que lhes foi revelada.
+  var MIN_FORA = 8;      // minutos fora da base a partir dos quais se avisa
+  var MIN_URGENTE = 12;  // minutos a partir dos quais vale a pena ir ver
+
+  function onde(r) {
+    var s = r.s;
+    if (!s || r.classe === 'ban') return null;
+    var desde = s.faseDesde || s.atualizado || s.inicio;
+    var minutos = Math.max(0, Math.floor((Date.now() - desde) / 60000));
+    if (s.fim || s.fase !== 'procurar') return { naBase: true, minutos: minutos, r: r };
+    var passo = G.percursoGrupo(r.g)[s.passo];
+    return { naBase: false, cache: passo ? passo.cache : -1, minutos: minutos, r: r };
+  }
+
+  function nomeLocal(i) {
+    var c = D.caches[i];
+    if (!c) return { nome: 'Cache desconhecida', sitio: '' };
+    return { nome: c.nome + (c.coordenada ? ' (' + c.coordenada + ')' : ''), sitio: c.texto || '' };
+  }
+
+  function desenharOnde(zona) {
+    var base = (window.REGRAS && window.REGRAS.base) || '';
+    zona.appendChild(el('p', { class: 'nota-onde', texto: 'Sem GPS: o sítio vem do jogo. A resolver um problema, o grupo está na base; depois de acertar, está a ir ou a voltar da cache indicada. ' +
+      'Laranja: fora da base há ' + MIN_FORA + ' min ou mais. Vermelho: há ' + MIN_URGENTE + ' min ou mais, ou pedido de ajuda. Vai ver primeiro aos vermelhos.' }));
+    var naBase = [], porCache = {};
+    todos.map(info).forEach(function (r) {
+      var o = onde(r);
+      if (!o) return;
+      if (o.naBase) naBase.push(o);
+      else (porCache[o.cache] = porCache[o.cache] || []).push(o);
+    });
+
+    function linhaGrupo(o) {
+      var r = o.r, cls = null, txt;
+      if (o.naBase) {
+        txt = r.s.fim ? (r.s.esgotado ? 'tempo esgotado' : 'terminou') : 'a resolver há ' + o.minutos + ' min';
+      } else {
+        txt = 'saiu há ' + o.minutos + ' min';
+        if (o.minutos >= MIN_URGENTE) cls = 'urgente'; else if (o.minutos >= MIN_FORA) cls = 'atrasado';
+      }
+      if (r.ajuda) { cls = 'urgente'; txt = 'PEDE AJUDA · ' + txt; }
+      return el('li', { class: cls }, [
+        el('span', null, [nome(r.g), r.semLigacao ? el('span', { class: 'chip offline', texto: 'sem ligação' }) : null]),
+        el('span', { class: 'min', texto: txt })
+      ]);
+    }
+    function pior(lista) {
+      return lista.reduce(function (m, o) { return Math.max(m, o.r.ajuda ? 99 : o.minutos); }, 0);
+    }
+
+    var grelha = el('div', { class: 'onde' });
+    grelha.appendChild(el('div', { class: 'local base' }, [
+      el('h3', { texto: 'Base' }),
+      el('p', { class: 'sitio', texto: base ? base.charAt(0).toUpperCase() + base.slice(1) : 'Onde está o professor' }),
+      naBase.length ? el('ul', null, naBase.map(linhaGrupo)) : el('p', { class: 'sitio', texto: 'Nenhum grupo na base.' })
+    ]));
+    Object.keys(porCache).sort(function (a, b) { return pior(porCache[b]) - pior(porCache[a]); }).forEach(function (i) {
+      var lista = porCache[i].sort(function (a, b) { return b.minutos - a.minutos; });
+      var p = pior(lista);
+      var l = nomeLocal(Number(i));
+      grelha.appendChild(el('div', { class: 'local' + (p >= MIN_URGENTE ? ' urgente' : p >= MIN_FORA ? ' atrasado' : '') }, [
+        el('h3', { texto: l.nome }),
+        l.sitio ? el('p', { class: 'sitio', texto: l.sitio }) : null,
+        el('ul', null, lista.map(linhaGrupo))
+      ]));
+    });
+    var porComecar = todos.filter(function (g) { return !grupos[g.codigo]; }).length;
+    zona.appendChild(grelha);
+    if (porComecar) zona.appendChild(el('p', { class: 'nota-onde', texto: porComecar + ' grupo(s) ainda não começaram.' }));
   }
 
   function desenharClassificacao(zona) {

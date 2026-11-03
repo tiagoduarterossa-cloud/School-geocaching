@@ -148,6 +148,7 @@
       grupo: estado.grupo,
       ano: estado.ano,
       fase: estado.fase,
+      faseDesde: estado.faseDesde || null,
       passo: estado.passo,
       total: estado.passos.length,
       inicio: estado.inicio,
@@ -250,6 +251,7 @@
       passos: percursoGrupo(g),
       passo: 0,
       fase: 'problema',
+      faseDesde: agora(),
       inicio: agora(),
       fim: null,
       erros: 0,
@@ -266,6 +268,7 @@
   }
 
   function avancar() {
+    estado.faseDesde = agora();
     if (estado.fase === 'problema') {
       estado.fase = 'procurar';
     } else if (estado.fase === 'procurar') {
