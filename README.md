@@ -149,6 +149,10 @@ O ⚙ no canto do ecrã pede o PIN dos professores (`pinProfessor` em `privado/c
 - reiniciar o tablet para o grupo seguinte.
 
 
+## Levantamento do recinto
+
+`levantamento.html` é só para o organizador, no telemóvel, e não faz parte do jogo (os tablets não usam GPS). Serve para dar a volta ao limite onde os grupos podem andar, gravando o perímetro, e marcar a base, as caches e as zonas a evitar. Funciona sem rede depois de aberta uma vez, guarda tudo no telemóvel e exporta um ficheiro GeoJSON para fazer o mapa do jogo com a quadrícula. No exterior, o GPS acerta a 3 a 5 metros; pontos com precisão pior do que 15 m não entram no perímetro. O ecrã tem de ficar ligado enquanto se grava.
+
 ## Publicar
 
 Não precisa de servidor nem de instalar nada. A forma mais simples é ativar o GitHub Pages neste repositório (Settings → Pages → branch). Os tablets abrem o endereço que o GitHub der.

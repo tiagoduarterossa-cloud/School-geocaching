@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1f6f5c">
+  <meta name="robots" content="noindex">
+  <title>Levantamento do recinto</title>
+  <link rel="stylesheet" href="css/estilo.css">
+  <style>
+    body { background: var(--fundo); color: var(--texto); margin: 0; font-family: system-ui, sans-serif; }
+    main { max-width: 640px; margin: 0 auto; padding: 16px; }
+    h1 { font-size: 22px; margin: 4px 0 8px; }
+    .caixa { background: var(--cartao); border: 1px solid var(--borda); border-radius: 14px; padding: 14px; margin-bottom: 12px; }
+    .gps { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+    .gps strong { font-size: 20px; }
+    .bom { color: var(--certo); } .medio { color: var(--aviso); } .mau { color: var(--erro); }
+    .botoes { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .botoes button { min-height: 52px; font-size: 16px; border-radius: 12px; border: 1px solid var(--borda); background: var(--campo); color: var(--texto); font-weight: 600; }
+    .botoes .grande { grid-column: 1 / -1; background: var(--primaria); color: #fff; border: 0; }
+    .botoes .grande.ativo { background: var(--erro); }
+    .botoes .base { background: var(--dica-fundo); }
+    .botoes .perigo { background: var(--perigo-fundo); }
+    input[type=text] { width: 100%; box-sizing: border-box; font-size: 16px; padding: 10px; border-radius: 10px; border: 1px solid var(--borda); background: var(--campo); color: var(--texto); margin-bottom: 8px; }
+    svg { width: 100%; height: auto; background: var(--suave-fundo); border-radius: 12px; display: block; }
+    .legenda { font-size: 13px; color: var(--suave); margin-top: 6px; }
+    ol { padding-left: 20px; margin: 6px 0; } li { margin: 4px 0; }
+    li button { margin-left: 6px; font-size: 13px; }
+    .aviso { color: var(--aviso); font-size: 14px; }
+    .nota { font-size: 14px; color: var(--suave); }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Levantamento do recinto</h1>
+  <p class="nota">Só para o organizador. Dá a volta ao limite onde os grupos podem andar e marca a base, as caches e os sítios a evitar. Funciona sem rede e fica tudo guardado neste telemóvel. Mantém o ecrã ligado e esta página aberta: com o ecrã apagado o telemóvel deixa de dar a posição.</p>
+
+  <div class="caixa gps" aria-live="polite">
+    <span>GPS: <strong id="precisao">à espera…</strong></span>
+    <span class="nota" id="contagem"></span>
+  </div>
+
+  <div class="caixa">
+    <input type="text" id="nome" placeholder="Nome do ponto (ex.: banco junto ao campo)" aria-label="Nome do ponto">
+    <div class="botoes">
+      <button type="button" class="grande" id="gravar">Começar a gravar o perímetro</button>
+      <button type="button" class="base" data-tipo="base">Marcar base</button>
+      <button type="button" data-tipo="cache">Marcar cache</button>
+      <button type="button" class="perigo" data-tipo="perigo">Zona a evitar</button>
+      <button type="button" data-tipo="nota">Outro ponto</button>
+    </div>
+    <p class="aviso" id="aviso" role="alert"></p>
+  </div>
+
+  <div class="caixa">
+    <svg id="desenho" viewBox="0 0 600 600" role="img" aria-label="Desenho do perímetro e dos pontos marcados"></svg>
+    <p class="legenda">Linha verde: perímetro. Amarelo: base. Azul: caches. Vermelho: zonas a evitar. Cinzento: outros pontos. Ponto a piscar: onde estás. Norte para cima.</p>
+  </div>
+
+  <div class="caixa">
+    <strong>Pontos marcados</strong>
+    <ol id="lista"></ol>
+  </div>
+
+  <div class="caixa">
+    <div class="botoes">
+      <button type="button" id="exportar" class="grande">Guardar ficheiro (para enviar)</button>
+      <button type="button" id="desfazer">Apagar último troço</button>
+      <button type="button" id="limpar">Apagar tudo</button>
+    </div>
+    <p class="nota">O ficheiro é um GeoJSON: abre no Google Earth, no geojson.io ou em qualquer programa de mapas. Envia-o para se fazer o mapa do jogo com a quadrícula.</p>
+  </div>
+</main>
+
+<script>
+(function () {
+  var CHAVE = 'geocaching-levantamento-v1';
+  var PRECISAO_MAX = 15;   // metros: pior do que isto não entra no perímetro
+  var PASSO_MIN = 3;       // metros entre pontos gravados
+  var CORES = { base: '#f2b134', cache: '#2f6fd6', perigo: '#c0392b', nota: '#7a8a86' };
+  var NOMES = { base: 'Base', cache: 'Cache', perigo: 'Zona a evitar', nota: 'Ponto' };
+
+  var dados = carregar();
+  var ultimo = null;       // última posição recebida
+  var gravando = false;
+  var trancaEcra = null;
+
+  function carregar() {
+    try { var t = localStorage.getItem(CHAVE); if (t) return JSON.parse(t); } catch (e) {}
+    return { tracos: [], pontos: [] };
+  }
+  function guardar() {
+    try { localStorage.setItem(CHAVE, JSON.stringify(dados)); } catch (e) { aviso('Não consegui guardar neste telemóvel. Exporta o ficheiro antes de fechar a página.'); }
+  }
+  function $(id) { return document.getElementById(id); }
+  function aviso(t) { $('aviso').textContent = t || ''; }
+
+  function distancia(a, b) {
+    var R = 6371000, r = Math.PI / 180;
+    var x = (b[1] - a[1]) * r * Math.cos((a[0] + b[0]) / 2 * r), y = (b[0] - a[0]) * r;
+    return Math.sqrt(x * x + y * y) * R;
+  }
+
+  // ---------- GPS ----------
+  if (!('geolocation' in navigator)) {
+    $('precisao').textContent = 'este aparelho não dá a posição';
+  } else {
+    navigator.geolocation.watchPosition(recebido, function (e) {
+      $('precisao').textContent = e.code === 1 ? 'sem autorização' : 'sem sinal';
+      $('precisao').className = 'mau';
+      if (e.code === 1) aviso('Dá autorização de localização a este site nas definições do browser.');
+    }, { enableHighAccuracy: true, maximumAge: 0, timeout: 20000 });
+  }
+
+  function recebido(p) {
+    var c = p.coords;
+    ultimo = { lat: c.latitude, lon: c.longitude, prec: Math.round(c.accuracy), t: Date.now() };
+    var el = $('precisao');
+    el.textContent = '± ' + ultimo.prec + ' m';
+    el.className = ultimo.prec <= 6 ? 'bom' : ultimo.prec <= PRECISAO_MAX ? 'medio' : 'mau';
+    if (gravando && ultimo.prec <= PRECISAO_MAX) {
+      var traco = dados.tracos[dados.tracos.length - 1];
+      var novo = [ultimo.lat, ultimo.lon, ultimo.prec];
+      var ant = traco[traco.length - 1];
+      if (!ant || distancia(ant, novo) >= PASSO_MIN) { traco.push(novo); guardar(); }
+    }
+    desenhar();
+  }
+
+  // ---------- gravar perímetro ----------
+  $('gravar').addEventListener('click', function () {
+    gravando = !gravando;
+    if (gravando) {
+      dados.tracos.push([]);
+      pedirEcraLigado();
+      aviso(ultimo && ultimo.prec > PRECISAO_MAX ? 'Precisão fraca: espera uns segundos a céu aberto antes de andar.' : '');
+    } else {
+      if (dados.tracos.length && dados.tracos[dados.tracos.length - 1].length < 2) dados.tracos.pop();
+      if (trancaEcra) { trancaEcra.release(); trancaEcra = null; }
+      aviso('');
+    }
+    guardar();
+    atualizarBotao();
+    desenhar();
+  });
+  function atualizarBotao() {
+    var b = $('gravar');
+    b.textContent = gravando ? 'Parar de gravar' : (dados.tracos.length ? 'Continuar a gravar o perímetro' : 'Começar a gravar o perímetro');
+    b.classList.toggle('ativo', gravando);
+  }
+  function pedirEcraLigado() {
+    if (navigator.wakeLock) navigator.wakeLock.request('screen').then(function (l) { trancaEcra = l; }).catch(function () {});
+  }
+  document.addEventListener('visibilitychange', function () {
+    if (gravando && document.visibilityState === 'visible') pedirEcraLigado();
+  });
+
+  // ---------- pontos ----------
+  document.querySelectorAll('[data-tipo]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      if (!ultimo || Date.now() - ultimo.t > 30000) return aviso('Ainda não tenho a tua posição. Espera pelo GPS.');
+      var tipo = b.getAttribute('data-tipo');
+      if (tipo === 'base' && dados.pontos.some(function (p) { return p.tipo === 'base'; }) &&
+          !confirm('Já marcaste uma base. Marcar outra?')) return;
+      var nome = $('nome').value.trim() || (NOMES[tipo] + ' ' + (dados.pontos.filter(function (p) { return p.tipo === tipo; }).length + 1));
+      dados.pontos.push({ tipo: tipo, nome: nome, lat: ultimo.lat, lon: ultimo.lon, prec: ultimo.prec, t: new Date().toISOString() });
+      $('nome').value = '';
+      aviso(ultimo.prec > PRECISAO_MAX ? 'Marcado, mas com precisão fraca (± ' + ultimo.prec + ' m). Descreve bem o sítio no nome.' : 'Marcado: ' + nome + '.');
+      guardar();
+      desenhar();
+    });
+  });
+
+  $('desfazer').addEventListener('click', function () {
+    if (!dados.tracos.length) return;
+    if (!confirm('Apagar o último troço do perímetro?')) return;
+    dados.tracos.pop();
+    if (gravando) { gravando = false; atualizarBotao(); }
+    guardar(); desenhar();
+  });
+  $('limpar').addEventListener('click', function () {
+    if (!confirm('Apagar o perímetro e todos os pontos deste telemóvel? Exporta primeiro se quiseres guardar.')) return;
+    dados = { tracos: [], pontos: [] }; gravando = false;
+    guardar(); atualizarBotao(); desenhar();
+  });
+
+  // ---------- desenho ----------
+  function desenhar() {
+    var todos = [];
+    dados.tracos.forEach(function (t) { t.forEach(function (p) { todos.push(p); }); });
+    dados.pontos.forEach(function (p) { todos.push([p.lat, p.lon]); });
+    if (ultimo) todos.push([ultimo.lat, ultimo.lon]);
+    var svg = $('desenho');
+    var n = 0;
+    dados.tracos.forEach(function (t) { n += t.length; });
+    $('contagem').textContent = n + ' pontos no perímetro · ' + dados.pontos.length + ' marcados';
+    lista();
+    if (!todos.length) { svg.innerHTML = '<text x="300" y="300" text-anchor="middle" fill="currentColor" font-size="20">Ainda sem pontos</text>'; return; }
+
+    var lat0 = todos[0][0], k = Math.cos(lat0 * Math.PI / 180);
+    var xs = todos.map(function (p) { return p[1] * k; }), ys = todos.map(function (p) { return p[0]; });
+    var minX = Math.min.apply(null, xs), maxX = Math.max.apply(null, xs), minY = Math.min.apply(null, ys), maxY = Math.max.apply(null, ys);
+    var lado = Math.max(maxX - minX, maxY - minY, 0.0003);
+    var esc = 540 / lado, ox = 300 - (minX + maxX) / 2 * esc, oy = 300 + (minY + maxY) / 2 * esc;
+    function X(p) { return (p[1] * k * esc + ox).toFixed(1); }
+    function Y(p) { return (oy - p[0] * esc).toFixed(1); }
+
+    var h = '';
+    // barra de escala
+    var metrosPorUnidade = 111320 / esc; // metros por pixel do viewBox
+    var escala = [10, 20, 50, 100, 200].filter(function (m) { return m / metrosPorUnidade < 200; }).pop() || 10;
+    var px = escala / metrosPorUnidade;
+    h += '<line x1="20" y1="580" x2="' + (20 + px).toFixed(1) + '" y2="580" stroke="currentColor" stroke-width="3"/>' +
+         '<text x="20" y="572" font-size="14" fill="currentColor">' + escala + ' m</text>';
+    dados.tracos.forEach(function (t) {
+      if (t.length < 2) return;
+      h += '<polyline fill="none" stroke="#1e8449" stroke-width="4" stroke-linejoin="round" stroke-linecap="round" points="' +
+        t.map(function (p) { return X(p) + ',' + Y(p); }).join(' ') + '"/>';
+    });
+    dados.pontos.forEach(function (p, i) {
+      var q = [p.lat, p.lon];
+      h += '<circle cx="' + X(q) + '" cy="' + Y(q) + '" r="9" fill="' + CORES[p.tipo] + '" stroke="#fff" stroke-width="2"/>' +
+           '<text x="' + X(q) + '" y="' + (Y(q) - 13) + '" text-anchor="middle" font-size="14" font-weight="700" fill="currentColor">' + (i + 1) + '</text>';
+    });
+    if (ultimo) {
+      var u = [ultimo.lat, ultimo.lon];
+      h += '<circle cx="' + X(u) + '" cy="' + Y(u) + '" r="' + Math.max(6, ultimo.prec / metrosPorUnidade).toFixed(1) + '" fill="#2f6fd6" fill-opacity=".15"/>' +
+           '<circle cx="' + X(u) + '" cy="' + Y(u) + '" r="6" fill="#2f6fd6"><animate attributeName="opacity" values="1;.3;1" dur="1.5s" repeatCount="indefinite"/></circle>';
+    }
+    svg.innerHTML = h;
+  }
+
+  function lista() {
+    var ol = $('lista');
+    ol.innerHTML = '';
+    dados.pontos.forEach(function (p, i) {
+      var li = document.createElement('li');
+      li.textContent = NOMES[p.tipo] + ': ' + p.nome + ' (± ' + p.prec + ' m)';
+      var b = document.createElement('button');
+      b.type = 'button'; b.textContent = 'apagar';
+      b.addEventListener('click', function () {
+        if (!confirm('Apagar "' + p.nome + '"?')) return;
+        dados.pontos.splice(i, 1); guardar(); desenhar();
+      });
+      li.appendChild(b);
+      ol.appendChild(li);
+    });
+  }
+
+  // ---------- exportar ----------
+  $('exportar').addEventListener('click', function () {
+    var feats = [];
+    dados.tracos.forEach(function (t, i) {
+      if (t.length < 2) return;
+      feats.push({ type: 'Feature', properties: { tipo: 'perimetro', troco: i + 1 },
+        geometry: { type: 'LineString', coordinates: t.map(function (p) { return [p[1], p[0]]; }) } });
+    });
+    dados.pontos.forEach(function (p) {
+      feats.push({ type: 'Feature', properties: { tipo: p.tipo, nome: p.nome, precisao_m: p.prec, hora: p.t },
+        geometry: { type: 'Point', coordinates: [p.lon, p.lat] } });
+    });
+    if (!feats.length) return aviso('Ainda não há nada para guardar.');
+    var texto = JSON.stringify({ type: 'FeatureCollection', features: feats }, null, 1);
+    var nome = 'recinto-' + new Date().toISOString().slice(0, 10) + '.geojson';
+    var ficheiro;
+    try { ficheiro = new File([texto], nome, { type: 'application/geo+json' }); } catch (e) {}
+    if (ficheiro && navigator.canShare && navigator.canShare({ files: [ficheiro] })) {
+      navigator.share({ files: [ficheiro], title: 'Levantamento do recinto' }).catch(function () {});
+      return;
+    }
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([texto], { type: 'application/geo+json' }));
+    a.download = nome;
+    document.body.appendChild(a); a.click(); a.remove();
+  });
+
+  atualizarBotao();
+  desenhar();
+})();
+</script>
+</body>
+</html>
