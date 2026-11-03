@@ -115,6 +115,7 @@ async function construir(passe) {
         const local = JSON.stringify({
           nome: cache.nome,
           coordenada: cache.coordenada || '',
+          andar: Number.isInteger(cache.andar) && cache.andar >= 0 ? cache.andar : null,
           texto: cache.texto || '',
           imagem: cache.imagem || '',
           codigo: await Cripto.resumo(Cripto.normalizar(codigosCache[t.caches[pos] - 1][t.turma]), sal, 'cache|' + contexto, IT.codigo)

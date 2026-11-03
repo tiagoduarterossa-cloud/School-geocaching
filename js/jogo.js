@@ -391,8 +391,12 @@
   // ---------- pedir ajuda ----------
 
   function descricaoLocal(l) {
-    return l.nome + (l.coordenada ? ' (' + l.coordenada + ')' : '') + (l.texto ? ': ' + l.texto : '');
+    return l.nome + (l.coordenada ? ' (' + l.coordenada + ')' : '') + (temAndar(l) ? ', ' + nomeAndar(l.andar) : '') + (l.texto ? ': ' + l.texto : '');
   }
+
+  // andar: 0 é o rés-do-chão; sem andar, a cache está no exterior.
+  function temAndar(l) { return typeof l.andar === 'number' && l.andar >= 0; }
+  function nomeAndar(a) { return a === 0 ? 'rés-do-chão' : a + 'º andar'; }
 
   // Onde o grupo está, pelo que o tablet sabe: a caminho da cache revelada, ou
   // perto da última cache encontrada.
@@ -665,13 +669,32 @@
     });
     var aviso = el('p', { class: 'erro', role: 'alert' });
 
-    var textoLocal = 'Resposta certa! A cache está em ' + (cache.coordenada ? cache.coordenada + '. ' : '') + (cache.texto || '');
+    var textoLocal = 'Resposta certa! A cache está em ' + (cache.coordenada ? cache.coordenada + '. ' : '') +
+      (temAndar(cache) ? nomeAndar(cache.andar) + '. ' : '') + (cache.texto || '');
     var filhos = [
       el('h2', { class: 'certo', tabindex: '-1', texto: '✔ Resposta certa!' }),
       el('p', { class: 'etapa', texto: 'A cache está em' })
     ];
-    if (cache.coordenada) filhos.push(el('p', { class: 'coordenada', texto: cache.coordenada }));
-    if (cache.texto) filhos.push(el('p', { class: 'local', texto: cache.texto }));
+    var onde = [];
+    if (cache.coordenada) onde.push(el('p', { class: 'coordenada', texto: cache.coordenada }));
+    if (cache.texto) onde.push(el('p', { class: 'local', texto: cache.texto }));
+    if (temAndar(cache)) {
+      // Dentro de um edifício: os andares de cima para baixo, com o da cache marcado.
+      var pisos = [];
+      for (var a = Math.max(3, cache.andar); a >= 0; a--) {
+        pisos.push(el('li', { class: a === cache.andar ? 'piso este' : 'piso', 'aria-hidden': 'true', texto: a === 0 ? 'R/C' : a + 'º' }));
+      }
+      filhos.push(el('div', { class: 'com-andar' }, [
+        el('div', { class: 'andares', role: 'img', 'aria-label': nomeAndar(cache.andar) }, [
+          el('p', { class: 'andares-titulo', texto: 'Andar' }),
+          el('ol', null, pisos),
+          el('p', { class: 'andares-nome', texto: nomeAndar(cache.andar) })
+        ]),
+        el('div', { class: 'onde-texto' }, onde)
+      ]));
+    } else {
+      onde.forEach(function (n) { filhos.push(n); });
+    }
     if (cache.imagem) filhos.push(el('img', { class: 'imagem-local', src: cache.imagem, alt: 'Pista do local' }));
     if (DADOS.mapa && cache.coordenada) {
       filhos.push(el('details', { class: 'mapa' }, [

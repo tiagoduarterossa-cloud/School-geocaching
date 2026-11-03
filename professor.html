@@ -148,7 +148,9 @@
     }
     function nomeCache(i) {
       var c = D.caches[i];
-      return c ? c.nome + (c.coordenada ? ' (' + c.coordenada + ')' : '') : '?';
+      if (!c) return '?';
+      var andar = Number.isInteger(c.andar) && c.andar >= 0 ? (c.andar === 0 ? ', rés-do-chão' : ', ' + c.andar + 'º andar') : '';
+      return c.nome + (c.coordenada ? ' (' + c.coordenada + ')' : '') + andar;
     }
 
     // ---------- verificação dos dados ----------

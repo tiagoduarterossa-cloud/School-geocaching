@@ -155,6 +155,15 @@ form.cartao .principal { margin-top: 16px; font-size: 1.2rem; }
   letter-spacing: .05em;
 }
 .local { font-size: 1.3rem; text-align: center; margin: 0 0 16px; }
+.com-andar { display: flex; gap: 16px; align-items: stretch; margin-bottom: 16px; }
+.com-andar .onde-texto { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
+.com-andar .onde-texto > :last-child { margin-bottom: 0; }
+.andares { flex: 0 0 auto; width: 92px; text-align: center; border: 2px solid var(--borda); border-radius: 14px; padding: 8px; background: var(--campo); }
+.andares p { margin: 0; font-size: .8rem; color: var(--suave); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.andares .andares-nome { text-transform: none; letter-spacing: 0; color: var(--primaria-escura); margin-top: 6px; }
+.andares ol { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; gap: 4px; }
+.andares .piso { border-radius: 8px; padding: 6px 0; background: var(--suave-fundo); color: var(--suave); font-weight: 700; }
+.andares .piso.este { background: var(--primaria); color: #fff; font-size: 1.3rem; }
 .imagem-local, .mapa img { display: block; max-width: 100%; border-radius: 12px; margin: 0 auto 16px; }
 .mapa { margin-bottom: 16px; }
 .mapa summary { cursor: pointer; color: var(--primaria); font-weight: 600; padding: 8px 0; }

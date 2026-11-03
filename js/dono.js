@@ -399,7 +399,8 @@
   function nomeLocal(i) {
     var c = D.caches[i];
     if (!c) return { nome: 'Cache desconhecida', sitio: '' };
-    return { nome: c.nome + (c.coordenada ? ' (' + c.coordenada + ')' : ''), sitio: c.texto || '' };
+    var andar = Number.isInteger(c.andar) && c.andar >= 0 ? (c.andar === 0 ? 'rés-do-chão' : c.andar + 'º andar') : '';
+    return { nome: c.nome + (c.coordenada ? ' (' + c.coordenada + ')' : ''), sitio: (andar ? andar.charAt(0).toUpperCase() + andar.slice(1) + '. ' : '') + (c.texto || '') };
   }
 
   function desenharOnde(zona) {
