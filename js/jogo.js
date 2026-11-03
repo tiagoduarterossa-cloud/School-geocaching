@@ -499,7 +499,7 @@
         listaRegras('Comportamento', R.conduta),
         listaRegras('Jogo', [
           'Têm ' + ((eventoDe(eq.evento) || {}).tempoLimiteMinutos || DADOS.tempoLimiteMinutos || 60) + ' minutos.',
-          'Os problemas resolvem-se na base e o tablet fica sempre na base. À cache levam só a folha do grupo e o lápis.',
+          'A base é ' + baseTexto() + '. Os problemas resolvem-se na base e o tablet fica sempre lá. À cache levam só a folha do grupo e o lápis.',
           'Nada de calculadoras, telemóveis ou IA. Contas em papel.',
           'Sair desta página a meio de um problema dá +' + Math.round((DADOS.penalizacaoSaidaSegundos || 0) / 60) + ' minutos.'
         ]),
@@ -678,7 +678,7 @@
     }
     filhos.push(
       A.temVoz ? el('button', { type: 'button', class: 'botao-ouvir', onclick: function () { A.falar(textoLocal); }, texto: 'Ouvir onde está a cache' }) : null,
-      el('p', { class: 'instrucao', texto: 'Copiem este local para a folha do grupo e vão todos à cache. Copiem o código do cartão para a folha, deixem o cartão onde estava e voltem à base para o escrever aqui.' }),
+      el('p', { class: 'instrucao', texto: 'Copiem este local para a folha do grupo e vão todos à cache. Copiem o código do cartão para a folha, deixem o cartão onde estava e voltem à base (' + baseTexto() + ') para o escrever aqui.' }),
       el('form', {
         class: 'linha-resposta',
         onsubmit: function (ev) {
@@ -698,6 +698,10 @@
       aviso
     );
     app.appendChild(el('main', { class: 'cartao' }, filhos));
+  }
+
+  function baseTexto() {
+    return (window.REGRAS && window.REGRAS.base) || 'onde está o professor';
   }
 
   function ecraFim() {

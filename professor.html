@@ -105,6 +105,7 @@
 <script src="dados/organizador.js"></script>
 <script src="js/organizador.js"></script>
 <script src="js/acessivel.js"></script>
+<script src="js/regras.js"></script>
 <script>
   Organizador.desbloquear(document.getElementById('cadeado'), function () {
     document.getElementById('cadeado').hidden = true;
@@ -235,6 +236,7 @@
       var t = D.turmas[g.turmaIndice];
       var f = el('div', null, 'folha-grupo');
       f.appendChild(el('h3', g.turma + ' · Grupo ' + g.grupo));
+      if (window.REGRAS && window.REGRAS.base) f.appendChild(el('p', 'A base é ' + window.REGRAS.base + '. Voltem sempre lá depois de cada cache.'));
       f.appendChild(tabela(['Cache', 'Local (copiado do tablet)', 'Código do cartão'],
         t.caches.map(function (_, i) { return [String(i + 1) + 'ª', '', '']; }), 'registo folha'));
       f.appendChild(el('p', 'Contas em papel, no verso. Nada de calculadoras nem telemóveis.', 'rodape-folha'));

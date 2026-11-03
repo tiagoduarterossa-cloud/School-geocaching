@@ -1,13 +1,15 @@
 // Regras de segurança e conduta. Aparecem no tablet antes de começar (o grupo
 // tem de as confirmar) e nos termos de utilização (termos.html).
 window.REGRAS = {
+  // Onde ficam os tablets e o professor durante o jogo.
+  base: 'nos bancos castanhos junto ao 2.º ciclo',
   seguranca: [
     'Andem, não corram. Nas escadas, devagar e pelo corrimão.',
     'As caches nunca estão em sítios perigosos. Não subam a nada, não entrem em zonas fechadas e não saiam da escola.',
     'Não mexam em extintores, quadros elétricos, armários de laboratório nem equipamento da cozinha.',
     'O grupo anda sempre junto. Ninguém fica sozinho.',
     'Se no grupo houver um colega cego, ofereçam-lhe o braço para guiar e avisem antes de escadas, portas e obstáculos.',
-    'Se alguém se magoar ou houver um problema, ninguém fica sozinho: um fica com o colega e outro vem à base chamar o professor.'
+    'Se alguém se magoar ou houver um problema, ninguém fica sozinho: um fica com o colega e outro vem à base (bancos castanhos junto ao 2.º ciclo) chamar o professor.'
   ],
   conduta: [
     'Não entrem em salas com aulas a decorrer e falem baixo nos corredores.',

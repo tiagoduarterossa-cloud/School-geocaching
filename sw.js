@@ -1,6 +1,6 @@
 // Guarda os ficheiros para o jogo continuar a funcionar se a rede da escola falhar.
 // Tenta sempre a rede primeiro, para apanhar alterações ao conteúdo.
-var CACHE = 'geocaching-v5';
+var CACHE = 'geocaching-v6';
 var FICHEIROS = ['./', 'index.html', 'css/estilo.css', 'js/jogo.js', 'js/cripto.js', 'js/regras.js', 'js/acessivel.js', 'js/sync.js', 'dados/jogo.js'];
 
 self.addEventListener('install', function (e) {

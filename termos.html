@@ -62,7 +62,7 @@
     <h2>5. Acidentes</h2>
     <p>Sendo uma atividade escolar aprovada, os acidentes durante o jogo estão abrangidos pelo seguro de acidentes que cobre as atividades escolares <span class="da-escola">da escola</span>. Se alguém se magoar:</p>
     <ul>
-      <li>o grupo para de jogar e ninguém fica sozinho: um colega fica com quem se magoou e outro vai à base chamar o professor;</li>
+      <li>o grupo para de jogar e ninguém fica sozinho: um colega fica com quem se magoou e outro vai à base<span class="local-base"></span> chamar o professor;</li>
       <li>na base, o professor carrega em "Pedir ajuda" no tablet do grupo;</li>
       <li>o organizador recebe o aviso com o local do grupo e avisa os adultos responsáveis;</li>
       <li>o tempo perdido não prejudica o grupo na classificação.</li>
@@ -99,6 +99,7 @@
     document.getElementById('sub').textContent = partes.join(' · ');
     if (D.organizador) document.querySelectorAll('.organizador').forEach(function (n) { n.textContent = D.organizador; });
     if (D.escola) document.querySelectorAll('.da-escola').forEach(function (n) { n.textContent = 'do ' + D.escola; });
+    if (R.base) document.querySelectorAll('.local-base').forEach(function (n) { n.textContent = ' (' + R.base + ')'; });
     [['seguranca', R.seguranca], ['conduta', R.conduta]].forEach(function (x) {
       var ul = document.getElementById(x[0]);
       x[1].forEach(function (t) { var li = document.createElement('li'); li.textContent = t; ul.appendChild(li); });
