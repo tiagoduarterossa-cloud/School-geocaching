@@ -12,6 +12,7 @@ window.REGRAS = {
     'As caches nunca estão em sítios perigosos. Não subam a nada, não entrem em zonas fechadas e não saiam da escola.',
     'Não mexam em extintores, quadros elétricos, armários de laboratório nem equipamento da cozinha.',
     'O grupo anda sempre junto. Ninguém fica sozinho.',
+    'No pinhal está sempre um adulto. Se alguma coisa correr mal lá dentro, vão ter com ele.',
     'Se no grupo houver um colega cego, ofereçam-lhe o braço para guiar e avisem antes de escadas, portas e obstáculos.',
     'Se alguém se magoar ou houver um problema, ninguém fica sozinho: um fica com o colega e outro vem à base (bancos castanhos junto ao 2.º ciclo) chamar o professor.'
   ],
