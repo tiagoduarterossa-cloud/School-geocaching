@@ -159,6 +159,7 @@
       saidas: estado.saidas || [],
       foraDaApp: estado.saidaInicio || null,
       ajuda: estado.ajuda || null,
+      chamadaVista: estado.chamadaVista || null,
       regras: estado.regrasAceites || null,
       limite: limiteSegundos(),
       atualizado: agora()
@@ -234,9 +235,17 @@
     return true;
   }
 
+  // Tempo de jogo, sem as pausas: quando o organizador confirma que o grupo
+  // chegou à base, o tempo para, e recomeça quando o grupo volta a sair.
   function tempoDecorrido() {
     var fim = estado.fim || agora();
-    return (fim - estado.inicio) / 1000;
+    var c = controlo();
+    var pausa = (c.pausaSegundos || 0) + (c.pausadoDesde && !estado.fim ? Math.max(0, (fim - c.pausadoDesde) / 1000) : 0);
+    return Math.max(0, (fim - estado.inicio) / 1000 - pausa);
+  }
+
+  function emPausa() {
+    return !!(controlo().pausadoDesde && !estado.fim);
   }
 
   function comecar(g, regrasAceites) {
@@ -322,7 +331,9 @@
     verificarLimite();
     app.appendChild(cabecalho());
     if (estado.ajuda) app.appendChild(avisoAjuda());
+    if (chamadaAtiva()) app.appendChild(faixaChamada());
     if (controlo().desclassificado) return ecraDesclassificado();
+    if (emPausa()) return ecraPausa();
     if (estado.fase === 'problema') ecraProblema();
     else if (estado.fase === 'procurar') ecraProcurar();
     else ecraFim();
@@ -352,6 +363,16 @@
     }
   }
 
+  function ecraPausa() {
+    refsBloqueio = null;
+    app.appendChild(el('main', { class: 'cartao fim' }, [
+      el('p', { class: 'trofeu', texto: '⏸' }),
+      el('h2', { tabindex: '-1', texto: 'Tempo parado' }),
+      el('p', { texto: 'Estão na base. O tempo não conta enquanto este ecrã estiver aberto.' }),
+      el('p', { class: 'instrucao', texto: 'O jogo continua onde estava quando o professor vos deixar sair.' })
+    ]));
+  }
+
   function ecraDesclassificado() {
     refsBloqueio = null;
     app.appendChild(el('main', { class: 'cartao fim' }, [
@@ -364,7 +385,7 @@
 
   function janela(titulo, texto, aoFechar, cls) {
     var fundo = el('div', { class: 'modal-fundo' });
-    var botao = el('button', { type: 'button', class: 'principal', texto: 'Percebido', onclick: function () { fundo.remove(); aoFechar(); } });
+    var botao = el('button', { type: 'button', class: 'principal', texto: 'Percebido', onclick: function () { fundo.remove(); aoFechar(); avisos(); } });
     fundo.appendChild(el('div', { class: 'modal ' + (cls || ''), role: 'alertdialog', 'aria-modal': 'true' }, [
       el('h2', { texto: titulo }),
       el('p', { class: 'modal-texto', texto: texto }),
@@ -383,9 +404,61 @@
         'Saíram desta página a meio de um problema. Isso conta como usar calculadora ou outra ajuda: +' +
         Math.round((DADOS.penalizacaoSaidaSegundos || 0) / 60) + ' minutos no tempo final.',
         function () { estado.avisoSaida = false; guardar(); }, 'modal-alerta');
+    } else if (chamadaAtiva() && controlo().chamar.id !== estado.chamadaVista) {
+      alertar();
+      A.falar('Voltem à base. ' + baseFrase());
+      janela('Voltem à base', 'O organizador está a chamar o grupo. Parem onde estão e voltem já à base' + baseEntreParenteses() + '.', function () {
+        estado.chamadaVista = controlo().chamar.id; guardar();
+      }, 'modal-alerta');
+    } else if (estado.aviso5 === 'mostrar') {
+      alertar();
+      A.falarSeAtivo('Faltam 5 minutos.');
+      janela('Faltam 5 minutos', 'Comecem já a voltar à base' + baseEntreParenteses() + '. Se encontrarem uma cache pelo caminho, podem fazê-la, mas não se afastem mais.', function () {
+        estado.aviso5 = 'visto'; guardar();
+      }, 'modal-alerta');
     } else if (msg && msg.id && msg.id !== estado.mensagemVista) {
       janela('Mensagem do organizador', msg.texto, function () { estado.mensagemVista = msg.id; guardar(); });
     }
+  }
+
+  // ---------- chamar à base ----------
+
+  function chamadaAtiva() {
+    var c = controlo().chamar;
+    return !!(c && c.id && !estado.fim && !controlo().pausadoDesde);
+  }
+
+  function baseFrase() {
+    var b = window.REGRAS && window.REGRAS.base;
+    return b ? 'A base é ' + b + '.' : '';
+  }
+
+  function baseEntreParenteses() {
+    var b = window.REGRAS && window.REGRAS.base;
+    return b ? ' (' + b + ')' : '';
+  }
+
+  function faixaChamada() {
+    return el('div', { class: 'aviso-ajuda chamada', role: 'alert' }, [
+      el('strong', { texto: 'O organizador chamou-vos à base.' }),
+      el('p', { texto: 'Voltem já' + baseEntreParenteses() + '. Este aviso desaparece quando o professor confirmar que chegaram.' })
+    ]);
+  }
+
+  // Vibra e apita, para se ouvir mesmo com o tablet na mão de outro colega.
+  function alertar() {
+    try { if (navigator.vibrate) navigator.vibrate([300, 150, 300, 150, 300]); } catch (e) { /* sem vibração */ }
+    try {
+      var Ctx = window.AudioContext || window.webkitAudioContext;
+      if (!Ctx) return;
+      var ctx = new Ctx();
+      [0, 0.3, 0.6].forEach(function (t) {
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.frequency.value = 880; g.gain.value = 0.25;
+        o.connect(g); g.connect(ctx.destination);
+        o.start(ctx.currentTime + t); o.stop(ctx.currentTime + t + 0.18);
+      });
+    } catch (e) { /* sem som */ }
   }
 
   // ---------- pedir ajuda ----------
@@ -446,8 +519,13 @@
       var limite = limiteSegundos();
       if (limite && !estado.fim) {
         var falta = limite - tempoDecorrido();
-        relogio.textContent = 'Faltam ' + formatarTempo(falta);
+        relogio.textContent = (emPausa() ? 'Parado · faltam ' : 'Faltam ') + formatarTempo(falta);
         relogio.classList.toggle('pouco-tempo', falta <= 300);
+        if (falta <= 300 && limite >= 600 && !estado.aviso5) {
+          estado.aviso5 = 'mostrar';
+          guardar();
+          avisos();
+        }
       } else {
         relogio.textContent = formatarTempo(tempoDecorrido());
       }

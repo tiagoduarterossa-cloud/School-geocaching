@@ -59,7 +59,9 @@
     var agora = Date.now();
     var r = { g: g, s: s, c: c };
     if (!s) { r.estado = 'por começar'; r.classe = ''; return r; }
-    var decorrido = ((s.fim || agora) - s.inicio) / 1000;
+    var fimT = s.fim || agora;
+    var pausa = (c.pausaSegundos || 0) + (c.pausadoDesde && !s.fim ? Math.max(0, (fimT - c.pausadoDesde) / 1000) : 0);
+    var decorrido = Math.max(0, (fimT - s.inicio) / 1000 - pausa);
     r.pen = G.penalizacao(s, c);
     r.tempoFinal = decorrido + r.pen;
     r.decorrido = decorrido;
@@ -68,6 +70,8 @@
     if (c.desclassificado) { r.estado = 'desclassificado'; r.classe = 'ban'; }
     else if (r.ajuda) { r.estado = 'pede ajuda'; r.classe = 'ajuda'; }
     else if (s.foraDaApp) { r.estado = 'fora da app'; r.classe = 'fora'; }
+    else if (c.pausadoDesde && !s.fim) { r.estado = 'na base, tempo parado'; r.classe = 'chamado'; }
+    else if (c.chamar && !s.fim) { r.estado = s.chamadaVista === c.chamar.id ? 'chamado (viram)' : 'chamado (ainda não viram)'; r.classe = 'chamado'; }
     else if (s.fim) { r.estado = s.esgotado ? 'tempo esgotado' : 'terminou'; r.classe = 'fim'; }
     else { r.estado = 'a jogar'; r.classe = 'jogo'; }
     return r;
@@ -156,6 +160,8 @@
     if (separador === 'direto') {
       if (mudouSeparador || !document.getElementById('tabela')) montarDireto(zona);
       desenharAlertas();
+      var zc = document.getElementById('chamar');
+      if (zc) { zc.innerHTML = ''; zc.appendChild(barraChamar()); }
       desenharResumo();
       desenharTabela();
       desenharFeed();
@@ -179,6 +185,7 @@
       })));
     selTurma.value = filtroTurma;
     zona.appendChild(el('div', { id: 'alertas', class: 'alertas', role: 'alert' }));
+    zona.appendChild(el('div', { id: 'chamar' }));
     zona.appendChild(el('div', { id: 'resumo', class: 'resumo-topo' }));
     zona.appendChild(el('div', { id: 'gestao' }));
     zona.appendChild(el('div', { class: 'filtros' }, [el('label', { for: 'filtro-turma', texto: 'Mostrar' }), selTurma]));
@@ -344,7 +351,9 @@
       el('p', { id: 'resumo-gestao', class: 'estado-gestao' }),
       el('div', { class: 'acoes' }, [
         el('button', { type: 'button', class: 'secundario', onclick: function () { ajustar(300); }, texto: '+5 min' }),
-        el('button', { type: 'button', class: 'secundario', onclick: function () { ajustar(-300); }, texto: '−5 min (anular)' })
+        el('button', { type: 'button', class: 'secundario', onclick: function () { ajustar(-300); }, texto: '−5 min (anular)' }),
+        el('button', { type: 'button', class: 'principal', id: 'botao-chamar', onclick: function () { passoChamada(codigo, aviso); } }),
+        el('button', { type: 'button', class: 'secundario', id: 'botao-cancelar-chamada', onclick: function () { mandar(codigo, { chamar: null }, aviso); }, texto: 'Cancelar a chamada' })
       ]),
       el('form', {
         class: 'linha-resposta',
@@ -365,6 +374,11 @@
 
   function atualizarGestao() {
     if (!selecionado) return;
+    var bc = document.getElementById('botao-chamar');
+    var cs = controlos[selecionado] || {};
+    if (bc) bc.textContent = cs.pausadoDesde ? 'Podem sair (o tempo recomeça)' : cs.chamar ? 'Chegaram à base (parar o tempo)' : 'Chamar à base';
+    var bx = document.getElementById('botao-cancelar-chamada');
+    if (bx) bx.hidden = !cs.chamar || !!cs.pausadoDesde;
     var g = todos.filter(function (x) { return x.codigo === selecionado; })[0];
     var r = info(g);
     var c = controlos[selecionado] || {};
@@ -391,7 +405,7 @@
     if (!s || r.classe === 'ban') return null;
     var desde = s.faseDesde || s.atualizado || s.inicio;
     var minutos = Math.max(0, Math.floor((Date.now() - desde) / 60000));
-    if (s.fim || s.fase !== 'procurar') return { naBase: true, minutos: minutos, r: r };
+    if (s.fim || s.fase !== 'procurar' || r.c.pausadoDesde) return { naBase: true, minutos: minutos, r: r };
     var passo = G.percursoGrupo(r.g)[s.passo];
     return { naBase: false, cache: passo ? passo.cache : -1, minutos: minutos, r: r };
   }
@@ -403,7 +417,54 @@
     return { nome: c.nome + (c.coordenada ? ' (' + c.coordenada + ')' : ''), sitio: (andar ? andar.charAt(0).toUpperCase() + andar.slice(1) + '. ' : '') + (c.texto || '') };
   }
 
+  // Chama à base todos os grupos que ainda estão a jogar (ou tira o aviso a todos).
+  // Chamar à base -> chegaram (o tempo para) -> podem sair (o tempo recomeça).
+  function passoChamada(codigo, aviso) {
+    var c = controlos[codigo] || {};
+    if (c.pausadoDesde) {
+      var parado = Math.max(0, (Date.now() - c.pausadoDesde) / 1000);
+      mandar(codigo, { pausadoDesde: null, pausaSegundos: Math.round((c.pausaSegundos || 0) + parado) }, aviso);
+    } else if (c.chamar) {
+      mandar(codigo, { chamar: null, pausadoDesde: Date.now() }, aviso);
+    } else {
+      mandar(codigo, { chamar: { id: Date.now().toString(36), t: Date.now() } }, aviso);
+    }
+  }
+
+  var confirmarChamadaAte = 0;  // o segundo clique tem de vir nos 6 s seguintes (a página redesenha-se sozinha)
+
+  function barraChamar() {
+    var aJogar = todos.filter(function (g) { var s = grupos[g.codigo]; return s && !s.fim && !(controlos[g.codigo] || {}).desclassificado; });
+    var chamados = aJogar.filter(function (g) { return (controlos[g.codigo] || {}).chamar; });
+    var aviso = el('span', { class: 'estado-gestao', role: 'status' });
+    var botao = el('button', { type: 'button', class: chamados.length ? 'secundario' : 'perigo' });
+    var aConfirmar = Date.now() < confirmarChamadaAte;
+    botao.textContent = chamados.length ? 'Tirar o aviso a todos (' + chamados.length + ')'
+      : aConfirmar ? 'Carregar outra vez para chamar ' + aJogar.length + ' grupos' : 'Chamar todos à base (' + aJogar.length + ')';
+    if (!aJogar.length && !chamados.length) botao.disabled = true;
+    botao.addEventListener('click', function () {
+      if (chamados.length) {
+        chamados.forEach(function (g) { mandar(g.codigo, { chamar: null }, aviso); });
+        return;
+      }
+      if (Date.now() >= confirmarChamadaAte) {
+        confirmarChamadaAte = Date.now() + 6000;
+        botao.textContent = 'Carregar outra vez para chamar ' + aJogar.length + ' grupos';
+        return;
+      }
+      confirmarChamadaAte = 0;
+      var id = Date.now().toString(36);
+      aJogar.forEach(function (g) { mandar(g.codigo, { chamar: { id: id, t: Date.now() } }, aviso); });
+    });
+    var parados = aJogar.filter(function (g) { return (controlos[g.codigo] || {}).pausadoDesde; });
+    var retomar = parados.length ? el('button', { type: 'button', class: 'principal', onclick: function () {
+      parados.forEach(function (g) { passoChamada(g.codigo, aviso); });
+    }, texto: 'Podem sair todos (' + parados.length + ' com o tempo parado)' }) : null;
+    return el('div', { class: 'barra-chamar' }, [botao, retomar, aviso]);
+  }
+
   function desenharOnde(zona) {
+    zona.appendChild(barraChamar());
     var base = (window.REGRAS && window.REGRAS.base) || '';
     zona.appendChild(el('p', { class: 'nota-onde', texto: 'Sem GPS: o sítio vem do jogo. A resolver um problema, o grupo está na base; depois de acertar, está a ir ou a voltar da cache indicada. ' +
       'Laranja: fora da base há ' + MIN_FORA + ' min ou mais. Vermelho: há ' + MIN_URGENTE + ' min ou mais, ou pedido de ajuda. Vai ver primeiro aos vermelhos.' }));
@@ -418,11 +479,12 @@
     function linhaGrupo(o) {
       var r = o.r, cls = null, txt;
       if (o.naBase) {
-        txt = r.s.fim ? (r.s.esgotado ? 'tempo esgotado' : 'terminou') : 'a resolver há ' + o.minutos + ' min';
+        txt = r.s.fim ? (r.s.esgotado ? 'tempo esgotado' : 'terminou') : r.c.pausadoDesde ? 'tempo parado' : 'a resolver há ' + o.minutos + ' min';
       } else {
         txt = 'saiu há ' + o.minutos + ' min';
         if (o.minutos >= MIN_URGENTE) cls = 'urgente'; else if (o.minutos >= MIN_FORA) cls = 'atrasado';
       }
+      if (r.classe === 'chamado') txt = r.estado + ' · ' + txt;
       if (r.ajuda) { cls = 'urgente'; txt = 'PEDE AJUDA · ' + txt; }
       return el('li', { class: cls }, [
         el('span', null, [nome(r.g), r.semLigacao ? el('span', { class: 'chip offline', texto: 'sem ligação' }) : null]),

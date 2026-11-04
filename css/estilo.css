@@ -223,6 +223,8 @@ html.grande input { border-width: 3px; }
 .aviso-ajuda strong { color: var(--erro); }
 .aviso-ajuda p { margin: 0; }
 .modal-alerta h2 { color: var(--erro); }
+.aviso-ajuda.chamada { background: var(--dica-fundo); border-color: var(--destaque); }
+.aviso-ajuda.chamada strong { color: var(--aviso); font-size: 1.2rem; }
 .modal-texto { margin: 0; }
 
 .entrada-organizador { max-width: 460px; margin: 15vh auto 0; background: var(--cartao); border-radius: var(--raio); padding: 24px; }
