@@ -13,6 +13,7 @@
   var filtroTurma = '';
   var filtroAno = '';
   var todos = [];
+  var config = {};      // definições do evento que o organizador muda aqui (tempo, caches, pessoas)
 
   // ---------- utilitários ----------
 
@@ -119,7 +120,8 @@
         botaoSeparador('direto', 'Em direto'),
         botaoSeparador('onde', 'Onde estão'),
         botaoSeparador('classificacao', 'Classificação'),
-        botaoSeparador('codigos', 'Códigos')
+        botaoSeparador('codigos', 'Códigos'),
+        botaoSeparador('definicoes', 'Definições')
       ]),
       el('div', { id: 'conteudo' })
     ]));
@@ -128,6 +130,7 @@
     if (Sync.ativo) {
       Sync.ouvir(caminho('grupos'), function (v) { grupos = v || {}; desenharConteudo(); }, function (ok) { ligado = ok; mostrarLigacao(); });
       Sync.ouvir(caminho('controlo'), function (v) { controlos = v || {}; desenharConteudo(); });
+      Sync.ouvir(caminho('config'), function (v) { config = v || {}; if (separador !== 'definicoes') desenharConteudo(); });
     }
     desenharConteudo();
     setInterval(atualizarTempos, 1000);
@@ -170,6 +173,7 @@
       zona.innerHTML = '';
       if (separador === 'onde') desenharOnde(zona);
       else if (separador === 'classificacao') desenharClassificacao(zona);
+      else if (separador === 'definicoes') desenharDefinicoes(zona);
       else desenharCodigos(zona);
     }
   }
@@ -551,6 +555,76 @@
       ]));
     });
     if (!lista.length) t.appendChild(el('tr', null, [el('td', { colspan: '5', class: 'vazio', texto: 'Ainda nenhum grupo começou.' })]));
+    zona.appendChild(el('div', { class: 'rolar' }, [t]));
+  }
+
+  // ---------- definições ----------
+
+  var PESSOAS_POR_GRUPO = 4;
+
+  function tempoBase() { return D.tempoLimiteMinutos || (window.JOGO || {}).tempoLimiteMinutos || 40; }
+  function cachesMax() {
+    return D.turmas.reduce(function (m, t) { return Math.max(m, (t.caches || []).length); }, 0);
+  }
+
+  function desenharDefinicoes(zona, mensagem) {
+    var c = config || {};
+    var aviso = el('p', { class: 'estado-gestao', role: 'status', texto: mensagem || '' });
+    function campo(id, rotulo, valor, min, max, ajuda) {
+      var input = el('input', { id: id, type: 'number', inputmode: 'numeric', min: String(min), max: String(max), value: String(valor) });
+      return { input: input, bloco: el('div', { class: 'definicao' }, [
+        el('label', { for: id, texto: rotulo }), input, el('p', { class: 'nota-onde', texto: ajuda })
+      ]) };
+    }
+    var tempo = campo('def-tempo', 'Tempo de jogo de cada grupo (minutos)', c.tempoLimiteMinutos || tempoBase(), 5, 180,
+      'Sem nada guardado aqui, vale o que está no conteúdo do jogo (' + tempoBase() + ' min).');
+    var nCaches = campo('def-caches', 'Caches por grupo', c.cachesPorGrupo || cachesMax(), 1, cachesMax(),
+      'Cada turma tem ' + cachesMax() + ' caches no percurso. Com menos, cada grupo faz só as primeiras a partir de onde começa, e os grupos da mesma turma continuam a começar em sítios diferentes.');
+    var pessoas = campo('def-pessoas', 'Pessoas por grupo', c.pessoasPorGrupo || PESSOAS_POR_GRUPO, 2, 10,
+      'Serve para calcular quantos grupos cada turma precisa (tabela abaixo).');
+
+    function guardar(ev) {
+      ev.preventDefault();
+      var novo = {
+        tempoLimiteMinutos: Math.round(Number(tempo.input.value)) || null,
+        cachesPorGrupo: Math.round(Number(nCaches.input.value)) || null,
+        pessoasPorGrupo: Math.round(Number(pessoas.input.value)) || null,
+        alterado: Date.now()
+      };
+      if (!novo.tempoLimiteMinutos || novo.tempoLimiteMinutos < 5) return (aviso.textContent = 'O tempo tem de ser de pelo menos 5 minutos.');
+      if (novo.cachesPorGrupo > cachesMax()) novo.cachesPorGrupo = cachesMax();
+      aviso.textContent = 'A guardar…';
+      Sync.guardar(caminho('config'), novo).then(function (ok) {
+        if (ok) config = novo;
+        if (!ok) return (aviso.textContent = 'Não foi guardado: sem ligação à base de dados.');
+        zona.innerHTML = '';
+        desenharDefinicoes(zona, 'Guardado. Vale para os grupos que entrarem a partir de agora.');
+      });
+    }
+
+    zona.appendChild(el('form', { class: 'cartao definicoes', onsubmit: guardar }, [
+      el('h2', { texto: 'Definições deste evento' }),
+      el('p', { class: 'nota-onde', texto: 'Os tablets leem estas definições quando o grupo escreve o código de entrada, por isso precisam de rede nesse momento (se não houver, usam as últimas que leram). Os grupos que já estão a jogar não mudam.' }),
+      tempo.bloco, nCaches.bloco, pessoas.bloco,
+      el('div', { class: 'acoes' }, [el('button', { type: 'submit', class: 'principal', texto: 'Guardar' })]),
+      aviso
+    ]));
+
+    // quantos grupos cada turma precisa, com as pessoas por grupo
+    var porGrupo = c.pessoasPorGrupo || PESSOAS_POR_GRUPO;
+    var t = el('table', { class: 'grelha' }, [el('tr', null, ['Turma', 'Alunos', 'Grupos necessários (' + porGrupo + ' por grupo)', 'Códigos de grupo que existem'].map(function (x) { return el('th', { texto: x }); }))]);
+    D.turmas.forEach(function (tu) {
+      var precisa = tu.alunos ? Math.ceil(tu.alunos / porGrupo) : null;
+      var falta = precisa && precisa > (tu.grupos || 1);
+      t.appendChild(el('tr', { class: falta ? 'selecionado' : null }, [
+        el('td', { texto: tu.turma }),
+        el('td', { class: 'num', texto: tu.alunos ? String(tu.alunos) : 'falta' }),
+        el('td', { class: 'num', texto: precisa ? String(precisa) : '—' }),
+        el('td', { class: 'num', texto: String(tu.grupos || 1) + (falta ? ' (faltam ' + (precisa - (tu.grupos || 1)) + ')' : '') })
+      ]));
+    });
+    zona.appendChild(el('h3', { texto: 'Grupos por turma' }));
+    zona.appendChild(el('p', { class: 'nota-onde', texto: 'O número de grupos de cada turma vem do conteúdo do jogo, porque cada grupo tem o seu código de entrada impresso. Para mudar o número de alunos ou de grupos é preciso voltar a gerar os ficheiros.' }));
     zona.appendChild(el('div', { class: 'rolar' }, [t]));
   }
 

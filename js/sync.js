@@ -68,8 +68,21 @@ window.Sync = (function () {
     return es;
   }
 
+  // Lê um valor uma vez. Sem rede (ou se demorar mais de 4 s), devolve null.
+  function ler(caminho) {
+    if (!base) return Promise.resolve(null);
+    var feito = false;
+    return new Promise(function (resolver) {
+      setTimeout(function () { if (!feito) { feito = true; resolver(null); } }, 4000);
+      fetch(endereco(caminho)).then(function (r) { return r.ok ? r.json() : null; })
+        .catch(function () { return null; })
+        .then(function (v) { if (!feito) { feito = true; resolver(v); } });
+    });
+  }
+
   return {
     ativo: !!base,
+    ler: ler,
     guardar: function (caminho, dados) { return enviar('PUT', caminho, dados); },
     atualizar: function (caminho, dados) { return enviar('PATCH', caminho, dados); },
     ouvir: ouvir

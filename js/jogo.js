@@ -220,6 +220,7 @@
   }
 
   function limiteSegundos() {
+    if (estado && estado.limiteMinutos) return estado.limiteMinutos * 60;
     var ev = estado && eventoDe(estado.evento);
     return ((ev && ev.tempoLimiteMinutos) || DADOS.tempoLimiteMinutos || 0) * 60;
   }
@@ -248,8 +249,33 @@
     return !!(controlo().pausadoDesde && !estado.fim);
   }
 
+  // Definições que o organizador muda na área do dono (tempo de jogo, caches
+  // por grupo). Ficam guardadas no tablet para quando não houver rede.
+  function chaveConfig(evento) { return 'geocaching-config-' + evento; }
+  function configGuardada(evento) {
+    try { return JSON.parse(localStorage.getItem(chaveConfig(evento)) || 'null') || {}; } catch (e) { return {}; }
+  }
+  function lerConfig(evento) {
+    var ler = window.Sync && Sync.ativo ? Sync.ler('eventos/' + evento + '/config') : Promise.resolve(null);
+    return ler.then(function (v) {
+      if (v && typeof v === 'object') {
+        try { localStorage.setItem(chaveConfig(evento), JSON.stringify(v)); } catch (e) { /* sem armazenamento */ }
+        return v;
+      }
+      return configGuardada(evento);
+    });
+  }
+  function minutosDe(g) {
+    var c = g.config || {};
+    return c.tempoLimiteMinutos || (eventoDe(g.evento) || {}).tempoLimiteMinutos || DADOS.tempoLimiteMinutos || 60;
+  }
+
   function comecar(g, regrasAceites) {
+    var passos = percursoGrupo(g);
+    var n = (g.config || {}).cachesPorGrupo;
+    if (n > 0 && n < passos.length) passos = passos.slice(0, n);
     estado = {
+      limiteMinutos: minutosDe(g),
       evento: g.evento,
       regrasAceites: regrasAceites,
       codigo: g.codigo.toUpperCase(),
@@ -257,7 +283,7 @@
       turma: g.turma,
       grupo: g.grupo,
       ano: g.ano,
-      passos: percursoGrupo(g),
+      passos: passos,
       passo: 0,
       fase: 'problema',
       faseDesde: agora(),
@@ -583,7 +609,7 @@
         listaRegras('Segurança', R.seguranca),
         listaRegras('Comportamento', R.conduta),
         listaRegras('Jogo', [
-          'Têm ' + ((eventoDe(eq.evento) || {}).tempoLimiteMinutos || DADOS.tempoLimiteMinutos || 60) + ' minutos.',
+          'Têm ' + minutosDe(eq) + ' minutos.',
           'A base é ' + baseTexto() + '. Os problemas resolvem-se na base e o tablet fica sempre lá. À cache levam só a folha do grupo e o lápis.',
           'Nada de calculadoras, telemóveis ou IA. Contas em papel.',
           'Sair desta página a meio de um problema dá +' + Math.round((DADOS.penalizacaoSaidaSegundos || 0) / 60) + ' minutos.'
@@ -607,7 +633,11 @@
         procurarGrupo(codigo.value).then(function (g) {
           botao.disabled = false;
           if (!g) { codigo.select(); return mostrar(erro, 'Este código não existe. Confirmem as letras e os números no papel.'); }
-          confirmar(Object.assign({ codigo: normalizar(codigo.value) }, g));
+          botao.disabled = true;
+          lerConfig(g.evento).then(function (cfg) {
+            botao.disabled = false;
+            confirmar(Object.assign({ codigo: normalizar(codigo.value), config: cfg }, g));
+          });
         });
       }
     }, [
