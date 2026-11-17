@@ -650,10 +650,35 @@
     app.appendChild(el('div', { class: 'inicio' }, [
       el('h1', { texto: DADOS.titulo }),
       el('p', { class: 'acess-inicio' }, [el('button', { type: 'button', class: 'secundario', onclick: A.painel, texto: 'Aa · Acessibilidade' })]),
-      el('p', { class: 'intro', texto: 'Resolvam cada problema para descobrir onde está escondida a próxima cache. Dentro de cada cache há um código: escrevam-no aqui para continuar.' }),
+      comoSeJoga(),
       zona
     ]));
-    codigo.focus();
+    // Sem foco automático no código: o teclado tapava a explicação do jogo.
+  }
+
+  // Explicação do jogo no ecrã inicial: quase ninguém conhece o geocaching.
+  function comoSeJoga() {
+    var erro = Math.round(DADOS.penalizacaoErroSegundos || 0);
+    var dica = Math.round((DADOS.penalizacaoDicaSegundos || 0) / 60);
+    var passos = [
+      ['Entrem no jogo', 'Escrevam o código do papel que o professor vos deu e leiam as regras em grupo.'],
+      ['Resolvam o problema', 'Contas em papel, sem calculadora nem telemóvel. Se ficarem presos, podem pedir uma dica.'],
+      ['Descubram onde está a cache', 'Quando acertam, o tablet diz onde ela está: um quadrado do mapa da escola (por exemplo D2) e uma pista do sítio.'],
+      ['Vão à cache, todos juntos', 'É uma caixinha escondida. Lá dentro há um cartão com códigos: copiem o da vossa turma e deixem tudo como estava.'],
+      ['Escrevam o código', 'O código no tablet abre o problema seguinte. E assim até ao fim do percurso.']
+    ];
+    var falado = 'Como se joga. O geocaching é uma caça ao tesouro: há pequenas caixas escondidas, as caches, e encontram-se com pistas. Aqui, as pistas são problemas de matemática. ' +
+      passos.map(function (p, i) { return (i + 1) + '. ' + p[0] + '. ' + p[1]; }).join(' ') +
+      ' Ganha quem encontrar mais caches. Em empate, quem demorar menos. Cada resposta errada soma ' + erro + ' segundos e cada dica ' + dica + ' minutos.';
+    return el('section', { class: 'cartao como-jogar', 'aria-labelledby': 'titulo-como' }, [
+      el('h2', { id: 'titulo-como', texto: 'Como se joga' }),
+      el('p', { class: 'o-que-e', texto: 'O geocaching é uma caça ao tesouro: há pequenas caixas escondidas (as caches) e encontram-se com pistas. Aqui, as pistas são problemas de matemática.' }),
+      el('ol', { class: 'passos-jogo' }, passos.map(function (p) {
+        return el('li', null, [el('strong', { texto: p[0] }), el('span', { texto: p[1] })]);
+      })),
+      el('p', { class: 'quem-ganha', texto: 'Ganha quem encontrar mais caches. Em empate, quem demorar menos. Cada resposta errada soma ' + erro + ' segundos e cada dica ' + dica + ' minutos.' }),
+      A.temVoz ? el('button', { type: 'button', class: 'botao-ouvir', onclick: function () { A.falar(falado); }, texto: 'Ouvir as instruções' }) : null
+    ]);
   }
 
   function mostrar(no, texto) {

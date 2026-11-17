@@ -61,6 +61,15 @@ h1, h2 { line-height: 1.2; margin: 0 0 12px; }
 h1 { font-size: 2rem; color: var(--primaria-escura); text-align: center; margin-top: 24px; }
 
 .intro { text-align: center; color: var(--suave); margin: 0 0 24px; }
+.como-jogar { margin: 0 0 20px; }
+.como-jogar h2 { color: var(--primaria-escura); }
+.como-jogar .o-que-e { margin: 0 0 16px; }
+.passos-jogo { list-style: none; counter-reset: passo; padding: 0; margin: 0 0 16px; display: flex; flex-direction: column; gap: 12px; }
+.passos-jogo li { counter-increment: passo; display: grid; grid-template-columns: 40px 1fr; column-gap: 12px; align-items: start; }
+.passos-jogo li::before { content: counter(passo); grid-row: span 2; width: 36px; height: 36px; border-radius: 50%; background: var(--primaria); color: #fff; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.passos-jogo strong { display: block; }
+.passos-jogo span { color: var(--suave); }
+.como-jogar .quem-ganha { background: var(--realce-fundo); border-radius: 12px; padding: 10px 14px; margin: 0 0 12px; }
 
 .cartao {
   background: var(--cartao);
