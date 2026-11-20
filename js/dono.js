@@ -13,7 +13,8 @@
   var filtroTurma = '';
   var filtroAno = '';
   var todos = [];
-  var config = {};      // definições do evento que o organizador muda aqui (tempo, caches, pessoas)
+  var config = {};
+  var reinicio = 0;     // hora do último "Reiniciar o evento"      // definições do evento que o organizador muda aqui (tempo, caches, pessoas)
 
   // ---------- utilitários ----------
 
@@ -128,8 +129,9 @@
     mostrarLigacao();
 
     if (Sync.ativo) {
-      Sync.ouvir(caminho('grupos'), function (v) { grupos = v || {}; desenharConteudo(); }, function (ok) { ligado = ok; mostrarLigacao(); });
+      Sync.ouvir(caminho('grupos'), function (v) { grupos = semAntigos(v || {}); desenharConteudo(); }, function (ok) { ligado = ok; mostrarLigacao(); });
       Sync.ouvir(caminho('controlo'), function (v) { controlos = v || {}; desenharConteudo(); });
+      Sync.ouvir(caminho('reinicio'), function (v) { reinicio = v || 0; grupos = semAntigos(grupos); desenharConteudo(); });
       Sync.ouvir(caminho('config'), function (v) { config = v || {}; if (separador !== 'definicoes') desenharConteudo(); });
     }
     desenharConteudo();
@@ -170,6 +172,8 @@
       desenharFeed();
       atualizarGestao();
     } else {
+      // As definições não se redesenham sozinhas: apagariam o que se está a escrever.
+      if (separador === 'definicoes' && !mudouSeparador && zona.firstChild) return;
       zona.innerHTML = '';
       if (separador === 'onde') desenharOnde(zona);
       else if (separador === 'classificacao') desenharClassificacao(zona);
@@ -558,6 +562,50 @@
     zona.appendChild(el('div', { class: 'rolar' }, [t]));
   }
 
+  // Um tablet que ainda não soube do reinício pode voltar a enviar o grupo antigo:
+  // os grupos que começaram antes do último reinício não contam.
+  function semAntigos(v) {
+    if (!reinicio) return v;
+    var r = {};
+    Object.keys(v).forEach(function (k) { if (v[k] && v[k].inicio > reinicio) r[k] = v[k]; });
+    return r;
+  }
+
+  var confirmarReinicioAte = 0;
+
+  function blocoReiniciar() {
+    var aviso = el('p', { class: 'estado-gestao', role: 'status' });
+    var comDados = Object.keys(grupos).length;
+    var aJogar = Object.keys(grupos).filter(function (k) { return grupos[k] && !grupos[k].fim; }).length;
+    var botao = el('button', { type: 'button', class: 'perigo', texto: 'Reiniciar o evento' });
+    botao.addEventListener('click', function () {
+      if (Date.now() >= confirmarReinicioAte) {
+        confirmarReinicioAte = Date.now() + 8000;
+        botao.textContent = aJogar ? (aJogar === 1 ? 'Há 1 grupo a jogar' : 'Há ' + aJogar + ' grupos a jogar') + '. Carregar outra vez para apagar tudo' : 'Carregar outra vez para apagar o progresso de ' + comDados + (comDados === 1 ? ' grupo' : ' grupos');
+        return;
+      }
+      confirmarReinicioAte = 0;
+      botao.disabled = true;
+      aviso.textContent = 'A reiniciar…';
+      var agora = Date.now();
+      Sync.guardar(caminho('reinicio'), agora).then(function (ok) {
+        if (!ok) { botao.disabled = false; return (aviso.textContent = 'Não foi feito: sem ligação à base de dados.'); }
+        return Promise.all([Sync.guardar(caminho('grupos'), null), Sync.guardar(caminho('controlo'), null)]).then(function () {
+          reinicio = agora; grupos = {}; controlos = {};
+          aviso.textContent = 'Feito. O progresso foi apagado e os tablets com rede voltam sozinhos ao ecrã inicial. Os que estão sem rede voltam quando a apanharem.';
+          botao.disabled = false;
+          botao.textContent = 'Reiniciar o evento';
+        });
+      });
+    });
+    return el('div', { class: 'cartao definicoes reiniciar' }, [
+      el('h2', { texto: 'Reiniciar o evento' }),
+      el('p', { class: 'nota-onde', texto: 'Apaga o progresso de todos os grupos deste evento (' + comDados + ' com dados agora), as mensagens, chamadas, pausas e penalizações, e manda os tablets voltar ao ecrã inicial. As definições acima ficam. Usa depois de um ensaio ou entre dias de jogo, não entre sessões do mesmo dia: cada turma tem os seus códigos e não precisa de reinício.' }),
+      el('div', { class: 'acoes' }, [botao]),
+      aviso
+    ]);
+  }
+
   // ---------- definições ----------
 
   var PESSOAS_POR_GRUPO = 4;
@@ -623,6 +671,7 @@
         el('td', { class: 'num', texto: String(tu.grupos || 1) + (falta ? ' (faltam ' + (precisa - (tu.grupos || 1)) + ')' : '') })
       ]));
     });
+    zona.appendChild(blocoReiniciar());
     zona.appendChild(el('h3', { texto: 'Grupos por turma' }));
     zona.appendChild(el('p', { class: 'nota-onde', texto: 'O número de grupos de cada turma vem do conteúdo do jogo, porque cada grupo tem o seu código de entrada impresso. Para mudar o número de alunos ou de grupos é preciso voltar a gerar os ficheiros.' }));
     zona.appendChild(el('div', { class: 'rolar' }, [t]));

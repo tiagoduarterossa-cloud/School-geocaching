@@ -14,6 +14,7 @@
   var estado = carregar();
   var temporizador = null;
   var escutaControlo = null;
+  var escutaReinicio = null;
   var wakeLock = null;
   var chaveProfessor = null; // só em memória, depois de o professor escrever o PIN
 
@@ -40,6 +41,7 @@
       localStorage.removeItem(CHAVE);
     } catch (e) { /* ignorar */ }
     if (escutaControlo) { escutaControlo.close(); escutaControlo = null; }
+    if (escutaReinicio) { escutaReinicio.close(); escutaReinicio = null; }
     estado = null;
   }
 
@@ -180,6 +182,14 @@
       guardar();
       desenhar();
     });
+    // "Reiniciar o evento" na área do dono: o tablet apaga o grupo e volta ao início.
+    // Só conta um reinício feito depois de o grupo começar e diferente do que já
+    // existia quando o grupo entrou.
+    escutaReinicio = Sync.ouvir('eventos/' + estado.evento + '/reinicio', function (v) {
+      if (!estado || !v || v === estado.reinicioBase || v <= estado.inicio) return;
+      apagar();
+      desenhar();
+    });
   }
 
   // ---------- saídas da app ----------
@@ -276,6 +286,7 @@
     if (n > 0 && n < passos.length) passos = passos.slice(0, n);
     estado = {
       limiteMinutos: minutosDe(g),
+      reinicioBase: g.reinicio || null,
       evento: g.evento,
       regrasAceites: regrasAceites,
       codigo: g.codigo.toUpperCase(),
@@ -634,9 +645,10 @@
           botao.disabled = false;
           if (!g) { codigo.select(); return mostrar(erro, 'Este código não existe. Confirmem as letras e os números no papel.'); }
           botao.disabled = true;
-          lerConfig(g.evento).then(function (cfg) {
+          var reinicio = window.Sync && Sync.ativo ? Sync.ler('eventos/' + g.evento + '/reinicio') : Promise.resolve(null);
+          Promise.all([lerConfig(g.evento), reinicio]).then(function (r) {
             botao.disabled = false;
-            confirmar(Object.assign({ codigo: normalizar(codigo.value), config: cfg }, g));
+            confirmar(Object.assign({ codigo: normalizar(codigo.value), config: r[0], reinicio: r[1] }, g));
           });
         });
       }
