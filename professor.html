@@ -189,10 +189,15 @@
 
     // ---------- plano ----------
     document.getElementById('plano').appendChild(tabela(
-      ['Turma', 'Ano', 'Sessão', 'Grupos', 'Caches', 'Partilha caches com'],
+      ['Turma', 'Ano', 'Sessão', 'Grupos', 'Caches', 'Partilha caches na mesma sessão com'],
       D.turmas.map(function (t) {
+        // Só conta a partilha entre turmas que jogam à mesma hora (sem sessão, conta sempre).
+        function mesmaSessao(o) {
+          if (!t.sessao || !o.sessao) return true;
+          return t.sessao.dia === o.sessao.dia && t.sessao.hora === o.sessao.hora;
+        }
         var partilha = D.turmas.filter(function (o) {
-          return o !== t && o.caches.some(function (c) { return t.caches.indexOf(c) >= 0; });
+          return o !== t && mesmaSessao(o) && o.caches.some(function (c) { return t.caches.indexOf(c) >= 0; });
         }).map(function (o) { return o.turma; });
         var sessao = t.sessao && t.sessao.dia ? t.sessao.dia.split('-').reverse().join('/') + ' ' + (t.sessao.hora || '') : '—';
         return [t.turma, t.ano + 'º', sessao, String(t.grupos || 1), t.caches.join(', '), partilha.join(', ') || '—'];
