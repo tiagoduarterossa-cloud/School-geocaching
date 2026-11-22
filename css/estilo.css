@@ -61,6 +61,9 @@ h1, h2 { line-height: 1.2; margin: 0 0 12px; }
 h1 { font-size: 2rem; color: var(--primaria-escura); text-align: center; margin-top: 24px; }
 
 .intro { text-align: center; color: var(--suave); margin: 0 0 24px; }
+.figura-problema { margin: 0 0 16px; display: flex; flex-direction: column; align-items: center; gap: 10px; background: #fff; border-radius: 12px; padding: 12px; }
+.figura-problema img { display: block; max-width: 100%; height: auto; }
+.figura-problema figcaption { font-size: .75rem; color: #6a756f; }
 .como-jogar { margin: 0 0 20px; }
 .como-jogar h2 { color: var(--primaria-escura); }
 .como-jogar .o-que-e { margin: 0 0 16px; }

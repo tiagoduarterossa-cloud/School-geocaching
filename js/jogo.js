@@ -718,6 +718,14 @@
     }
   }
 
+  // Figuras de um problema, com a descrição para leitores de ecrã e a fonte.
+  function figurasProblema(p) {
+    if (!p.imagens || !p.imagens.length) return null;
+    return el('figure', { class: 'figura-problema' }, p.imagens.map(function (src, i) {
+      return el('img', { src: src, alt: i === 0 ? (p.descricaoImagem || 'Figura do problema') : '', loading: 'eager' });
+    }).concat(p.fonte ? [el('figcaption', { texto: 'Problema: ' + p.fonte })] : []));
+  }
+
   function ecraProblema() {
     var p = problemaAtual();
     if (!p || p.falta) {
@@ -768,7 +776,8 @@
       el('h2', { class: 'etapa', tabindex: '-1', texto: 'Problema ' + (estado.passo + 1) + ' de ' + estado.passos.length }),
       el('p', { class: 'enunciado', 'aria-hidden': 'true' }, [conta(p.enunciado)]),
       el('p', { class: 'so-leitor', texto: A.fala(p.enunciado) }),
-      A.temVoz ? el('button', { type: 'button', class: 'botao-ouvir', onclick: function () { A.falar(p.enunciado); }, texto: 'Ouvir o problema' }) : null,
+      figurasProblema(p),
+      A.temVoz ? el('button', { type: 'button', class: 'botao-ouvir', onclick: function () { A.falar(p.enunciado + (p.descricaoImagem ? '. Figura: ' + p.descricaoImagem : '')); }, texto: 'Ouvir o problema' }) : null,
       el('form', {
         class: 'linha-resposta',
         onsubmit: function (ev) {

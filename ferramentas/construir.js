@@ -129,6 +129,9 @@ async function construir(passe) {
         percursos[t.turma].push({
           enunciado: p.enunciado,
           dica: p.dica || '',
+          imagens: p.imagens || [],
+          descricaoImagem: p.descricaoImagem || '',
+          fonte: p.fonte || '',
           numerica: respostas.every((r) => Cripto.paraNumero(r) !== null),
           fechos,
           professor: await Cripto.cifrarCom(chaveProfessor, local)

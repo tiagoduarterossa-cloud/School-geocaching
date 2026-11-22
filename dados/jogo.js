@@ -17,10 +17,10 @@ window.JOGO = {
   "url": "https://geocaching-escola-default-rtdb.europe-west1.firebasedatabase.app",
   "evento": "geocaching-3dc2b6902016"
  },
- "sal": "zhIsM+hxr9ZrKhKGFhe2ug==",
+ "sal": "wybD5iFLLN4e0AsfJfEUFQ==",
  "verificacaoProfessor": {
-  "iv": "/w0lpBI7eIVo/cpg",
-  "ct": "2HpOUU8vazgF1CoiBncsL6aD"
+  "iv": "FsX0zp1zldqXNwME",
+  "ct": "BGmszKXlJD/9kHiN519KZlvb"
  },
  "eventos": [
   {
@@ -41,91 +41,109 @@ window.JOGO = {
      {
       "enunciado": "Calcula e escreve como fração irredutível:\n3/7 × (−5/2)",
       "dica": "Sinais diferentes dão negativo. Multiplica os numeradores e os denominadores.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "b28vo0sf9TPWMESX",
-        "ct": "zJhzQ+VKkGdwLMfMGIO8SMve2NS9lYG3TWBS78TUi+PAQkFw9qzN/L+oPEOuTt0+86ldAU+W6T4lUv7t3iPYo3MIKx2YgnhIgAVDwfKxVKUvbYP/eLcZNjsWk2lWsWC9ZpGIa36Rdy9XC785a0LaOzvJnIXE1+hYmG5NMD1VenwxtowEq5fLVBkElDUH1pqwRmx8zGs4QmeL8mShm2BUpz21ka2AgoBLMv3al8Og/3dNTkYPHjDtBFkE0/c32sQ0bJKsZDlxu+Hr0rm2UQHDitec5q5gtDAJ+Ya2veZDctk8mQsldXsFWoRpkyargWTtQMezEMiDStyRLfK2"
+        "iv": "8jbmqmBXrxLxH3gB",
+        "ct": "Anr5wZfgiTVEZktfc1fBU1mucM5UOvLkIWvERFNMFqKqoQb3LZZ5EfBykB29uRRcCNUCV+eO8whkCmxoopTFR9XpU1nLe5hlBF6rK+zF5p16P4iwKylgQoFerlEp+ww5G3RQQLBUJL10mB9xOrObXf/WLRjOHfF3ugkK2Ur58pPpRJLZYQLLu/F2S8LxTJiVOLm4CY3SiV0q/ee+c7cXbR+dfK1ZV6YR9C2o3baF+nfMpiTAhr3nH6rMrurZo7dlUMDY+xmbxES/vZx5xlZMrCtlnW3jpSyD6uQAXBHFyRBka8LJec88cdfHGMWpE/vIAH2BdywcTfYCdiHq"
        }
       ],
       "professor": {
-       "iv": "mq3q427Mbtl7fOt4",
-       "ct": "EFpijaNRgWtC72gmlAh55oLO54jhN4LrRsnXt6zD+hY8nfv+WzD31MYhYeSdD+0Gixv/VsSxWsvM5keKlBpuyg8RsYOstYHlZrjJ5fIa6kH3ugMdDspwSXUGaMQFCkKpbKLrKlKfMtsEmcCenXhAHTtoiUm6Fka0lSzsy4k+OGDue4sqUY+yqwlLtFnAon9IeSaEUv5EE8psE+tt2bpuO3YTMEb1Zd+mqq0Lk53o33YomowEtFbcD77qIRWRj1v5X85z78BQzBaNICBEUIoHbMhcSFUG0fdoOskh2O5vEAMZUNNNaJuaUKYsOWsqk6RmPnAosH4n0xjxwTlQ"
+       "iv": "QNErHJwUR7qrjKaw",
+       "ct": "V59ol5E8x/Xx6sk8AVjPx5W2mWShTBLR6ou1QbtaKrQnTs5dwezihy6cPvLl7yJ8OBmX2T3mzCkW5HcQlc7huuHoWKR44irx/Dbwb5Q7oo6EecI8cAQesEnA4/9IfqsMLgNqYNLAilivRBBziZ5uoKQTpHj0SglauZj48FeFGJ63p4bbY8KRcuG1vjWke8E/dxxaqeWT6e6yc+32T9xV0xJGigYOdtNb3dOVzHXBq1VnBA32EOSDdvdiDLh0L4R4DJ22LrAOdO3mf/3AXtqSYzzwMqcPK4kFfEE6xUkab4aycBeqNnY27aGPm9AY7TAlNi3yvYXLTV2x6wb6"
       }
      },
      {
       "enunciado": "Calcula e escreve como fração irredutível:\n3/4 : (−5/7)",
       "dica": "Dividir é multiplicar pelo inverso do divisor: o inverso de −5/7 é −7/5.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "gFyi/07CdUeN9hQ+",
-        "ct": "38KoTWQ+ccbVfCcYqD9WlB+SBbyVR49UNq7HR8jtqdFT1e5jMNCLQONgMrBFnzPybQzjKWO0FZso1BgO5mhsn6wf9bIajJIhT8x4XAcwoW6db0zrVyBoaI0tZaZpTekb6tS4xwWEPBMtgS1cs+hL+hMkWd/rmHasEPPu9KFqJ1iMXEDMUO8GLQry+FFuDwmZ1xQ9AwjTbh+vxlEhVHaUvJkcBw6805ouy34fctlzoI1WGRZS+nXNReQH8pki29MaR10dsQvq9Tq1pR6KqYw6OBc8GOmpEfeH3jzsjdLt1HqufyIXKE0Obw=="
+        "iv": "BgHEfGBrVwyA/dpF",
+        "ct": "NuFswJr+kYh6jDOdxgh1FkfMxRmYxTT1R4kHgZ/hcwXSwEjZtsvSVgnQcgLpxBEvOnZGQVNPNEJuT9isfe/jgQ01MaDWz8brcmLs2nuTYYup5ek5Jh9sTefdLtM6OBMKq6oLDugXiAv26H/KoohfGm9zqi6X15m5NeLZRf0e9dcTNyt99b2QDL1s1GUV54f7q6wuBvfBoGUlpNi7J8DVEseAnJu5MbeQbEX+ojE8oGwqff/v9rvOXt86naw6i0PP6BJ9LZ4Wylf9FHw/5IA49jzjXiC6/GzneOlmvryod3CdOm95CtSM2g=="
        }
       ],
       "professor": {
-       "iv": "vH3xlTB14qK4M1fC",
-       "ct": "LVlGmVoIw0FTE6ecr93G5tGppT8jezegmfuHHL6A8U4ma9J79fzXlOOHRiT3P+uVfpGBuWzJKMKuhG82fv+lMxLhQnIja5iP+jnhCdCFmxA6NvydzeICWP/Jv0uh1oRsXlxEfdvuBjPo/i2vQE9yjK7II575xuw7s+UxajW0SPsv6KVMEmz5kW65rz8GAkY7LcXBpmYiA5mlAuNqEOVw90QSM29qsugYBGVkW8Z/zW98VitgDuOw0r7DMMIFlNjf2fWlDG40o2bPMAFCnLEVOhm3zsYVC2oTEVISuDiz9DhHO38gPo0LzQ=="
+       "iv": "euwrsftUeFvbPa9o",
+       "ct": "Hzk1i2tEFgj6vpB/HKKtZoPE7RrZ8m0w5YpJigldxSui5l5jvJVsLeiesIuP2GIZ/trd5x2eZrvqsUial5QEWUlfj/y0CnL9HFp+tXUk5bMfu2Ff/KpPP8Gw+89DBRmYBYQ+2TQr3ov7UARm36buPLVo6MHghlgkT8mOC8Ueij+wQ4NebuXzpteSFEqJ5UytopBEnsL/OpImUocWvu9Im0Ianq8uyBsA+TjxLc9DR2/AWe50O8AFnBk/Ie9MgI7pCs6UweADlfRD51MfSeo+50qglcvl3qvfipT0/ie4RTvNPnuouYQjoQ=="
       }
      },
      {
       "enunciado": "Calcula o valor da expressão:\n2 + 3 × (−4)",
       "dica": "Primeiro a multiplicação, depois a adição.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "Fv9iNPsQsRoLQS3y",
-        "ct": "Y0/21Pxl15Et9sp1YYZD1e0jNXfIgKzGJr2xKBgCYAMg2PhJiCFdRkitHJOrZYNAB7rQjPSRZdD8a8T+Sl9dzlonEM0clLaSdEpUvtcVLx5uA3aaPC0gZxjVa7NNbLnrfbZe4bPlK9aCUvUsF1RuGbqeyTVRJX9NloUVpocxzRb6HM1yN2s4AuOebGaHPMKu7mYPwXhCFWdPxNh4CTFhj2I4qwW++ZbCUCq3huX1mWYpqIzVIowWkKHSGtwxcBo5b5XmoqOHA4sbW7mYBSEvzIKE1QZCZQoHUb6zQm2bV+z2tJizPLPFu/98yBhPVnE="
+        "iv": "31OQM6DvfJghx2cM",
+        "ct": "+JrR4hf2GlfkexMG6tkLUFosAxc/OjEpZtXObxEKR9XZPmueVZLAhRbJC51klbjnLojP0TuTOdWVHtxpd65rogEghgEANszzg6gcDrfuXfX6u6+IQRAf4uiy25tN8q6gT7ANmHJdQEl0aAYd3OiVYliDfK6ruPLY0jH5IxLyW1+iLODw035NlBh5BFdrZ/kIvZo/jYZTrvNnzYg/fe4yBh/au+pBk1gDN5m1+Z+p5A/lrcaHD9RDd9wPWlmhbNZyHQtPrf4pwSKQjDpUrUTVHQs8HwrDK+W433zPccg25r3zwhtKzIQiyhkhmThTHOI="
        }
       ],
       "professor": {
-       "iv": "6YDsyDKf5MqcZxri",
-       "ct": "uDhzuB6kGICFfLW8um+85YN1aArK+wlJLuI4bBqS9zW8DqKqykn3h/0F6ZaEzS/3MPkTjiNXtdQJ2qCTYtdd8XEnFv7GfJ1Da9vzbiYMGzBT3P9f1HpObVQtlLYmxwOEsX9lgJmx2hIKw7oGx+XBEYurB67ubWRc72m3QHEefnw7JvnRPC+ROW6H2em6fe1qKjN/CiVCZDQZRV+YfhA4ynBxZ2Hj4WFR6umniX9S41APeUcNW7Nm51KkmKRsaSNEcck9B4J7fCsfok9xbx6YH8xr4uuLYJlZdC18Cidk5ydjpsIlqU107VUthNctpTk="
+       "iv": "gKplv9axAW/w3S8g",
+       "ct": "BirANCo1cf3kX/BmiOo0cYSMe5sXW73udpAuktKEhM8G49NzzHyjPiXZ1plJzsG5elc3eSiI0IQVdwsjXQS1bo1nGdP+lcv5o1q2eBiG7m4zy9p6ImTA6YK5issqTyg1zL0ZqTpvsb0pD+x+s+wtqDqHLA8IDVqY4fJSU6W04hJt2Yml3leNbl6den/ksf+MQ8KAWDYnUF22YDlmvbZVpqwLfGwbHHaCQaVE5NdARKA2+mWu7qHoW5tnliU+uP8Iw/cR8f1dGQ7KlcBPxndnz2rjD1BzaYMt2fsZn9UckG9pQJkIYkE6nBriFMtptqk="
       }
      },
      {
       "enunciado": "Calcula e escreve como fração:\n2⁻³",
       "dica": "Expoente negativo: inverte-se a base e o expoente passa a positivo. 2⁻³ = (1/2)³.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "hrG5jNUDiyF5vNyL",
-        "ct": "ksu5XVrFwtos0tVemnbAsGyg8C+oIIv5m21dFy9HA91jr0AE6AT8fYQpF23bD4lxBumnV6rWzBHci50kzxYp3PpY8/Ad1A2D8N1wttxh6VhfRZXsxpSoOZcXkNS/XOLtOu/615EEiXa89FRKZiQo+9SoKK5E/PNJqlh49eiNrpoKR4axgVJTgQRg1ZNwLovAwkolfhhDXnfth+j+BqBJEHwSa3rWX1MLFky0bD2cZQqS+IZVeC26iCh4V9FxEwKEciPguVOgsSyg5ZP5WM2G4XhJVQH5EiveQkeRiQIom4b9h++EK75GzV4="
+        "iv": "H6QMO1HguHs20IMh",
+        "ct": "Ni34HwdBXfn8Btq8u2t2bbK+JLcrARhAZJW/yX9viVl2/OgbMgo0AhIntmhr/KEEWCEmWUWunHXfNTg+jFsgu55fxv5wtnvJQBrw9pm+KTT+rO+OMNoxlp6Df4dwZm1XBhrOaWQMDZQc0Uh/EXrAM/8cKyaELyR4kdp7i2cjG2aTfR5HKMAj8CeFQJfnYveyBKSa7w7wgnZOTryJLYXmce8YowN7mM49zdwAwfsGJGNxnRnCQJ5SQS6QC0YjenIui/IAqQZALbpVQf7s9TEj/782WV/EoR1WiKVRMAYKchS5G89If3bP+jo="
        }
       ],
       "professor": {
-       "iv": "Xp/yFqhf2Avll/Gz",
-       "ct": "hzm0BmEd86Wtf8CZ80fUHdhoQ9jwbtxJHtESJ6nlRleYQnd+BEWdQIWXNDP8PuO979L4FUue9goEOolR2hLVG6CkfRe6WmOwem3vF4+iBENYSjKoTpBhU+K0CxF4gW3uIniuphtdz2xePbsy7t8ZO/WICQT5ytARPPpgvllOKGz5VWaB+zFNESuaJWYVBvx5CFYE3P1fghZFpG1musLpOy+UIJcoXWazp7njI3sgIN99PQLys0lcqk1WUcuaAKSDLkNQue7ljPn33GPXI8RsTS7UqN4wkIcBMMTEdefM6OTOTnsdEd6ru+4="
+       "iv": "v5Gu8p0snkP1b6SL",
+       "ct": "WvPDnp1FJE1+uPM0Vj1ocRIqtEUGHE82Xrhito3wk0E1n/9IHpRzv52g2fb3nVLIpYkNmVkXH1eNJHJAH3PceWj69PI1ALBCxC0jH87GN9RjKCg5WmawVJQN2hDAqHNLeuBRwJCKKiamCy21SO9FwQ6lCRRvrx+Ea8okF9TCgJ3FXkY1icS0AmXjM2pFyqiXGjfkGInhBLaZWi2CQFA/oVrI05TYLNHyri/9CHleEt2qOfKLR0HrOT4Cq/Q47NDEdK2WuL2CznM1CuIl0rDfixbiAj4d8Ja+fRy3CB8rmzpSxnbs94F/hgM="
       }
      },
      {
       "enunciado": "Usa as regras das potências e calcula:\n2⁵ × 2⁻³",
       "dica": "Mesma base: somam-se os expoentes. 5 + (−3) = 2.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "K79xAf45LD58Ikds",
-        "ct": "b0CEh7M2q5YrJ6FNRamIBa66HsDj5JIBLHMwJzGawt9xEpjFK2SPBdX0P/kPXVRsnGHmRT8HC9l2m3ab8qYPUhqb9CLk21Kpm6E4u57j4BX3MXYofrhRKmIs2wbwA0Pk/BOjiqDbbjh+76lQftfIOJuB+DXa2/pVpNLgjPaEGs8fsWRyAKvlVXQi14C36XPHml/2CTl0tddQskjNhFxGXAtXWPkUwYEamJb0ZNFXmRh3EOhoKbtX08QD1QNlfr6t9CUktUD2m/h8RqM75Tmxjzm0HY+jDB0IP68h"
+        "iv": "mx7EPogwwUPh9H50",
+        "ct": "P+HaoyF8SYfGnx6aOGnu3n3u5A1LruEJ2pIU8tF27qamLK9ChqvGrctV4cPwrh8MiOD5zHmC5BBuChjzaqXeIP2hI7hB33fBABaUUEiDv9SqRvN2zlYHc2hqPuFxjapd4GhKTtch5EJUfO557F+MDuYRclbkBJ44U5Sw18KHoPTLilODw7jjQrfx/BJsEOdAbJ1rLzuuRbL7sM2ss9SVbJiWUtFM4vNsc2OpHia3iIXPhZTnL1qKicLb8/vUB7y+dEf52cWtA3vL9qV46qhj32UDTMghjnX+FwCv"
        }
       ],
       "professor": {
-       "iv": "AUz/CZBKLEERctsx",
-       "ct": "c4E1Yoh2mpm4swNmMCDptSsqS8QPeeMReH2CyKJSXiFqT6iP4NyvKd3xwgU1z3iK8yYOIY2ajpgHkN1TXjgDdssZQ+F8qE0gun8Fnl3Ti9Sf4x/RC3cRaADwPuGXjo7uvGwHPRM1LX2QUyZsowq94VEp0jKUraR+BMd5xPXuzWr0EX3m3eKyx3b169GLqrLMwthOA81/SHm4NMZygaqN2IX3ZSKv0Qj6SdV3/FXn7RjMI7xO6Jp5lNWz9sIZgATE9JP0D4MRbuvgnizayFkIM/zRe5LdeKi80J8z"
+       "iv": "msSlTd8pCEkJoqc6",
+       "ct": "phaMLq0yPU0cYN96MHi0soNKhUF+uWwt33d+eNDSdzZ1SPhWmU8cgkGE7cR8n863FLp89sJgSIavT17YVvKRLxOR/gSZARKF+w0KgHTRQd6/9I/sqUSGKTJIe7ywMKjrMKgOoETI4ZJsAQyDehm69D8puL9OMK60GdwItEHHiUShJyWg3xvZRQVU7sILSEd6d+KWTO0nKIjNxOJLrDElPIddCTBZCRbcfNrtq1rTbaxs86OownOF5Vdhz8+LMF89Mg+y0MN4TSFG6Y05gkESQ2IfQ+KoXCfuXfIc"
       }
      },
      {
       "enunciado": "34 € são divididos igualmente por 3 irmãs.\nQuanto paga cada uma, em euros, arredondado às centésimas?",
       "dica": "34 : 3 = 11,333… Olha para o algarismo das milésimas para arredondar.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "hx0igyHnFCc7x4ko",
-        "ct": "8tdgmtuIQFCZHKeFO/tP7298kC07VuewNA1mVHR/GN6Bg7ihG44TvgRJ7KHMsyu1WNh1HDNxv2NFqvNEGc29iMs6qv5fCfRUCtk7TClbBfaSeqPeW30GuJdLco83pEfm33wHn14rIIqga+JgDiKOSjjEDU+WCtkioEaEjRAZq6FORwVAGGSFMA44GkaMXGXE5ZnJ2pniO+P0Q1JlWeBJ8dFlqhPUU/b0bQOtVbUkNSyAOTHsW5JZ1AO5b8psfmPsEMVn+za/oFNKt9A3YBFcIA=="
+        "iv": "8piCDhoKpDLrzdM6",
+        "ct": "ug+tF9GvW3m56yGgQKNauwolrzOffnxmrRV4FkWVrRc2JiE1eWE3zfvAHW7UGA+OmQsjVa0BApmQZ28oXLb3z4r63KI9vxVqtc8ilTjJ0emdraKN8pfFuwK8USGWqMRSW9kzbt/T5o6t+4Jemr4LGs0LB+IWw38BlUtpcbklj5VtgDE55/Pu/XY+P9+E9ifv0J6oSRGbCV48gt0Dz7Ks4XX2T7m/NiBUCh+oIxnzlk7VbpdhJLFw+irfB6IQLqVe3U8yzKfW564oukbVK3KlDw=="
        }
       ],
       "professor": {
-       "iv": "W8ETdYc8H8pw0/UR",
-       "ct": "7om2fku9v9/R4MW7LyzV8rk9HT/SspGRBeBqJ8Uc2pwVVly6ck9YEyv8SYy6b05RLL9oifw/5kNGAe0Qha+Jo8uEQu3I2Hl4qG3xPva3L5z84LEDeTXFH2z66RF+gP+Rm+AdMV6ju13gLw7yjZ6SXQ+L5LySwckkUuwAN9oLktloIiAiESDVK5FSxAl3IEsKbgbZed+zSwEO0yt71j/oMdgSESP28+0Z0blP5Ei81HtJfNjNS5sC6yKCKnEh76RG7bNE5UevLCMmKeLRdJQYtw=="
+       "iv": "FjSuVVzg3m82XvA5",
+       "ct": "u99b/LRkSthvXNr+tZB/I/5VQQt3KqWiyX+P+Ur6gl4mcZ5ndAu0qiB4M4y0EWLhAL7MxrlHeaypMsZhntYrckL1+RAU1reS5dFqOn9eG8hW0WlLoorsAgmJK5wW2gH2P/LgBaP98J7kwOhYnICJsog6/f17qj1q/qPAwR1wwaqJlF9ZAu7lj+och9QFk4G9HKE/MHeZtAuBtGc+yEDGENc7Ff4NUuhkKL5bKgttRQnEqtN8zuRGFNLyFvEZvdPnR30AsvBD1pC0YguM4vkoTQ=="
       }
      }
     ]
@@ -179,7 +197,7 @@ window.JOGO = {
     {
      "turma": "6ºA",
      "ano": 6,
-     "grupos": 4,
+     "grupos": 5,
      "sessao": {
       "dia": "2026-12-03",
       "hora": "10:50"
@@ -188,7 +206,7 @@ window.JOGO = {
     {
      "turma": "6ºB",
      "ano": 6,
-     "grupos": 4,
+     "grupos": 5,
      "sessao": {
       "dia": "2026-12-03",
       "hora": "10:50"
@@ -197,7 +215,7 @@ window.JOGO = {
     {
      "turma": "6ºC",
      "ano": 6,
-     "grupos": 4,
+     "grupos": 5,
      "sessao": {
       "dia": "2026-12-03",
       "hora": "10:50"
@@ -206,7 +224,7 @@ window.JOGO = {
     {
      "turma": "5ºA",
      "ano": 5,
-     "grupos": 4,
+     "grupos": 5,
      "sessao": {
       "dia": "2026-12-03",
       "hora": "11:40"
@@ -224,7 +242,7 @@ window.JOGO = {
     {
      "turma": "5ºC",
      "ano": 5,
-     "grupos": 4,
+     "grupos": 5,
      "sessao": {
       "dia": "2026-12-03",
       "hora": "11:40"
@@ -234,771 +252,1021 @@ window.JOGO = {
    "percursos": {
     "8ºA": [
      {
-      "enunciado": "Calcula e escreve como fração irredutível:\n(−9/5) × (−3/4)",
-      "dica": "Sinais iguais dão positivo. Multiplica os numeradores e os denominadores.",
+      "enunciado": "A Maria quer escrever os números de 1 a 8 nos vértices de um cubo, de forma que a soma dos quatro números de cada face seja sempre a mesma. Já escreveu 6, 7 e 8, como na figura.\nQue número deve escrever no vértice com o ponto de interrogação?",
+      "dica": "A soma de 1 a 8 é 36. Cada face tem metade dos vértices, por isso cada face soma 18.",
+      "imagens": [
+       "dados/problemas/8-1.png"
+      ],
+      "descricaoImagem": "Um cubo com os vértices marcados. O 6, o 7 e o 8 já estão escritos, e há um ponto de interrogação num vértice da face da frente.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "/HEUt8H5/Gs5zINZ",
-        "ct": "R73R3bvqItZB+tqQ4U11SYV/uKwY2bz3LvvHj0llqqP8o11sx3LXOdhuny9qSWD8hoOqy505BCDlYlkrpdN3YraU92WgR9yZ/6lziLTCOUnefA1hY/8bkEiftZaA2pgGK2WHj3P1d7hpgGd0WSS8ODS62dYPXRn1kQ9MYaaDZIiF7fI/WHMcGxnLC9Em5oySAnV3op9LBzV5v56SYmPwWT0U+aNALGxYoJ0jpKCHRLHaZ69iAB/p+ltkyJZsrVaV/LciKTvrk5vzRbuRNaQy7f9K+XiAMGjJJ7Oepl59QuuY/kxUNW3ZL1iKHegtCg=="
+        "iv": "lykdIwLLWYlYIWEV",
+        "ct": "xz2AJFiClnuBaT712TmvQzUBRy/kFUcg8sBZvIcdYjSfbz3Dj/DZBk4FSM2GQoEHqmX2eA12pc4xTEp7/RgSDSooaCMFsMptKK4wjAs9/4IS/hTHn48Z8kPlLQ4r7lFhMPQqT/1r0dpVLH2OzHo6DQ2XitcmFzNznDEavB9kCyY/0BNy/yiLZIRSGcoPm0H84ZmfVyAVsJFLaMC5N5sTNqCismif7XDcWjjPmdCcvUItnj3oPFxJEmDQOqwtt5Nbf30qHQmaPShmiZ5MZDp0upe93JH3YanDB+nvZhbCdoV7dTQk9I30K934NS4s+Q=="
        }
       ],
       "professor": {
-       "iv": "s6vkCtHM5yftwPpI",
-       "ct": "J7tKMp7cHiBoEJIDSEBxYof8kIvPMD4B8k8+pAMG2pixLVau1UA6yp1hDg05jQsCDHmi5spOxNLO6XQv+4UZDBsJDN6sVuHmCew841iCrGbVUCStTdrKt8Eq61YrcB7CNI9FL5tlsWqVOpxAfCDEq10PKYeMhtbr5ve+U3OZ2AoPJxjkJNbhcb9Qypqcz0g2PhAegx2VQAyozh1mIAnndcfkpxWCsWsn5E4HOQdKwq6MXV/TlNdAKWqJLmwsgx4cd/l+gtuxm9P8Jxc9CoB1rBCPYLw4ehl9J/hzsv8bhGIeeajwqnpVu8SupFKNHw=="
+       "iv": "QnP0Jk6YeWj9eHH4",
+       "ct": "YKs0Yj47RxkZrJNG9uTtIUHcZpU9SM3eAH1ni9hLx2ZkEN+7MoiK++3PTZ+MYKcGbOECMnXaPbFHc5roJivIoSbNixucOpVmOuNMcblACXtyNEeI4zAWJTjrV51YXfQjMSH7JRb3dHw7WNxPrWWaYj8lcKN0GY717tI/qk+cLHFzRZvDuH+XF4AVbb0VvEDJfXo1/FT2NDPsLM3EHCN+YMioKVUpZxAttUqH+URU7osb2AdRFxl7tEhA+kjxO/kExq6FwMwgwNLonNfxVPf6sYUhmg5aaNcgxjK1XhCZHTqs82fThXw60XGAj+bvWA=="
       }
      },
      {
-      "enunciado": "Calcula e escreve como fração irredutível:\n(−5/6) : (−2)",
-      "dica": "Dividir por −2 é multiplicar por −1/2. Sinais iguais dão positivo.",
+      "enunciado": "A Eva escreveu um número de três algarismos no quadro. O Rui acrescentou um algarismo à direita e disse: «Olha! O número aumentou 2024 unidades.»\nQual foi o algarismo que o Rui acrescentou?",
+      "dica": "Acrescentar um algarismo à direita é multiplicar o número por 10 e somar esse algarismo.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "08MHsVubIUCUbypB",
-        "ct": "Z5jomUAwlWdFVvqX2qdNef7PHhWVjxKIrSct47F6jLCKC0+hwKwAPBqlN136QT8F+OHybXZPIbDAF+hxkxSdX5rkklt4oQlsJ/qUF9obhaz+D7GG5gGut3iAypiQdjkVBDm4tryK5jxvkcCgsR5y/PFlk+TfO2OgfLQXT8g7mpmtHJKiqdgFvW0JcAb6E5gVQljrmuRmLVgywjaBmF20wPKAt/xgohACbCDp2vXwcyrOPFlcgd7LIpRXsuqQOvHZG0MHw37oyJL5oMU+LEtzlMWLTuC8M1A8m8fJR13Re+QT+wtepJTOtbZI6npuKg=="
+        "iv": "vb+wdV81yAMmvzVJ",
+        "ct": "4wgLCySMvnf41IdHGwaZP7tsG6S+jcJsKskY8P/2ynf1Qm+zKoSL91VWf6bf+3oytQYzmkz1E5KriKbJ3WNWieXfxmsYilLI2aU2niFMffewk6ZTM3yTG3ToI9FFuNBfzkUaY8K99u90B0NNXoFWpAfBJRZmKen/PgXqeLEKKwnCYmvtu7eS7CD7H4SZnxGyI2mznybFfe6dUUH7BmgTLhq4HIoXvqTB0AVez6iWag7+p1XH5XDlHiAMFbPXvXENsxPtsfi1kACvxdkQZIMU/kJDZnaGTohoi9fwdhim2gAaXmiUnTfk3ZADS3VhMQ=="
        }
       ],
       "professor": {
-       "iv": "pSKq8D9adlpoTIDu",
-       "ct": "MSFpM+aTsxc0kffaJqn1wH7o2oiYsoRrwKoP9tS+cwIO6CHSQdvEPn8WHUq+3k0A0Z5aYffLw64Ae00/4emaG0CNoPCnDURNpGQ9sqgAp1Bw6z6sCY0Fteklov005BnXtl/XRydMkXp2nZZzUiRboHIVb3KEceZAP7F5L+FnIwoWRX/02FJOkQtyDYX+yknB/0lOcAAxUkmsl17B/Y4s+EjE9H95zM2HC4zLiJj0s+bkJdqIiKIX8v+pU4uUlzTV6YUF86aVoOsMGb7HgWSIUi3GMSB32Sbz2G6O54q1LkSuaRnp1H9Li2hzKakLdw=="
+       "iv": "F5RzZmnfLGDtygtC",
+       "ct": "ejHDtUxkuJAeLfaq5/YdXuCTE1CW4JxI4J8ht+B2NehHHSMp10ZKinbolT76VtIzoGPwPaCSJP37h5OuBmGXc6sEkedhMCalJf+Jmr2ceDeFuet5EaT1Cv0v83CRSNwkMby96YatpAPMWcrHHmFzKpsESacK6NQ0ahUSzCWqbaEEn+7bO93TdodzdiV4eYUHK+hMDT1nmMqGadBFKKGywykKZwaA10PrTGfrcuZtkpBiGxlmE/4VN9pnbAgZ+OSgBtoKFN3Qi7hLtjyn5j/azWkWOW7oQYdnQCSV48TwQ4LGFNksDIBMOgROAKPong=="
       }
      },
      {
-      "enunciado": "Calcula o valor da expressão:\n10 − (0,5 × 3 + 2 × 1,25)",
-      "dica": "Primeiro o que está dentro dos parênteses: as multiplicações e depois a adição.",
-      "numerica": true,
+      "enunciado": "Com fósforos constroem-se algarismos, como na figura. Para fazer o número 15 são precisos 7 fósforos, tal como para fazer o 8.\nQual é o maior destes números que se constrói com 7 fósforos?\n(A) 31 (B) 51 (C) 74 (D) 711 (E) 800",
+      "dica": "Conta os fósforos de cada algarismo na figura e soma para cada número.",
+      "imagens": [
+       "dados/problemas/8-3.png"
+      ],
+      "descricaoImagem": "Os algarismos de 0 a 9 feitos com fósforos. O 1 usa 2 fósforos, o 7 usa 3, o 4 usa 4, o 2, o 3 e o 5 usam 5, o 0, o 6 e o 9 usam 6, e o 8 usa 7.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "TWyoBdYQBUZpOc5u",
-        "ct": "jM0fLUuTf/2jCzG8zRmWOLBs0Nh2ZogvJ/5wk6yV0cwL2wFCLkimJbK6kD7zsssfte9p+HfkhXxZAmv8i+a530/c2ovAkMslFDGZ6BiZVagyii08qzygxLvLBlTMr7LyoBGttWAm2IRyhRujGGcFaQ4pIKBb2g5JzPEs1p+AfRlN+QYZFGcwU6sOxCEZ5flnxn1AhsdtirqSKzt1sKSNk+Kc1mRbkTLPgcCNar2TD9CjjWOnkIGQbn71v33mMPzW1fpDjiu17P64FjtZ07BbaTprfiuMuWeU6OW8x5FG62Vw+ABfuHw4wOUzsuj2ny0JvIAD7jkx+w=="
+        "iv": "VZIiEwl2yM70mdqZ",
+        "ct": "jJE8ufJ+QvFBO4Qv2A18gkfUeNc+djAp+RTiHJ7LUqWLnkTjsmqPkWusZCw7D/Bf0CIqkQhQTa19+kFgewg9utjRMbwo16YG/qGRc27aeuQVXXrF8PcO0XjaVCzgjFukijGxHzcDDfbg+FVfIFP0Wr/IvFMswmtcBauIivHJsXwq2XBJdhhgF8nBQqcEMBLZ3Xsjwdg5dpxkK1aihknGqu3q+XONgBaOyOehwzCvEpotdRyyHZqhcMD8ZI03bp6HxAI13/LlxcwawKhLdto7m9y8cLthgmSb/K2vtOb4RV7v5ouJrbpDSL4WT95sLYpOgQPhziFezg=="
+       },
+       {
+        "iv": "UDfmvxozr+vQhj1K",
+        "ct": "yvcYIOIaH2i1xdvEn50rPXXv6/HPVtYBViZ1nYF/BC2rgAUx5Gq3yUlfi0Nh6fA4B7TsDx84dwbvljRtujT1TgFaefSd9Swj3/sLvKi69+5n/jihmZOAeeaXBTOh1R6SicU0VT/BVcE5L4DXOxgPvJ1UtaRBTy1dztl80r1qnNQ4m2wdhieC5kq2jesRILeu7R9mtzilHgDHGD1sBir+BNA9lfq/qtxmCf8pPnbVVh0gg1xArufp7ZzPBWTx2OwTRdFhrgvFpC3dxrdk35yglvsnUxMa65IS6gtyb9I2lLMN63bVITdqpOAlZVVwveqdjHIcHe1BwA=="
        }
       ],
       "professor": {
-       "iv": "5dx9Cs8Q8wI1ggai",
-       "ct": "giK61WrCw3FyamIFNQsKwK33Rq7+SnZ1JzzPd1sM5IvDLyr/9YVpF4o8won1l2DVvYsQuxu4M0tHBqsVImFZQa0/NMg7PFXtjqgJEjFP4o6f9CcjX1YENcOuWUf/Vfjn+N08v+iC49WuphAOassretVTxlPKmzWin+GgjdfOY3qRnPfKTf2JMrjkxYeq96xv6ts1N/JoQmARciH+i0/zCFJeoHmQ32Fw73eRGM4OEhRJID9PUMTIo6NICtvAyVUTpfI7lcUjXXFkzllRUETdxLO4k8sq08Cye1Z8plsYGl2v6OiCPxFApTjzl1/DrZZB3mCi3wTsuA=="
+       "iv": "PZBf/C6YhVnlBTpP",
+       "ct": "JkEOSAVTqweTJdqAY/RnnKflDUp0BBZwFhQd8csOtNAplXW9+4ehbjwRWS2mHwNG+hQ3NHYrbpniYAyLdR2rsfUHR66NkGHGoAKP5fT7RRIWU4FPyCAjl+MXvWUduRu/X8IML2wJxlnQi/237iH40CMgUnNISWsixLffb4RvAYbxbiSg2Z30wxFgm650JOhECNztobx8HhtfrmbMA0TwBjMNKJQ8ceKD8T3SbZkOe01qXWj+KW7mJxQkl0bYZJmjmTHKwCPKeSHdq3PiA700Dr579vSVRXB7xxnXcshlqaF4exhNEmxVMOEaM7v7ndjlx+1Aka0zfA=="
       }
      },
      {
-      "enunciado": "Calcula e escreve como fração:\n(−2/3)³",
-      "dica": "Expoente ímpar com base negativa: o resultado é negativo.",
-      "numerica": true,
+      "enunciado": "Atrás de mim há um relógio digital. No espelho à minha frente, vejo-o como na primeira figura.\nDaqui a 30 minutos, que imagem vou ver no espelho? Responde com a letra: A, B, C, D ou E.",
+      "dica": "Primeiro descobre que horas o relógio marca de verdade: no espelho, a ordem dos algarismos fica trocada e o 2 parece um 5.",
+      "imagens": [
+       "dados/problemas/8-4a.png",
+       "dados/problemas/8-4b.png"
+      ],
+      "descricaoImagem": "Um relógio digital visto ao espelho e cinco opções de A a E: 12:22, 12:55, 15:15, 15:55 e 21:21, todas vistas ao espelho.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "ifB1aTA/ZlB+vtWx",
-        "ct": "6Je4xIfkLF8vPVXNt2rJ3YcBJlLf4onDNYSI7pwNQLdVE/cCe5h8EJqHXz/8i+kdzaW79Gd7Dc9//FDG7AVeV9f0ORhCh9u++gnPtHQNrc1Z12SrrugKH8PyJDuCioqvpw93lstp6q3jqsbnk/h1wjPFxE6JZRQbmGfpIDdb5NtFXT0fKOBay0I3W4M6orHxXPbgYl9HmQTKJpyDJaIx3NSwTD3JXl2mwClkBj9iP4QQm0vnc2b6wdh7zAv9IowYWdPcX3hdZipNdYto3E7wohkX3czplYlNTBfuLv4mdeObb9SUP5UjRDhzGFMLOcQjqNCOget//7UokcG0ZThdlrh5zzj0Dhb0"
+        "iv": "wG1AFLBuWNNvOK4p",
+        "ct": "JOtX9zDE5P2aTT6nqOvABvCbq4Z7xIurqHk45KU2vWANfihRzxrA/wqUSHkmbJVePh4Mloa4S9/Tt7BQ5VizLcuuoFZUXmVICXrjP/ZQ66Ax0eH9x1iZ1r/nmitZsNXki8lKNDRMv8NoZPsYEhjQ8X2Q/87remDW1kRrqwK5l52+eTM0EcRaoVKhyEaXrIRbDJgkZkFgFwDtvqT2Aj4ZQ1ZZoW440Mc9Dd6KnaT/z7SqmCQTqASwooqzDff42uSyFYRTkrYTDPlSEWUDwKlZ0F58TLROrAAoCQgUuGUOfF9Rz++Y78BvjRjzt2yrCTwK9xdqkmpWRRGotfYRH5I6Vzvx5Jq+RKAt"
        }
       ],
       "professor": {
-       "iv": "6nNjhQTiueWKNzZ1",
-       "ct": "4VjQGor18dgLN4IqogYI+qLF1wRVJXVp3D1yFLXt5Rg6mYmDUCVvEjjnsjl13WrCC8epVbH40L3cxX8JB9Au2fVtFzjaEOTccRl/FN1LLoPwXFQboVggUFd1WvQ/6CE+u6I4bzfBnFCvoZrAeK3W5kqFTBSb3J6o/uN89amBdsQNjZYq3t8oD/obxtS59cbPQCRUIC/mx/MRyEBm9ywHXxaVhAGnaraEH6mH1DWk4Ejkl6HO9X8B5aVrVaRqROFEYAkauj7cM4JGOpRHK1ST2f7LewLQwjdPw9sxDFOJNXYmQXwg9q+5aqSmkgkwJeqUv/rMFdMKZ7DIuBogeXXRrZNdyv+Xn7tB"
+       "iv": "aMtS3phvP3UEOwH2",
+       "ct": "Xlrk234iqIm114Ihl0OF2WP/aBaw2dIdSPdTjHbIlbv9FXWVPcmN0/it/gOfrn5dhmiP8hZE8q13WfyVThmJE5bn5ul6HQ0z310/EcghlKkiYwOvjgOsuWextCv2CQGB7Qz419okfM6AhCCjLgXO67fuGlueKEOeAfr6IgFwqMMZXCpZ9ip/6Yp8q5+UBB/Rqr2sR+P3sz+EK2PGXD3v6cBYRRQFpo2nYeF+qSdk8+j2kSmBWPE7QrZsmlJYSKeX5f9sJgA7cfClgJf3hTphdLU+Jx4KgcTfnPqaCq8fm+hwB1FVSLG/+K/KvRVoGFL1KT9dH34EJQJTSI0ivsti801lCG7GmVLe"
       }
      },
      {
-      "enunciado": "Usa as regras das potências e calcula:\n3⁷ : 3⁵",
-      "dica": "Mesma base, divisão: subtraem-se os expoentes.",
+      "enunciado": "A Elisa tem quatro peças de madeira em forma de algarismos: 2, 0, 2 e 5. Com elas consegue escrever o número 2025.\nQual é o maior número que consegue escrever usando as quatro peças?",
+      "dica": "Põe o algarismo maior à esquerda.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "oZpigK4H6vNVhLnM",
-        "ct": "aOb0gAGGGWIeZywekGe+HoTotCaU1RLiBNBxKmky/IHKxHrrn/5mYR3YD+tFsLtl+w9bjrhwIJQxS7liagigt5kc6JkmKSgqpMLIpp5+TdulsvgNGqJaDGtICssH+La2V/5kV/LSKZRE1NF91sxLSVOIE5uoUHTALD676SlSPztRWAGb5fMzTfuiJyImdyqT6w2gXH7K0SPwSyDHjzcXMDrIJCSFji+H5AwvV9vO5KJAk3LrVon6l3QyScEyGlLuqciyif6HBcx9I0xvtMSpQQ+14LlI596vdKR2ykj8cc28TNrWyw8tC75Z0T3SkDW3"
+        "iv": "o+Xw6rJ07Z+PYjMq",
+        "ct": "zpLoUvdjH/56uxucm3igPsbS8diuwI+M7HOUYT2JY5WIASETLQwvHb7c7liCYgwnvnyoitBz7PLtUrrle8RVoLJxpTjwEZ81/APILLhxqHLLiobbeFWG/skAczhRZoAtO26tgOhTvb4sqWXfHu/YgaiBPKNrfmLRQnZd1ltuozce7vV4o7FDC6ydtGP/dYEZ3PSESj28Eebt7Fz/OXX7Aw+EtKPy/cIvWdRlL5COHYGEUakNDfnfLC0wTLTohWSBa7ng5nxlBFkqAsJ2Jmk3HBRHhAlsWQa06D193cV0ubRnVyazpKt/Tn5f1Gaz/Yat"
        }
       ],
       "professor": {
-       "iv": "4KmVouv6TAEq6VRU",
-       "ct": "QgQ7iPhVzuwCbmnxgVwaWB7veg2LAJTlWQN0V8oGy8fkXP+9D3UOkhQ4paLaAtvaksig4wsmpblq2eFZQwGOgGUomEm3wNJGPPS5xEF8238gvlIYTwExK6tWSRfbJxX2ViWThydDIBn1c1n5y2ztDYoAa5ved3YimdN/eEp7PviWEHo8qKNHGlFTuZzfBCklHpB390WeUmtyB5xRE2x/VsrOs78xWGn/5AsGXMUhUNyGpu9vsZQ6qQAKyxHWNqdY4B4klHJO7Yzm2PkzZru90hcdb0e9W1pn2iUiVhxbGjZTv+wIm3SHwloW3GKgR3y7"
+       "iv": "5lIiaqh2jlz8A8Z/",
+       "ct": "uxFaAbb7H5ROYxYpuOpmo92nDsE+ImZClLfI/4U0+ExnRXkHxUkVhq3E2rErb9K7cL/5MBE4LMIFMd3+nH28lhh3xXK1Lp806b8aBsssMTGBPqkkXwxE+IWYhKAuge1a7J6NV/tG8tCxoISFPuvLZf0PaMNNY6GGPPRFdpqcOhQgVy+3qlkRo1FLv8oABBdKYgzUElee+7tf3jRDjXY1KO4fC5nyHPQWPlIga0vCJyo3acIqrxV/QndJwHBqj3KVg2S1mv1LJTvCdJAoKn6I0/ty0vyxuc1OgW/vBDoGp9un0PU+X4D6RYbYqglCkL4H"
       }
      }
     ],
     "8ºB": [
      {
-      "enunciado": "Calcula e escreve como fração irredutível:\n(−4/9) × 3/8",
-      "dica": "Sinais diferentes dão negativo. Não te esqueças de simplificar.",
+      "enunciado": "A Maria quer escrever os números de 1 a 8 nos vértices de um cubo, de forma que a soma dos quatro números de cada face seja sempre a mesma. Já escreveu 6, 7 e 8, como na figura.\nQue número deve escrever no vértice com o ponto de interrogação?",
+      "dica": "A soma de 1 a 8 é 36. Cada face tem metade dos vértices, por isso cada face soma 18.",
+      "imagens": [
+       "dados/problemas/8-1.png"
+      ],
+      "descricaoImagem": "Um cubo com os vértices marcados. O 6, o 7 e o 8 já estão escritos, e há um ponto de interrogação num vértice da face da frente.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "WW0M48CjkFFjb36n",
-        "ct": "a6RPvSeGt9iDPpAtJmRuCi5gDaDUwOBWQxkkjv4Coy+G54Zh2sTlxC8HftJinlggUSMz//CLgQ51qru+jTjtZ89p2wrkp2tzO2syWWP1+KJHloX5UdeklST9zTCTDDNYgNlo7TeeoIt1No8d6f3p7rbjTES3PWGbvWeK75jplKtI2HFm/GWHVrDP+3aVIWivbu8xfcgEJKMQeHQbJEzPQi8eKW5da2mR0cZqWZDa8EvHCnUgkhMWwvwdQm3U79XHX3R7i/+++kn2dbnGFIDPfxvwX3cv2ff+xzwrgGYm1vRMW93ADtWTdwihMUeG+Q=="
+        "iv": "zUGNqtK+7oyI1Mr/",
+        "ct": "5SMuu6W/JP8srPAoRWolD8eT/kbI0d/H1Y+qPmEJD1n2AI1qV3bg6JjaRNddiqeBxd3+qDC2aCIgsClkqrP5Qdriu3lMZ17lzE0XbM8yXAg9WDgce+tZo7uh6mVsF9YxRtJsaX4dFEHCqzlG157e9FJgpBpML1Vol+dj4f2yY+bSxqR18TXaSB06P5WosetbYqlZvYxfM9NjPTgJ6YuT3h1jNid+NJahhjGMSThg1MDOPdrmgcciEEqQkFE43sRxlbpnYjQhjf6lB8G+pbOyn58mapn9+ijZCZCZGFkYt8rpz2lafXQjqOOt6fMbmQ=="
        }
       ],
       "professor": {
-       "iv": "MxdrMEmf+ql7eN20",
-       "ct": "cBMWc4ebZiA3rCrXUa58GOt0BbodatAZRqdfQYdtklRX2iRgoK0cq2nWQz/aHLyW21vwceAFvyuKYQjIkdDwYt7MMYU2rJ0xDc8TlpcJerCavrE60U/SpzIjur+VlBqBsC7ocFWLqtPSwLwNhhr3qA+f2ViM5l2EK9+kgWwyTpW+1e5y07GdRCZUtOxmoYynngNFc1E3zHS5bm2ReHMZRVzaPSot2EdpcvDUuhK9O2NZVbqXM0cCJwFtZlL+jNzo/SZDxOxGLoD79HvFlcVLycbQhU0AfQr4XOPbgwQMBATnM+t8K0gSbE7/KLYmsw=="
+       "iv": "1ZpaSmTaIOHEkZTd",
+       "ct": "O21jsS6RjGGxlReNuINye8Ai0yyn/GT44+QBwHRf6yi0KX6V/aDz11dZq8WlJma3G40hs1vsiWDrB4w2fAL772HiVPO86S69b1CBbgnIwGBnrdFh6X9BLTjXMLJqWWNPGtrh0WEKiXs78/ZN1H+CyFWQkVV33Mh+HUlXFdBJK5DfpI3Ff3w6sIZ40SEuY59hrtbw15dTbB6rdmGjBwxLWHTja1OcjCt6X2LQ14v1mm061wbkNSlLXy2JxyMs2xoGSgpdhX0W2CEd51tcObLoCX6T2TOuJx9Rsry0UT8Tk7VqF4BWdp7MtKjm9kL6eA=="
       }
      },
      {
-      "enunciado": "Calcula e escreve como fração irredutível:\n(−2/3) : 4/9",
-      "dica": "Multiplica pelo inverso do divisor: 9/4. Sinais diferentes dão negativo.",
+      "enunciado": "A Eva escreveu um número de três algarismos no quadro. O Rui acrescentou um algarismo à direita e disse: «Olha! O número aumentou 2024 unidades.»\nQual foi o algarismo que o Rui acrescentou?",
+      "dica": "Acrescentar um algarismo à direita é multiplicar o número por 10 e somar esse algarismo.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "sl4LHo1IavAZABqn",
-        "ct": "EU5NVcFGovoyDNdtkps2hb4rnojuoSE5ho6/B9KgDvnZJF7JF2y9wkKWBzjADL5mGlIvaez7TpfMQgbJrunXNbiX+l8xUf4JWAvPnqL1D/PM25MsLu2HQIaf0K4CAWUDVKfR4YkN5I4GVcj/c394FpkhCGUVyxLgr3vov0ERjCcfV+eMcYc+XfXjRXJdH/65Vwr+wMs8EmniWFbDg5f5V5yNW+9SAwbZk3JANCQoK53VkIBURhtYN+Tn2PF7FlFhT00akOgRFkddC+XGkgISOgYdd7N1Q6hRyY37PTh0whkQPWHd55IubEWbDDwzQw=="
+        "iv": "NP9M/mxSbIi4g/z/",
+        "ct": "ofLAieSLh44vf21sF5o/Kd6XJ3gl9LSd1VuyE3Ixz94ux0tCVgAIiJie3AOypmJBvSnbpGAa7ORn7aroMrR32GSoUIxcr3uZmHHD5dVIm225Bm513rwwAIpifi8zruAOGEMOaSHlgNVo8Qe5DWjjZ952G8ye30Q0Z8sb3cZoHlw3ooQ8O6cTmESFhwa2N1oRHksZYbflhE0lbGgxJdwz8qUhiOCtEjwgzHk3R7PPihNdM4fGAC2aE71KnL2YSCjMffZ/bJVfYOb6XCt8936hS3+lwlCmD0j1AAJpr1joGzIxgepgakRF1DOXNzYAxQ=="
        }
       ],
       "professor": {
-       "iv": "+jBOzNUmpwNiKERH",
-       "ct": "rnd6v8dzuqVflcY5Xq7SNY7MhD6e73vwROrm2tAj53axmdDNn32L44hwhhbC1lMmnSJuHQWDNbUkV7UjKBTkEFhmuT/qxm1Fk8Rd81sfSqgh5Oap2Lg8L5EjD2sMr/dZmOmaKc/mpxnAA13aKA/JYKKnaILQ9fwhNRhAW/nydrxdD8dvvll6p3JgsoCxCK0jTl1HEFG6pQlTyHNyDiEcT5klbOPbXTiZCX4OA7+r7DoqhIpEJk6UUf5PaRY5jYdByqZ7wJjo0EpU3oqmKiiyH16KhAWVhV0gil9mICv/5cB64+nlCzWcdPMImwWDSQ=="
+       "iv": "O3oaXl4Q96xacvQf",
+       "ct": "2WZtVC8w1fcfDvoNYxAVwvNfqTdqZstONq+ZsYcBSEN1y9AUVtQQJ8KY08sE7i4m7pWlSvXcX72l+QOUZGhXk9YiX/TCuMXTFEcEiyKdEbAv5GqA9GquU3LzOjBS137ACr+nr7zTI6qWKWiCsruZAd5EGewpHSkwrUbushfGs+8qHNr2YUJWmT2Q1TCvFGvp3p82Y83nwn91E3yjaPLKg6lCLj4yjSlq+/KzVt4on3omYFGQDtQDaaQ1ktHmtJm3VAXz3d0CqQrlbEB6ZEgc1OIZoC/2xpsKALB6TjMU1DkWG04V1Fw2K4eQts5SUQ=="
       }
      },
      {
-      "enunciado": "Calcula o valor da expressão:\n(−6) : 3 − 5 × (−2)",
-      "dica": "Primeiro a divisão e a multiplicação, pela ordem em que aparecem. Depois a subtração.",
-      "numerica": true,
+      "enunciado": "Com fósforos constroem-se algarismos, como na figura. Para fazer o número 15 são precisos 7 fósforos, tal como para fazer o 8.\nQual é o maior destes números que se constrói com 7 fósforos?\n(A) 31 (B) 51 (C) 74 (D) 711 (E) 800",
+      "dica": "Conta os fósforos de cada algarismo na figura e soma para cada número.",
+      "imagens": [
+       "dados/problemas/8-3.png"
+      ],
+      "descricaoImagem": "Os algarismos de 0 a 9 feitos com fósforos. O 1 usa 2 fósforos, o 7 usa 3, o 4 usa 4, o 2, o 3 e o 5 usam 5, o 0, o 6 e o 9 usam 6, e o 8 usa 7.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "ru7Uz+Zt4AfROkKF",
-        "ct": "2WJYTE8xqnx6EgKJVNq/igUFzWoNklwPlgyhYmUp97tKbon7wqpr7K6OwGnsUc/yFlefE/uieSgmB315K6J/uErej4bfWgBHq3wNXXgoBRdP3/zRnsBvo6ecW1ihstYtWZqeQiFNCDsyj17SDwOQiGBtnynTnDv712tqXQ6ljXM5iu5ZjHCY86zeXD9xscGrDztn7uQUhXl4HC/r32LlqsCPR3tAP/WwlIMN21ehXnZalb9b6QiCgkl338vSE+73GnCK4rZIhqX5az1IX6UmdMtfFjXZXaNCh0CCNZYv0w2KnhyoNT1J6E+5JHcvTJTmp9pBOzT40dEuWURnLahu3fmiVo2fvRCECdy50kvsaQ=="
+        "iv": "PTxK6r2bpEXYcr71",
+        "ct": "s87A1Dd0gAngIuw8Z8YuFDQ7riXaqQUqBs8dQLq2G5sgDsNgKg2A+5xM3hNIIVYH7WMa6Y1EPpfZYqX6T5zZ/KVq7JDxvBGBXwkdD2uk1x01PAkoFhNzjFOHj92dkpPMlSnlLNZ0ICoDeLUPqt2nb7UQtYMCY2UFLXCMp8G8TWZ1xHKpfLFczMZIvd6n4lphPG3dLxz40ftfutUvn/C34FHrnQEwz4OTF7pnpv+KHZYS8/6TMIcCZC6YKBPZVr+wG1D5bR0UtzXdPH05LnaG1bbDG+K9suZ21aDk4jTBMcMSmwS1dD9Fgh7TMGNcnGPapN9QciA2VZhFK/gQ96mlYzqZZ5aqsInIg/tgFSY9nA=="
+       },
+       {
+        "iv": "klDtrTsdyCPuUonk",
+        "ct": "MFw2VUkZrkbvq0AIlZzzLU5Fe62lwEgn9P3GpMpAYOmWtR3rbOf9zcAkt7WJG5JtAndYUsuXjFKww4jGyBHGvyitEslljuYG+xCGHx3Sg4xTraK3ofUpJyGnHv4B8vMn0xir0io+kLrtgHeXyEIC/KkZGY33txKAiDv2xsAOvtqaqpQaPufHyNu29jb2rwR7IOqHTS62xkpgQJaXEjeVdHdPINsAsZXhzdyUqTsk/5PiP2VQZzPhIJh6tmn5rr8iJjNoCF9WG1GneuOH0zUj6Z6t/ZCoiYaxSZXzIWfRnlhFH3mOqHvCJJfq/m4LitTmu97uIUrFl2c325dwgRLTIZ/B3yrPb1hb4oqaU8kSQA=="
        }
       ],
       "professor": {
-       "iv": "CU8TPGVd8TCVUvkA",
-       "ct": "hDT80ITgcezFZNdxPz4LBW+Fn3DM/PW2RDq9svyF8W/xURBFB8s4H4bd0sSKm8g3HUm+OokJYXMO1sB2R+lBfhwbTUsUMF9xkFpQWrGKJATyk0NMx4qBbmlhC7xUnKwPaQMMtDEzRpv2vvtvnEAupz+DWgHNu/tMZuOwmbSBa+ASXBc0cHLL+34CfELzlCcEL9pCUiy58bmlZCkIY7JmDCUVIMowne6UuG++T9C+X4CBRE1iY6nw2/TYVWVib6veysIRJRfY3hS+kBDHekPS96iPQ+EAybcRWxajFZMjVZu1uOkbUSIhKkMtAmHdNjlbEkO29uAZ9Pte6DzXFZ/kMzsRn1JZdur5QweZ9jYFgQ=="
+       "iv": "SyJh/h9FpkNMuOIQ",
+       "ct": "IyioXzzuLwAuTJ/39ieNM4r978ViJ6SNI45dSE0qTxSvnzvfAWCfIUjEInOE4IGDN/fahTqHUb/FxezGIoKRo7i448C1ouiIZGBKy9S0Q6X+8+lNRIELfFhbZp7Qq+cmIY4pxQ69iWjlG2FZ9EBAtnuc0RfnwKRLH/NE+ytooAiVF4k2L2YFtUXiov1YSNZC/CPCibaVHFSq4X8a+GEU58Mh7nGxFsUugDg5H1c0zWlEdvt4+RirRY5K1n2jYlFOgvwosDdw61VwwFghIVY1W6oIeq4VA5V0dcBkTj+ZqHzy4QGMLO0cVsIgaEV8Z0DnKFaxP0HdJWs4t4LEoZ7A0u3lYY9lQQzYwoAOpVTk6A=="
       }
      },
      {
-      "enunciado": "Calcula e escreve como fração:\n(−3)⁻²",
-      "dica": "Inverte a base: (−1/3)². Expoente par dá positivo.",
-      "numerica": true,
+      "enunciado": "Atrás de mim há um relógio digital. No espelho à minha frente, vejo-o como na primeira figura.\nDaqui a 30 minutos, que imagem vou ver no espelho? Responde com a letra: A, B, C, D ou E.",
+      "dica": "Primeiro descobre que horas o relógio marca de verdade: no espelho, a ordem dos algarismos fica trocada e o 2 parece um 5.",
+      "imagens": [
+       "dados/problemas/8-4a.png",
+       "dados/problemas/8-4b.png"
+      ],
+      "descricaoImagem": "Um relógio digital visto ao espelho e cinco opções de A a E: 12:22, 12:55, 15:15, 15:55 e 21:21, todas vistas ao espelho.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "ZGP4SZJ25XX32AO+",
-        "ct": "+PuZqfwSqfUA9QuKDM29OXhZGfn8f/lM32t8fcar53GwBtxkH5+fStk8F8tSx4t0byZTN6rjVLQqmgnRQd0pTyMDwRL/RmM0H098LmHJkNEss9O7POI0TleQVM81knL1YzJX5axhSf4oCjbm8rUMUgZRaMFXtJy0X9dLApVeNyq2vQykMgcpu9bD8T2ppA+0CcTFICo6nndd+xdL74vnuWWhG7cGjFY//VIdhH3a1XZJkZ3+L89UR32haEKs68VWfTHAAU5H6+zN/69O/6JSWDq1JmBGzWN00/V2eSMKsP+71FJJ8SHwEPERgpto0Ky+/nt9TWikUg=="
+        "iv": "KsEaN2VCl/1MyJmP",
+        "ct": "CFNaJRv6kqRx0q5Fp4Pm+tiErMrw1eJHGYC7RXQXq7DfR++HynMwUFSw+5UXEwiAM/hyXjOCRVkUfa/T1YMhX38miPyT41zSCp6rbyfdOmZqipAuqgEsaqfIHisrI+KgzVTJzgeVbZVql7/ftC91OGfwo9UPgJVb67AYJpuNGubiW6dFnIzO5AXKzlbXsF9z7BhNKYvF2slBAl5F5YqnnkSqy9WQFlGuPuW1jaRacqx+JGalO8Se6gDNgPitLLdwE6Z5ZD89oIGkAMMCLjSP3zbQ61S42m/cGNfFjoMO8VjuV+Y+KLu3o+enWzVy5dVI3Wd/fVjAhw=="
        }
       ],
       "professor": {
-       "iv": "/oOXXuyPHTrJtGAP",
-       "ct": "w4z1iY39PXC8V6Fidz0JbX2W06jwMQpnEdZ/lE0PsUNIbALcAr6bWPfQl41+4LwZ6Z0Yfx+ePHXWpwaMnQO3GcplMgtFM+KBcKiZ/hX+iRr7WFBugOvXhYOz54XJVrvmUGiXbQygqpfJc/LfqQsRhR/JCkKxdD2XZ/e9U7mayWSmZVKmakMLuv89O2ougZcJa8gD8dOhE00uxiQRk0MA7OqI3FlMlSML0UrA3NCGTK76bJ8+Bvw1MgLK7toU8Ppp4ICq5c4Pu11xV1LZYkdQhh7ZJyO6Q+likASEQy701i8CyhTbRAB6D2+H8pdWh575EHHv67L8Hg=="
+       "iv": "XXO5CEMwRhSQD7ey",
+       "ct": "FTA+RvBJwyWUgZ7/3VBiNOMW+h6pQgesUdThmFDbpwczYuqmuRNKm8MGrxrj+O6WTmyHfI+bXjyt1DBpQIcsMidM30PMjCxHM/6TpzmRFttndBqQXi22F5XXypgFeX6Vb/Ajsl1nilDOBdPK5yxkuWj7ir2MJKV9IzYwTVB059fIw3v/b03r9TVD7Mfc9mPMiteggVUpfGJ3LyxuxLjwHr82C6U8vnBQ8pURQOpJAqjxEChJ6HVOgff3PmCaGBPZACEDQNMsz1u3sL/Te7XXo0b9uOeBLG5jkayJf0niqakWLUDOF/0AcyYmLbrjiFjXK1nifeB6WA=="
       }
      },
      {
-      "enunciado": "Usa as regras das potências e calcula:\n(5⁻¹)⁻²",
-      "dica": "Potência de potência: multiplicam-se os expoentes. (−1) × (−2) = 2.",
+      "enunciado": "A Elisa tem quatro peças de madeira em forma de algarismos: 2, 0, 2 e 5. Com elas consegue escrever o número 2025.\nQual é o maior número que consegue escrever usando as quatro peças?",
+      "dica": "Põe o algarismo maior à esquerda.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "Nk/nVgYf1l+DCPi7",
-        "ct": "CS6sVfTPdeUDH1eTAnNz6SE6nVYg30/HLQSuRqro9GdagAklEiH8pdzhzLR12x1+Xrjj0aKmMK89+QOxHU9YgnMtAT8gcAxEid8292/UpBP75t3ClYuo/g1dHNcPFRoMFpYRXrsmLlk8L0qi+jwTuncH7UpMM/R2Ol9ihBJsp92bljvPl00vPkJtSuNCKtJr/QyihofVylNJ4EZz+5LD7IUYw9csP/1IkOz1iGQrVY1tZkqeF/kc2mp3p09xEZFJWFbMTGa/G7qCobCepP+SNcHIOmWKHebzhTAYiApa2KPj0MsfI/yRQkMT7ousmSRle7rBmj87WuAPTGOjoM0="
+        "iv": "DPl8w+cGPxxh+Lea",
+        "ct": "bFWZdCPyVbgd/UmWB/G83zvqiMCYLXkrOn01yoBv4IDixpiyW4jaX+h285W8acpSw2/OZ5tFKSoCnJqLllpfeZxG8JVQe5w/uL6eyXxE3qeM/7JrptmimYj7/jo2ddWH3bVIfG72mRvC4Mee+MjVoyPPeiuUi8uiBHzsQRDfRkjyz05yF4qkKIRX9oZ2fgfG8Ja7LUpQPwIojZR5t9VwC9IlYioIARKNgzx1LNDub/Cf4+wKyU8x41oV2DL2Mqt2LtyZK/MydhilwmTZKEJbZn11HeIuqpSqi2EijQM0oLTxxma7mXh4rS4cpHIm1//bOonVUSoLqcu5m0sgXAM="
        }
       ],
       "professor": {
-       "iv": "O94+vZj0uYAl9YhY",
-       "ct": "EnTYLNTjCt0qO4Y8SQ2zImvrrqC8QsuqEhEJ2t88nOw8mfypEZtHUaUei0gq8Fo5+W3mAJwPAmUaQB06YH+1Y6fDrS/KLr4lqXTGKrMu6K/opd8hpV/+K6019q/q0keR9kpltcSIe3aPwO25zGV8gN+x7K6RKZ6KLfvqz8SfqBvSW7QMDhUb+GfI54Df8Tx1asuCsmO0PcimZPYFCdirpSTeZu30SHo4oiZkET5u3pkhLdAzbSmo4z8OrB6RSjt5IMOpf9yOFYrRGDCgl8BusQWqfMscuWR2XwR/NrwXrvHh6uP044qsHbzS2wplr1ZB5AgwmjY2DSFSbO1YTFw="
+       "iv": "Mj4RZV6fQ5IR6TJ6",
+       "ct": "xGUTsULDuAGA1o9czvFZN7N0YGvmX/fxeYujQ/3WM9CB1T+Hr8vG8Lks6mQI+QUNYgYbv9SbB7bTBP96IN6tyE/OlRITt5EMnuwdo7ozvybGqQTiWzFgktTc39ZEpRiCpeQot6+V2/WY7L5L6vedJa6XE1c9RG44jFEA+oNFVjXDHlbdcQgm+lLcsifrmU+akbGjpUYpVO3TYmEMN3OycgqE22Lvd097yqWxBuGNVU0jg0J/ptP1/Nw2vXV2j9D0uU/tk2WoheVdmfoiN9wXTC85hE/soP7HTdwXeqMNnXJJn23IcRGoUwRZgVILnVEXiR85Gbh5g3jIxyzwWAg="
       }
      }
     ],
     "7ºA": [
      {
-      "enunciado": "Resolve a equação:\n3x − 9 = 2x + 4\nQual é o valor de x?",
-      "dica": "Passa os termos com x para um lado e os números para o outro.",
-      "numerica": true,
+      "enunciado": "Cinco nadadores nadam a mesma distância, um após o outro, e o cronómetro não para. No fim de cada percurso marcou:\n2:08, 4:07, 6:10, 8:05 e 10:03.\nQual dos nadadores foi o mais rápido? Responde com o número (1 a 5) ou com a letra:\n(A) o primeiro (B) o segundo (C) o terceiro (D) o quarto (E) o quinto",
+      "dica": "O tempo de cada nadador é a diferença entre duas marcas seguidas do cronómetro.",
+      "imagens": [
+       "dados/problemas/7-1.png"
+      ],
+      "descricaoImagem": "Cinco cronómetros a marcar 0:02:08, 0:04:07, 0:06:10, 0:08:05 e 0:10:03.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "drbbvFEyTfI/EiTz",
-        "ct": "5X7R9llGpLNMDd5pUNlJ3bGFj8jg2vgeqEqkbmuedSQfOC8GWWzn28qVXLooIWdlTYKiVSPhEvrwOo4m6UWuV7iFjNnZ4W5sK22E1gk0gajudkxtvU2QVKGIPB1R2ua/RqOwp2Vqr0Mh+So18bREfcEVrK4JAzx7dOPCoeSvpwXYO/oSMY6UwjJD1e0/RsrdDPLleOGGDCJ4CzjU0zBYIL+CJqvqO3eL1J3dDmlFMjAaPfSqLFomyysTX8PN5PW7D1f7O+/ZK8DlmHF0+L/ZG2j0KgAdZrylvciEOBRsZdtzRn8GUhmWH9v9CGg4KA=="
+        "iv": "kU/BFb7u7FLHF1jX",
+        "ct": "eEEKVmEeua6LY9GuxL1XDelRzsjPVAWU5VNnPTMk2aNIJ+hsluvVad01oEsPaDW23d5tntE8ZwEx5Q9mG0Ihb9Y7U5rlrMoTylyFL5hRp5++lI+OFa0KPajP0TuOysVTlMZ8Q0GG7AuJoU5Xbf0Yg/TfGIeRnwydGD0xKQY2VcQvomOmwUkvLrTFD2t/T4PvMlSNqL1Z1zESxV70MjL0yyM3ndNibpSEOQjKunDQS6gT9ntc/JQD4sfp7CarsjWyXbLQtkeMHZ7Ifkb8kitGYIdhYyFgvyHYBNXyoV/RfP0vNlAEXfWMQY5NvvjRPw=="
+       },
+       {
+        "iv": "O9txALsVWhBBB38x",
+        "ct": "aBtMBjzbAFb0sTNOWzE6OE7s62An9ug7tgz1+4LkGE2NoS5r9gG1XS4rAEMp9ovy+QmlJ++9rQTf8RhG+NYqYGtqjch5SboNucXYHhMnTPo1OMoas4FRZTpmAdweYOtSmg5e7oAgKNUoOc0IMowzNofOx9lPgm9n8gScFbAc4jq1lZvRjhbFj+c545cH0N0iT1YuDCM5Vji6piApGffwX0236dPw1iN9W9N+RFhooabphYRQi+jmRxGag7oLbOPCbvZO36tRe/28C0TmE3TQXN8zjXrgOS6hsFv+kv8ALK7buNgrt6R5+kUQnYL0DA=="
+       },
+       {
+        "iv": "nd6ISf6BLJTmqU1g",
+        "ct": "zuSGZfZSskR8MZxngo7PDF0jZW5Yu3PymwAF6viUCp5hDF1R+sPHfNZ7DR4msqPvAi2CmUB0yEvzJ93npBOR0B/FlcXhtOe2gMT/tNmWsDMc4RvlXkNBh99NpKrD5pTZBARp/Jx5t7ySodqKPM39g2F7uSpALb9Q+HhurIlQleZduURGlhLrjgoCWMzuDHw+4uQIUl4rXwAaFz+rvVhgljSw4k2gqVZ+kteceWMT4cLSY422dfwFL2nzy9/zuvSOKmvY5FPfDpk1Tx9ylE9mZGrMJjF4CV8DNboe/JvCN7RRYK2oN6JORXN/c/tClw=="
+       },
+       {
+        "iv": "CdIPfWT1ZiTxz6PR",
+        "ct": "hiaVioytsAWhb3/bMAZ2hMgRYWdhOKfEkRpAiZsvpHB/MorBdBElkWR94Qzv2M1LRD6JCKnhc7ml47IQFReojg3TmtGXUVJYMUU88JPpK5Wt1LgbNav5r2Q9IHjHGWfsVTKDrHdle2vRxgzwKOeLzFLA04vDKG88rNJFyXmLd1kmgf+S4wOoRp2RCtqB0xG0nuIpfKoUAGwgwvKu0pCxrap5fnZtDUuX1aF/AodXIMtK2+OfWayB+NDkxhQ9pJKc++GQ8fw2vgccSyk6yBNYO6BigBVUkU5YxFjqBBDm1nWlBn0pFKWYnpj4pY3ySA=="
        }
       ],
       "professor": {
-       "iv": "pSBBGKKEX9MBFd3L",
-       "ct": "ts/CueARd8k8Uer6DHczOMB7522fY+c3I69nZ+/qxFDY21ItPE4B32bEjg2MMhC1oLXqjrponHaQmlMh7RDIDDZqdZtPbUkWqXBF3O4kEFyVZ2Ruj1d8ZgzpqYFHXysf49Ho5kNhXsVXO9Zh2eLkt5CFouvi0b2Mj7JEz06ige5JoklSe0kbyJd8QUKu4fhjGvCj0CaV5WNH2vf3BT9MWkBOKADg1AH76R7WNCzLhfh8ja/huh/r5Si/GyVII1eBKXICLi8iUssx3Q1JjY7p73XMni++ErPK89qmZLjARDwKDQ6Uevb7YF9zi8SnJg=="
+       "iv": "rognxo+0xMehLg3Z",
+       "ct": "fmqvPCMABOhb0CLCXuDNONxOnJGqRGbSaqQCMMGp+aNNJA5dugMwNebjGmblwLZOofmm0i6gF4P9rBU9PSdeGe+wHoALAvzyZKKy/AqOM6tyULxbGereJK0oObgEcPK+KGdFZz7FQQx8w1pi4xCYPQNz8BDocwS8yqrWukfjXDx0oB9AREuW5rndjSBmDt2oVuYHyU/s5xTKNa+XfCmEA31pQcNKBOaoggXx/sNvL1YhLgRjsON7jS3m4HrCYWeX/9IokyRhMWKMUNfqFGzdKUHpJU4eXyY2ZTseBg1kOEFhOlR3zYVZAsEIYGWYoQ=="
       }
      },
      {
-      "enunciado": "Descobre o número seguinte:\n4, 7, 10, 13, …",
-      "dica": "Quanto aumenta de um número para o seguinte?",
+      "enunciado": "A Joana cortou quatro quadrados iguais dos cantos de um quadrado de papel e ficou com uma cruz.\nA área cortada, no total, é 16 cm², e a área da cruz é 9 cm².\nQual é o perímetro da cruz, em centímetros?",
+      "dica": "Qual era a área do quadrado inteiro? E o lado? Cortar um quadrado num canto não muda o perímetro.",
+      "imagens": [
+       "dados/problemas/7-2.png"
+      ],
+      "descricaoImagem": "Um quadrado de papel com um quadrado mais pequeno cortado em cada canto, e a cruz que sobra.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "oyeuKZy8SDrmcdFF",
-        "ct": "/IhJFdOGjiJAMuli1e9Lcl0kvramqHGLiJzunaAE3A2K66o9FL4ZIQ1YEcvRUJQCTLvINQe2OP5z9BRGMUoP9BCxJ0SyS+XhjSNLH71WGAmgkHwDlVfVeaCyxZ49pcriFh1OU7TZk5uPNKIpkovVNpxM/8VpFrSViGDGSMgTfUoPD0Ak3aikIRMfj9xgwhHGP8LO8siI3pJ82fendAhZcUC/Z7AQFpj7jh8fekNvjJ170BvPdrGS4I072NfYEpPkTWtxKVgu9i+NCNTh0vR13PoE7T+b7xQ0sfcXYP/1gJ9lxaV4aeUOBSuT7D6yAw=="
+        "iv": "lDN6y5/Tae14E+YK",
+        "ct": "yQCnZI3pHQ6olOYNxGqCbHazdi+tzfOQL9dg2dSD/9Ir9C+1RkK7ppEjQLO+/z7PTKFf3pNdgs3+MWDoQtU0ZrykxVAUFNSEOPlVPK4Kx/HtCQRR78MNVvus0nkTDLmRuZEhjUFGbHeV5u+Wv8wz7uwsRmW3v30nbSV5Wfh+iJv2l8egdkwenySYX3YFKIi7ag4YLzbvJ6Q2l6b4JRnbBTBZ31s5EYCYXeFH7kENMJVYuMwqzpd3zG3t8M9SXf+fuph43AVHJFhAxRJRHIndPNZN/ESLxJYdemq5O+vUJJPhhatrN4Zr75WiOwyDAg=="
        }
       ],
       "professor": {
-       "iv": "mGSqiZogukml13Vw",
-       "ct": "a4iouDVRalCPpid6bjzNc1fSLIDb9AX6YtfoGS/Hr3MTB0GprFC03Fg8Ks36fICvDsXT7e4Fp45nuQJ5/zBOMeu+5Slp3NJngNLXfAbcaTHyzXLm6SMZyiuq4040GcCJuuwS9wzNh8EoIFwHWykFEoR1mr+hefC7Lc9NIAfkZTz1awCnYWVN6+yo8Y4JVNuUViIAp7bHtADL23qRJnfeTn48ieQlieTXs6Qj5CCc3zfpMXRX08dy7RecVy17GyfxeDtruYAqsQ/zBuuybkSgzXyy/IV90QWS3ORVnZ8QvWHy4ndvvEZs9ISayVtknQ=="
+       "iv": "3w6UE1RkhH7BbC4m",
+       "ct": "+rretN/KldgofKWvkHqu6Ba3/6KFSO/sgFSIOFAvJ8k+rJ9xAeI1rRLnCTSm2LzBWVRlQ5Msrx31IpNEM1hX571KvpKB6VmuHd8aduEizpyRcSpj5oa6hRBYqSRHgT/X1oWebR+4FH9hH+OqQswLRNB4geY8WUAOMTTztrIpT6M/5Ftr7bHuaQpcZrav0rnEzVgiqi+bg1+b1kiw/tHAteiHSgucujLsU8iTgbnbxSCTcqZ0w1qYQONEoF2/CyTqWtx3fLxtXt2Tmsq5UfiRzMeHCHleMo5OK0Q4F4Vuz8Uve4+dvKRAZmqJPwdsmA=="
       }
      },
      {
-      "enunciado": "Quanto é 40% de 80?",
-      "dica": "10% de 80 é 8.",
-      "numerica": true,
+      "enunciado": "Um camião leva seis caixas arrumadas como na primeira figura. Um trabalhador tira uma caixa de cada vez, só quando não tem outra por cima, e põe-na no chão ou em cima de outra caixa. Cada caixa só sai do camião uma vez.\nQual das pilhas não pode ser construída? Responde com a letra: A, B, C, D ou E.",
+      "dica": "Uma caixa só sai do camião depois de saírem as que estão em cima dela. Vê a ordem em que cada pilha precisa das caixas.",
+      "imagens": [
+       "dados/problemas/7-3a.png",
+       "dados/problemas/7-3b.png"
+      ],
+      "descricaoImagem": "No camião: A e B no fundo; C em cima das duas; D em cima de B, ao lado de C; E e F em cima de C. Em baixo, cinco pilhas diferentes, de A a E.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "rcXRgjkRWwa9Qwi7",
-        "ct": "R47xYvpN/O/MFTYMpe76s/psucV+RguFH+7fH/bkW4wO1eXPduMpbo/dNiOrNEkuTgRoYMbeSUT3Gke3sSzpJV5mWecBzROoGfse4riV/B9GuW1cSXItTyxMIJ32FwjC+ae/nOgO7FeDkCAQUSPQ+Sfk5Rcb1OTg1v/xCEKBI+/876Ke8O075fj3SMrxJcpyDvQlX1Rq/ZQF0m0vkN/gWULE0e0oejvg3ZbAxpPUoU+h7RtGjEhe0INEEdVfiy5T77LvmDKFHZiQFbU4NQYGoBqo3kcuB3dAEGOwru9VPbn83pEeZ5ytN1EnOgwA0zmr3DczHO8h1Q=="
+        "iv": "al9HwC0aKrVd+YJT",
+        "ct": "/iCQo9O4ICXLr7B+4oHGNplKxnMTbUPrvp2nCM1XC46uCUhkd+fPlT43jn/BzDeFdRZthAiV40O5ET73wdmUDP9lBgdQCdlOQoG0reqGzD2iMBE5xhiwbetfbql2biTAKI59FGW7CjKvdpxAP+cFgo1/OPir9hJwWTiv878GXmgLpwoP/gpvyS/AHzeQVYvW1Ey4gOwMn3I7xqefzyt6+9RFUqrmNh6+qTjNachQZIM4mjAMW66GLjIGTWzoYvsC8RF9PPh/EfkDnn07aJhfrbTijDU17MA+lKoXxYGXbdVGrBq4TeILb+KVfhbp6Q6hfqxpgvP+dw=="
        }
       ],
       "professor": {
-       "iv": "McuuJdg+CNS0XnLo",
-       "ct": "cFW2oZjS+GgWaVDyn3gjpnyddx2koyd0xIg3OSQT98IXAK6/kHGcJ7Y/6od0n+ZE0GxI2+UjtSyJP56avsXwl7hn6vdeSFyyjJjZXK6Dej9DhqKyzXNDhEHbugm5iztDJMS6aOdUjPyCiI2GJIyJFgzuKbmzD2pyozPLUyfl/aWXnOG4qb/AhH5goMu0vRzGTUYX1fFHj6t02qUp6RgJ0c4RUmzN7fO4Js58eB/eEXaYbvduPfO5oiOTTEgIfbXPaKkcsS5W3SZfY7RA2Xg0m59aryvleDZ0UNyBQOwJAHnMfv29T5NbpL4q3q2JFrHhSZOVZzEi0w=="
+       "iv": "cXrVT8bc9kI+fVoU",
+       "ct": "JZ9xnckYLVcHZVDrUVHzCKTs4K/WNgpXXOmpIjXvjs8U4/OQ2F+tCrRb8lB5g2ndViCp/MBN0XXA/928Llz6sftcxj6QnyKjka0zj2T7bDjdODbiuHfbUbgVXWcLJIzfk7pOvUpwQ+Ce9OcqOZVSc/TDZ8PEFEwJes5Ed8BzZyOMs8G/EtjGrAq7ihzSUW9faRoP2ZgcdiKdHv1at1c5FJrUnWfd9znsNeJAEINHXR/mXFeC28fJERhRV6Gsu2/9BV4zFGn4Id0cS2NYRkF3n+ZLR6HDAEfUUxB8/8auL0yBWVZPEta0pvbBdb3I+xVnYidSLyRWKw=="
       }
      },
      {
-      "enunciado": "A média de 4 testes é 13.\nAs outras notas são 13, 12 e 15.\nQual é a nota que falta?",
-      "dica": "Se a média de 4 testes é 13, a soma das notas é 4 × 13.",
+      "enunciado": "Os quartos de um hotel estão numerados 1, 2, 3, … sem saltar nenhum. Nos números de todos os quartos, o algarismo 2 aparece 14 vezes e o algarismo 5 aparece 3 vezes.\nQual é o maior número de quartos que o hotel pode ter?",
+      "dica": "Conta os algarismos 5: no 5, no 15, no 25… Em que número aparece o quarto 5?",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "fzxD2cUo9pn3vPqr",
-        "ct": "xkb21OsFAh1Wq7eOwYtYt6UyJZLz1NVBICdhQXhBHg+7yW970lqjbEe5cMxhT+eMzham4Kc3dEgrp8Hc1fzcf0xZWPRlertcMxavDSfDRc7uyzOWZ5JvhgkN3qpH7kjVMHaSV1L3BrWCpB0z5XmUn0C4Kq1znGsKLL8kDK4Hgm1LmtctNgkBhGmSkrXWM29Yoc7f6hSmuzlyFlERCdsbCpnfUUUAt8jtR2nfle9SdecfFwSlllA88EQFwJZ/iSiElwFEUeMo4hxRvT2vLx4duErp2oShAwPepf28aAkDqQtd545rESNXH6WzlyV9fNrkGoZ3KWY1UZjWLCKZCoCFreMxnI079UV2"
+        "iv": "ipft0o9EPDE0Yfk2",
+        "ct": "CiYpJb1xReMvYj1Y7g4VxFvWPiWTaj1QxeVGK2uaS4sJzfWUOwXeOsSjuA+Ayl/q4avvH0UCfV8XQ0U1xKJ/z3b5H7ugHrMjIeqMNSknHKbMlh+K2azkjRoZzZs9AbArmv07GVUMotQ/axmoSptr+3azLWlDr40q0FMlFZW/cBjyh4Ud+sN50d0K1pLIk7Up/4pyNz5DdNV+Xt2IqMV7f5H+YfFSdnyS3YyzNOPkgNWVm53cSt2mwGLHtDscxDOGdvhHG3vuscJeBfVtGjvb1/5PP+IV//aYUU+ZJg5xdOGzC93pCILXc9lu2U7+2eOhmdyTPzayB+dMvTkR17PrIP0fRqS0HEc/"
        }
       ],
       "professor": {
-       "iv": "KPdH714+JKeLBA2Q",
-       "ct": "KNPM0UQ6v2BRrC4TVlxLASxHpFaDjqPy8t91sxUua62UXlaR2u3Bd115wXrgXRO08X+zl/KR3zHpXa5l26o4YUcC9yEdOFyyv57/ck2sLUbmZyIHLhCYYStJbW9/cRY99oc5fuFTxttUNI1mlTAO7Au4MtLAc3YrJ5AG/R3CeExjcUugLRH/T6sU3YRw55PmC0e7yGUEMqS08k9m7dAWwLsQD56rBvso3hIRC4aWN3xdI5gx2glHuYyhBXs7GVO26s2dkwl2gZGGfkHaREEe91z+3hIU3kq7w1DXvJStmkyIxyYDQfUWkhwYuO0lKC/qUIkNZJ3ZV34WUeIhagf/xFTHpsQu63sL"
+       "iv": "QViovwIKxHkMu+VF",
+       "ct": "4P4BshkzCApR5YIdmJJSjMCZVcXeSlufXqa97j04CJC6oS+ED//nHQY/sckCPXFmNNMjt6nsmlxCXRcW00tt2DWyoV1v31D1AQI5LlYf1fN/bGpP684miBG4lAhTahj+kcyZ03ISeFhEEMg2hkbJpB0CUDM5tLEboycKZk/b9pbR0j9vISerAPv7mr/BOYra6ctzpEJ2PJby3JSWn3LrI3PNQLZ4YZjkoV395wK6yoomWRL+B1B4LuhWAUTIa8QBrnnXdUX8croe71PWjpI0TkNyxMugvwVgUsARK021tppzVdkTcAxGvFlDaD1Bogzl/g2OAFEfyksLutie4wMKeDhQde5Rqc//"
       }
      },
      {
-      "enunciado": "Dois ângulos são suplementares.\nUm mede 96°. Quanto mede o outro?",
-      "dica": "Ângulos suplementares somam 180°.",
+      "enunciado": "Três dados especiais e iguais estão em cima de uma mesa, como na figura. Cada dado tem seis números diferentes.\nQual é a soma dos números das faces que tocam na mesa?",
+      "dica": "Junta o que vês nos três dados para descobrir que números ficam em faces opostas.",
+      "imagens": [
+       "dados/problemas/7-5.png"
+      ],
+      "descricaoImagem": "Três dados iguais. No primeiro vê-se 34 em cima, 22 à frente e 8 à direita. No segundo, 5 em cima, 8 à frente e 13 à direita. No terceiro, 17 em cima, 13 à frente e 22 à direita.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "HorQZJrT2VNMZ8Ow",
-        "ct": "X3f1VF/mE++ta7aJWa1ZqqBtT0E89EdmhCGhWZGCRUm10X+C2xWH9ue6PB8su1ubcBhYqsBUk0/NuElapk0xgvQLd0X5UGBqLrtZcEbgtivLm4jb4JS+xge4/Hhn4bGKbdRde9j9uOAwk0IbKS/8OlBxsLgsz28lLJ5qqkRX6a/bvmtNSScVdtAD/PBsvIp+iNUTFNbfwuVr77lLvS92ZY+tNzQWyQPgCNJpcH0Q3vJl385VvXjAUwEuo5ZUyzhMJaD1IxWDzUmeyz1J6lR7leWaFEtx5pTC/aluYk8c5NtJ5wbSphqClEteSRfoxOX6"
+        "iv": "bOLMH1T2kt4mvOuO",
+        "ct": "mWPivLvu441ujpV1rf0SImVJFxo2vGUcWkJTyoNINe+b7X/ErT9EsRvtSsdKvNX3HgWHRs9MLTe82kauD0BLpu2Nt6DNpCyP+AYmiGrs4PgKeE+qPxC5ZW1c+HRyMZ2uJmpz7WzlkT1WOkgNTPIVmfI9PVCXKB+LrcETA4nXe95CdXIE6g4iLbQ0sSgePT+mJtYJO37g9B0kcnUbUDZ/ltSIDCH1cs9Kimq5pbl1u2/TtIPwYEOHVeCXkkWWh83TPzWBDArbP8QVLxDceo0hkfhXbxS/1s055yaQa3LYp7UfskJ9wIswQBYxAhf4RKpm"
        }
       ],
       "professor": {
-       "iv": "eQqQZuaeFBlur++E",
-       "ct": "74hO4xg1F+3Gze5y3v+P1jSfYPJBbwjqVoIo0jX4D/0KiWPaJm2FWhtShZ9gEhkULx53RT3w1ykzzYw7NRk1n/Bwf+SY16+EDYghMwGcfLxO2sxTOryrMw4YSst+45mZ2HsMFXr8SlnIoaC3vtTqcBqaNScyi2ap43GhhfD38uFJXcnOr3/UPwFJMCem+kbsGZcpb9wXSQHz/60Dk1pY+AzLNrR+srIuU2yc97tKB4/HQ15RdZJj3GJjFbAi+KD/P4Hvbjt7IrW3wK4j+24J7V55fL/hYVQRtThK/zswWRqI6lwxws6Fs8UsbgLXJenQ"
+       "iv": "Kqq7fjSsDMwVpXYa",
+       "ct": "ohsDbyNiOVBCSW/K28glwFDRup0n5eACTZ0+lzH2Ob4l9nyU7tWVuYmuASXDyFAJf3BP708YneiPA+fbJ52mp3gFl6w1RKL/piD00lEU7yLEh3bc/4Q5QAg2cJSQLLykVYYtH+8jgqXy8w2sEILpUa7hCKs1baoima6NpewN4bFfECCyd6qN/SZwo15VKgfSZc1zmLrsWuiBmdK94YNoeQpSClCxzZxGdkyhY0w8Foa359tPFF/8rmvxHBCoNX8ZyMYepmW81j7qMe/hnIR3WsnS4wHycvAMM7d6dS9+/fg7HEfXU5tkDNxdbwNgbWoe"
       }
      }
     ],
     "7ºB": [
      {
-      "enunciado": "Resolve a equação:\n3x − 7 = 2x + 11\nQual é o valor de x?",
-      "dica": "Passa os termos com x para um lado e os números para o outro.",
-      "numerica": true,
+      "enunciado": "Cinco nadadores nadam a mesma distância, um após o outro, e o cronómetro não para. No fim de cada percurso marcou:\n2:08, 4:07, 6:10, 8:05 e 10:03.\nQual dos nadadores foi o mais rápido? Responde com o número (1 a 5) ou com a letra:\n(A) o primeiro (B) o segundo (C) o terceiro (D) o quarto (E) o quinto",
+      "dica": "O tempo de cada nadador é a diferença entre duas marcas seguidas do cronómetro.",
+      "imagens": [
+       "dados/problemas/7-1.png"
+      ],
+      "descricaoImagem": "Cinco cronómetros a marcar 0:02:08, 0:04:07, 0:06:10, 0:08:05 e 0:10:03.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "Yz9ajbz5/GnMdGlR",
-        "ct": "UDGzVlIgtxgpJn+I/jb6KbNg+NgJJN0z3aNDqqqeFaWwAtHVz+20j9M1yQN4GvGVO3WRursAYPc8UDdPg0njz02Rv9gAz1cCn2UGhjTlYWcMMSDGxNsA6q3YaFy5o1NxfSSpDvLtGjoIoafbNNEg9Aqb+zu8HH8pebjRkpw4K78UPg+YkmQnLWCpjwW8RXH39d909FbHwOLx2um31Sq3wr/lF1whASp62UbbZ4SDXHwLqxKIxrt2Zl0jzXMI9z30nc8TD25otcV7DSYj7Muzz1fYYt4u0mQDOccGxdMRYbAxrXHYHMa58XJ49p6aow=="
+        "iv": "TkTDtB/vVLcKy64O",
+        "ct": "x2rSiZlJ8C1jiRVAWFrjNj8qcwpvwFjiP2AlOSGczeyOlHzUpifZesSsLc5NMsxvmG8bd8EjN27a0yqTkWidLLBqlVS2eO7D2EkpvhUdo2fZQLRktCsgTQOCvfrbB71lw0Yb39/+EvM9QjbPGJEZufDN063o5o3AZqCOIxIxgE8ceKKbDcmcAN8y6W67KUKEZKdbqk5LhX1egratSY7+wwgoJ4cN4hNEFl6KTDskKKFZ8fFAFDCTVgciFjAmly8oCtnE4fWWMkdWkZQ+o5leLuQ4+6Fp071Sz/1Zy+x6cKmQQgXQ3LRYIuL083aidw=="
+       },
+       {
+        "iv": "jg2SYmJPXPLtJkm2",
+        "ct": "9kQNbq5241BYvkMeNSnOxAxuXCvjDOLH5J/AYen1/DD7v/+JP6qNRtru1pO0s9aATOVfAvur/tBPC5nBULD2qt9PwQFJoH7wU3hrEO5+kgIrwuV/+k0WffWGvhHAIfwuGdvXwlYqrpDKCuUL9q5CB+gyU1HCFnunqToc/dMfgmz3KfHev2yrMYJEEvr+8jqOXLPoJOl3BNduPJqXC61HhC61oZc6A5qHQ8B02i8OZDb7b8AWS2H5s1J24JSHAAfqeEc9OYS9sJT9A2fBwBqcaCdWrKWbo5iwEi2oHufZVlbTWKzLiN2veAB7U+eLlw=="
+       },
+       {
+        "iv": "xn8pc2Fi5lMgsAz9",
+        "ct": "kUelJzYuDhwXiBaORLNGkLU6eFVRwOreSnpHux9o4NQzFAjVO+faGNGenMrzNMdDRGo75u1zOjy5+MTa8bgheINq/P4kwZsXBTIP8Ex+JvXBzzHG1OGanP3yOVpYxVlw7bUF3uLZcg1Vc4Qu2g/qR8nkHjRqeztRgh5n6lsT/b//Mq1GLQdZkLGD5mei8tkU+7AJSqwWWVjUpmu188KVvTlHKMkd6IuYsOpEKFjhgsV60yV/xByeStvbX4kSDg+pBgnqfABnMM72tJk3nSpF0kVH2k5TA1sMytgQ0YKI+8KDpYohH8Z5feux/NwnSg=="
+       },
+       {
+        "iv": "w+mqODw/oKVa4vCJ",
+        "ct": "9W+D6ZtAOtdklGzxJGBXQuzPvl0PSqkIvQJ9SSCEDLsUa1p4LWkdJY0ZfrDWIC1tcVOkIGqQRKcnZDiz/fJvE9a6ZA1oH40ZiNo31S5QNXjbCymzeUdIbkfiYfr5adACZt3Mo4mZladowjpiJB6aeMHesgh/5suws2X2kAeX4sXn1pR1oORI46EpIStRerN/S3cQ734mre335KAN3bIZ+cvz9emSc1KULGImsKi/p2ILpTPN4DZDnEWyoMKj9tEtYQNidX/2pxsRO2Pj+xhWiCp3FZnIgC4dbpkISw0JEcAYebh4FNJr7pqeXQO0Kg=="
        }
       ],
       "professor": {
-       "iv": "Uxa2JS842mwsAdFm",
-       "ct": "giwgh39ah+nWteH1Oqea8u4QecfVc6YVWue7G+QhI+zjEHG3hsGnLbhqrkOpEjoGwGPtU4D3zVn8LiZ19Eeb/wi4RYJzHLRlpw74oI2nAFBCl4bnkB+XoCbEUXusYUgD8qKMjkjB5e+Lqyv1Bjo3bjKTv22YN+qiCudz2TBEOQe+7EBJgLXtvLWuX0SGHfGiKNiaXRq1eBhoAwrkJZpTSfc6QHgG6PjFEp5o9MdTNI6TIP0BvtJrO4dZzwJ5PjQSU1htuYCDPYCHDBVyU1zNJfoBTX6CMtynRHBOw02dV8NLASSOzRNA9ssbP9+sKg=="
+       "iv": "Pr2YHNdsuK4ly50F",
+       "ct": "Pa2MFB2PRAgEJxQ3NADS7QacYhr4A0GF+tL7NrJpccPHrt//YLSqKrrjC28P/Dxxr2+phPm85GnT5ZUa/QuJnr6NNURaDuCRFI1B/8ar3pN/qMcCQRkjFbE9lScUqIw8rUhD7H4p7euxqstCcYFCtc3HKN7X7x/LeryHJnwOwKpoADZDjEp2s4C2FTB2Kw/G6EwbBZHsr+aiMwRCwswO73zZQb5u/qfDtpn5QgFDTWUB6pL8/oy783ExWmlYJfLKiYzC2e/ihbHQomYziNpwtsIAz/cUgUM2rzH6CqiONqRuREIZyx83RwEsjBr/Qw=="
       }
      },
      {
-      "enunciado": "Descobre o número seguinte:\n6, 10, 14, 18, …",
-      "dica": "Quanto aumenta de um número para o seguinte?",
+      "enunciado": "A Joana cortou quatro quadrados iguais dos cantos de um quadrado de papel e ficou com uma cruz.\nA área cortada, no total, é 16 cm², e a área da cruz é 9 cm².\nQual é o perímetro da cruz, em centímetros?",
+      "dica": "Qual era a área do quadrado inteiro? E o lado? Cortar um quadrado num canto não muda o perímetro.",
+      "imagens": [
+       "dados/problemas/7-2.png"
+      ],
+      "descricaoImagem": "Um quadrado de papel com um quadrado mais pequeno cortado em cada canto, e a cruz que sobra.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "RBaBVq3heYzUDH76",
-        "ct": "rjwo7BpQ5h7HJSj6/7Ohem2ohRfTjxYS+qkyvZQBUd+I+UfK1hCchj9AE1iCVJDWZnQOvGnOOLKVwgQi7SWws0sfzG8pfKkDkyBL4+reLtlZ9TCEm0F7Dm5GdsdbocSaUZ18BCHsHeZMhI3T/1I51siNfB7SmNhCTDQZBs4Iws05BOjZzlvJm2YLXjVdAYv6l/mvA/CU5S+ZN1hrUyCyjW36ImbkBMUEc4+FxYuAVhn2Tl4lyMjs8KQx5CCgIpXzr6Kjjap/QdcNs496zdyoyBjPXwCOWPrOb+V/EURirM2JOtTvpm4oODglRA1VZA=="
+        "iv": "S78lLS9Ljzl3dwXB",
+        "ct": "RExhko5nHfbhxQgOs3w4GpgI8kzj2MOD40XZzLKlm1S/s06vOF0lqw4hdI2KDpFphD57MYh2uzQM75jV+Hz9Ih3vvcKxzxGx3xe3NcsUpeI8cZHzTJMygDCU3McHHtp1jigSxqgZS026kyVkk1+lblQkJS26vJYVqAo615hF/SHNPZdN/hhQltv7Gfyl4YtcmMAfndCXIAKtC211O1F2SJ2TyxFQ0g2sgEF6e4EwL8/NMrNyPZcxjHT5qmwR1nDhVPR6YkowQ7FoU5LRBEjh8hVxI/ZgT3KsnY2M5rqlNZU52Vp0L70G/T8ca4CPRQ=="
        }
       ],
       "professor": {
-       "iv": "IGwmn/GIdvU4G5ZX",
-       "ct": "edpIsyqEXXch0gR1Eo0UTptBO7nbFMZhz1j2Vjhmy16L9JIMT1zDtvbru5glb3PQQyy9tI5Tq7AXp1XHA7YqQindNuvUyIi6nsGAHb366hJOOf8aJ6GHHc2WSR8v/eG3zPGFnNPC6pkfSl+lcmameTmDGbnxnW0PLeN0pfyom87q78jQBPWNf7dYgaoapYlj3FBxjfw/FbXJSjiknIa6Agbr6Tuz9PWoau1Oh+DV/QJYo+Goa2nkzLw1Zz3n9EPn5DhObkgBwh2Tk91Bj6ML2omCV0Cxjkl3a7kRL6LcnUhJPAawaBleIYiQUoQTpg=="
+       "iv": "ueO4Lj90c4Fii1X/",
+       "ct": "h2g6qX07UwZxfPLefGl5OewF9rJ3Ro+tgbGTamtREkZyslZu40g/eN1ZgslIzx0Tbd4q182Ac/x7GZSz3GInjfWIi9MctFm+oxa1w+x7cNC5TtGuWSiwHRL7xpA3e5vkIIKJe+gjhWuoSMNlUxM12GILnk8Gb306aPwwcN0ThxyLJLTlo1JOF4svfP+oMRNz97STuZy0UquF8/NaoWRyDWEI3NdZc+0NatJj8RQ4jAhT1O1a7ku5XzJRvHldgkUG/JJcBRCHTLoB/mNha2dLlb12LJV0C6myfvw21DnGvz+rpDteVXW+y5uyj5JZFg=="
       }
      },
      {
-      "enunciado": "Quanto é 10% de 200?",
-      "dica": "10% de 200 é 20.",
-      "numerica": true,
+      "enunciado": "Um camião leva seis caixas arrumadas como na primeira figura. Um trabalhador tira uma caixa de cada vez, só quando não tem outra por cima, e põe-na no chão ou em cima de outra caixa. Cada caixa só sai do camião uma vez.\nQual das pilhas não pode ser construída? Responde com a letra: A, B, C, D ou E.",
+      "dica": "Uma caixa só sai do camião depois de saírem as que estão em cima dela. Vê a ordem em que cada pilha precisa das caixas.",
+      "imagens": [
+       "dados/problemas/7-3a.png",
+       "dados/problemas/7-3b.png"
+      ],
+      "descricaoImagem": "No camião: A e B no fundo; C em cima das duas; D em cima de B, ao lado de C; E e F em cima de C. Em baixo, cinco pilhas diferentes, de A a E.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "9D4fYXIS5ABT5Vay",
-        "ct": "+q8BfFP076NeD57q0oCGxQGB7CH8vd+KFJemHJ3z69vHmfFQ77+A/Omsg+JJDTD9KkmgfYtYl0pSyLjaDLnNgWcUHHUF3XYBVqAtDAtV7IOf1v9K0GHwyOH28hZ4at/CaRcA/fSJDmFjF1Vw/xKBOobWj4O1Gm4rqUQCoCYd7ulCrYotGHTHcTFOBsj3fvZvm/3XrAGC6PnNcTHvI6zXBPEd1DHQ2pAYmTTxiwR2FhS9eQoaq0mvgx8PuElnhGODiPqlYgEfGm8niZu88HyBN7KMsm+FcuZRjzgYNnFM/WgouSsre4pH6R3bL1j/BY/PqHEZWZIR8pTUc1aDfKf9LDfi2XL0xrEL6m4zc5YJpw=="
+        "iv": "1L9/Xt945p4NQQFM",
+        "ct": "HktWqVuIeOclTHpqCxP+bppLCR85r8LaygfDQHv3lOqNJhRPbr2v7wNvJCU0R8GtQZoLB8VXLNUv53uiLbf14eoV5LAWIQH6PGcihmnL12/OeLzVetn9jYeSDeTLs6mdgaXir8ovWT0V2glrAv7EUzD4Jap8UtjUiDVKewqxWUUGw9JznULq8Gulx6DdEHJigF8kbfGMOeV9Byob+rCRdckCBxiluDW4HZa1ZCoezchrEmKFJ6MXpGm0NQfGjJwxrQ4AaZeSISTVtGVMAm5O3Nke9MfgRmmMinWG8uXM5JmWGLbGmHmX5tKU3urvl99yiJ/bTG92eAP2Fk+JXVNihrS3sVMh9RyLyPo5taZb5A=="
        }
       ],
       "professor": {
-       "iv": "BlKVDKyLzsRlghrZ",
-       "ct": "z8ykvaCDaLqahAEoGpuDHa3OjFpZ/SnYXJOZXNiO0dD5Y0ym9cYc8HvUenynkMqf0EWo4E9N8ZeM9BfU2VqQIt6JzQJOCwPz9ilLqlKuvmUN3OHu2SVDZkjLXb1Cl/OErUvmlUZBsabsV2uWR9Scjy+MqQvHfxd4mZSOa5B97A3n9Y0O3MiIkFcXyLHvGhXu32QHrvHLeFhfjk36IL3e2pRaJHQg6Y1CGCrfZ6yaH69544mo63umwvswdKGuUBJa3Zglt+a8nLTD3LC605eV3Crn1XJGX/n+DgZwTdlUOI+Bs967VkCJQ88QPBB6KzftpYx4Q9D5aqD7E/djdrhvNAbDyb7HrAY6/IxVRJyeVw=="
+       "iv": "y0xwn2HZLhFpsGpN",
+       "ct": "DX6vHnyTM1WcTpH4XYlphLu5NuFv4/3v5f6r7b73bG1t1dpoH95G28TliDsddAC5adkadEFpmlA6jmfdd5LHJRBPB6Xm5b/OXkf/wUbTI/l3eZ0arUHEBTJfc6ofmaeP6L08IHQXhSeKloJl1pTzshgernB0VuR7ZYj1aZLCAFhOjwctMAfGqSbnZCtQqupNKy+bavSi5YXIxrZTPwEN0+7AbEbTRO/L+K3Pxwo8nSf28o2IOFm6QyjAU4T7WL6UEkvaB8OZG7uc/q+lUBamaL5pOzQZEIwuWrdE8FRg0uceBthYSqJuhiujFJB6PTK1H4f3R7fKnkzawqpJIicMiELXsjzV/QH7D1Byu32IgQ=="
       }
      },
      {
-      "enunciado": "A média de 4 testes é 14.\nAs outras notas são 9, 15 e 13.\nQual é a nota que falta?",
-      "dica": "Se a média de 4 testes é 14, a soma das notas é 4 × 14.",
+      "enunciado": "Os quartos de um hotel estão numerados 1, 2, 3, … sem saltar nenhum. Nos números de todos os quartos, o algarismo 2 aparece 14 vezes e o algarismo 5 aparece 3 vezes.\nQual é o maior número de quartos que o hotel pode ter?",
+      "dica": "Conta os algarismos 5: no 5, no 15, no 25… Em que número aparece o quarto 5?",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "XGZyD9qdnGtvfgjU",
-        "ct": "FH6CdKyReAHKtww03M19JznVCNASrIWlQf72qozKWSz4rIidBzvEynlS6ocSq8kogioR05iX90x+xhHoQL4l+weGhnNfnfIU0Zei9fIMH/ClCU8C5Ismm2y+syXSANTY2XS04rftElWLzPcC7sHoswcK7kB9jTM4CRT/hOhHPJSO4t+aZrxHHuY7G6kKhn93NZ/KG/VLGtlSm1C2l8QysBcsjjqja3jo/ra8pcia5t6Y0RVO0c/ssTiWHJdcjeskX33w10d7GaggE3WsJYyYp8V/ESfEtOp7TYh4gH435y490PhyiunyQkni+D0YFAe2G8ClDgFLmw=="
+        "iv": "2G+JtN/4Wf4mwFSj",
+        "ct": "TLUK5deIlgo3S8r1VfAmKOgwNoUCd2DiaFvtK/P1wJcrGqdtQ9dpngGWkE9FVvH9i4OJ8mi0j1OnbKCaqpgh2PXHUm7Le7bXj1qbARFZBKTac7Tglk+4L97ERznjHAn5KWwZ+DpPa1SD6HPtEsMawIltlFuJVM/AwTgZbNoq4HFReeW1iZLbUK2HEpjlD/wR1K4wgCiPEnlyO9Sj4J1V036BTRmFenhu4RoJqL/ufMWyZjXggt3NL4G9gM2/07bR5L0fDwP8sm/3h2+TC3AOkV1bU0BouD+VCd0KCPIWRKfqt+aIPuvw3yWKu7Wg+dMhm5pKhWwwrQ=="
        }
       ],
       "professor": {
-       "iv": "qBmLc23oY1sH3jae",
-       "ct": "lYVcBD6aHgIUQ4YW1rPOSgda8gs1pbSlsD/SxMJvyPTn/5wEyMjmdHx3/9vnKt90ej2EzMX7qNV+Rao7IRTR4PCW+5GT8c0nOEd2SAluNo8/gT2Ffh5X+dShZXUsxjF1klv2StD0lqOMbkJDItuyOTImq4sdnCGpNgLw7HOVHwYLwIlxo+23Ao620vLuzIC0o+zQYJ8a75wdQbrsN8fI1U6/YQGXGcfmcg7f2cB37iqCqMCbAr4JOh3HdFitmveGU1BFz28LqTZPNbUaZyWmxFhxNuEOVCHBeRxhj7kNaSMuaRq0j6IbokEeOuPIL8I0zdLxb//dmA=="
+       "iv": "bxZrVsnEQ5aiAgBu",
+       "ct": "sbC6cmo0ojaP5S4Gh1mEraqPJAOpqF7Zlx1OLhtguUaICPnrffv3lHFpnTHb6dPqj4eY7N9bnXbKvyfiJWbrDuXxiquEwaq+qpGaS0Hp0FoXtdBa7qzWgiq+IoLeCi4fz85AvdcNU3vj1tEx3l37QA0z7srVx98DB+a3oV8SWITDD+uLkFaAsAj/dxhOWGW7p1mAZYKiPKZT2Zeiw0IFhXDIWsXm9iFkpviXCLOzn4B3iEhkJPZ9b/2vS4kaKlbxZvXkQQ5J/nhtAyWI6T6035XfaXYqy15UOYRhfOGZWqTyFX6Iz0SpnlVn968U+25ruVxosrgQJw=="
       }
      },
      {
-      "enunciado": "Dois ângulos são complementares.\nUm mede 67°. Quanto mede o outro?",
-      "dica": "Ângulos complementares somam 90°.",
+      "enunciado": "Três dados especiais e iguais estão em cima de uma mesa, como na figura. Cada dado tem seis números diferentes.\nQual é a soma dos números das faces que tocam na mesa?",
+      "dica": "Junta o que vês nos três dados para descobrir que números ficam em faces opostas.",
+      "imagens": [
+       "dados/problemas/7-5.png"
+      ],
+      "descricaoImagem": "Três dados iguais. No primeiro vê-se 34 em cima, 22 à frente e 8 à direita. No segundo, 5 em cima, 8 à frente e 13 à direita. No terceiro, 17 em cima, 13 à frente e 22 à direita.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "Uh3EH4Qr/mPwNm0y",
-        "ct": "AVIFhHIZXNTlCIgaOQSQoH76tduAq//PByEnUvPxjDiYVmOBetvdFW9NMlKCUFQPHCK4ZwS7DdelimUHO32MlCcBr/gDfHwlE8+vuoI6yw/1ZDLcCnnVYdLlqnp/liMjj+wyVWabqCFZ7keviTGNLYlYkN95hN7Yj7lMGsi02X1iLbNT7x2aBm9ahaiQCicKgo4z0XNjs0O+DQttwvUPz+AVa3hWF6kjdd4EudXPbqmoEMEQ+4crpkoOQdP8c8FWgs7ii28uBQknTMH3Tw3W44Jxla28D5BDmBnDTIVh7wLzp05EAzosNlucAayIbHKv5lOp/Hdf0OpEkGf2f3s="
+        "iv": "aJms4YcwbQkKNY5O",
+        "ct": "EZ72v7ZUngZLsMju14bFN+Cmi9CqOY1nFN+Ruz2ZHL2YxzC67l4C9/Qju1W0JVmVBCGiknjC3PMtbKE4ab40LY9xIcsEEuASPpaTpE5Vcu4z1M9mnfc4NtJ0+kb9qBDN/tWo8D2zT9DsLTRsVPc4JEc1W+iGePHks9yns6F39BqP//tCxbyhrb24Bu6sCgx4y03nwUxX8CssA1iWd2EkHZ+lD/SGEoQeF4jtZcWkPVc+1ElXca3cFa2GWYA0sbYC1r9kAIhBDBOseRXAmUVyVNAQg/HVIoWuBIHbKog+vC8bVD1+Box5FfVS5Mi238v40Xv9YrwylxECaN1E6m0="
        }
       ],
       "professor": {
-       "iv": "zKuc07Uy0zU4a7So",
-       "ct": "V5TPMspg/Xv16HJUx/0EsXs0f/PYcGThHScmf8SluiZo3YYs1l+i8dGj4j5ZR3HeEeXvOJMZBT0k6E7K91j6epe8rCpU+5m4iE6J2UUdMqWaQ+zjO5IG9GEdmm7HLEo0jz++mF7dcCeWip7mU44MdQUYSNiiaZtoYppvysyVgOd8p/KAoKF3N39h2kwmbTOOXMQgPL8jHIKz2H33avW13NUo7pPFoTOvYkMEqFGMlowV2eayeaFu03bshhZPZtZuyGGTWTLQkRUcBiSLABnFD6u16JYYD7+DC2aO8mK3sK71dQBsfQLwmK3JS0qStBDpe8P7z62Bz58nA+J7eDs="
+       "iv": "qbXwQNZbQRjggMrk",
+       "ct": "8sxS4lKgIKFunSmCgcsE0K0RKI/OjY6sEt+8UyXut4e3ghpjrHcmzpjgLn4ypSmuV9BNFM5KMoiFx+o+UddHSdG5Dn/amJrfQybsJNbVf79V50O7VJW1etQgDY4ZwpyRWtJqldY8cXkaAG5qyy9oRwLH39JjyyjAKZcWp85db1GFfq8+RpdokSQd85X1rnyyPH5hZ7/MQPTiRid0xXLf/wgO0WIZQGnSYLKhYGHAdoeQmuh0p6ovd73mam6GRsTaw6ZB5CO5bYbjAlagAbzKxtcdBfR6HJZzkYFIDIC3DIdIntw/wMCc+M/gWH9rK/UOE/JwkVLqw4E7vu8Idng="
       }
      }
     ],
     "6ºA": [
      {
-      "enunciado": "Uma camisola custa 20 €.\nEstá com 25% de desconto.\nQuanto custa agora, em euros?",
-      "dica": "Calcula 25% de 20 e tira ao preço.",
+      "enunciado": "O Pedro vai estender roupa numa corda com o menor número possível de molas, como na figura. Para estender 3 toalhas precisa de 4 molas.\nDe quantas molas precisa para estender 9 toalhas?",
+      "dica": "Duas toalhas lado a lado partilham a mola do meio.",
+      "imagens": [
+       "dados/problemas/6-1.png"
+      ],
+      "descricaoImagem": "Três toalhas penduradas lado a lado numa corda, com 4 molas: uma em cada ponta e uma entre cada duas toalhas.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "InEgnKvPG8pfYbyW",
-        "ct": "3mmwn3EM80h5XTIhJ3cY9/doGjcXqqsCwSHA+dYTkKvFhx5TMFw91CNE6r6nfzg8tycYEtXA+E8+0RVxSQyU1/purExrh9ODTov1rv8oHfaBpjlc0kI6BbU7RHsGEj+UnjVokuXKpzTtn6FnTDUI+zMcZc+z/7gS5oIXeWKFI6wSjMIR7i09h8+la+zEDlun5aZpL+toYWHXYQluptH+CHeszlSxv4zitsWfywKAxBKsgBRIqSkbWkC5AS0unQo2srriEZBm2QQXjHxR1k54B5np35lUkUeNn+KT2tKp/APW1PX3BFMrd+zGOWu1Ow=="
+        "iv": "R8k6qrEtYMMRX402",
+        "ct": "/MU/qmzCPv9nEyXFm4Lzv2HZPDX1PIIOsU50KO5OR+mqbyFNz0PaJLhc7Yw0iUlol/px2mj07KBDUP5uVeFpvDQIUa9EEMB/GC5R9k6MtdPqj2aW1jqtejeCifv81AUI+lxhQjLusTyKHRX/RgE0CQn8dbeiTbkl776tI0vca6I98B4p9AOMj00P3fs6AM7i0yQx8E6dAbXZgiJ/VRkPbWdxJOUXEFQm1WEsQtjS0beo+AbXY3CTldFq+19KtZLkmyp6VY+y0/E9rQxu+jOUWeyjwG7LdEEn2L6HtUkgb8qh2RRQVysXx/vrrkP+hA=="
        }
       ],
       "professor": {
-       "iv": "h5F7J0U3QvjnMyne",
-       "ct": "sTLiea5Rny3TXDdOjPXdw06VklH5bov7KeKyK+osvOM1xmkp8SVk2grA8ubklZg6FEqOJwAXAi+WYcl6xfNiCKrA0arwMQrCgJszHNfPsTXtwSQPeegxwp2dNawG2iA6Mf3IfNVf2M2qIB92jbgvnega+DHzZetuAolNMWAqi64n/PfZn6Zcp9xaaatsQCaoJfZXk9v9cEZVuEj8WWAoHSI4iY/okvekscxfxcg4hbDZ5+OPHp2lyKZ4PD94YRJQp9WyQ9WsoZV7A9yfgCNghIIbsEqmXno0qgEarBlzExZJszq7L2dVgo4nKgEjDA=="
+       "iv": "j6Vkwk82SDsSneRt",
+       "ct": "C2vtoi+a7avYwn1Hjf39k8byrZWRnmTcPFiBADaj5LmbWVhkC71NKR8x8L9Hz3YIqeEH/W4ww5D2hTyjCYLDhoaD2XEH284szxkLgyrEcA8/bTlXGC+Zo8FBklX0A5AB123lxiAbjw/GNuYSG4oTDnHGY3aFd4I/UuvxpYRgNmKoG13liDgrR9YmG4vv/jrxj1ikEWdyNh2syTM/Uhq6BxrndH1zt0KosHNyA7oqfMNP9Bz6Nn6oU6JmB38y7vJ0BEM2kBSGtMtinskXUM7/AtU/Zfbd/k41hMxBJLk7r2WtTqILxlOgGrQyr4Gh4w=="
       }
      },
      {
-      "enunciado": "Calcula:\n9² + 3³",
-      "dica": "3³ = 3 × 3 × 3",
+      "enunciado": "Seis moedas estão dispostas em triângulo: 3 em baixo, 2 no meio e 1 em cima.\nNo mínimo, quantas moedas é preciso mover para as pôr em forma de círculo, como na segunda figura?",
+      "dica": "Algumas moedas do triângulo já estão no sítio certo do círculo. Quais?",
+      "imagens": [
+       "dados/problemas/6-2.png"
+      ],
+      "descricaoImagem": "À esquerda, seis moedas em triângulo. À direita, as mesmas seis moedas num anel, com um espaço vazio no meio.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "904nCEDSEKq3Kpij",
-        "ct": "g1PyIut60zhMkjAOVOQq9Z7rsf6sW/EiNyQ/XXfVdMivUENH83Ug+/jfP/X7J8VtMwuFPcJgFXa0NKmOdA6qg3BHuTgx3CQY2V8P7RZZsMx7aAvuifaPVMqL/SWeDyJDhqTWoOKmm1cskd5Nh2uz7oo5oUumCkIU8NnMiNIRCiVZOBo/2xLxDpsKrqcTak4JPpdIGbjgkm579rYWE88ImhwZIYDaM1Bc1QPW0bWAuLLZm60nQ3QZuflQq32/zQc7iYOYkAbZMWsBZ+fMXK5pI3qecWq6W51AZMFHPVHDzb5dpZyA5fw0o11LxIuknw=="
+        "iv": "7PY/KJciabTAdDZI",
+        "ct": "iBNn+2VaBIEhpCL7Tm8CrvrGkSxIAPQgqBSlJyQBl0WQUcUk0LlXACuz7AJPBdCUXQj5Y+3HL7WED1a5ANmFsYpbjX1eOcq7aCwxloAgI8Q1gfdZIpYij8e5I2xD7lHFIOua+DMNAAyU6srmkfALiJ5LSBi4NHvBKtVgs93GjoTYhnUX8LorYNJTsy2rEmAp8MUo+Upcm3xVW5IdwqwbPRVYknCVbEDyK6xaRlCmajeU8PNuwewSVr6crHvy4vt3PJXKagcrghJPZb1xGOMbkmA6qfMBB+sbW+k5JR5N5Cwr4rozzroaur3FA2n/8g=="
        }
       ],
       "professor": {
-       "iv": "ezq58RdLKa6ax5qZ",
-       "ct": "lUL5aloea8fNaS82GvMmKM6YPD42lV5iu7PlxV2KUpKlIP5ckKQ5TzU752BnYjXp/iWuUTugrE3jf6rVa3qh6T03/XqLB++J7NfCOoRp7V0gSwT75oaO/LO8I+R3V6zRrZebJQHGFkoGp3d5ziHI9+q0/p6ouuUV3Yxn8bIqnKLWbdo2Pe1wwDZ+WsEcDXJ0/U0IBoPmLqYcWPnjgwcWi4dEmH+Wrojc1CXajTcjJHh7cd4Efm3q37suPdp7nEaUDCweR0yxaJSJPirl4Q0kpOlkprMbpbhiBTK9UySoSJDrI1F75okNH8m/AqWOXA=="
+       "iv": "Ydy8C1y0CX8vso+Y",
+       "ct": "hmuVFcNUsuZ/Vp0So2TmSqW6MKCG/+DO6Y9UKhJKc9D/2HH3RuqIr1WesCSjcs38bkXEQi+v3rz7Q1Tq+qS0eRHMjVP21XRmiq8AgOwxu8J94lwKZt2os01KpNmyr+ryg8zishHt4dAbOOD7sQ2XzJp8fR/2IfnubHTXdDIk/LrlFMoXH6tDxDuoqBPxm7g0Dra3nLM2hRitg2CLw4uvPPJnYSqMpjP4Sr+xTQNrjrQFaF1KQDIioJx9F2hpHpZQODF+GldPw2IOgrrnr3+inVDP6nwkN365lP6AArtd5kgEok+JLBxJ95+wLq5f2Q=="
       }
      },
      {
-      "enunciado": "Um cubo tem 3 cm de aresta.\nQual é o seu volume, em cm³?",
-      "dica": "Volume do cubo = aresta × aresta × aresta.",
+      "enunciado": "Os cachorros de cerâmica pesam todos o mesmo, um número inteiro de quilogramas.\nNa primeira balança, 1 cachorro fica mais leve do que 12 kg.\nNa segunda balança, 2 cachorros ficam mais pesados do que 20 kg.\nQuanto pesa um cachorro, em kg?",
+      "dica": "Um cachorro pesa menos de 12 kg, e dois cachorros pesam mais de 20 kg.",
+      "imagens": [
+       "dados/problemas/6-3.png"
+      ],
+      "descricaoImagem": "Duas balanças. Na primeira, um cachorro sobe e o peso de 12 kg desce. Na segunda, dois cachorros descem e o peso de 20 kg sobe.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "cZ+OYVzo3nKqQ7k8",
-        "ct": "cKSowVMZmhihic9cj+rmh9mVkOXtaQ70kGcMKmzxqlUyjqtM/NVE2b/CD4XWaO4r4y4IZaCVA+yTcYjzw3QfBXjWRnmbDGuUv+Rg1Q6ncCcXxL5QvmSryWtgFfRmthdNctmqOYNC4JtiawAJAT9yHJZT8Cv9OLiFbjPgF31G9jVvCjfDGoDzkkxBEN7YWNlk8iJXHxX7WJMA5cREv56XfM/VmVgShGcoWtPubiV5KNZH7Wjm7PeF/b8T3bDsbp87GLJGFJbMuMQaKRNMoGHblrSQ+Z1PyyhZknoWmkFV5HdR+eQPC8WWlwVB3r7EMbgZzujKCDn07g=="
+        "iv": "0szpUCxCm6gwDwNX",
+        "ct": "4H1wavX3kNnD0rUrKekHPCDGBu+SBjfu+zFT8VxI21n42vHU/NA3jy2tS4GW/ECy5tuBpQ4q/XUvo3tinJhdCCFkQfSA6Quu+FwDhfONQEy1n4SbD+78reN7wn/lTJqf+oo/+w0qzbFeJWhZl0woM/WjxfOmicG+c7qSgYtRNnJAWrpittxmuY/iD1mk43B2qj5vSx81nogiEu61Eb5sG/+dAidTh9+g8iSEmgeWcAyqXx2tk9EGjJB4qzJelGJZWVaORdZauq7Vo6kWYuLOuHqFaACHe5JgQKAjPk4ig10ovhcnit0/RhuMEXNkj0oONquV7E/kwA=="
        }
       ],
       "professor": {
-       "iv": "t/8+1BAQI3BldmSn",
-       "ct": "z20YyI1OD3FSmnv0HEu7hPn7m9btA9jDiSKw6AyREEE/r5xPGShli154DVfpODJ/TvMkynusMeyhIarUKl4xf73Lgc3cz7DAb6oAuNINu6Wr8gacGWZ3SdaM7cu3ral+J6S4dzKnhJRlpjYmAJhRbCIzj1xsXe4wXu1ax/UG+jD0wpXSeqJT3M3ramEAIK+bUqhxEinZBQTWSBZf4LjG+lxrJj8f2ETwJdrGyLb2Gtd7ahaOcLmVG8msLG4CuTmGJqiixwf8uAutVS3gCzHaaFOwkyRKY5P2YK6AbJnWgAz1K8nd7gKpcbtb4GYIZ/0qAPY62zOs7w=="
+       "iv": "YMRnNRXIZ7MSaq8z",
+       "ct": "2lehqJOoSfz7qNCKKOuzNS1UuJMvGUjG2EiH1zqVwsp9QUJeEoJ1AiWL9pRBF3KXS/4iyf7O7rlW1ZJZZsFkeVFGGFoN8u28CGzGm15ryTi3pTn5kI53CVSI7tsoQO2sFD+gShTMTnOEuXzOWw5AfGyAQTJylBRS9Hqz8ARANeJfa8o0yhjy4MQfplnRc19FWYezC237ePSRlaGQVz/Kc3Egz/pMJitCrd/YIacCsFYubQJ8lSOg2T+nf1ohZ388PlFdRoQnm0AQNgkvq4mCCGJ9wIs63A286ucniuRXk85ZOFRM/F3jRsZYIWO4Qtk/PHOOsLsA1A=="
       }
      },
      {
-      "enunciado": "Qual é o máximo divisor comum de 32 e 40?",
-      "dica": "Escreve os divisores de 32 e procura o maior que também divide 40.",
+      "enunciado": "Numa festa, cada um de dois bolos foi dividido em quatro partes, e depois cada parte foi dividida em três fatias.\nCada pessoa comeu uma fatia e no fim sobraram três fatias.\nQuantas pessoas estavam na festa?",
+      "dica": "Primeiro conta as fatias: 2 bolos × 4 partes × 3 fatias.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "1099jkJrOcE1+SbL",
-        "ct": "3qS+cMy67jwpxVjAN3HNPBQuFF22d3s6CohP1FgvgGj4q/XwHdCA2BqXIm0+1esrfJp93kL0X8Nw5hwOhpkwmyuOSaFh+jk1VUNmmyuTmPXaOqFuIhAiCphfkjPIPhK6hmrcTrVOWNMXg6KCz5SZREolblY7hRJqq1axQMWWU4/ex27K1brjz/zNGDJixdzF+HPD+rq+Zj6Ef+z1apkveLShyQKV32pkXT62qABGkfUna/WCUIm9eZayjk9CtiUDOXFR8FQ0j3Y6X9xPJJfcbk2aNTXOJFC0tUEmHwsJ1zagTLWHcwQHBbq40bifvW3YivlqGa7moig0l9/vvcri1yBrmymx+wPk"
+        "iv": "vP/Ju9rCYHt0RPFG",
+        "ct": "HKYKd7D6CK2ROTT4O55nhJMHAPIM12adxKA3D0NrI9tAeopuSXke4r3LLT4cXCmm15yrtKo5kyfopMzTDtmZDBHehlnDpu6grYvTDsGH6KnfoQUM1KQNWMZlO4qEf1sti+Td5JOxsHiVKyiUwSqXFiIc/G9mwWX2SpXGSixKB4kN5TX3VWcDdCn+BczT0Etnhhxosi5JafGxNwEAqvSCt6rxb1OV5xNTbDMuCIIh7sMF3R/8CjxPJKOorTzpbf5B4a1k7JjDaMyemeeZwmQ9zuJLcJSM4j/ap61DDEi9KExOMcuSiTq4MZnOYNnVc9Qja/hPjxcaNNi7WaMumPI17EJMBx8Q6sCd"
        }
       ],
       "professor": {
-       "iv": "4KTlUTSAZRUf5IiJ",
-       "ct": "HPyKSnn8y6vw4rGslRSe7r82rtY9EAy+q+oP1zx0p7598kW2PBC7VEDqgaiK7XAPqkSyEdZufeNmE4F15hYiXonHmClrl3j0x7f/hZfFxKNsiS2+L0suONk5B/UU7+SUDhXH0ujSLXPfrvqLuoGfyjF6S4QqzK+uUvIbV7Xs9dwq5BTdrqdl4l6BDTSJCwnFOv/TzKY2roiU16/39VqBtbw6eIyPYbgV2J6mL5XZ3lWzLbmlCmd/tzPP1/zwlq5iitYZKIhDcgH+b0IA0nJxBi2u8pUqXcxhRzWwkYHz6rGy7Tqfj8axwLQxv00QuvQnPjqCsq8LuC6FXzP5IE/LIS5tMWWQT0tM"
+       "iv": "UGCCy6/8TgmU3w4F",
+       "ct": "hGaJ3AkYcnLr5XIQbGp8eEHm2KnvOAjdwxmNrNfr14s4S0mIMZpQJszjP6cRlzg2ifgQTHhSzAQOrzu24JIbJS7zoavspuVefliqg9Eh3hrG+vLxukiSynFUzznJi/n3XZsHcy6fUZT/oxmNyPXplOtRmKk1ZvkQuOR39pVh4HMi7Gx5x0MbmNXWWUTXxjNFbf3J+kGP8du+/AQSdGKNwkaRUk5aX6Uchko6EUMT8tat+Cjd5U3buPgRQmnitzBbnD4nL95XLfAFE94aLGnMTfbuMDvqfd94aS48cfs2WhlSi6uWLn28mIzSWUBfJRwBR/L70RNtKo/t+WfiM2J2qFqjqFbFEAH8"
       }
      },
      {
-      "enunciado": "Calcula 3/5 × 4/9.\nEscreve o resultado como fração irredutível.",
-      "dica": "Multiplica os numeradores e os denominadores, e depois simplifica.",
+      "enunciado": "O João escreveu 8, 6 e 7 em três dos círculos da figura. Nos outros cinco círculos escreveu 1, 2, 3, 4 e 5, de forma que a soma dos três números de cada lado do quadrado é 13.\nQual é a soma dos números nos círculos sombreados?",
+      "dica": "Começa pelo canto de baixo à direita: entra na soma do lado direito e na do lado de baixo.",
+      "imagens": [
+       "dados/problemas/6-5.png"
+      ],
+      "descricaoImagem": "Um quadrado com 8 círculos: um em cada canto e um no meio de cada lado. O 8 está no canto de cima à esquerda, o 6 no meio do lado direito e o 7 no meio do lado de baixo. Os quatro cantos estão sombreados.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "LdGuMORquhH+QEjd",
-        "ct": "UoSUPN8yjV4XeHr2WhqEPwtTWhNm5l3z8dK0HztKH/o709hxrWUERlviFyfnJDgzuSAO1RPljvjQNUtkL0rkAE/ikWMxXqq8P/og9zRhAfwJnKzq7YKRtw4w1pvkG41iGGEMxsbovYz8fu7BvGCALpK1BbMy8QfALTJlOP2tT55gCq0Eu5LUgATdEkhL5plhPhOzl7YyZuTmb8Dc2lbq6EIysV7QTgejaRU0YDGfdT1jwU5HzcUwwm6RtG+QYeKjzYZKbI5oPwM5YyA2AX2E5Onhg/p6qlZGct1KHA7icRkk2my5wGBPKzjhkzamUYJO"
+        "iv": "TT82qbze4lCH1U8Z",
+        "ct": "oNx6mwY+dkAU5kyiuIB+SMavphIFPShDAzEtvSpXoRaFmODaoMCq+cy7W+Vxjxn4FMfhzIbu3AgIwKxR7xqZF09iQl1AszcqIoZv3JtbX/UP1b9HFBJgBCbg1diuCn7beL6+en0u6R+rPjoYen3n2/waWfjF0Ipctdmm07IuAw9ZZun7UQtHubk80JF4m5UYg7DDHLhgAYkeM3ao/Lem4ZTDtJyRzv+Tfci70L1VsFskZKk4lRlmuJKBeoPqjEWGoiJN8XMySYHcw7eb8g1a3gzGH20b2wXW6rehPIlWqd+laegoORanPN183L8SLd15"
        }
       ],
       "professor": {
-       "iv": "sL7q6/tSK6f1cP8i",
-       "ct": "xNz0TnDOLEYfnCvBRsa7VBkazbLKzzO0eTpMwSK36fIs0x65rHJCS3bwg2BkvilZvMUyVmZGbyRG62AJzqn9v49On1xxlIxjMmd62zZkEss8h/PVB/NLjeWBGiVW7eruS/dOI8szwisz//ON/zhFS4a9ejMX+nW6QcLveT9kL2rN/aMXYVSHKhPew/H+sFK8RU7SYTbPwcF6UTwPUPW7t+/MHdBXFl9HHajuEm0CDd5MLM8n0DddldBMNpd0TxqvtBgerzrJCaWnffFcf9OwROfsG+9CH1RU0WKjBLzpDEmumoKLBThr/9MGmX9iWhjW"
+       "iv": "e1t5saWsyKD7tmyY",
+       "ct": "OYdJcpkVm5S373mrmCr8PVdBC72bIoXuBejLaw0aeOBUz/jr2q8eTu40onBtBCCPbjMzATw8/pS4JlzffPz9UvU4oYMIu7TzErhPM7N+ThNVW3mFK0OqfIbdQY9k041UREuHqKV3aRcnY1HSr//mcFrjKM1xv40Mf73YW968AYgtJ/SMhIjCcIaP9BYoMXqJRkLW6ojfNYO16yZ2LOP+Jr7pLSZnZeANb1n4t1JJ/o4a7ETxV9IvrrrfBT3ffJkEsoFOsuppNfHihYvlAt6Gz28oZ8HV/C7tu2rpLAJi60QYVMG5o1I8qcaQWzUH5hU6"
       }
      }
     ],
     "6ºB": [
      {
-      "enunciado": "Uma camisola custa 80 €.\nEstá com 50% de desconto.\nQuanto custa agora, em euros?",
-      "dica": "Calcula 50% de 80 e tira ao preço.",
+      "enunciado": "O Pedro vai estender roupa numa corda com o menor número possível de molas, como na figura. Para estender 3 toalhas precisa de 4 molas.\nDe quantas molas precisa para estender 9 toalhas?",
+      "dica": "Duas toalhas lado a lado partilham a mola do meio.",
+      "imagens": [
+       "dados/problemas/6-1.png"
+      ],
+      "descricaoImagem": "Três toalhas penduradas lado a lado numa corda, com 4 molas: uma em cada ponta e uma entre cada duas toalhas.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "or1z3cw7unkmrxZr",
-        "ct": "m4LdlkHWrW/gLUBeCNEnDVc04UqWk403Q3elw2jok0kPFuRV8vjgD/DDwpoQz2irVSRc8w6cXlOLMTNfdjtC/+ySUrLgaYRCrgurTCB67Wo8ptkQgf/M6qTmb/dBSIb8QIKAe+F61CSGmdEAw/QQ51wJiRUX3SeA+8L/UTYLM0kQoIENrJZAWUCblZi97OMBWWzsSxT+f6SD7/bLMG4tZUJni0QAvK/QXjVBcTpW2hHTD2rWH/4vgBcfOfMz9gSi4v/aKuOUc+/VDJKxyNpaIsUH7IFymV0grFGIMMCvIBaF/2MdwT+m+hkjBbOudw=="
+        "iv": "YJJ8YBhtV+sc42dF",
+        "ct": "sm3kIkfUOL0FeEVIWFkg5xPpN6CCUSBvoxH5yf1T+wYqfGrqRV466LXo6wDcv0K3yIwW+ZTDy5lhgaYtuIDLNh7gL2Czv5/DhTGL/ecCJe+Gedf93rNf5j3RTIbkIBXV1nQS1ZPh9Jdj2/n1ES1H2xnn2S4Nrf998eXsI9vXx1fqeOZjJJEFrbxcd5e+XyeS7NfdHicsZIXBY9fRyOdiZPjOFd3BBWk9evY/fCI4u+ArELWTvfB1VtNIKH64HPSieIrDhfmCr/saSRT1mHO1SfhxUP8Ehc3RGM/hsqGcc1M4+QeW5Ur6AnCUirpaUw=="
        }
       ],
       "professor": {
-       "iv": "iqUhwjllDaEQsfk9",
-       "ct": "/95rZygaSQZADPJvxdXX/de7DLPojhLJ9RzVnL2KKEAJfioXsN4swStsNWLNxnslCW4s7iXMCwbFQPBXVeqlgSVnLv/xDxahbhlbcw/OaqZPqaVXlZFacPTZnKTxEsBkEe2f0HNDUZ3dRRiYz7IaytvQOuKWqaq2LRxLX0/md3Q6ta2mrzuN799oFbZA7M4ih+8r0vMlO4FhznlvCHnLN5mKKbSW5sOBbFcLtBgQx2yiTPRqzHLt24VO9fT6zP1FudOYZ8zoD1XWx5NOS0BMvC6UQbrEjj09YtlWIeL74jevXUzyNRJp5AAUhh7fxg=="
+       "iv": "qHlBiW+xQ4ixXm5f",
+       "ct": "Kse+rhv1j5E/OmM04Q8UdH6P0OqGrMNulQGaksQ6iLcsQZYLS5vp+A971sCNjDO0InUSs+mh+KD1kc0z2RAC0DXCY1kT/QH7lDxgss1sYPfSbyLdSKy2+x7QBYrjOLt77xrUZ2cWAnhOyCKclZqaaqDEE6hyX3Yo4ZKq0Te9UbDXzGXtHoXw5fRABCrpXAc28iCwacrZKLeC5J4lZhIWQEukm7ks4QKpEerpaT9wW0CZb5vTvk6Uldoy7qCUsSJTfXOTgKbe0Lne4XvF7C1oqXQgRxnbUanI/Y/dhVl2Kc1qnNqaDEQY2tagON11ag=="
       }
      },
      {
-      "enunciado": "Calcula:\n5² + 2³",
-      "dica": "2³ = 2 × 2 × 2",
+      "enunciado": "Seis moedas estão dispostas em triângulo: 3 em baixo, 2 no meio e 1 em cima.\nNo mínimo, quantas moedas é preciso mover para as pôr em forma de círculo, como na segunda figura?",
+      "dica": "Algumas moedas do triângulo já estão no sítio certo do círculo. Quais?",
+      "imagens": [
+       "dados/problemas/6-2.png"
+      ],
+      "descricaoImagem": "À esquerda, seis moedas em triângulo. À direita, as mesmas seis moedas num anel, com um espaço vazio no meio.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "WYAVMSFjdO6F0u2v",
-        "ct": "k34gfSZnulkam3BeHaFoXoEoHDhjJSANvsCKDuugqOARgby6JWwo67+MZNMuXwNhBrEI1/NN1F1yBR4BpOhDwvIaY9/1yBaTB+hLrAlLAbZ+9UMGRktN9nhSR4dVyjA26tMjG0/7Uwfbc3qkIfoO8WfFf9UnYfTUHVfXDKPY0aUVot/acyJUYgRBe/piVk0aUOQTs4jdvpH+8vmtavWdcozEUGC4ruk2SeEUy+GJAiFit6yHwZ6n7UA1S0vW9LguveMPW3z/23DZ8xddya8b5wAtqEuWxfqSy/zM/OxXpB8rKalGH/D469yBVJ4Alw=="
+        "iv": "8q4uYlATbbByJYpU",
+        "ct": "F+L7bIrAgkQTHnig+tzsQMUsCbyjUd8B+ML0emg1vN9BdbvYmsmrFS+AKgYm4/lMmTLZlerUK2C4fgxFQ1niVOkGxy3hroaRl3Nw3gs8T9WygKzIUL1RazwGppfv90sjwXMEdY+ddODfx3xTBL4pvtrUleXRYsfCdevxzYReImhh6MHF86jSPxkuUJgE34sc2v1pmVO9z8UB4dOEUaahLcO1g/L38acz39FPGRSkTsZkRBi53Ow7iL8MsuUk7TWj2UkWS8pqDc6n7ZkxKoQEGON+tEol0uxo0DJKtjqbnRwdpnhDe5Si/YkThQ5alA=="
        }
       ],
       "professor": {
-       "iv": "8i92SZCX0iJEEGxH",
-       "ct": "Tzb1JXSBcC2fCozQ1UnQx5tM8wFp0krF+dC0KlH38P2vB3HascwDK7d0nFVkLEGB45YVav1wPKoTWAcOgjxi5Q68BeFA5rwIoHGFNzMUMYlhQn5doIOWOwBTgWWuw7VPSO9BIfVmSeWMoM2L+KxoVFh4lfw0zGYNYUy9S9xu0S8CfBXU7gOTKzaDaRcd+IMWOP6R3ax6B3ewCnkSwetrcU+qvGYSx4FEZTd9z0N4Afy7/EUc6KfPwL07wvOPJH8ZYkhU8x4h0E/PbQkcOOBp59lvnGzw6uWg3WwhJ3KUrXR/ZC9YLTQY2DEPR5GE7g=="
+       "iv": "sDJ4joT66ykPTdE8",
+       "ct": "hBTPUCow54apcOXJNw3MQf+QdSYwLv4UIXPb+DOY7mTd+AYMM9301gGAPYjw6lFwgxf7ke7VeO3kJepGe/Ep0728QqIeyAggRCNUL9AsQHLe3EDUKQ0nDnv26IjVKjHQpU+iKUmZTB48l2bQBNJCEXcOglQAxQWSCdwUFCPenDtnLJJMZ0Mz7bgHrRFeFY9fwVRXkp+YfO8jTy61miaIXAOZfFuHzHGr5ZTclGnJlbvpLmIY1AhR4nq7779gOMpJWYzUA3t01mbbyfNgRXyZAeTbsJ8Wdptx84twrvAXg570ZtBTZujMvBFDMJR5NQ=="
       }
      },
      {
-      "enunciado": "Um cubo tem 9 cm de aresta.\nQual é o seu volume, em cm³?",
-      "dica": "Volume do cubo = aresta × aresta × aresta.",
+      "enunciado": "Os cachorros de cerâmica pesam todos o mesmo, um número inteiro de quilogramas.\nNa primeira balança, 1 cachorro fica mais leve do que 12 kg.\nNa segunda balança, 2 cachorros ficam mais pesados do que 20 kg.\nQuanto pesa um cachorro, em kg?",
+      "dica": "Um cachorro pesa menos de 12 kg, e dois cachorros pesam mais de 20 kg.",
+      "imagens": [
+       "dados/problemas/6-3.png"
+      ],
+      "descricaoImagem": "Duas balanças. Na primeira, um cachorro sobe e o peso de 12 kg desce. Na segunda, dois cachorros descem e o peso de 20 kg sobe.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "n3GJAxCSLZvDKbva",
-        "ct": "B5Q+cKl+rNGVK/HVwqtrfOlK/I9HmsRTNrtr5ZjKo8Y5ZZAxqqcPqcNyUz2V7sYr8dwnMew0tfafqNzoFdyYjNjYHm5yky3ylB5jkC7HHckFPd9rgZ+MNhJiJHtmhroFeEcI3iYACEZycoGqWsmo0ZFQWx/PIsCAbVpMI04avrGS8A8CRLc1FTvtFSEevXL+tmpS5JehhXd6/jx6Yk9i/ub8oHdY3/528gnTeWXFNP7DCehZsWrxj+AQLJnxYlo2wp7GSDjSswUepxE9BpO2kKWDmid0J42w9pRsZdxYtjbMcgIiOesqv9I4q5ejc2el+F+GupwZZSmo1cIVhtSXvNn3Cs+9LpyK+a0jKPNwnw=="
+        "iv": "Ml6r2bOatqyG36xw",
+        "ct": "9N/uQYNywplm/CixtK/l+7m3sb6XiZTZgAo6CPEe8oTHjtnzyTpnzukV4OY0zufyYAbkrUBwNsC7aiYn4XIkB1KR1En19DwqgCiJXEUNL3tXD+X72rQvGTrN/o6TAxmu4eXKsV8ZX/gh6tHSotSlL2yxWTBywhXKK10RonCcuEjj8hS8jqAeZCxabqerSdavYs+VLOybAqSmY+4yE41jIygdsfQTA4LBYVULF4yX9+ciWlIQeCjd/IqGPbut2/eYldyEtbFx0t0t6VXNpAMevbYIFyKpSoKTuCxmeQqp1zt25M3gvJpVb+CTPy4sgB6lbzTlwKP4+oOSbi7zBNHcy8byG2ZTJT6oP31lOByBiQ=="
        }
       ],
       "professor": {
-       "iv": "pwGiUPSDshl8iAHH",
-       "ct": "fYRtatXu9kZb3Z+znhxSZDFHKVbAi8eB5rBrXayn5FTuV5jQ0npUEBCmHUIZEDFTpMzhr3Y19Z3WzpRGtBiixTq8doAhWYs+m+7AmGPghuv+QzqwKxJirmdbaW+akV1W+S448lf76YXehLjlyHU1bjTz1x/D3h7GwlQLK//jPP+BKT7VjuVo3kHL+DWV0WcSlTiykSG8B/3quTlacMb6RA1SFSNUMxoBoj45FtrjnAb4zkEi7Z73pKdFUIf23rilUZz3k+7ldpXd1zkbcYr8Rw4iJ6BsgB6U6koSwhuBbo9EfVeBPSweRouwxGRnx8HkPYf9obN0u9UEKrEACcHH3CrmCYxRir7QsRJnYaHWvQ=="
+       "iv": "5Z7hr6pcaqWMeVcn",
+       "ct": "BdkniGtA+CiJLvYQFZ72lSSL4GJcRtS6EZGQdgyf9U0x1iCQWGIqAiCULp+XiARrG7U+RmmoksjjfR3hvHnbGY4RiPnyFg9E64/2D74oHVDuxxOmlNzOfwBhZtCmEtGQ2r0fW0aqASPN3vK1zVaLRvMNV7dAcuqJMxatF4IMilo0J8PLD8MzQexDSLqDOtSQ7gK8e1ELz4Q6jc6Nan5Stf6YIfUxrovR8vxt8m8WCH8SPiYyAID9gZdljmLYaU05nKW0jA6Vl0IXbQLCAFtckqzja6DgDv2/kDpdBY4/BpIvyDUPLHratYrUW8Q8uRq8dVTVw8CC9+4fE0aUdwFtm/krZsPe+8bg5A+2qJ2brg=="
       }
      },
      {
-      "enunciado": "Qual é o máximo divisor comum de 6 e 10?",
-      "dica": "Escreve os divisores de 6 e procura o maior que também divide 10.",
+      "enunciado": "Numa festa, cada um de dois bolos foi dividido em quatro partes, e depois cada parte foi dividida em três fatias.\nCada pessoa comeu uma fatia e no fim sobraram três fatias.\nQuantas pessoas estavam na festa?",
+      "dica": "Primeiro conta as fatias: 2 bolos × 4 partes × 3 fatias.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "JN21dhE+d2X2oQHp",
-        "ct": "GxKQP+ZIlYBW3CayxgQWG9Oa5Pk84KYxn6ZMMj1PgYLgOTbj1lQQfpFfd8bRl1kCUJSjAVjNL9oNKVtz4JrkhYb3GrqpZ1WFl1K/ZaHd1hHf8smG/2ZA9SBoRdPsSxPZJSXhu86vERlAJYXcjWhZKPWrn5qZBPDTnoAtQfPKEBhy2VAxaCbWD0HD/sIOuCN4otIK4w/PSFTMayAvnJN3yAwnr8OVjcbik4JLAxYG3oZq2i8uqS1KldqSaUbd8nB4EGsAi5DVv73RpcjGzfkuJqw57DuNsdmxv2drJ9TIrY2UeW2Y3Fj7om43g96WxOkBgo3CZoCB0Q=="
+        "iv": "GU0+y79CUbjPKEF8",
+        "ct": "hNjGHJxheXQZ/ct7WzAnQG2Lz+YGqx4/MauDvf04jqQyUPZESGLM0sN5TXRw3kDBTVoU/gYMwC770D5M0zqiWOD/rUA1ra443Ara9uaFYFrnuZqkkmnQIENxzc0nQBv8MTD5uU/i2hQp8ihMBxQYzzYCvH7+8Vi9sSexMdgpWno98EHgV6l7wUOrKtrCND+KO0nyNge8K3dWtv3JYgTCxBt0LtmO0U/T2zIe+M7SSyKtwJrbGWgFVX63jzXGdHar/BHlSXTkM3hkZQHZeCrehuUMAZdbmIStjLlpIeMRXGfwQsQhd/Ty0P55VbMtOcn5iGZybfnyDw=="
        }
       ],
       "professor": {
-       "iv": "/DV7N2RskUlIxQxD",
-       "ct": "JoppgFB9upNRGogXZk9qb5Qu+9oktizg++8aLOYwHKy+aZ68Kp5+C6wwqbb2ebHQZ7qaz2ZLtXTryK7uCuFuhqnppPNcPGnnVuHNxS6bqu6Yf3cZ+qXM8IwJhksKY2np875Q41ONdwASWiV8uoUii2s0pfY3YhBRPcUhTyG96IO0CSAoYbvDtWyR2Xk1hjSfN8xWIQP1movcYmqefwj554e1MOz1ZIIQzlhdet5JaL89E7Q7Wc2wmT0ERAczZLcb0R7X4o4xWn4hFUrrdDailHuy4uteEZW4dXzT6Lm8cUD9bNyViPFl1MpWdcvO7DdRQzf/jMG/bA=="
+       "iv": "Q7XWVK2iPacGKUUt",
+       "ct": "PZ9ZmTXOc1MXntXzDLFqHw3nTF9mGZ1HnD7uSUsgTCdRU5V0HVLarVb63bqjQPxNEzQHXjnKjQKx584G1gK2Cdsj0SJD64YpAbGSMCXVRCvVp0VnCke0sa7R87ZennsaWNHfSTBTUfHGMa8jH73GcNhS/XbGwJ74w+HpFjcJ5GVAOBE1SdhSEVivrm3IvOlrIH1iYDEOsyXuAiEslKEqlbGWuW+7BdEs1C9In1S1x6i2C6Lx0SpUZM/KLlB4K28iW0gBx+VU9k9pW//DORgKt1UFvVNt+ZwQB5N6JoaJHmRpdVlraqCCSHySWuTd2+8/hcwvWia/Vg=="
       }
      },
      {
-      "enunciado": "Calcula 3/8 × 1/10.\nEscreve o resultado como fração irredutível.",
-      "dica": "Multiplica os numeradores e os denominadores, e depois simplifica.",
+      "enunciado": "O João escreveu 8, 6 e 7 em três dos círculos da figura. Nos outros cinco círculos escreveu 1, 2, 3, 4 e 5, de forma que a soma dos três números de cada lado do quadrado é 13.\nQual é a soma dos números nos círculos sombreados?",
+      "dica": "Começa pelo canto de baixo à direita: entra na soma do lado direito e na do lado de baixo.",
+      "imagens": [
+       "dados/problemas/6-5.png"
+      ],
+      "descricaoImagem": "Um quadrado com 8 círculos: um em cada canto e um no meio de cada lado. O 8 está no canto de cima à esquerda, o 6 no meio do lado direito e o 7 no meio do lado de baixo. Os quatro cantos estão sombreados.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "yEO84amZ3zi8svEG",
-        "ct": "ZNWN2AqAr2/QQs1/O+Fnq/UbPt3b5MbXcIpcF/eNsfL+DEMhZKCJk4MhUhan6clbHUzuKblcDNEFNecWAs3I6fVW/pGnA12EixHuCk9lUIh4/byOpFY968xKh1LhcuOIzYnaUMNZB2CE1ItdRtUdqcDpjsyJKfw8IrfRG8gT+9mnYOksuZm0hQ61/1AwHkNHSZp4eVYKMEZw50vcdM6s2aL1kThBvMsCCUzZ4YIlkKNrjx7AyoxbjC2kTRnw1OnenOBH/ya/TPQ9GhbiMx8gdXo23ZjCuZ5V7QyoJ8uoprlYmOQmFN73K9wiTc84eyaDNRP7KTH1F9vL9EQ1Wz4="
+        "iv": "33T8EgFLIunP5NES",
+        "ct": "547cYrPacoaQyLMiAxbWmXH/9aiZGBDUKWKdtR9iDES6pZVDDduXAz8FKV+OgmkEcNjYKG30LzC8VUspLts15u+LgamDuOkjhYwcAUAPX59zPNRmW2SIfULtwjAWRiq8PX1UZvANO54fPksBA5rlBHzbDspU8LqR9AfAf/qGZkwwxdZQfAGQ6bF0WVtFV5vJ6heBHzeWk6LdENZWi0g6+DD1UYmSTjn0QG6GusLyUC7wGcakSUTRvKdgmG9DbifddUZkdi9MMAQXxn6d8h7QsfJpEbT1afI/t8pw9/+cuH+iNPcA94/V6xBWAyq139wkUBpsT4aHECfjiwoZgnc="
        }
       ],
       "professor": {
-       "iv": "3buWWNLIJVwqO0Wb",
-       "ct": "0n9QKlBwYXllk26m/gh5uKcs+MoiFIm9sM/B/DHwbDoSsDY9ODSr59BYeOvJKNsKfhAdCvmbZ6F8XM5bx+yr0tPF7jMn+ceL+W/kolK6E9tHkwv1nymhIGPCx7JQKZkJUWrkeycBQR8SEhKlcgiz14MSZbTOgV8mFjJmHlofN/RwZcW1W5eOvnky0CU99klzg17fOWqo74Idq9ROmOr0lUB0IS0AKuXxEqCAC/bpgx4hvgqlu1rVVFBCKNwhaQvv9BjEbM7lwuNWDo2kzaDVW7sSl3rlIj23mkTkOwZ6O7s8xyzZ1KOKCYS/FPTj6LR5L23THH/eCMUpfTac4Og="
+       "iv": "8xnL6oHk8uj3ZGYw",
+       "ct": "D1h+oJMxQCy1TzTuR7yQdK06rPpujKNxhqb3d8yZb7szoixPn2LSqZOeGBRIg8jIaauQSh0pHtQ5bpW9oNj9ZoK46NVeo55O31kHMj7D3uosQ1VN5IGw3/Kbxpd8UVqBsSVfgtVGxO6cPunmmSANJGcUySda12aXUb8vT3EOKSd2mgrXwfoKk12PZ+wg9nQgtNmZn/c7o4Hxdeib6JUTw4PHnbd0z0Rneamnb0GZWmF6sYXIqXqKZkOt6Fr1qSog36CHqIKYnAcedDDkp9si5Dvm1FplbbLwo2xgzigHyRyjdVdp4HgQO94gB7oeMxCHuH1oWGV3M0xpKOdzdTA="
       }
      }
     ],
     "6ºC": [
      {
-      "enunciado": "Uma camisola custa 60 €.\nEstá com 25% de desconto.\nQuanto custa agora, em euros?",
-      "dica": "Calcula 25% de 60 e tira ao preço.",
+      "enunciado": "O Pedro vai estender roupa numa corda com o menor número possível de molas, como na figura. Para estender 3 toalhas precisa de 4 molas.\nDe quantas molas precisa para estender 9 toalhas?",
+      "dica": "Duas toalhas lado a lado partilham a mola do meio.",
+      "imagens": [
+       "dados/problemas/6-1.png"
+      ],
+      "descricaoImagem": "Três toalhas penduradas lado a lado numa corda, com 4 molas: uma em cada ponta e uma entre cada duas toalhas.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "8mCGVD65gLOaaFQC",
-        "ct": "UYZRZ9M4c0l7EpiqLMpidOuiRn38XuU6g4mHYp7UrpSc/TSKPxr9CL9quPBs4AooV/s87KyjCisythuzQfPZzyUmtoKtkez0QE0GuKQ27zDLXWz7K3Ce+pRHHjcmknJmgtyesb+HVjchEzW3/IJw5G7lUjuZC/AGmm/LgrwUvus9O+CDlEuob1xX0eqgE23Wz1KV/CF6WpwK9zjK3cmjQORWpQSzt//hSvbdtks8tkk3Z7jQNoryvtgGJqtjgfzq9SMEaQmJTUdUF5cDUWxPdh/8oW7G70+2b4uUU+R+7WxwjO6Si5OSTK3xjb26/Q=="
+        "iv": "H5Sh6bYIz7MRTN4z",
+        "ct": "Cqjc7NNFEjk1ouezagvAb/ZJq+vfTiWrlSyM6BWc+G/hbeL5vuTZCpLdjqYTTDk1aQH95UHtYq5J8CItC8OWAd1vEd0mG0mH2VEEGay5wDwoGvs6vrnxI/rYgKPYwNcGh88cHG+QHoxw8HxEaKriqpDyoYfcpm1Gu/hOd3UUqNLcnoYs817u27NwalnXP1zwg9SJExMoY0A/swmv+lzOIvLFtVaVGF733fBOkUXYlRZFi7F5/Z1g7B+siW0yxW0mz50zxKiJ0VcAvzEDUCcdK2mffNr4XQLwr6U4LlaF2dCTTopePk8mj9Wecy9elw=="
        }
       ],
       "professor": {
-       "iv": "NDy3dLd9Y2mzcF5E",
-       "ct": "i34dcKGGJfbv9ub/oftb7365tf3hHJubSEzd+GEUIoTtenwNGp4HR49uC32Y8Ako6jdMh+ynq3pcj0yyM2rl7v3GUDwmxN7s2XSwlFaWPruFQcO5Q3Qb+QGXJiINuE0xIDemUqq6suWo4I55mHiGIUSQUhqaX56vh2Q5sSjXdYDs/Mbei0/7e8BHfZfw41urcuXTp4MHJSfh45RJPEy+moCU5AnjC5Dj6oEQR4bYjjtzxRA3lJB28hlR5cqwOeuF5hjpHELyws4vz8z3/qGG7+ANEBxTCU83u7QH+NVxJmANwAtztDKLYiBFoOrd6Q=="
+       "iv": "oAN1aZO5/c4rsueh",
+       "ct": "xqN08QsDX/CuXzJEl3/zuVcMLP9EMrTQhMOJTAh7pKjZTiIXLUmbTxYSAbk4iyOiHakACS7chLf1nl8GbfhA7qLIAr7YZCeaOvyzGtEkO2MZOgi2Af6NrfC+gRASdwNSHXgFFG553g3rXMACen3QiqEZXbXjQpz2ldj3gP5UIsuuNRII84oH7MEOMbi3A0+52GtpLdk8XhoXhqW+LeV8kt24UrxVDCrG69uUkMH5w5gnSLZJjrLyPrBRunxiUS51ZBswS98P8wiQhQGQ+zXofWZ18tYC0BIzMa61t8NRQMzkJlI3hZU3KaGg7Ii3Xw=="
       }
      },
      {
-      "enunciado": "Calcula:\n4² + 3³",
-      "dica": "3³ = 3 × 3 × 3",
+      "enunciado": "Seis moedas estão dispostas em triângulo: 3 em baixo, 2 no meio e 1 em cima.\nNo mínimo, quantas moedas é preciso mover para as pôr em forma de círculo, como na segunda figura?",
+      "dica": "Algumas moedas do triângulo já estão no sítio certo do círculo. Quais?",
+      "imagens": [
+       "dados/problemas/6-2.png"
+      ],
+      "descricaoImagem": "À esquerda, seis moedas em triângulo. À direita, as mesmas seis moedas num anel, com um espaço vazio no meio.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "oztQvUwPLQrUqmk8",
-        "ct": "4amC9LVrTLNsuStTa4daZKgUyaaw2v677TtPXgMTI8kGbRiyazFxNpdyAXOqVoSdQageQWi+OKyIsYMYBywpTuRnhgak1f+HsyvrmRUaDA1XKPcQpbtXJrEDCGIkpC4tFG7gnhssMkv74CEUVy+tOslVn6gE7ssBYumALRU9ZOtLqbA99Yr17sCeUNF9HEIRWPW1JuajtxUCdR2tWAy+iSI+EGv2mbRURoX6MM5Q48F8d01rcW9IAyspogzbrf4+l4EOoWPdudxCyFbWT/UVz18B2voZpeTCxY9LrS7g0l77fZ4apV0M44YOO/fadpV9s2EIU3tzQe8RJB8iAVOnNBL77rjX/uEnTUL5m66KMg=="
+        "iv": "b/enTgc+1k3bA/jd",
+        "ct": "qMx3DmdL6lXuTDy5UJqLh2xpV/mse1XM8H3EM2Hp7CnRWJbNz5CK6Mku+a8GSL35qflT0YI3Dc13tR3mX77rB894BDEoqt994seD/VChu6n3kb2jE1NE/ruHMn0NcCDuoItEthWFk1hHjPFmqan+6T4WMaBUAofx98zCvR+FvA5VqmipLURoTxLtNLvs1C6nGwKktU1u/1JzfHwBdGkcVL7yULCW/px6m6J3QUEtx3MhfmpdkPjsook7K1pVx7mbrLPLY+ojqi9dCSx4A5Nrz2RfQLnf1Fc5v5I18Pqn7LbK/p9legzLqquu+SBCBgvuNYh25ATnP5gYXkmd7N+ubU9JS5RzVA54uhBgkQ31BQ=="
        }
       ],
       "professor": {
-       "iv": "QPAk6xWkWmfbg28m",
-       "ct": "0YzP8SgAOHVY3i0mY7LIWCvUWGSWL3QbrQUtfCP9E/rdRbaswA4hT3gsxyowZkfqpaNMVfCdfvuwstqMyoHY3Y7VwcubeK+fhXjpstImyLNXGn5EPuzEIaMwy8p9fnwwVbdpbQqVba8379SMVf0JMjH4CF9qct/BncJUwWAtLyzEVt2ZBFc995prBYUiphqJS6KgPnxMIdkcpj8SxAYGUJal707/Lk3SGhSjxIX4Xf3yj5rWwoAacQrmn1n803WqpjmIUvOZGxP+vuU1fysMZ7EMWubEeQy6l1un9GPpZ73m6yWooRhAuiV9oCXSb4cgB+D+5cl4j01i1Cz1kmXSrv6gt/m40u+ox7OFSkYv1A=="
+       "iv": "5CwQjzCRg02twi+G",
+       "ct": "vrB5Fk0WegHSO9ndo5MlikbmM2adzt9bsr7nC1uaIiShWDgJCLyHy5L+FCC6YaZDrGKqSv632s6ONss4VI1kvaP0O0NTNnTFrguectzTldiWktJifJXQevfdG5k4isG97EwImK8ijDp1hONfh2HoD//QmO/xmdF22LcyBcyUVws3sUloSQmWI37saP2do/BxRE+reipoTDX6bMu2W+gJcxYOTyavJCKV7G3G5zbh3ewV2Wr1icH2E5OCnLRbOaoN/6/1HOWkiCtFrfpfPfHE7gZb8LG7FXjohkygIRgJ78uvlNcyHI7EKh6pm4vRmfspBGx/Pm+WnLsaVi2Bk8ig+iMi3nVpJzsvtiPoiyrpbQ=="
       }
      },
      {
-      "enunciado": "Um cubo tem 5 cm de aresta.\nQual é o seu volume, em cm³?",
-      "dica": "Volume do cubo = aresta × aresta × aresta.",
+      "enunciado": "Os cachorros de cerâmica pesam todos o mesmo, um número inteiro de quilogramas.\nNa primeira balança, 1 cachorro fica mais leve do que 12 kg.\nNa segunda balança, 2 cachorros ficam mais pesados do que 20 kg.\nQuanto pesa um cachorro, em kg?",
+      "dica": "Um cachorro pesa menos de 12 kg, e dois cachorros pesam mais de 20 kg.",
+      "imagens": [
+       "dados/problemas/6-3.png"
+      ],
+      "descricaoImagem": "Duas balanças. Na primeira, um cachorro sobe e o peso de 12 kg desce. Na segunda, dois cachorros descem e o peso de 20 kg sobe.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "ERrrQa+/4wmpPedT",
-        "ct": "BVId1nJtPpVFHxZqDZVYxwzqDzxtCZguvYRmRjHsQAtC2oMcGrOD1834CGoJPqVf1DzaJrxRBnn7pxjbEiBie2okSlMkeDmSp6Sc30+jzCN0S/bBW80+i6oF0mjVMhY4dulPv2Uq8kpN7hD8CgCi9EMpd45ArvPMRmF7oapg0hisp6Lz9ezohs6PHAUDHSmWMA7Z1BWeS2ceHUxhyQ2vJs/ES1QTh+tjuHyvtUjTzYld2jaANj5Pz5D9EzsadpR9JK/5zXDS1i54MzVI36UHxXStx9YCKF6F4Mx3Zvqhp3ixRXr/clGEfsvUcwiy202N+iRSMC6bBlc="
+        "iv": "owUpD39fSdkFjRBJ",
+        "ct": "EoILjxE/j7SssGlwjjaUBxiEPh73I2TK9S+JQvifz1QbMejCAYyE32XRtlZgU2ck6aE8t4AoEsdNmoHMRDOXxKomBDwrp16BsXlPWtJjRAv4u23mKG36X6gDcqCHP29s2GYqKT0WdoVsBK9WH93FCzT9js/zHDzZHfCO1gf61VTq5HeIMcIy3JvkTSfz7N8rD4C3+yTV3vHC+GHs6yRrCa8Pgtj58Gs8yVdwgmiCox4Y+ge8gyPpEVrExMBK3RQ/fx47dISj52qpm4yGkcSTNz8nPNEHiWTNh1AJo/cHMxQvgaUCzsgS4RWCjZRLKNpibcguvWXJoUE="
        }
       ],
       "professor": {
-       "iv": "6SN8zlWlZXEAsP/k",
-       "ct": "MzfMcKjalEL0v8f8dTyYxVg5ULMeFfnihCigWc6ht6ypilCAPBqCaGFgEjlxiqs5V/bWkHU0XvATrdRc7gn39fF3IeWX2LEC7ZhNW2GVVxDsKvSpSE0ulNGLwUKErNIHS8/rLs35GFgwRCbXpJ+aODXTSoB7uhTSZ15DdlbgcW2bN1Bp+egk2STN0SbkczsueiYiNI9R4+xWPtSRxZNk4yfspn9XhP4N1hWSzvMnuirbmDIFTCOYoXhJSwaf8ZWBhVcdp/P2qP6JaOTvpwRBJqX5HlD6XotSnE9I/lD/3iampQ2CedFMKiFHb8BsaZT5ADCEGoGQZVI="
+       "iv": "icjwyh1WjuKRGuqS",
+       "ct": "67ovYubhf5/qngDNvZe1SHGATQESymURNE8UXNSNWuTh3l7wbnsxUtHQrucWpioSvevmSx2XnOJvCTQHkXpZfSWP9nWejFTR6iUemOEWFZJGofz5RyuiZMUuXOrUqQqWp/YWMXQVkgJqx5hneQzuM6QzkCrtUQodBqsE7auCu7NUeJNo+48PRVCDFEa9LDXirojFj+PHD298KK86tRsC26L9AbiKow/rVBsqxo9BHi7jL+zMX4jn7iNPuhZ5ZaEvsI65CjNNMaYKEO1Z3oKF1d6H8NpmUZXOD4whI89vQ//lYcsSED24cPR2JnTfgvLIUYxYekm2Le8="
       }
      },
      {
-      "enunciado": "Qual é o máximo divisor comum de 18 e 24?",
-      "dica": "Escreve os divisores de 18 e procura o maior que também divide 24.",
+      "enunciado": "Numa festa, cada um de dois bolos foi dividido em quatro partes, e depois cada parte foi dividida em três fatias.\nCada pessoa comeu uma fatia e no fim sobraram três fatias.\nQuantas pessoas estavam na festa?",
+      "dica": "Primeiro conta as fatias: 2 bolos × 4 partes × 3 fatias.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "5WBvQKW2648l8Z+4",
-        "ct": "ziddtcqBzViBooD1uluMdTjXjCvvgR8/KfQ3RaftwGIW9jLAUUsvySpvx/5L0ROAVkUZDV8okbStvgx4MUsMn/iKfOaGkMhd0An+3mvlYKGkux6UeRSrCymX0nwoml1eAiPmxKiSGI7sqa6bz4tTV3Gifg/k6VXG4LhphOlc8JdUQBghEVxoC19DzUw6MNwHiYScikWSOYny+4Rmp2qtoE3xJxWntw4g9uXJRTHW/2gRVAzSDIQlAbv+U5sd919Tg2IEvvlnzJSqFlV4W+wcEM9TxLgB38inp40zgOUEzMUt9hQCljrscz3fcIQNLIdp7z4+kK0H/CN7C/Q="
+        "iv": "CC8TiDx2/aoUHusa",
+        "ct": "rM/5GCvc1LQbzSwTT47mzj55HJQE9B7vvsVj6dmx0vhm5Beg3Z6noMEHsvRuqeZv+8/omBwYulWDD+S+Dbexv6z0Rx2aG3R/KYrU2yv1fKhdtpML5lGG/87fflK6DBJi+XPwUPCjmKCCjQOVcyGTuA8ItEpQIl/iyrYlzPuaPpiGXrsIyorKy8v9qM251QnSle+aIx+phi4/sImLSM+M5SHgJHs+zxIbtECRhUrh3Gm8ey1NyCTaF1j0Qoc7d7/NAjrUvblYGqzkKupQPYTVsHPPl/t5OwtwKlMNe2xAoDPXNw0XV82DjDUvqNQ3S7KY2bgS1TjhJCQkxfs="
        }
       ],
       "professor": {
-       "iv": "Fs8V+aSbI2PM1oTh",
-       "ct": "7srLnGCJZ3INYukE3YwZd1gzbeZgbRpAuns0GMNddIWxbA71SPTFIs9LXEHnQ5gzcRofr/2sRGTSSARHETTdgor3q5HLDddDT+Nk+U7yQsZ23LchAWWE4jI/1sYU3VenIJ8j8p+R/4/e3LX+auaabG+tNaAvLQlLvdiAXeh/K1CVicya3tJP6fUjxJ9YQJz/IBv9juhcxiBMbHT7ASw5SXljXRXOcdm7IfWfhseI/uc9917OVjRtf9e3/dSd+wdcWoHbnY7QYn4XRixxtyd/ulRGpvqWUxFYcN9xlhaRVgrnu/JuyMtBnhBqScVOLRpQGSkQPAamQdxqg+U="
+       "iv": "04sGpIDfEJvwd/EU",
+       "ct": "lpfHHwjuOBwBqURAvrTeMk/1YBWCJJEKsn69rrD+VFLAKCuhMRz3zwott/wpzYuIPkPgpRXHn++Vz92i9T842q4w4QHW9BPucn5VNdBvmRBVLZosuqe7v6ycEm24UBR9159o4z3vEvnlia2mMc58VG2pPIsXgXL56Tp5za1OCVJz0RBcxXcm+rEOucx48rO8Z5+zIX2D6RjgYbFP5fW8JWHbSIbn8Nn/oIhDzmsqUsfWKfWODl3+uz/Gu7ZXqae/OeL9jAown4uyCsYBBe0D8UrykCkgXiQZHmoMM3nVklPX6skLaXVN3pzajpiO5MrYUleeO/ir8CZd+SM="
       }
      },
      {
-      "enunciado": "Calcula 2/3 × 9/10.\nEscreve o resultado como fração irredutível.",
-      "dica": "Multiplica os numeradores e os denominadores, e depois simplifica.",
+      "enunciado": "O João escreveu 8, 6 e 7 em três dos círculos da figura. Nos outros cinco círculos escreveu 1, 2, 3, 4 e 5, de forma que a soma dos três números de cada lado do quadrado é 13.\nQual é a soma dos números nos círculos sombreados?",
+      "dica": "Começa pelo canto de baixo à direita: entra na soma do lado direito e na do lado de baixo.",
+      "imagens": [
+       "dados/problemas/6-5.png"
+      ],
+      "descricaoImagem": "Um quadrado com 8 círculos: um em cada canto e um no meio de cada lado. O 8 está no canto de cima à esquerda, o 6 no meio do lado direito e o 7 no meio do lado de baixo. Os quatro cantos estão sombreados.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "ur5LNwNwQBbRGbwP",
-        "ct": "KROidzmP+Q32i74HcfZ8u+rtWzKfzR2LhWCk9qcEF2N0C8X4JiPb653Tlq14raGNjKte16HAZhUADEaqFVuXSl2Q7ZH9szJI6nzkZL2f4l3NK+sQjzNWgYMyfj8fc1mk6J89ltXm2kqpUeBWmjz5QA0Soc+olMkXvEOCklvtnk/3tlNK3FwP+Uy9WMD5TYhY02nrUeuH+hcCg7WoooY0acv3aO3o+MJEd1q9k+WXlpMqYnpuOsCtI7oOT2bRqMJPk4rJLd4newtc6ZididGaAxqtjIw6kfOBHyFp+5wp5ddzki28Z3z88RRA0kXbCnkZ"
+        "iv": "fYGz+GrJi8DGYQxk",
+        "ct": "doUJw3/pvpeHgSlj36cuS50d4Kn42UOmb4yRCD7iHiNSdsNUmltEez9az2B0MixU1qSYzQ/6H2rDZBnz77eNsUFBQ4TFslzWtibJf5UoVaDsyBA0D8VDXcRh3PZzOgUhpYd4fM7zjNUfFNncfWtaQGsZZ7n/74a6+vleCFEcYLOLI7j5NkdoxVBXR+6sLGqYCVDjmRXpWRKxU42lvLuvABpRJlLofiHKBhLT+oanLAftyL0uBcdDsz6kj5y8h39Hiuj85a/kcDM3KOmmmzDBY7tUOBAxhblCFbr3MEnJNL+mWMVViIIeu2gOQfyT4u6Z"
        }
       ],
       "professor": {
-       "iv": "YLFqHeUVir8VK8vE",
-       "ct": "b/Ted41rFC6In+oum66rZ7hct/Lu4cTl+CBGDIHw8NK0OvicGgjUFMg9MqV75Q4Mx0UGp8vTX/hrPIYc9T5MFmR++OzRJf3X/1aMdEgo7xb6Sfy3P4DA8u0JFNKaX+ty4qxGCl1qJDek1TtmdL8QP7eH0Rey2lhICRA0u2HKARS/RsYU2kBDfXmxUO22Cfj72/ahRBNzxgMTWB8s/PoBKJI63XzTrzr8WqbnsPNlDRrqX8+3SsCIfgdR3SZsrlLdvguv4ONql8xghKbpC6ukZ3KphRtSfK0pNnsAn9iZ3c8nCJ8zF4Nuuk1FfbF4cXDk"
+       "iv": "CetiLLww4fAlSiAJ",
+       "ct": "l0tECEPE60AAiWGiuFmd4re/gafFnKBQwIOvEaZ2CJWb36HSWWYbbRuoTZmgSGDbDcCgyyIkeM0cnMd4Rf0350XX23VbrOli+LvI5llonDS6IAaKUSpwVyHgxup0H76hCa/ldCJDvcHLQZaq61hD8jsiQK66TdF1ee/jYJ4c/DyL/tms0DYuYnVTDaqaX8o8iyKSvgfYpBW2HVpD7vYvaAUGDDfKqk8iKg9dCJWwCrMfV5EvxbYrhjpg/yjbE8y782kpxx5chH6WZYk/KBb3pyPKsCStNq2g6IpAiHuwzBCDMN9rYqPM+GtDaYfUq7TF"
       }
      }
     ],
     "5ºA": [
      {
-      "enunciado": "Um bolo foi dividido em 40 fatias iguais.\nA turma comeu 1/5 do bolo.\nQuantas fatias sobraram?",
-      "dica": "Primeiro descobre quanto é 1/5 de 40.",
+      "enunciado": "Num clube de atletismo há adultos e crianças, que treinam de manhã ou de tarde. Sabe-se que:\n• um terço dos atletas treina de tarde;\n• três quartos dos atletas são adultos;\n• o clube tem entre 20 e 30 atletas.\nQuantos atletas treinam de manhã?",
+      "dica": "O número de atletas tem de se dividir por 3 e por 4. Qual é, entre 20 e 30?",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "4gwLAhaGO46Ic0OF",
-        "ct": "/f9ybjxCAKkEwKJmVNKLD24iEWh8qkRWGFKhQROo0CK0ADaO9ZOPyh537E5vhqu/lxwInXcnHtsIqad20uQwHgEJfdJHO0V3DJiX11HwZDY31vpen2TqiIJhIOzD04gqJJMmXyb6OHkldwHvb39jK1y5XS+fzlMBq7V3GGBE0x9G8J6j7kitn3zlxK5io20jHKpyDSklMtcewBpCyEwBms42rrPfkjrxmTGEE/tA0QfHCcQID9HL1kIRrDK0ep104/gjap151DI6GYzeKwqt2x1LpV3XjDQlyJDkOxhF5ZyzftdC02pFScSI8Y92Qg=="
+        "iv": "dHpibg6s5Gvy2r4H",
+        "ct": "stJalwBeewCruCQ3UjZymSXz20kW4e/dRi72Zn0bHr6j0uapNiS5wonjYQLXjv+ij6ypHadpK0jeud622NJa2v/JVzKRiW15ITWo0S5JkuwfuT42Zlg1rmenou+SijM9CliklQYETpgQGu3GK4VXPlIMy65oFNlPmAmOvNsPkUG1RBwOK7GYcqL0MBPNvsdJP6F+/ggb+448e1R9rNc1msdvNvlamzb3sICJM15BJcyO7ODkJuiOacU+sb9LfAyBXWlL3PD33jpYoBLZvM/30LyhKPxjC1nm9bwKPMOecA7f+zm6106ZU24wAprHaw=="
        }
       ],
       "professor": {
-       "iv": "QWpcF5xUtrUtftMZ",
-       "ct": "k59BDKZHq0jgoej5gXkQf1B0SgFvuB9XoTmUEKuHZAmoVx7xf5udt58wHKpSvKwcT+qmaHFRHqY3UWYOeylp1bMVr3FJJvSqzvJ531/SNJ5uWqMVkcMuycV//0FZBfP8u0MLe2JTmslALd79La9i5otnQS0BubfGKIs7w+5OiRNgJh5PBxOxNmm+M3sgOOn2PUzcj/IfkjELyUc0MPoGXrhDQBgSZssM6DTeXGkqIrDmBJKFBXeAxuPEbmCZPSjM4rB0dACYOlD8hDM/WK2QbIW5xuDzu/3+XEDN5JwEgOb5rJX9TQRH/cvfjbYMHg=="
+       "iv": "uDt57pIDoGWfdFyp",
+       "ct": "Iz1g4RYRT6Jxr2rNvpFMmskgzVBY9RIlgdqTSE9dHj3rQIyu3pcGFaeOPFvBehRWlsbN1ursVUAcaVKb/L2TwT6h0o1xO4a6Wf/RrUUUasKv0UTMzPzLaAoMyR3C2i9jhztnt2fNozrM8X1KbrSo7ygX0YQQZMQC8EEGQvc83EGFh4ZSDMqJOeMBBZeb6nUq2P+4li4qZQq+AcqXsRAYkfKuX2zzgMaylInElyq56Zdlm335jbA1itkduxUKzyfcvwvMNdYQL/c+Z5rU5KJfQsZJXQREqvuR5VAMVD+oQ+Lry7OYSqZektPt7zZbig=="
       }
      },
      {
-      "enunciado": "Qual é o mínimo múltiplo comum de 10 e 12?",
-      "dica": "Escreve os múltiplos de 12 e procura o primeiro que também é múltiplo de 10.",
-      "numerica": true,
+      "enunciado": "Qual é a linha mais comprida?\nResponde com a letra: A, B, C, D ou E.",
+      "dica": "Conta quantos lados de quadradinho tem cada linha.",
+      "imagens": [
+       "dados/problemas/5-2.png"
+      ],
+      "descricaoImagem": "Cinco linhas com curvas em ângulo reto, desenhadas numa quadrícula e marcadas de A a E.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "vvUeYqwQssU+NqSO",
-        "ct": "giZDNljxg8KLxAhQ36BnsbfrI6sRoaITCNHWjITLkN+iRtw+PdECv093KL0LtLbVNCA4CBou0DI2rBbTY5nMnpUZs/beFHqKe+FKwSiKQ2hTIh3/u54r46yMlhLn+hGlTcMLLuM8TaJ1LXKx70tISQQDpNFib8BU0/4Q0XElUq7Ne5U+z8smPDKblgndTdX2YMrQ1Dd+cmoxMA0bUMISuAAbkZUKLsLZDgub5TvfLSq1MuOhEKjseLINat/fgIZnRD6/Bnrh4xhXvN9XZoTo2s2NhodXfeIAdegnK46oqLtHU3I9bnh18D/2XTgyQA=="
+        "iv": "2FD1zi01bN2VKyiV",
+        "ct": "8rAfsIzYGkU2uPnYkDia/nCG6xQ1OoeZ9kH0j/nu778XiBEyGWRNQjeGZGfFFVOTCfxw1TkDfQmLb6mbxnmfUjSmJXE+FmtP7xOK3zZac6Nb4l79JNuUTj4OrBwPjbsFK78cXv6LNEplrabORRN8iXf0ibaO5hrRIwaZ5mVIWiJ84VPZazk8+yF6/5tiZ7bgcHA2oorahZUMMAjyTD8wdJoM2nXOZ4/3MbKBixvx1WJcffmP4zOZGIPE19Z0n5rU005AhRWVKgMM+lRJ73soZ/UTwAVqZXwjr4PtosYSG3s1aVv5GgACyIFHCzpKIw=="
        }
       ],
       "professor": {
-       "iv": "4kncwRWAJdAoe05j",
-       "ct": "mPrUkMrp6T6aYYDbiHxLmzJUsiyANvZ3DkAXJmoAfV2VYAJbNJty+o2/R5ryObDsX2oeP0ni1wE4sdbCyTPswoBGPFCngS7opOINl+gFsbyrfpuwOWhrsyDBo4qwhFc0GuvtW3Wvb1Z1gYB8uXlksXvRJySkpoYICgp9aw92YrwAcbg9cDvQ3AdNKjEw4uj4UP/LMPi2eIEuEzowQFiDP//7C/OKwKulRIwkPs91I5KdyLMYM5Bxx4jzOfT23MDh5u5UmS9I510Bo9t7RcI88Ys1QJF3LUnqJtJETtpw3oG13V+oK9qkP3j9cWQ5sQ=="
+       "iv": "DA/m2jImxfEgzlQW",
+       "ct": "zXcSqQIgneEr+iNeDtbhQebm4elT7oT6gepjUtwGxR5uYm40H+iv3cUKtlwy2lgn1XgQj4Ou2gK9WJzBiwlcEAKOrKWcH9aZzpXjTxzRFIaebvc//asupqjm4Y4hGleSSF3bP44eZXaSTzFWtgi1jUL9KTH/3omnwEN6mUFcdijvP3oT0nhSaPO4mw0umWot+jsug3+xjxJBF+3//hE3fWRNKTnI8Hz7BX/xtuf6vENRGm9XM5LAwelkHdTj/RTClhcoY1ushjBuDp6lG3sPae/XsIvMqNfAdyncKlbZkQifrv3ctC0ATGmxP7fVuA=="
       }
      },
      {
-      "enunciado": "Um retângulo tem 6 cm de comprimento e 4 cm de largura.\nQual é a sua área, em cm²?",
-      "dica": "Área do retângulo = comprimento × largura.",
+      "enunciado": "A Margarida veste a t-shirt da figura, com o número 2021, e põe-se em frente a um espelho.\nQue algarismos vê ela no espelho, lidos da esquerda para a direita?",
+      "dica": "No espelho, o que está à direita aparece à esquerda: a ordem dos algarismos fica trocada.",
+      "imagens": [
+       "dados/problemas/5-3.png"
+      ],
+      "descricaoImagem": "Uma t-shirt com o número 2021 escrito à frente.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "vESfsV3/MgoFGE4u",
-        "ct": "vjM29jjiSmcJhp06gp8aW2db4baCjB1N5Mr24HIil388RIA0juJhQ0Rk8op7/c0AMrYNBwBY1uF5w4jHbU9XlPT2L4Ei3Ky+w8HboqWCB+22Z5P3emSpMlYiH8Psvs/gn9mI8LmEpmdx/Cq8p04gnb4Q5qVlwD+GFmI7lWybWnl+aOUiBYv/EvilNUS+nHjrKtGu/Ba63wpCVY7l/PW8IMU2aRgGMfgHxYabbHhH9w8IPf1uBmM9Sm/suYBB3WKNUxGbAI1ehpILQPNDEMyJhO9nBJ/wrRsXMHvar/N+tDfKwT4vB/yL7kVGoS3vr/dftF+VYG0VCg=="
+        "iv": "m79yJyDb/WrPA6ww",
+        "ct": "kkMVq31iEYNdUhd9ZcACNI/wExhsm/ITxy7w0D38IVF6X3MSKSPqS/0XYNb2F19saUT/NX6GBMHQAfcZYQ9FIrORPh8YrF3oRMTe/lfFIDL+kIoO77Oxp/YlN7OW+SP/mfhLgywLzYDCOCajMaclhCmys2w/4NDYLIUnoVBjZyLliunKto8nrMd/j6+8PlWjaydZGJiHqiJdU51uWoPaXeGNKqPdMRLc1B1rh7WuKd0yIHtBMdBGHpg5PJ3kgdl5QO/VVRI0UmhJ96EJa1vGwspWbt+8WXnJyOEafQLDw+2FRLgRnTRs0dAyZ8h1Bo019N02zuEmxA=="
        }
       ],
       "professor": {
-       "iv": "akKvtsEHy7Jt1+Fr",
-       "ct": "v10lkZuCicTcTtoA2vqaYqfwuEjjE9yIoSBt9mCBBVIwF5knFuMPOmHrg9LjnVm3fuB0Rbqn/RsfO+V7I23oinkex0SUpj00jRx7jzBYJXUcXommMTiCVxZU2Zj2Owuxfyr00UdO5AXddL+X79X31oCSSjO6u/wlES2mtF/8INzZoU1OMklrqekLknntBSt4M6mFUegH0foUmblz1kIh1sx9r6XaxHpl9i9TZMjS/YfflgAhD39ztdCI+zU3ZzxNza69FqCPLJ6KuXn/j4poscxCj85RioEJ0ZiuokLwq8mYVegsh8MDYa2Ugmp5R8/HvHflF5jWDg=="
+       "iv": "qZuAtsetiaXR9pU9",
+       "ct": "kRvC0IdcsPhUS8u786dbsxhl4xeNhE/03mh19C6s9QLKjYmFVLd6i7xi2CL9MhUY4FxORiK2CTsj7IP9KgYWKAFXZNuaNZLVNrTRLRbEOOJbuUFZg1Lyh1FZzc1prcUJMnKrXG/oPaVoXYJLmo4q4l3jtiO8mVCUVcR8Q6I8dqXPcshh20+dyaCqKc4x3Z7kD5vLmbN2+iGR7nTjduQKeJOj97a9GdNKTk968D5IMOghdE+YDic6qoHTDtDQ+rWVuR9WD3HGWewvU7jifZCaw2TBDphx5ODNf9AaB/cGfpBDdd+zja93mCH3K/WrFLQVek4Irmmdsg=="
       }
      },
      {
-      "enunciado": "Calcula:\n12 + 9 × 5 − 4",
-      "dica": "A multiplicação faz-se antes da adição e da subtração.",
+      "enunciado": "Quatro dos números 1, 3, 4, 5 e 7 são colocados nos quadrados, um em cada, para que a igualdade fique certa:\n□ + □ = □ + □\nQual dos números não é usado?",
+      "dica": "A soma dos cinco números é 20. Sem o número que fica de fora, o resto tem de se dividir em duas somas iguais.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "3oe0K3h1qLTrRJVt",
-        "ct": "A8vkadrSQSI6fG/+eQ0IPtL39cRs4ILuLmkiYpcIg17nS0SUBZ/sBPwDJ5CbVzyBmDgpTQxUQm092uQ/N+N7IaCDL11BKA6NJKCVQZVw1F5AyQhgMjo/5Cn4HuxbAcGHDtEkNohIXaKPy+8TfJ5DTywFkM396Mqrk661q8eR4kcHRuBI38cC6BXpyKFH0bF+vCRf3Rzpt7qV2TaRPM9HAvYTl5H9P7qP7MQmNdmsQiXGMMM0XzEiE2QyTBeCAdB1+p0S1T2Nts+B4ayFqNAmGk84WYku8aOKuZPTAfzIr8rTQepAhuan2EJtqDZed7lzO43K9idTLAwOw19rAPgv8pOaqoUxvca1"
+        "iv": "gD7nHVtlbLB6UX85",
+        "ct": "6NXaCCvps2CQQiAHrXYPDJ6+Ixu6qTboO8m23HWT9Q/H4/SOhkB0gJ8+leLw/6esWgzRQdI82j6NesEiB3dvOW0suZjWKrG8yP+iuJaeEgXXTBAbp6zYTCMKtsPNKzR33zNma8whqqlyIQLAqZ8ktiXV3yd575aBhufEhXdTMivbicS7kuCOX9Xzd2xPM/i/z6K/y8o4Xm/0qYL/wpIceQi7+FY9s2dRWry2cxF2iwOpdA57XOGp94hhxTmy7JLpzhFklyi+dk+x91w+KYP8tZ6hcbGvYbg5SatQ/k8mwQlIeYs+2XLZvcoR+x9tmClMOs3o9FVOIVfjhy85WzvEsU1h4YYO1s/x"
        }
       ],
       "professor": {
-       "iv": "Ufvd+dG4w9FKOJ6A",
-       "ct": "t+QCBWmeuyOdQ/9xwMKU9PxWw1bqrBOhsJcq0ZP51KyMLfTHRp3VONwG4ZR6Z+sCftDqz1eL5Px7BAJmWxkKtMsRaHGrOqPXOCITAtvg6FZLu4gWVwegrLowjEUPyKrvfxAqzGhYfpiG1uEdwEKdXmIxFT3eO1MTooFBPIWEmpc2o5HrGh68qZ8k+VIwVSoxdfUVeiv3hylDxqTpdDLyYwYiZpH3KZ1JoKCtqxLFPQ6x0M1/5Oa7Zn/4eePj1r7ErXw9exnzyRwldEugNjlNWUdB4dLOnle7/DxfSAdaOzFaJSBmtQtj9LPtj+T8/qlMkDdPl3Yzu5vgrDBtmWghJGvydQyCNK1B"
+       "iv": "5HHHY36lTMVG1TB8",
+       "ct": "JFj9xmcOCO3zxNzxZljISwjlkgAwuC2v7bi0Pd6HooWUajH92g2WU/MBK/sQmXZZ4rpfIGNLlGMwcZavIH2/Hh5xmSA2ulZUWL1zmRP1fD9qdYM2Nhnx8GR9+S9qro7GgmbvnZzWQAfKG3y1BdQ1Uh5U1BIqfV2ZmcMiRWY/6jNNNkVkXmAoYuS/SI82Z8GWxCW5AVThAE1Y0h03QQHwbsRg5Lan541LpI/b9twYMdu2VRRONZerkzaPmt7IIUN+GCdOzCXXzPB48+lubc+iFMCjgkAE+9sAsIEplD7clMepZcp6uuwhJ65UE1x8Qn3VWGUxnHWQOPas2d/njuB3wzSdPxNmDlJj"
       }
      },
      {
-      "enunciado": "A soma dos ângulos internos de um triângulo é 180°.\nDois ângulos medem 40° e 120°.\nQuanto mede o terceiro?",
-      "dica": "Soma os dois ângulos que conheces e tira a 180.",
+      "enunciado": "Dentro de uma caixa estão três caixas, e cada uma destas tem lá dentro três caixas mais pequenas.\nQuantas caixas há ao todo?",
+      "dica": "Conta a caixa grande, as do meio e as pequenas.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "EekbodJ89kStLGpY",
-        "ct": "u10ZZFA7NfVYTznDDRtqyUBz5lyzx/9NfE5rn7fyKHrz4VQHFH0Nx3ZmxdXlPXip6yFty/NCJB36H2ARAAxCjYiTMt+YJm8vWAPPfH9QuqmRDuveRfpEaFcZVdAbNwliMlQu3HQO42FJYSvrzUXn9eWfP9UrWycoJZ6X4AF8KFmwJTuhhWgqOqnvQOZQFofUJ4sb8u1mQVN5Gz8t9JewoUpdPzyoZMPx4px6ef3SuMOTrdABt+zjEqpDOuBRCu1ecpqUD3WA4lAa+pbHPSJRH64kDp7+Laa937jv8vj6gYW5+PhhuDEiHHw9Hni9ee8c"
+        "iv": "ayfjroMrz2w7hu1Q",
+        "ct": "OJc8hLOM2nbNGdjdiiF2GesBnFTap9QulC4RNEhlVMMEC2Tvb08wg0o/VBiHEJiSfjoptj4jLMNVDTVxnWCk0mBc+BOlOPwXy4yDRlMPHlk1KUWlOiQn4xRL5T8R4+M/lWkNOGMX5qZO3wlB7ohQSOzhzaCkrvlaareJmH6mT62PcTLXSoemguiHWfvk3KjZPe/ZT7mw6lF2WuZpwkas0tYXQqJxucGDKcSe2iYm2S7zwsRjy9I8grN0AA/gswxjgDEG5hpu1xKUJyde4qPNyxFYvRPZD27l/34J4aFQ4EYI8XUa3V0qGSf0GFwsTSdO"
        }
       ],
       "professor": {
-       "iv": "DfOAG8BjfWjhigd5",
-       "ct": "CoOJWh5WiXgQfkk8tqAucf9DogqSCbtisCq68CPEgBSAqT+Ldi23ydJXskSTDJpXed7B6kS6j2BjLjr8eoGpPowVlzSAOvmdbwqCVA/nLt98YM2H3SWf0OagpUtqij20H65vYnYpIieK8XZASU7dI+i2B5igV26XyMmWijlLonD/ysTroYVxoIg8FV5h/vTW4xLmDpsnpBEn6E7yy71lQC53ytmC4iIGesz086dFpgl+kMC+HYE6Rl9VOBHmigY9daUeC1i2ahMACkaqtuXcTCcTWHyp0krjbGCxKU9f0v0ruDKVBAVqDMb2D4VBcrB9"
+       "iv": "/zwibc52guPzLDDR",
+       "ct": "vKJ4eFbhXE/XT4VdhZdTn3AVIZvl4p7dmKCZsJJpWKv+PdNQ0uRbIFSwxzCTmqbcq+3waaCw0F7e1fQTevd5NoXLDG5Fs6Lin2aP68ICQj+kvg7/zm3cDIHFgwzyiqBrlZOQG0blNuHqV5gGauwlK2+a0Plfi5ZXXBOfUicrnZr6+MAky78aSCOs/yL8F7tGU+4jfNDD+Alc+KxOC3pHenCcJWPGf0ywvjfu8Yeysy3840Ru8BhPzTAYmKpVm+RoO9Gb0m2vEiKFXl6TX4Lgj7QuWmJLKJrw4frzz1sbN5pSDTb72FyoqZm1L7xNXTRF"
       }
      }
     ],
     "5ºB": [
      {
-      "enunciado": "Um bolo foi dividido em 20 fatias iguais.\nA turma comeu 1/5 do bolo.\nQuantas fatias sobraram?",
-      "dica": "Primeiro descobre quanto é 1/5 de 20.",
+      "enunciado": "Num clube de atletismo há adultos e crianças, que treinam de manhã ou de tarde. Sabe-se que:\n• um terço dos atletas treina de tarde;\n• três quartos dos atletas são adultos;\n• o clube tem entre 20 e 30 atletas.\nQuantos atletas treinam de manhã?",
+      "dica": "O número de atletas tem de se dividir por 3 e por 4. Qual é, entre 20 e 30?",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "e0FlrKZgffri1Fvh",
-        "ct": "86SoZKDQyK+pm1vA788BKkzzPZN1UD+N/1eNY18HiXIlkgVjBqvD7Eeeo/7kYNV3zY3WLr7VOgQqvOw7+ZU48Iph7GGHy1Tod1sfJt0Ok4MXOMJt16VonJ3LhQa7LjP5pTdOj00zOTBNyVK8pYWmdDAUY5LTe1cZzNmYUXPzgFxRo1rG7AStgYldZJ9njXgJuyHZJk4oaUcdxyjczaqEWzkzph3sKnFaAf3MoAxZEsv7eWwPIpKDtejXb0AeMKa9zZqJ5C7yW52Wt/AJiQjQBMFHm7Hd/8HMxZy0K/4R+qGa8yXZ2j/EiSlRhmJE5Q=="
+        "iv": "gfoaiEVaE1S3nPe3",
+        "ct": "D3yBDL2XwF5vwEdtONLvhe0B+CT1SnEZjMIDyb8/8qYV+oVIyQ3dfAJPHUNaKlzxaxuJkc/SwR5/mhQDmBaVrgV2Zi1rYPiCxRmEyEDh4uiGn3bQwgHZMsscattdHU7tcecyE/TuqMAvBLL+yMFqZmkyASjJsKWA9kAGNdd05Ju5/oiXMe6h154vStuZeup2zU18ivLH5BxQXHqRECbVzuLNn6Rv0zTq679LdDibxjc8cDHZp0s0GmaNpyNfBdltQ3xRCge6oTGgZnrFMnYDukcKmyol6W2qmJB9wsSeRxQdhvZML7IgUof4bL1zTw=="
        }
       ],
       "professor": {
-       "iv": "tHwqTUOnbRWeTMDz",
-       "ct": "4X3K80oYqTu47lPmZLwcxdi6VknP+0BLSk6qKD8ASilxDizGyZDfUskYPTvrznVpoPYVhswNxi86vGA/SwhKibwDlzKfi8g83wLKnS9AUtJdwcJBW3hrRxZxaaMW/qY4WC/y4HCL/hLft3X4l1vRXXfGX5w0ftQWIBjcQjZ4DEtI6bYfbOrTgeeiMSEiLHmViEXC1wcAxBScQZ7mi3OTkND8KdG7E9TnA11+2gyLOwd59Zpm1YntQtVz1kjFFdUg74nLFK0HE+u/ysu+pA3Nd7V9ClG4MrpoABFaiQONFcXeNtfckCWh+q4XfBjXhg=="
+       "iv": "nWFcpYJT4f2DDx5a",
+       "ct": "a8SFuuXQN0UsLtHdZTnfpRTAIGAgTwCIMEvBVMLsivmUQHkiFY7231B2U5zomKC1cu0dMYB7y88EH6LnhlqmpWquVbltpswsjfc3ZL3YzhVZvVSPoRUcXVwWrC+cUJ336IVbrJzVn7LKN60fPCCVjDAqGjLUmWIpBaCc+YY2xzGONbjPgK+5UJDlITFxOVmi1gAQ5sVJfzlJ5nV40yLF+XqZj5gnRLyHpF5hj1dsHLqEQxMsZ6UG7ydlOgEJjgANWa62aX6YdHOsnpCwefwgrFeO8yqpEgRwELMKJ8rqmmIiUeu1RkDTaZi/OAEj9Q=="
       }
      },
      {
-      "enunciado": "Qual é o mínimo múltiplo comum de 6 e 9?",
-      "dica": "Escreve os múltiplos de 9 e procura o primeiro que também é múltiplo de 6.",
-      "numerica": true,
+      "enunciado": "Qual é a linha mais comprida?\nResponde com a letra: A, B, C, D ou E.",
+      "dica": "Conta quantos lados de quadradinho tem cada linha.",
+      "imagens": [
+       "dados/problemas/5-2.png"
+      ],
+      "descricaoImagem": "Cinco linhas com curvas em ângulo reto, desenhadas numa quadrícula e marcadas de A a E.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "Pmo+uvF1mxZfsn5l",
-        "ct": "gDMah32ROJHPjITHB1uH/MaLJstHn66Amh+4UEp16BkdvsDBzkvbFdL9GfzBYKkjvYmQNRFyvOd0KvvfU+oMwcRcDDrPhAAduHViqOQVXRtTW2Im7YjIjhsJOEr0PnP0TNyZ3JtgAjd6ADvLez8ACwEaFub1uvzBE4JS5RteWmM85ktPOjix+ztVQEGL93l9ZRYqSy34M+0QKOfRVFB3GTQcBh/g1t+AP26dDOTHhNlgr5lNnYgSwrAfuJDQiKDMk38KNgygCqBlmThAa7I2KH6ZsMPEz173/TwHVYx3Zp44StRyRc367KKWcHrKVg=="
+        "iv": "LC1WoIZKqbBv30PD",
+        "ct": "+mggb330qOxW8tQ6FL76te5GUf/WZwvWBU8vDeoL6dCavuZU1xPFEZc9shih+uz7AO9AgkXtLQo8PWrsHnVdwXwVX66YFlvHw1e9eqhVhsGKQRkZLV5ymaa5UvF6Ws/dy7/UNWk+z/oFgmJTGb1G5qZsx2d7fZeL3ip8ip3DES6Tk2jfi1K5FsStrZ5DGwlaHfMhZF9i3YdTaTA798Y7MOSxMHHXjS0kOeZ3EH6ndEoa+5fgDdMVKI4EobmcS97aypvI5D/b2uxOI1EwmXfPxK70+cQZCV2b/MmmadEAKFJQLh36ffXqYEkeNRkSYQ=="
        }
       ],
       "professor": {
-       "iv": "Mugepy2hzvy7AUHx",
-       "ct": "fEcT0kXIETtL1vUM6cymd8uB74C7nrmwzqCru3d49UsrdS57TmmgmNFNtGoGfZ32jBy9zr8kRZVyqV5+Ikpncv0RgBFFI1N1eHaFC7doW8hELhrcnBdznRymynC8Y8sABV8PH4+rj/jxjWEa7nZCsiIaYYVn1kwuY65MoIG+o5rc2Xu/qoDrQQ3DtvexxzLyIiz5EwnIocIeScWQgl7EPXAad1HwJjSV74Iwtcy3KrKI/MkwLcN9TUa7xMcMB3OjA6UzjUd1WymFp9YQMFU9IXdWzyEQ/U+d8DJEZeweEZtzAp43GwBLYd5any/8qA=="
+       "iv": "Y3GFQ8CtDCOuBKPj",
+       "ct": "wFNcm23wUT/hKbxOxnfBcVsaquX85tS3pOJRovVGVt4ZwsRX6K8bqNPdOIjzLWdr/t3J1PIr51ePfx9ZSPO3g6jeh/KhPL8LX0Wbo/KpV/8xcGvkkDBkuoYKBqpYfcV8VgVMBp7nKuU5FD6yMdFA04CwFWmM7eajRnS5i7wIMN3BQEtde7K4aO2DQ8qlIIsnd1KpfBK12RkLDLSR6mseSY6mgLMair1G4K0A/GX2YX3w6ELxh5lubnCDWj8Db+4Ll/bttC+XcgrN6O+K9UAunJywC00DdWGFaAjxk7eEU1C7JdUd/GzDnfmYoppL5g=="
       }
      },
      {
-      "enunciado": "Um retângulo tem 6 cm de comprimento e 3 cm de largura.\nQual é a sua área, em cm²?",
-      "dica": "Área do retângulo = comprimento × largura.",
+      "enunciado": "A Margarida veste a t-shirt da figura, com o número 2021, e põe-se em frente a um espelho.\nQue algarismos vê ela no espelho, lidos da esquerda para a direita?",
+      "dica": "No espelho, o que está à direita aparece à esquerda: a ordem dos algarismos fica trocada.",
+      "imagens": [
+       "dados/problemas/5-3.png"
+      ],
+      "descricaoImagem": "Uma t-shirt com o número 2021 escrito à frente.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "utJJn6RpO1wLxUPa",
-        "ct": "kUFG1m2I5kDsJ/3QI/j3L9XvXv37fPwgFAEqVAxFQdH08OpmgYRjCHXD25VnxGhioFp97qSd5htvdizufj17BTZC23E54+tA8aemVGKk+K7yT0gFxVcz4mXm4xtBHr6iitD0c/gn/aD9QcsMW708Gf2i4eIvvvEYV0R0SzsWTxtQ019Y0TbmNxR5XLdgvNoGqsW1CHoOYQq8Uw+3hrA5lla2nsU9Y+Q5BypDR+73eYBTB4dRTsixf4CMO3GXKwZjVA6+eyFxbaCioeFOYCcdAZyKklzFMzRCW0ODhaixRhSG4+No2wKA/vnuo1p+JmvXBBbFf7NT8X4p12rkaYQ80iTFAaT+yj8xNUVELzen8A=="
+        "iv": "eZyQzhXMEVRXi/BT",
+        "ct": "Kf9FAnZLj/1fmr2vrMh0uPwBPKLs1LkU03Hve5rv9koymyOlscKDvrcMPM5a+pWag5WtHG03UEnhwKzRjdGLMaO0UOJMiI41IEPwCqEEL/TN4P18dlLHo1wdaB0HAhXvYNi6IcALppDxOtjBjnGD+XAZ4dqvUaSjvWFFDWWXDWb5kzKPvUgJJ1erom8Mlz/1oEtm6uJGbSE+fRaMdEhQtlkAgr4ZNuym3quIUSHA9I7cK+RTfzLiROSSXjWsdg0iGGh4NM1CyCcRiCKUnHYbSGZsCWbhDIh05bq9GAyTfPuLwmOkP53KsM68rfMl9WuspEah/jfzNKFAyoSkMy0lZYLcB+RqVQQIbC9VAUJh6g=="
        }
       ],
       "professor": {
-       "iv": "OSCaKbgCrHWGfFV7",
-       "ct": "pcq1YiIJkBxk3EIADcOA7BKi6ONlFCvN2WEzcUpwcQAlXYBRCFwmQhuzb7USUaysDm/9Mz6iLlYlV1LYMqS9DQNJS1KCmxWk8z5siOpoWqzGQvJKlZkaJdqWXMnezJlwgLAZ/roSQ/wjcbowuBoE5qaBvp4938y0m7DltHvYes2aOqRNrpGCX6B9h28cif5FdJxhX1BnA+BQqelwR40ZdWWZMRmP9W8XQTFDZRXyFwBMl4Owqy4VB/PcnfkLQ850Ue33bWODbt5PiMCkxnYYJM+aYQelD9CM5Dh/DuVU5Q+h39bJaPzaowZ3R8qMSIZGtOAmpIMWIzfCKc7BiYznVPhL7UeyjKZvpexa1oxLlg=="
+       "iv": "fDIzVgwXLMohdql+",
+       "ct": "UGBNgBaTT9VGoHpW0sUvy6kUt71CzPzapGYcpuyhdkCf+I2VOlB2/W+85e/cfMyOyCJPs+4W6FgB00vJ2HrtgNK/xt37cz7rB8+coePO7kvh+5U5d2PzJ/gJRdcz2RJNXga0WGUOt8wG9Xy0AM8XACs7Rvz5bxo2TvqY4svlrnq5TNdqVgZDRzRbtbqgCZt4FP6yGH5nccz0iPLLgJQKyPQiqnYTRTKHrbNJTLD+afiRXze34TbEcGlWfP+v209yT2yNVGKInQdEvQkgvadX6acI+9jPxN0QJrIxT9++d+RHRUVN21fEAtoQuogoIweeu+isBQHf1tED+gPjACdBv06fLY1QDXnHkTuSqrBRsg=="
       }
      },
      {
-      "enunciado": "Calcula:\n6 + 4 × 4 − 9",
-      "dica": "A multiplicação faz-se antes da adição e da subtração.",
+      "enunciado": "Quatro dos números 1, 3, 4, 5 e 7 são colocados nos quadrados, um em cada, para que a igualdade fique certa:\n□ + □ = □ + □\nQual dos números não é usado?",
+      "dica": "A soma dos cinco números é 20. Sem o número que fica de fora, o resto tem de se dividir em duas somas iguais.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "MjRskPiIijSwWwsM",
-        "ct": "FlCgJeQFIZz8rZ+UM+N4xG9R7caABQtemU49f4Ux+EArxLRZFXQpnneKnGPzbKRII1HRt6NSySo8S/HLFe11jKtu4KgKbGgMa7zA54NgV3kP83cnKnldYOXtPf/nLV0tutyBcpWcb7YoOXYwKG44kypQb0Q1KzqtvhjZPXFflunHoho2ncSC5PKMzqHy+KfHR6JFgwpHPNcCbVCCxjrOR2jGG4dA7W3kLJhooXouN0A22Pq9da0W96snjWSh9pBdM/Bvkc6S2SKEvl0ZI061gH3lglzBB3n61KTTZn190EhDMccI3p5Qm/HhdF+2/qSG8vQaFKDN0Q=="
+        "iv": "Dbaf/jOQKpTR0qKp",
+        "ct": "5+JTzNjk12LrYUhVekLcqbYtfWJKoH2L1rovpsk9bDSuWAmoYaKBTaRCHvVID0LhwHQngD9uWG2yeiACJMhNqbB+IF44BzkQYH8KxwOj+yZl7O8MdOODIoj/NZszwpvv/tZaHq76x08esRA1rDDEbI9xbL756z78WulbKDVQa9CTwQ4Ik5DXL+RDKEKpTs32y81K0RVDOsUJxVwetXClHbrS0e956vEsJGqNbSMq1nKaGS/vXNYFsjiVNugEnsEADBBnGlzSyZiDBFhmJjw4GmmfVXlCv+hPDIozn1waf3pgh36PFdJEj+Rvi0gXWMbO/ZOlyAurGQ=="
        }
       ],
       "professor": {
-       "iv": "Nyf0vyyNpHhHDD69",
-       "ct": "oUaAt0DRqq0xasYc63DH6fTvtkpTOcpiwaFzx/s9p2yojECO7iv26s0ksTtGXRkuuxUSQZU0b/v7sO5r2C5OB/JCcCQop7qEs2J2tc4ooFFLq/AzC7yKHBfU2FTRmkoPBEnmXp5KnEnUDq2qyMUF8IR4u/JKQhu6fDhjdqEblNrOP8OR6dc1iIEpFxGrisNHTnQLjPlvTMtvi3NlallHY34pv+RqGTfen92gm8yhGUO+8k25IhJj2FEqOCPSMYNxr3nMH6++h5WE7AMrFLyiMDnxBosdAIeSjACRfDHYkzchh1TytQNWUnpT1TaKJ6EOYWynZTY/+w=="
+       "iv": "6k1o/wrOIIkQXvTo",
+       "ct": "8mfk1K3G4IuaNC0F/kL31jyhgOuCvCLponX3A07cQoAJFlw4nW9UjqZuNahEYXa43rIdiiL6Wlb3D/HgsgQZqDroEmwmA+CRpyf/TTUVMdR6ZV57Tey/Mz47MOhJPV8Ld4Pj0d1QBktGMYNmMA6TQtsKMEVcBCHX3/hByk4zs/bVbxbSfIqUVTlJBJa2QzOUKiETVmRmS3LO3taWqBTSKuzWNM5rkPM3lOPORr1DKOBtc3v873nxKz60BXKyIBO+U8vw6DlrliKhGydMsLdQbmO8m6VqUgRpB19XhGDf1fiwOzkcle2VZFmb3+DZqcaA+9pnYXRLaQ=="
       }
      },
      {
-      "enunciado": "A soma dos ângulos internos de um triângulo é 180°.\nDois ângulos medem 80° e 85°.\nQuanto mede o terceiro?",
-      "dica": "Soma os dois ângulos que conheces e tira a 180.",
+      "enunciado": "Dentro de uma caixa estão três caixas, e cada uma destas tem lá dentro três caixas mais pequenas.\nQuantas caixas há ao todo?",
+      "dica": "Conta a caixa grande, as do meio e as pequenas.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "vu+1ObkAszyogNI/",
-        "ct": "AxFpDMtYxSy3B1B7Dl/HpWnDPkSuTD5ULX/pwWhBV5drPf8c+AQ14QzjfwfifkaANpDZ98+MEUXgNH/7UxCL7VOCxnnReDDa3l9nwNKNfDjB+HeUTvC+Q0QHrXuu1dil+3vV9tzu/5Jj/kGbPIx0UFofQ2nFOJyAwO1lczlqDK47mK/5FF7g8ONPf+23QOSdH139xWQ7VOlSYrlU5u68VcqEiULApcuQqDrwnf/4qud+yl0XGVldX1Z7bgNoBeFDMevSdOeUHfrPSO7OZo5zucbsO6TtxwI1iNf8bG+kB5iqc2ctOR91oehBTmncWDhvdczaczepR8W4KYzXAho="
+        "iv": "2FPc5jSiAADnzF3z",
+        "ct": "mHluVp71A22ID/UXDDteceaFhxMx5ZG8UbLuIqjAJgYQn3aDcBwLNV9igh8UzqBvyCygAg5gowLfoEDa6NOAym35RF6AEuhOiOfXdwd4M9DHH22ERMro7EIDRZ6X4ScurIW1xWAtMqJOKnatdMSnwDS96PQ2AVNQUW6uiaczdN0vXG79VoPIOubkqLR/dsJlvAGZxb7xzvfRXPQTqHxPmIvGiBnz47tozsv+0x4Vjq54cEcvLu8Dnm4u4LSMCWLKHq7ZgeiNDdWkOFeK5hZuTT47HL/94kbzfWSRDri4SNqFgUl9Lm61A0VIiiaIF+sqxNzj6Vz2kNB7uwum6Vw="
        }
       ],
       "professor": {
-       "iv": "vKDfbixG5V22tfOW",
-       "ct": "RhYvypDSmoWJyPt2PEaMIG5UpFABofnulcz7P1QK9ZeCjv8JlKYvBGmOXbfyX8GiAQpwKNvoaAd24ooo/0Xfuueen/vMWA+tNS8SGv3bLxh5bzWSe0onS//DTywxoe6eM0zPFxMdP+kQzFSuB6UEG2+f2/V5R36DCzqHZWoUpXrZWT9/WUAQtbADWE0FpKWwFlzW4CaUkVcLvcUqA5m8D65QIu2H0bjlK5BTYz4VYN6yvzfZEkxwtNUSF+77UH1ih4WBV0iYkF59DO1sDT2aiaheOykMl+ysAIB7r+bxxZ5D3Edosriq+M2sXiA28vpNCpFyklEm7oHIy+sMkPQ="
+       "iv": "Harqt76jP3kSxhFE",
+       "ct": "L6HZvBZIKH8MUo3LRGEupmz0WEEN+d/iPyQ9qSf0reNukU7rucm57HDD8MN+pVIIx6uy8ZHAY4k38CtDy9JwL7xmeMkAwT7G9w3n4oL1051d4wVEenzmQnzBUYjgXSEl/VFS3rcnJgP0V6HOzDDe8QBkTB0DQ4gz+v6UuBVFKRLeHySsKO9xU5LCbWTwwdwPjTCWTMZiCTWRnar12THhg2EnAisRjcvXKty8NuCpf8lD+57wmjnosw+cgyF0PYpfOZEBparspJ42vaAqmEDucU6r8mT8qza7orq8CT1rsYMZ3p6t3XJ88Ykj24/tw3rwuOXgJavgKtFWLDuohFU="
       }
      }
     ],
     "5ºC": [
      {
-      "enunciado": "Um bolo foi dividido em 30 fatias iguais.\nA turma comeu 1/3 do bolo.\nQuantas fatias sobraram?",
-      "dica": "Primeiro descobre quanto é 1/3 de 30.",
+      "enunciado": "Num clube de atletismo há adultos e crianças, que treinam de manhã ou de tarde. Sabe-se que:\n• um terço dos atletas treina de tarde;\n• três quartos dos atletas são adultos;\n• o clube tem entre 20 e 30 atletas.\nQuantos atletas treinam de manhã?",
+      "dica": "O número de atletas tem de se dividir por 3 e por 4. Qual é, entre 20 e 30?",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "+DoAxI+1FNQF6he3",
-        "ct": "CNIwRyqXf7N+0CuqojgRVkEVKg4iTOuhvvaiNbdzx0Yzp+uxdq9CVMDxhyUxXwbmFkcQ1yWCeNMpf2rJITWOTuOn+8PFI/5JGMOu6L7brn0B9nB6pcynbOV/flwokSNq8YyJizGU/sAYSHn6gMZBctc+LkdLMnvfQ/094iJ/ntgcK81Nhfx9tkc4/WwbDLsDnF5ppMWAxDrVIuVKHke0peYxto5sEXqh1BjF8Kp0ahZvvCXKagFhlssTrb/Rm6qTnYdv4Gl5AdQRp0SqDD12CUPFckGiti0AskoStuk6Mpzh9pfF4Qt5usdBcs6HEw=="
+        "iv": "5ZzLcfz0AXY0r654",
+        "ct": "jxr10+Z3SZ6E5miByxANCS4dqfd1ADzSNIfalnLs+Temaft8ErHZPb8LcTfKCoeWN9KJVkYMWjwefZVj1PbXvvRnxbxsbIaR5pAPDxXueJwgd5T2ckrRDRiUhDsBU/vr0uF4csWHJEfSAuAz2AD6xbq95WRAxUgBbdkktOSag35XNNXWetMHlWjiDQSlbD6SRFUcSRtTR/oPPBJnU7ELfIbd4OgYf5tsv2NR0QC3oVd6d2YZj5Lt1lAXegJwUhZf6KnuOZPccEkCkd3+I7hBKzUy+NxuNBCwrLXQgg6yt5oJzoEw0Nh+2FKL0LKKmA=="
        }
       ],
       "professor": {
-       "iv": "wU8xui6W4lbaojnj",
-       "ct": "BBaMZT7svCpd89w3QktkK+QqNpgmR5poTcI8TDGXwaSqiVqJQvLr+2J7ZhoWnIXgheCtvGH1wfWDTTr3pX1nok4FVWt1AOzKuRzysyp7V8zimfEYjiFjok3s75PtQvU5084Tkf4D/noEVF+NcqnSQuJpwuxNUcWv84mgFArNWzJ+3hqhcBJvQfChzpd7Ef64dczdA64HnQrxdhHCbsacMNuzMZOhyltfuZqkms4mYpY1Rb1IrhthDI1J3gjCQ097rXiY4VSg7SkUMH1GoYWu2XWkNymJsdz0IJyu4GwqlrKDF8o/yXZt1XbERNSD3g=="
+       "iv": "Xwz0uqGFPVtVJaaK",
+       "ct": "rBO+LcxovmPld7vlm1ygVaTitNNLlpOOwnlzGWx5Vd4+LzUFdeRgDz4gkRpWeRzVUYk/1g1naED8mKyo96j563ttR19Ebyo4EbyQjnIGy1b3J9QjLEO3gW4CcwsYKEGxD+1kiXVyA3RD8F5AV9taqt2Opn/aDiQel3WzQ9Lgm6PD2EeFL54X0le27KeIh6Knw8j6MhaGWORIljQ8NuSbJ8dvGG7mf38mqCt0oY+OR65PRDmzQxjmkxAvCmLCoEWy5WzZuaFtqV/9+t8/R95RUDqYydrfCbaMKIdN63CH8CCcS2IOv6U2cEfxPWR4CA=="
       }
      },
      {
-      "enunciado": "Qual é o mínimo múltiplo comum de 4 e 6?",
-      "dica": "Escreve os múltiplos de 6 e procura o primeiro que também é múltiplo de 4.",
-      "numerica": true,
+      "enunciado": "Qual é a linha mais comprida?\nResponde com a letra: A, B, C, D ou E.",
+      "dica": "Conta quantos lados de quadradinho tem cada linha.",
+      "imagens": [
+       "dados/problemas/5-2.png"
+      ],
+      "descricaoImagem": "Cinco linhas com curvas em ângulo reto, desenhadas numa quadrícula e marcadas de A a E.",
+      "fonte": "Canguru Matemático",
+      "numerica": false,
       "fechos": [
        {
-        "iv": "Gf3sGu8sVTdTy0bM",
-        "ct": "OoeDD6SsF+jDaG0LtcwjL3Vn/+x2UD+f7P/9EVmijW9sFNdDdNNhdvwknq3cyN/IOxV7UIK/1VFvYCLjkk3fru70/zPp5g+hoe0RWn3GKfz5IyIJDeYbLw7FKexNrXQyqkORLi6/s6z+/QJoFv+X/gjuEwdJuXhPgek1Glo0W63Hpb12kC79IAzVLc52lyaOue/8uvCULJETxT6Ng7LhEV00UbnxpaXDBYMzqImS+uWqOGJY7QkFmgwDe4kw5lmREcXBAUgG8qpcyC9s3IJicDc95eOUrTdkOEskbVLvnicRG4iKynH1Q3DyX9aPWiazM6KXje/+PTlKYZuKH2x5QcGfM1yW2WspMqrjNwVRdQ=="
+        "iv": "ME6ZXxWf4yT6V+GL",
+        "ct": "qOrHv7Z9e6M6ZpuDRH6NktIgya/b0w+2piUPUMzlQj9ofrNzyGz6/kGc2V9JwdBKTvem78ylEJW0U2U4xU258+axnE4q3iHwEGjVLakzEZRxiPK/ddz26Lt0Ca9das9EYR4lOdr6Eg3zNSCsuWy3SV9yHawn0Y2bLzPTiLPGy2Xmt1t8K1+V4pZhXT/CcFC7JwhewnjcSZibIgnIjMAks8tKVRPvpn4ezOJSWT2A/3Yu1y4I2DyLvfpYl2FmK9rhzXi7RflPG4qTNA+AVGBCG3Nbidos8yS/UBZjEz3oYVv4ZTy/rc6g9Pl+5AAVPC1upUStCFBlsrZZmBX2tc1i9TogfE2/NDP6yWF41aDYdA=="
        }
       ],
       "professor": {
-       "iv": "ecqud1m/IhZ3fOxA",
-       "ct": "2PhYkMXjJvM3mzzAK0HcEItkgJLoAkEJ8YIGJm1N1ieIV1qu2+fDRu1or5C4DL/gQuHQT13pz81lZHVcqfSpql68aCCLodm5NbCBl0u+5p5h5QJ8z/TMGTimea5s58gAN99wwCRgEV/I7drXwQWbsPSYmav209kqOoZawv8BSQKGSpsqGNn0jq2/vNAcnFdh4agenvVaWipPi3MwZieWyLQuy5YGuBB8NNszabJryAFyOerOuu6N1YjzGMLA8X7KvVNlRIwWi2TQPH+h5JHl/0OnvAUuLVytl96GvyaF771PNZJsKohP8hKqpIm57J2BJtgYFH/fuFODzvb0CAtE2ZIIZ69v4rr/kG0zoDLwOw=="
+       "iv": "KkBrPeNVSh90R0zx",
+       "ct": "mJCGbQsiRnk5IBkovbzP7wooplaP4M/9JGqebaPGC59XOBu+zFwo9Rd9pceXyri7tGRbfjIkdEwKvoN1jGf/PUZavqcN+URJWM7ODejGYkSsTb30o0V35roVYgw71/WJt5Ji5cN2nta65YgxapuH705+IORJNYPFE8QImEfiJxYKOqpFNgqLuwMzq+pPg1+G5+Q0CEoSo52z6aBFUNrKRTlwTlloDeEB/+pdzMtdfy3eGan6CwFXnaltD9mK8WCAOheRABHXBqLGlSYLsq+2qFuQR9lEbCo8mURxTwrSDHQ3yqCrV2RfzFYoGkgmzteoJPC48yDaJlSymY9EhGVmoWQ6Io7XmrPZ7BZZWOkSLA=="
       }
      },
      {
-      "enunciado": "Um retângulo tem 8 cm de comprimento e 5 cm de largura.\nQual é a sua área, em cm²?",
-      "dica": "Área do retângulo = comprimento × largura.",
+      "enunciado": "A Margarida veste a t-shirt da figura, com o número 2021, e põe-se em frente a um espelho.\nQue algarismos vê ela no espelho, lidos da esquerda para a direita?",
+      "dica": "No espelho, o que está à direita aparece à esquerda: a ordem dos algarismos fica trocada.",
+      "imagens": [
+       "dados/problemas/5-3.png"
+      ],
+      "descricaoImagem": "Uma t-shirt com o número 2021 escrito à frente.",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "gsMYViV0lu04sJIY",
-        "ct": "j6DYg9FXXHpIdnjIrUM8QdxCHlYIpfUCD9NmO3W1LxkKSB/MjzY7Jo5/JhM/aQcQDPhp0QQc83Uu/hboqQDO8xJd8b5OOauVyJIX1IrWloli+OSBvUdbmkCl/OoIovBxuzjffeHCrKL9ZA1tRBixl00SUghkVC0nukbiXgkYjPPAPEdhfmnpl9lCkSycbfv4Zdil7SgZic6c1iZ0t9lpBx3GlwNZhBH3mR50eSbd0DOfxeScLSV9DpRPLPMhEkwVogDloecUjojYQXGrVyuZX9kU1OcUJdQlRIw0cdqs6A2bNzGWCm50ODtxbRFQcW3oKCIcuuVXdCs="
+        "iv": "Dgo5FFwnjmtjd8fZ",
+        "ct": "v8/9BKMP1Vfz+Gy5pzCeBXr91mRHjbzYspqsXIKWZfZtdhY8xH9Yq2HRXD7G/K64H6PQrzJDHJo9RgmLOioClMHtzNWP3CgT8M5ak7SmMMtxKbYB7p6fbOg2p7Xa4XRK84e0bcsID+/8JZrtfYXVghRCw9qwgdJL0PX/yOgk+R6pUfAlcCN5RhOt1IG1e24EC4p9T0Rk+0YdumgpJDI06ltcpLK8NdEwVOeNtCS0ezJinE7yo2a50qXLdhvAfRyLbaqzv/r3+2QuhWEfDY4A7bUizl8t+iBVwJk98mv8AaoI8ISNp7NhTdEaiz5Uyv2Z1rGNIgkrCtI="
        }
       ],
       "professor": {
-       "iv": "4dIWqabDuVAD1POY",
-       "ct": "9f51t1I+rzuCyHh+ia5asLghQGUeSm4ENt64OUzbSMZe7LjkXe3c2/yPM6QH2Jo/8IB/KmVHZ+C3CF+coApwElSqlq9Z37qGO8NxWXURp47o6/J8ejz1QmRNaSWGQ3/hijjy/Dp4tyAuggjuTAMzt0DcNuC4uK/wQLZHVj31OeX4cCtBN9DyDASIXeNBk/3N7MAl7PJhCtHc0fT7u2RtZiAbJ39zHTlR/TqOz6doK3r9P7C/QEyzC73MABioPyikHaqfa/wf9R9EDD3NE9iV8gw8xEYOSJmJlA1yeXngZtnG/18nWsJpYM2bkSQwu8i9kNGG+MMaDXM="
+       "iv": "roKsWw7BNqYxgJ7P",
+       "ct": "trpxbuUprmZajp4TriGTi0/yvcLlpKiNbR5MSyiJ5t4sD2uxJM43mSSoOh5rJQA0eUuZOgWeoxa3JrzDvFzZ70sP8/JclRJl8dAhGmkJIQuGnCLriYhrXH3u6D5q1XcfUx5pVAB/uKN55CRt6xzldmgoVapza2LDTC+P17b2F5LWbeVvg44XtiRx/IiQHCPTpE4yBFkLm5E+z21bSG3Awdgw38n2oihPyfATETeoFc5FYZ/1KKJwdFAP5lQYtbNKzzTnQzeOuqL6LOITFwksT+AvKO4joRqrBPDzll11Aa568JwV8i/AmGy4rTMIM5HPnyUpnGd9wcM="
       }
      },
      {
-      "enunciado": "Calcula:\n7 + 3 × 6 − 5",
-      "dica": "A multiplicação faz-se antes da adição e da subtração.",
+      "enunciado": "Quatro dos números 1, 3, 4, 5 e 7 são colocados nos quadrados, um em cada, para que a igualdade fique certa:\n□ + □ = □ + □\nQual dos números não é usado?",
+      "dica": "A soma dos cinco números é 20. Sem o número que fica de fora, o resto tem de se dividir em duas somas iguais.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "naqrkbWjP2Uf/M0J",
-        "ct": "rnl3aLNO7cgqQ2A5MhYf3qM290tBd9opwExdEMd+Ut72mgzZI0P9FzO6l6YzcgsEFxgVGWEzzGWJ93+wV2t91plw5ND+5jVgmmpJjVx7/3xMjQU8Z1Ifc/LtHwXUBDknrjQyKZPVhScrdEeTNaEzxR5cDnQDoOGOl9iX03B8Qw6yeI6F/LUTcLdx4jwkFKkA0ns4Hr2wVQ5OzVbtUI6ecNuSi5AmYkay5jisRYMuYu8yguUWm1x8qXZAQqW3pUW7N/dhy75m3gIGEVFpbibNkVmV/p9zyalbxTeS5qDFk8JCu6S0w/kU+foGqhhWXWI3BNo0iq8WUqEtqdQ="
+        "iv": "34I5osQ+ZcqCQatN",
+        "ct": "r7nc8gyBdS1pyQwtmb7CSP9jBtxp6q4sqe7SfWMuzPkbDgiKgHzqzzfs8vcjkLWQGyCn3PJ0ZFCbphHmrEL8QjUWPSkP7JVaAEAzFBjQ064tWpJa7HNDmIq8Ap9JiWDQXxW3DsNv/rZWFCul3w0niphZBtWz0ltgeGQvWwURjTU39M9RZYLhcr3AKaky/u9Feklhdq4JHC+dq8fAYLNaBJgr8/2KN7LaS6hzkrwFfOS7Qz1kDlk4zaH8xDj6Qrvue23Mo7YB7nXlFF9SuoTF7cT8vjQGR6SVWOjhd9mmg1qeSlIux6TauNBf/Ptbf0B5tmVVQKFHXDp/4YA="
        }
       ],
       "professor": {
-       "iv": "4fg5itKrdC6qKNVr",
-       "ct": "iPHhZKaJNOPrlhUbiHfP4UUCz8jBVZaK7i8cTftov2+RJLci5+9CUdPx8GrHP/W45c6rjuoY4FkpgLF/16HGu4JXSgJXYmLY39rEMNOxjBSdam32Mopaq3u1lhBP1YrF7qRpKwGDqXOyifzVatLSHWh3CHuWHeikWF+46rsz2Ky1oAPxMqW3KZg7mwBuP9Hn+Tjhm1ypcIW/xeBOUFz5RIPx79FSnJFrJTgepvS58qdUUeBR2eKDToRjNjVgn8UKRnwUcm9TBRYQrTlXmG0TQ9XIPhbj37+oYsOnj5QpFEdurULJfoD4xDuu23bQIZi5rAoL7gDBg8TC7N4="
+       "iv": "r4VcYYbI9YuJzS4i",
+       "ct": "5oeVX/Y7Yr5Klz9d+ZnHdIo2jM4BSIfWHAR7g2PlorwFo7J7iGhje1BZsdatOy556A7u4C90zZGZvrTyAoZlIOpLxBNKfUFGb4WOCvg3TpZDJzka/Ac4OxjC0Nvt8z3m0Md7uCaF/4DXIJmEZtRJutPqgO1hFr7o4vlJa5SvBrIBHiQuK3dh/sVOW9diSgvt7ak8iBIASjsP5Jw71T80EOWmDqbK/WhIlwA++SK4UGlMC+LwVDEYX05SH5qZ4Mr9S8swq6o5Dft2tNx7Qe0mxEDVLe8s4iYizIjU4WGiH0dpOzq+isObeEFljJI01t6AlzbriTB17d3lWh0="
       }
      },
      {
-      "enunciado": "A soma dos ângulos internos de um triângulo é 180°.\nDois ângulos medem 70° e 45°.\nQuanto mede o terceiro?",
-      "dica": "Soma os dois ângulos que conheces e tira a 180.",
+      "enunciado": "Dentro de uma caixa estão três caixas, e cada uma destas tem lá dentro três caixas mais pequenas.\nQuantas caixas há ao todo?",
+      "dica": "Conta a caixa grande, as do meio e as pequenas.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "Canguru Matemático",
       "numerica": true,
       "fechos": [
        {
-        "iv": "jqHYBxcDkgNn2Wjb",
-        "ct": "PIUmT0kPUXUMNxtQc2lst16+AmNkEFgBvhEZcRU4qaZPrCDhfOy7+4WBC+NZfsnwU3g5CsOZLPtHJELFnqZc4NVwMKVFTI9/Qru4nj3iivqto30HEWyHZmWybYtmHAfxKvOJPk+pP/lDmnerjbzP6GaY+ZbHKbyA3wkfZJ0ToBG2cYD6B5euL8gNeGhKuvo1a4v0TRGH1Wus1trlCZhG240IuWdDBfJ4dELmrh+EpeLBGy4rx45uZdTYkStfbwi4GoP/7sLuqg/Azq/O/89+Nr1YnV9HY2luG4NSQc0/w7k6r5LOFwLVhySmXZPMKpzj"
+        "iv": "wFmtIHxw0HU1Abhz",
+        "ct": "8Gzx5fjk4KKI0/OAzaDgwRife8Yj7MJjfaHSN1dX43usNcuy+4QjNsaKroa1qwtObHrpr+rb8mftPp6xpw9MyDg0gxw9e71vE31CjU8Hp1iBU7HDkdeUyv6gQEmZMIWWPIHtNpK8sHlirRgWsJwTGAsYje+/CTN7OBSPmZVX7We2dSLzI2oPBqwC+zgNV8f4hL4QII6UGk7ratJ7E+qk9z7uHD6lJmabFYr2MLDUhOh9/tiLmBgr4GdfV17W5nCjzjq1AfH0YBctsv+3G/QK/aRBPd6UpRL24n6jCJDouQExPvUwoRyjr5w/IMVoC/pS"
        }
       ],
       "professor": {
-       "iv": "5HLP4tq4RvpBOLOm",
-       "ct": "UJsf+V+fa5dryKSpWoHHKEtd/wgXJpTbaCJgBlGJSH9RpEneINna4OlkU+qyzdyMKmuZw9Ur8AosRiZxEncxcmyN1dfWNRLDut1bs8pTmD4y8RxZB2Wdt0EjCRsX9tt7WF+mE1HQ/6CHJMjN4+F5tMf8GdKPhOsgJjliWrRVaNNl0JxghbsreIQBn/U4YuzqjoMhVbpBHgc84LqY5G8W+tzW7D1IneprVs+3QOZLpEWQ+4ERlP1ox6N1rviHyM901mWou0/MYeR9TsJmoTA0nmjla3jf/GCw53+unQa1rUHu4yZ3ZBo/d13qvdRYk3fT"
+       "iv": "dIIBHjajSG/EK0bI",
+       "ct": "S9FxrER8gtJ+H7Z16wealvAm+t2DHMN6b4jNIZ1d05WM97F1F9ItzBB8VvvlaK6Gb0biit3a4wfQZcMBYnekkhceTUIn62VSDpnAw64q1MdwjpFGEnti60pRg6TbGHrHalsLNkXl35evo/CHnJbVn5zB1K/uSi7WoxVckm08gUFaKI1gpstp4sXI0sTdPF0PgT5icGesA3WwlJKW/VPnRaT7GLwV4SF6q/j+O1418QITj7WLHAij4W18l/UuOd4DXvRPapRr6HvEKitT4NXgKWrICr4vjIDqLgepNzj0D5/68SscsI6m2QweFXHppTDg"
       }
      }
     ]
@@ -1037,25 +1305,25 @@ window.JOGO = {
     {
      "turma": "6ºA",
      "ano": 6,
-     "grupos": 4,
+     "grupos": 5,
      "sessao": null
     },
     {
      "turma": "6ºB",
      "ano": 6,
-     "grupos": 4,
+     "grupos": 5,
      "sessao": null
     },
     {
      "turma": "6ºC",
      "ano": 6,
-     "grupos": 4,
+     "grupos": 5,
      "sessao": null
     },
     {
      "turma": "5ºA",
      "ano": 5,
-     "grupos": 4,
+     "grupos": 5,
      "sessao": null
     },
     {
@@ -1067,7 +1335,7 @@ window.JOGO = {
     {
      "turma": "5ºC",
      "ano": 5,
-     "grupos": 4,
+     "grupos": 5,
      "sessao": null
     }
    ],
@@ -1076,76 +1344,91 @@ window.JOGO = {
      {
       "enunciado": "Calcula e escreve como fração irredutível:\n(−5/6) × (−9/10)",
       "dica": "Sinais iguais dão positivo. Não te esqueças de simplificar.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "b4onY0QZ/NxDkTO8",
-        "ct": "btmu1tRDpJsTZm6xqMKKt0b/d+9ydy4CjSOiWNFHhb8bUl7vt4ZKQrxtauUVDdOXSAQ64b3cTCsgZt5hPVFdyeFeYkAQcOka4Hhj/sFggdq3vcHTBBlrCTdZssxo3px2tWJMKOF/SeD5PG4ADpcZtbXma4aPquj+XhMvQeGs/84DPgSk5jMgdgR3tcCUahvl9vFsn1xdc3I1G0cFIchNVyWX9urryPVZlHCHqtsF3SEbyIW9Or/zIH+Xc8iWOAeCtNzKu8hzqt2XeTcBltu1gGn+bbC2n/9054XfAGDa+kb70OX0YNKKpQ0rn/H2Fw=="
+        "iv": "5RXRRmYxN2q8ohRe",
+        "ct": "uCINQnzD/vQQ66tgwj17agPLsMMggmx4fQomO3WAQRbpFhExFhLvSPMCl/Ad5G6YrwQJsp9cz9xtmOLOYfhfhZrnXXfWhTl5YauceTEdMXBXMCbCmLYI22Od6KR+WgIKrirPms0gOWawW1sQUb8EijN0qC4htW+8XCa3dO7jRXY/90qrtV8U1u/nXxpMrzkVzln70lB/v4XbZRluwA2vjnSB8AH7vSELKiM0R88IdbsEIrUj9dR83I+4srVGQrxoPiJt3BLasD4YLXZDfkhLVgE3neaJvkYpdeZ04PVkvUz9BEWv5lG2cbk5Ilxtuw=="
        }
       ],
       "professor": {
-       "iv": "OfzMOSB9FNRaecZ1",
-       "ct": "OTqwfDz6yphXt97iEpcge1ix9JxjAI1v9szH5oNj13Clo5nljZXLjxPtsDXSdbLb44lQG/XeA9oUDlRd3i55PfJLAjectk7BnANfiQs5OzzQXvD0ab/B+vTQ+tTbGwn/hOuLrNDqBFBNImaiKcT5plH1l/l6CFqQ5bPYhxh7eoa1uRB4OIGrEc9QwC2VyO1Hm4nrtpHdCaJfNjW+b7cBTAjpTEEgHS3dKR0ES2oQV790PWUVbGaELsnJfnljypR7Gq1a06qIOxAxvkXDdoExje4ce8kuRk07ycJnfKGwLMay8r/BB4IprujncJbfxQ=="
+       "iv": "MblfTINWyXW7wUKv",
+       "ct": "iKK5N4z1B5QESpo8QrFBVdp0/+QJFKp9PXpBztpLjDZ20ydAt1azrOxyBaaw72FdmMz6PLNNha21gQhnAQggRxLBVn/iKbW0W6kiDQnD+DVjxCzgsET5bevS/qM6J64CRvQwhioDWNBoG05DCttGumdI6KHFHy8yQVHhc4MFVZW1vP01Zez6fOdwZDqTZhsqutooXYMtuoI/+JRmyMMiqyw3fKiBCXA4lKOjNhxwm3XyfC88MVwPRuHRaQJEIpW9PV9DzBF+MaZJZqih5AIkbKnvbi8Jnty5bFOFTiHD7KyVSAypz/FKUqrVsBZ5OQ=="
       }
      },
      {
       "enunciado": "Calcula e escreve como fração irredutível:\n5 : (−7/2)",
       "dica": "Multiplica 5 pelo inverso de −7/2, que é −2/7.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "JFGf2OQddYHz5Yrg",
-        "ct": "xCXqhyvNH0Db1P/GJx4SuBLR94LwWOUZYUDyHntoTd2jzmPSXpUIDJa3Tqm8TYrt91mldxS2AVbqPsF+cLmNr759naqJY2DGPYRKiQ4nviqY3Wg6yYS0ubH9Tka93wSdIHx8lZ1HOilbwRVQLcTz/dTgzl3TP+wV2Gpm104wDmmdqY1aZRWSkuCSUktkR5tLGYoZdsLJJay9D6eYHsXqscAD+mE9EMkn5+kCN+Bfx0tPTXOK6Hx7+tTZOGWSVaJSCqLPYdk3lP+0N2JPvzWxxhAYSc9+SWmOo8JorJBYLRBtv8q8RqtwnfIIa4xtqSTqDagHdfZvjyVNy3+tAscxxg=="
+        "iv": "dozCk7mP0fQPiLhl",
+        "ct": "V4JU4abxgGwORYPOHKfadRvDCei6K2rjsZAn5W0CXKaI4gpW7uDdLtEYMjY/OUz/srO8K5gJPJV5DLntbdq7tC4YYuG46WD13WIBpvskKdHWmbbdX6J49dS1gWjICe10rLSjCPadjWRU3A1UqKRIbuv5Cib9P/RnpGxaXxIpwfIsh4EEGcBZFM2s1nSBcUEiBBENcHDhKctUF3PmjQjmCt4M71Jilp45/WWcrqRXcMh309/Wm69fAVSouLLMfCLz3gOFdJkDJrtnKNBkx9Oos2Hhr25yq4wYr5hXlAqezdeMSw3ZUH/iriwQhXS2fniQ1AdJmQMbiL+resQ8i1wwzA=="
        }
       ],
       "professor": {
-       "iv": "ee3fbZq6aEpfqU8E",
-       "ct": "l0T3QL6IKWmw7sJsRaB78rL98TVdNv9yIXr+pomVqGx47yKkJnJTadtUMlz3WJT+XlZ/IvQ9pEZ190eXJBWn53F6Jw/Sko9ZPkiCQ4KPgnIHsAx7NJ2WG5iOwz05sil4+giSHiUJTIMnu3WpoyEL5a147Y6V9/UmQlvfhrtpxt9zk88IWuFEtMTY8nUhuJFVA7bCIu7spjAFlY5SD0iZQP7G57eWDAfvbcTrpkXiKJM/uWsdS2TN0J4fpS96sn3IR/pPkOy4owWmtAlMVAljDKN9fCEPuuQWG+PPBkUfALKe1rLjsl+O8vlxigUVyBg1P3l7e+5bOdo2d7ZgfXBGlQ=="
+       "iv": "Radr3yE9u9J4L2ns",
+       "ct": "tKjHbLsr1tLhegaBGA1dcqY5LfAKmpprABj4NZJD8HuB4tDMMgPuzwWALYGfyKNrJdiKL1DCbdkOjpEItkQ1INYmviu6BqsqFjElGABEHE9SWeklvNyg62jW7QxZds4GRh9L08UR+ald9U9LVNcGLnfNW7GHEem5DGHuvCrr8yUUp0v/iuptkdsxU1tC+PZSYcQe16lH0hoiJ82Y+MeVfYfkqWNRFHf1bYcxBqhZfk4517L6d0H/I1X+YVjcMM48xYWW66gOG1c04pKuBhIw+DzODp0VK0dszMEufvEO9dUkpBDCHlphDVKxFqrXoR93XTs2jbi7mTrNnpkup4wmgw=="
       }
      },
      {
       "enunciado": "Calcula o valor da expressão:\n3 × [12 + (−5)] − 4",
       "dica": "Primeiro o que está dentro dos parênteses retos.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "/Y59D0Sg0dbcz/dG",
-        "ct": "/uCOFAoQYBYNHBQnRyVDQ17WXIn68MDggZQQDo+5m0t88VWqxu9o3PLY1qg7z5PGvh66dIBdQB6uL0xUjPU3r0LrnP1s7OmUmlgty6ueEUV3AvML4oex6FaFP9yhNYmkTfTdxaJEkj6hXIWDpzraawwjjaTsOyO4PlEKRS2eBMq8QVUx3E7OxVCPB5GOEmCc6Ib0/y+I+JIKIfLPtQvZR7fWZRkhp7Y442LucVaD6dUoFVxEVs57bcqw9o4M6RjeQ8Ii3oKtzgz0yTZ+5gLrS3BZsh56HMQz9AKHSQouzAUDH3gNHEemvsb5qlrxeihj/mV6z4F5lftw+RCP9ZC8M3iDzA1XM6Bt/DPbMWzsOQ=="
+        "iv": "BcOhgIFUGlt6ul8d",
+        "ct": "BRwCcLqr/gjn6iMrV3gC4YGcKuv15MpKa1J3zrR2WkgD5fQib5hKIEyLdHTT5uh+v9pkgoBzCplusiKLo5e9VPl0gA4iGzNQhVtN23hofN3gt1GkXsKcYL7HZpoIi4Ab17jrr+8EAyIyHK1doBwvqTqr245JtkpaO/ddagGYCE+WyugxGUgBQ0qXsDcTHpkJu+bEeTHPP6N0o/r8KmumsFhiOwymdz9Bhk9zwfu0rbSKy9r0wnlcCyzVkYnC1C9hMdSX0JFhtX60m1L4aCw5B+GQ10OypuVoWon5bYixVL2c5N4RVFr4TC6DTwoQzxVLMPl7aCKSnefzj2XDVLyNlrdV8ERqBDnuV5TTHXtnAQ=="
        }
       ],
       "professor": {
-       "iv": "54OPy6L4IO3cCQE2",
-       "ct": "z/dz5i3iJmk04ESEVS3JSJsR6PChJ/NJ9uQVftdPEi8rPMTwKKSdyPvlYqAnh8CdHSNG1tgt1xVOD6UBEerazfsJAwUFo0NCMM5lXFjYAwYqU1F8jSr8CIEOy1cCrL1uWBF5ZJWIVaEfmBAEqJoEAwuVB7olJcSxt6x+vjemuIEqAmRsMVSnYXtn9hT8u9i4iKTBI8OphMltkoITVleWiTNqFK4IMjgGauUUN7mQEd+2b0vpY+eFqML24wi0QOvdr0E0RCIhaBxABxkM3sa9fxjtAg7wGwd8lKHlDmENRREblvgTx4GHi+8xwpW9eBhyWvdzHq4L6hDOLgnQaI9zvqhmcy6zETBS2EaMSUtlsA=="
+       "iv": "8eyU6m5op+5N571r",
+       "ct": "VR6NeE/qzgdEL0nWX03t0ZJbzWfqZsV4Uh1XO7N/CJSNjV4VMDvKeT5V/sBiPpce/jN0fVrlLZj7PBcOeZJzesJTTB94GmVQQTJVuW9yT1HPSxIMJa6MC078xJi9vln9w5+y1NS1ZZ4LOUohXhtFTcl87rAqu+JHCT9yE3ce86giWEthbi2L78GfMiX3bTF5p1iHagts7b6cflscGwkNhQy+KmzEDTQaOxZe1/vBAzKwoucaJ75b4C7j74SUPlGe2eARgO2E/BVsCa16ZOIQW6aCLs3iQQIXNHlGbORX49jfZyz0YHXeWAzOUJ+3vdmesZ8w9wi8Hl0fSScLc14P33XhniNMOF+5cNrj9yzSQg=="
       }
      },
      {
       "enunciado": "Calcula:\n(1/4)⁻²",
       "dica": "Inverte a base: (1/4)⁻² = 4².",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "O1V7i1BXLK/gYOKj",
-        "ct": "o/98pE1vom8KK0YiJcicxfOrPkoIoVzmqekV7Xc9rEqI+CYT6KGGREfp8FqDMviKMsqtX2QdQD9uvL1vEC0qHrDkAqwkHZANlHto1Pert43vN+6mtbbtYb4uEtcswqNnPiarznyvwpMRC6Y1YduQJXStXTGXYnmfT0E81JeKfCobk9zlLL9Gh1rGRWsl4HCBXtZrDAwJIpJMMna6nT0lHZHDKERcX3X6AOBSG3iEGh8I9emnNrs3NAF7M76UxU+18/GxFlDZ/8x8rCDwWGZvrY/b3DUgOBFGpIY5CTgVNoxpecbXhqiQgg/ltxRaqjh9Fv3aQ+KeVBC99GaJdw=="
+        "iv": "Uw3HfjrmsjkAdvoy",
+        "ct": "19al3y9FVy/Spu9SQkqo/kQQwOT0k1Fz/cD9LkMfGfZEG6PBZopDy+Af3bXEDYb27Az/uEtJSBMk6AmoYGJqphyO1H2EECRCiNSKMMSKgQGAkX938KPyYKlr4wA+WPFU5wZobEf/lqF65No3jYBs76K8IrCznUWWk7qFAJqsgO3/buMYQAgQ1T1vyTCWhovwSvcsCOfz6qhhR/CYiQc5hDlJIaNyzlV1GdmYMv4s5GOCnzkcvpIaSuDfghceTLxqbeWxLLSF6bQ7yvXyQk17wx8h4X/d7+Q1VJyzm0Tf0ThELdzp9JruATk+ihSIVm/T4NbR1+H3CNNPAQeM/A=="
        }
       ],
       "professor": {
-       "iv": "Zao6N/D4IODB3ATU",
-       "ct": "eTtOA30qjWizaHVPkZjjjWqpvAbDL3iEawgoQXxrBW+X1cAfHD60ZTB3g1peHNKUWODYYE9sSXexZSyXtWjceolsyarL14ut3MoSfg+P6a0aK2+r6x15rat+/5UxtxO+laSKCQLI/DqV1G04+e/dUn/xdyjaJM5XXhGiRWhhG1vu1QFKP+u2tr7Kfzz6kFujrE0nRl+4SspKyAE5HMnftjV8ghErb3aBbmNKjATF3eOduZ5eIQZ0a56TRQtCGGyCcsrg4RK1f4z7oiHjGzIxsIBHTVr4xHv1uQQtQ7ifjDy49gRR9SIcUdivua5+CQBEcvZBUcJ3cSED3HAvFg=="
+       "iv": "4Ao+nktzn2XUlONm",
+       "ct": "3p/p+NeomHuRz2t5Y6o8j1hbfct6gWe7dFYqc+Om7J1SQqNtqTMEDBQC76vho0Bmnq6+FWOayJM8MIqFN5zfqijwbWdj9P+m5ohW1tbUYli79rq4Hdb9wdFjQTvxht9Wj253VElLkaB3onFSFO8Lsp9yaxECuh8+WJd7lUaYwr4aiMXEpDFNiGUxTzMnsXS+DuOTvTQoNs3UVX4vSHAdVhZOEy6Nl/jJNb4J9xCgAAp7RZFI5An/fF1N+ATLlgV4ZPeJrtufjvoz+s18Qrs08uQ1OnR7QW6eTuRFTexp29h34pBVp9gnlvtPO7Xyw5UoePKKxxEreupHEYRfRw=="
       }
      },
      {
       "enunciado": "Usa as regras das potências e calcula:\n8³ : 4³",
       "dica": "Mesmo expoente: dividem-se as bases. 8 : 4 = 2.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "81ar11YyKzE7DPye",
-        "ct": "xvCK8GWLUjcYgZkjokwODRaXI3VGrroce77ZGWoCie/5FkxNQf2yqIzusMcYxpejAL7hK11XwmrK/PNv7q2bu/jnX+qs0PI079v4rqBqZm2HRRHsFt2ToBG55AGlQNn+thpnwXl95v18A1WjCni711ba6flranZpaKHZlnVsHMFsf2cG9Y/862YnaTeeEmZarZGRD0xmRp/s+65SjP7jLI5TpkKuDoETQoMTixAD9YUhcnZIeTkiOj/qs1PGXNemcEMPvGK3Q7x8tBlJE5zyi7yea4e9taHYoZH9gUckpE/wy724meZq86uEcswwlybn4pbe"
+        "iv": "3Ngyr19rhFKapROA",
+        "ct": "zsabzECwZlnK0kDvU1SDmeXGQJl/DlRr8jBIt5YCHIpqh7pwIvEycfBIKS4xjUeDxXGBd0FCiUjokXTHU9wly6Nz57AlPgK8FoBIC/Xp3/ysE6bvBMY0fq7RQUCCiBwhsc2roabxc4JfwUu/LDHAFTN7Mi2jwQ0rAn+e/+sExyC5KPg+nYkhqjhWoh+lFYHJHeUTOcODSgXd8wTyPFM+rz2T+B88/pQLW9RRM7R8d0Lu9T/QsAfDdVi3tAObz4AFmzJI9D709cn0rLFNJ+LWIUA5/OhWvpvPOevRcKex7dAD0aFJv5Zhb4GY4HoXkAwq9A/G"
        }
       ],
       "professor": {
-       "iv": "96jUEtWLF0Oyw28Z",
-       "ct": "3Oa3tTX2jGcAy5hD03ryfphEEeRu/v6nsZMtBGdSRF3rP08ua+w1tcVHuuTAXqz1zqZst7Wu6Ahe754px6p3roAgZwGF5QMsi8YX8CfyLSBzvFO/pN6DJgmxnDx34SnSXKs3ngL0VCBFHBRM9Cqs2iUZD/98X13bSF7SZP2z7pKMfNsBlUO2SEqmfJv7rqRekCiYHE4Ah1qzHHKmgXH7UMtZYoFOjjYZmwYHBeSDqcU+lvonbwaVf5KUciMnyUGclfBffvJI6YNDjF1FadTITxIu2hpCSCQU6byPNT0S8OvqLAZ+PQtRUT/hldyiei3Nk8Iw"
+       "iv": "T0w0UDlYA0lxm97F",
+       "ct": "DNMpF+PHRjt0ylAhcrFekczZGJT4lw/aB2N+GXQvUse5N/UbqFo9CxDmMGwJfZaNw/DPiJCRIRodgAP9vZoxGapXkERlKsi//aK1gyxuPwPY5/A33EqtKKFV5PjDfvakyC+RL9rz9WfdsKncWYY/XT/v5ks4mAbUcMgvvZRd4pY7Fa8yuujXLlEU9UtzSkYgGS6zBb6Nmy6HTaKYOki88v4sDvewVyL2F/3oojHT3WxDIxszpPOyVXafRyCrSZX+BOQ7CP+1ynlZEkp+CpoinNh0mTM5t4R9obGSPw6OZlHIGwkyuKmeesvwccI7OBwm3ov+"
       }
      }
     ],
@@ -1153,76 +1436,91 @@ window.JOGO = {
      {
       "enunciado": "Calcula e escreve como fração irredutível:\n7/12 × (−4/21)",
       "dica": "Sinais diferentes dão negativo. Simplifica antes de multiplicar: 7 e 21, 4 e 12.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "KzXeLhymk+cOHhKt",
-        "ct": "Zrt6gwO5bmLiud9MAE/6mxFIcitMErqOfVxD/IXs+4HDB81odDIkv6SDbX/jzoEP58FvdFx8VtLYML2PYmTBnulrHjMD5+CkvFixDTmZYXQEZ5rZX4HDb0dM/55PxeMbua0c6DOlrI4y1n7eNbpE2OBBiLvjMS/SmrUjfuXWmTMHKRC3+9i4KNB8XuNiDxLy3/XNzN34T0rdytH08iw8ZNY7+2BUWXOoTQ3mWYKWU53yW5JciYupIjuhrKaXDxurVBHGcrpnkH56sXmbLNJbyF8tchsa29DhQySXdCdXXmzsZh3CphtpZdDLKvLU2w=="
+        "iv": "K0vXQbTbY8kvV7WU",
+        "ct": "LSp2UxB7jMvHHR5o5FN2P713limXUuyGEqPXTNzqJ4l9GMW2ZJtVgFXOIpPIqo7XEzy3B0LbGQ9iKHapHG6XQIzNLiNBtXqrqE0+8GoEXDp8NIMSH+/TRiCqgycLUoEYy2YC37E6WIOlwHz3pP7ekZ1iRWWOHuxdqaKJBr9ZDnS5062k/rSZxGcCQELz7ifQnKoJnyZnRY0S/FEv4zCYFUTsYdepBQCL490T4/vHVtlDM4GdO+q303xrbYx+KuK8VGSmIhjReSGIoqoP53251IQY8OLRcTMYgCQz/yrfKM3u0KiYRTd91uxfO5hphw=="
        }
       ],
       "professor": {
-       "iv": "BolfVlIWWZhL+Ws6",
-       "ct": "3x/Ow+WrcIMELBHd0lv1aom6CmoEMejQCvV2emXwCoo3xHG7hI7TwX3Tx8/JAhiL2loOhdJxDBijLPiO5iHtf4QyRDjfi4r8FfLUURy0OC1THciplN/TdgFvNAamlQlrNlna03nIfAcAE16toESmEP3mnKf86vCLH6m4QNohS96dbX3ZRiz4Tlg2QIY1XTX339BNbBkMjLLn9g6vf6voJqDMKF6dex6qQV8StLJfaX6pDfMJ2MBuYxBXQAlgSFJc5Ymu6QAvxTM3hk63tIt+vVFDQpOmXDzuRuK7LJ3ipEbS1+4zggS3ghHymdqd3g=="
+       "iv": "1i6KD/EeS3VgyefE",
+       "ct": "rxrK9OfWTy3zX6roA2BY6zPub6n49YusqfYSsEjeK/fImAGH1IVuXAPrwHDztWkiIHzbgXl1fU9sjdYFXu4RBwJCx2wT2wEKUYUXupDeJXLMC8Y5WMJuWDivcq2JJrih4kWF95VuiEFY+shlLLpB4tnswEW3aGeD2/suV1cGX7z5eEwPszCIvOO9Q+eSkUkv2c44NyIFCe+kMoGotUbWP+e8L+qi1grQ3smzatcpaTg4JJYPTVBMXp4UmgRx5ykMWrPOdAxoM9TC60LhDaxsH1Z/NMRFbHAPeb2i7BTZ0/SjQenNN1/fO2jl24rHXw=="
       }
      },
      {
       "enunciado": "Calcula e escreve como fração irredutível:\n(−3/10) : (−9/5)",
       "dica": "Multiplica pelo inverso do divisor: −5/9. Sinais iguais dão positivo.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "/uY9vQ7TOq5znCDD",
-        "ct": "onCh9aqKFNnqVFc+2o+goLHLv43GryDMOHlQNcF6Uj6x8sCfFJz5tCkJLkJcwW95NDEoqQm396ydgyg+cDHXtrAaA8g7WkZISG1JQCYHf+bWVgK66ocXDVH9Svvz32at9UP/9Eyu6szli0WjsmJzc7nsDPwd0KDG3YtHTHTKLXDNCIXrzCzpO+qY9QXE1fFhUzwa/Jc1Fj4tlZ48wv6dZOMD4Cjd8zWriYGjVhjDiQDeq6T4ywgxddIVs+ZtA+V7BAyJSQkBC2+7jal2YFKW6zQwdBwsRomUnzCTFSAxdye0ZFfmHTeRBHMTwwd7vXCOKf6vAx1vRZQj/T5S23kZGA=="
+        "iv": "Pj58vtRAD+Omw17g",
+        "ct": "+LAvxDZNpyq+TJ8msMOd/WI7pAPSz6z5AlUpPMe7jaudlHfoGSWYS/+y5xkSPKHes9Yk6avRbovxd4fIUgH+3O+V0A/viRPEddeKZIg13k87NzWGGH7xUTSHubQa0+lcVaIKovuMj/Qz1qtbjAa8ApKICGiaYlLM4eujVVWLMUuFAWhvZPTG9/ce18jLc01rMu5VjfUCQdRjJjFTLNXix0aoEGsVxi22ghMAsXHFNivUtYK0Rr/h8hFkDGdwfs6LTP2iN0ZXUbWs+htLMHWMax/r3cI/gkFwsD85y33geHYvVml6WszeHaaFZKI983WHxfNlOAnXC3D0xKa9dbmrng=="
        }
       ],
       "professor": {
-       "iv": "QwdWtFVXAObCql18",
-       "ct": "8giiCNGJje5I9csBgpvjHW8dYKkWc4un9kanA22OJ3detT+JAgs5pPzyGuvJXRmFDjnpNP2TPGIRR7uCYAzbpf70hoPCDlrXb1UGac6htKBUWncKMR5qPdw0bZlyfcEsuEvpy2nxM/KjzFscno6g4KS+l4ViwMykPQpZFm3EBcItwHo8XNJ0MMdbr9390f24pthdHBAEm5o5nouXyZiX7FYQy9YlUHfiqu94L9nQtnzzdMLi3mSX4IeULR+Q51YNM4FtQ/zPxvHNteZQlf0nbxkwHSp3Kfm+gNggf2Gzm5nJLL+emZHAvXdvChW+Sc/GGXAAfVC1BGOkp50QZ9mbUg=="
+       "iv": "u98jr65hh1au71o0",
+       "ct": "IoJ1XG/qufCH3OPz10m55v3J1rI+QhHukbO6Z6Qib+feRYeY0GAKi0OKocqwHCAD3eVIU2o4It+d4GkPVX4kI79ZEDjvx1Gn6uJlXD8LgFras3fatEF+kciaTNr0iffregEue52rx4NLeo2TRAWvT6vUCS+Yp7XYLRtftqCLYA0aHb9Ndbbo6p7mF+8HUeL47U5yqkGem5k9hUGWpumfUcVWHsuf99f5Gpc+vzmVuqY+0Exs7haNFhcAAprOv3fhj0jr1INP3hhxvLzCgADOBfq/iZBCTvsUmwnfbcAs1pFXfL6iUmbixLdo2AUbXdXuZe7iMzvBIej7svQZfCwrYA=="
       }
      },
      {
       "enunciado": "Calcula o valor da expressão:\n5 − 2 × (1,5 − 4)",
       "dica": "Primeiro o parêntese: 1,5 − 4 dá um número negativo.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "pYK0EHBFsBjhhN0i",
-        "ct": "g5JBgkXrWz3vw5mjO5MGECwmMRYqOgqMaBJVqFFNJVcjVDvaduyxeVOYFsT1sstGVYwWSkPeLe9t7gK6gQlPaxFhnPpSjfmFV0ccOrbm/shXBvXPt/qs7X08g+aF0nh1E5+boXm4memMgYv8bwFbzK07UY1/cyRIBs7ajl6BVMq5saDPQrPsIe+EWjZmkbEhjxtpayce2tgnAGOLCgCxwZehc5TOJ+h2Irm7CUAt1Y9JxqQJDbTsnw1b5wrldPpRHF77UjB6ew9SVl659RiAGG01G4wZmCkItv8nSBCDRPuFMgyzrw5YY/GOu/ZIeTfoEySYWVpQiJcLA8DtPGNU9bxj"
+        "iv": "Mbolxgpo2Huf4Kyl",
+        "ct": "ibKLab5zksmvQdPrYt9iau3vCM1QcAWe+8rSv5ILo8LuDnSjR3LQ8djqrBopMmEItNtzHAIyPpcZCsZsg4P4/0nQcIR6GiXtgY5y+XYfYf9U7g4h5ojFdqn+wuTXrfB7+RMKAzDQr9O0dZwspyAjHnUg4P6dR+FcrvC5SR4UJfAWuvGwLHKxZ/z7RU1RXcMzP5f2q3uWGB82CHx9iHThrq2S/bqdp1xELwfq38L0XZ2XGdMKJhorckRXdA/frjUhVG4EHFAMUDNR9ODIPrpC7ROxJ0+cKdkYVrmiDL3fYsI4tOEMpnetkYoRppTGzPLno5p4oME69KFFRSyak7lXkyUZ"
        }
       ],
       "professor": {
-       "iv": "zojb2QCzR9ohaaBU",
-       "ct": "nJ9bTkcwVtPWZIRaX7zg3h8IfCoFv5BQJSdI3qElo21o4566BbjsXTHedhk0I1KdPuzT/WMhiUmc1CLC7uUA7vQ+CUpWOjYIBsLpEDVLl3PXEm6+3JFCz5E4o1KfAd0a8jXPh5+sRxAJbC3SIe5DmUk4pD/xyRqwRALIL3KNWnhb3U1DYCyj/GgYC2MvZPW7NU5vpWDtt68H57REUc0MtBvwP8oaOp67N1XKocrBF/ltMtSVdUBP4GbaFh4QvtAf+b2KElxY1Nrvk8sM3oiHQMTwxKkEUbSgnkgwuUg2b6bDsnWdGyRmkrSr4UIPezhhUFYSIUC20213sFz9uo70cY2L"
+       "iv": "l5xynOIVooVzSm7I",
+       "ct": "Lhjv/cPDUFQQHlFOqU19AuQ+NNJyf0kgwfXcgtIbByqXToxD/YOCrIHtfd+zwBAxscOFSCZMU9yjcPFteBcd+P1IMExWBZE2brUPSWWFwDfnLSb2Kh4Qaank4y+e9HHWFa5+ZXeC4t+bfadhQyj3MH9mhHtfHkNnJa9ExZGRTSDWz0+/eoKpsDtq4Kr1Ccks+HYbPzhazziFzuCod3tADPcHrdKiFwZ31kNcFtJsLcW3cxJScDtZjK37mPBBm3xXTyXgKZn5y1ChB+NAiYGQ+Gd4mheWMWoIIlD2IDpT6mW2DE0OFdVS4sk2wKEPuXEtaYtAT7tEwr0k0aTsZ9zlnWd7"
       }
      },
      {
       "enunciado": "Calcula e escreve como fração:\n(−1/2)⁵",
       "dica": "Expoente ímpar com base negativa: o resultado é negativo. 2⁵ = 32.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "14iJrGSK/hunAK4m",
-        "ct": "VLwFAx2SMb5CqcxJlhk0JdATFZNEa+l699+RruNk8tXvERQExnC3Gvp0erTBePU9ivWjYUr71OZGLX0ecvoZDennHXz0WZzgPmoP2zIKunZj5XbRpFZtKP9snE7DbGiGcYX7FnlLMBdt8wm7L6gzyobeBPvvZ5ZPUnPPOFKE9syP/GTGUYvAsmWiRO2HXUvuUmktWt3QhSqLVhpSza79GDoM5eM03QGtUpuTxiZMVC4l1OgJ2zm3QACc6SbyDCCx8OONe4z6b/NZIDq2l1zd724KWLEoBs5tnqdiOj2+YTkJW6Z86ut/CHT1PQ1OwfkuUMv6wOi4WQ=="
+        "iv": "smj9gexWQ4hAoDnl",
+        "ct": "cBc+IxR1SJ5Qc/tN51rX6utLNbMCXV+l6yUgKkP1IHKtXic6I4f++/np4FiSPkkM3/t61DRhQY5vHNqNEqnlZh/efsbkNriwFbm+mDtYwQNDUvs+s+str9yZLgL0Y6+rnzVEh8iiqk2I5I0vwfIvBI9n73tQHZBL9CVWyq2OivzkB0a8MDoyxu6ZV3KVOIi5fQVQx+mXodKbMHpkTVGIOCavcnsdXjaCHrbAFe8SV+X4iFzil3b3F3vKiy132p1pWd2HGqolV5Tq5d66cffKNov/mCYa+QQRqUFkTFNuXOab4a5wTQmaROULfhqBZ0tI34cJUWPkDQ=="
        }
       ],
       "professor": {
-       "iv": "7kYDhUrG0ZIc1v0K",
-       "ct": "dP85dZjDQtFXu5+a/6eUVIL0r/6HRTfnXl2Hm+yK5y3jVlLtW/+6zMfoJxFXbrIbokzkN+ioC9r/3b+iWSEZ0sKH+U3iTf4AuNTLdRLb4HMI7Su8QnHA6Vrac/WUtKCarq0kSzmuHspavS+KfMsU3lsRvdmz1lje7XwDL1CB1ZvVOW+7SmG8pitp7+wW+VGBZipZwsqzUlCkk1It7wbP9sZh9cAMnB+E/s4/rY8WnhI+HUKHSPzprXA5TctgElVr33EZxjO0XNGqaq/GvAcq1/EgyjkMf+Rn+LcrsOjpqmL5mQ9zLvBjPH3QB9/LAkPzHKH76dCyrA=="
+       "iv": "/HvDSfmk2oBQtoMI",
+       "ct": "ANzBNDuRstFNGckRdqCe+cju/olJSzwLCm9RlfOHTijzp6+pDvSbic96+S1G/wkt3qvzWIhN7FSmc/+4yFIqq+H/klLG0fxNcfoB9ylJW60KqHfLp+cfy8fxWNFmSrUvJMCeY9LTYkpPxP56WwHTwPhwqZf6IstXEUaZLhezwKzmYYKTN5eCi5mLDGIEyxg6Q4Ew2XhfKl8Q2BAXB0Z7/ArGcbOi34EHmRShIE3YqqXluPYzjxPcrhonNzPd6n8bd6pj9Bmt2POSbXtoGuaH6lAaDCmxj9upYQueqvY1armzpW7m6KTwMCgeXeFWOq77a8oHMnoj+A=="
       }
      },
      {
       "enunciado": "Usa as regras das potências e calcula:\n10⁻² × 10⁵",
       "dica": "Mesma base: somam-se os expoentes. −2 + 5 = 3.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "aSuMZgn1/+KLa3my",
-        "ct": "1nUriA6rRvDTdm0OrWQfrtZHhqfQTGCeDf4lnf6H8notw9rHleGDYtbwh+jsoKzev6n4xQx1jbxfU5DDy6N+iWmR5re7rzjYzzIYoEm1E8siW2XeopFrIv6Y4HZmdmQ/ACWimbaLKrucQZFBx2TDN0MmwpywbhtPkXcAQonxY5VDrfoNaiHmeL169Bzb7m56iFKVaP/+sbLNZPVRABt6EKCxiQhd++sGaNkNjci0pD4LZyOMivuf2LE50FWcAM75yHv+fVCHxpsWJRzmAQgbpv/8jdKn1Y47MhpfklcO/AhIt/vbd9kfzJZyHuopY2XDx057NtSFXm83J/ghR4vhwP5P8xt1Cug="
+        "iv": "WHtV0ZUA+oF/uUeO",
+        "ct": "3Y/A1keQl0ADLHHTClWzEJlmPyCrcZcFfa7T42/5TkRBzOwiICiS7BNi7fsjZLfPYhWFvQq7DDYyfF3RIOiU0sRnEz7cGSVFfhTYTOs+dIm5PvW+pVtREGJo0oJhtj824HZ0GeYTDNagRGIIY2/XIe2jZzA6bC3XbVMPqjloli9qfm+dtvH9cUStdqnsL9se3puJ2FvS5AeslmjuM8H1L2lugBQXhC48E81lrCc8Ueulh7AT7Nz1lItOAGuAa8xJICpvLPf5ppBhOVNFyO0k0JGqAL+mZO/w8vXLTt/jGm1wxB47ap9uDrAIvKCpAMLmeEduVb4ymiodUjDAF63Y3ReEpSBTc14="
        }
       ],
       "professor": {
-       "iv": "/yQRQFn3Jz7dGpxv",
-       "ct": "s+eh3GlI6Z14zc7VIelcswS4xYuzYG4YC8CTjUc+0trzwEEPFk4S8Ii612iNdbLN8OskadrVzO3zmDJzV0fUkmY7cLIJ6HddHr5H/ToOR6FD3O762KoQPZ0UsXmHJNZAeSmh3RTf/ojbO0LvXWtPe9dQ2jO93+7Pt8Qc1/RTLkrnRxfnJb7H6zFRijs7RQ1KLNk+HlwJyIW2ILnqv7Z785/khhvnDIFOSUnmqOsb4S80WRnHUTu7KNL+B9S+K97Fe2zZfZ3wxIvTyRamp+MnyWOSCePpzBG8vcrE5jwdvuGEQvXXuEaUOIREQomK4EABEsfWAxvkNi9m5/zPbNsmS9oX8dWbGBI="
+       "iv": "2o2i7DjvNfuNc+NL",
+       "ct": "rvnOkjsjymt4Kt6JfFpYRgOUejshbDx1cVRoVjl3dd3X+ieGLPGRLSD5Lj+Fm8j1QGMTvjccBt2KYflgN0pNG+CQLkTftFrsIB+NZkP9dsKmAkOON063aYBsrpkeOz7uvBHN2vUM3aCJVxmyQSVH83HNoK/0YsB2gxFVn235EQQaczoaxH77T1NspTJXobnq22weZ/VtZP5L8HqbBC2NBDk23xtqe3Pa21lt1+/9RHgPAXaPY4hkY6MfDc7qIDVvPGpyzj78bS72ry94lehCRi6kgxpDGwxJw/dQow/uRMbHElCOZHV6oMRqkejh7MC9ffBFsijLUsoXS+iFHCanTN4eYg8lZPw="
       }
      }
     ],
@@ -1230,76 +1528,91 @@ window.JOGO = {
      {
       "enunciado": "Resolve a equação:\n3x − 11 = 2x + 3\nQual é o valor de x?",
       "dica": "Passa os termos com x para um lado e os números para o outro.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "dcinIrEjzBo2DWoY",
-        "ct": "pq9zmjiIkUCrDT/kMzw36H1NI0hkUv6JMha1lVX+psaaTqYGKwmdoriFL4UdmqV0FKwOL5RCW6bp/lc9p64Y+4QmqDSgafUexf3at1ZJrvNNW5eS7zuLgh11HhqWNKaZ9GHQ1GBde9oXnv/QJMAn51zzQyDOTzXJB1b26kpwKY2ereDiafKkOrhaZfc/O8Abv8RgURBD+t0dTS3E0UtIeXofa9nRaYC98bLImPbZ+mZERBM+TsfOzM/hy9LxrTZiqF5kKXKJ+HjhWRhYVtUs5BdftG0IIQ6uQDn6wmSOCqXwbcwKB28l0Zg1Ase7QA=="
+        "iv": "6QCuab1T34sft8w3",
+        "ct": "2nwBeUh2+FxZWSCMsOC10CrhYSd9GFYqeOamHWpmkqdLtdzRP1M8UGrJhNcBXcYLI/PgjQlYw5gbgiYpTTYRl4eOaTo2x8J8wX99Q2ENkv2yEik2JYnyr3YSjJy69JW6UIkl3gtoiUJGYjHVygSooCSspJ1EhSWzjJKwF8BFpGwMZaPj93ZPLzsP3WlXhbhlK3wS8IxQFx8aA2kx8gZOrTCIml80oQVGWXwEix4Cg8UClZzf5kXKqODujpykO3gzloZct++4oi2w8jx3FuHkAHHhlv2Ee76ucivTzUM8IU1bCj5tdcqi37SElsc3rw=="
        }
       ],
       "professor": {
-       "iv": "0A0I7d5dMGQY1gv+",
-       "ct": "9G675bMqTs9qIaOO8BIHwqIlN9IDv9wfVc0XuL3u20Wr5/ne02T9JeC01cqr4rQrfB3wAXNebVuzBY0tK0OVjjr3BdhYy5rDM7Ktw0cKfQOCDl351XzkbbFdFrHZMDPE0jkZF8E/yagwEKMNhO580CEnnb8qYicX5iZfbg4gCXs8DSZiB5q3qfHEuJmVUH1l+iI8YYbOqXN569OuTXC3wOaFDXO3R/01qFr1Yj2dopcg2EbHcg5elh0HmERYKvhcw/thJDWHXtx/xlLfUsyew97ZDZFhxPqLaJ65jYpsTYeQ5b4uhqNSRXTSATDmXQ=="
+       "iv": "WDc+sFXkMn0tJC2C",
+       "ct": "bjAEdtGaPS3IG4JghmiKbIaeX0AX8/kJHpvdxiYxShba7o6MfSA7fts+WK7/+ZqNF46vGZWtbviwldygI+SwOJ+iwiKANb1Me7O5M+zm4aY9qvFHM0FjRma8vNFEVe3C0DwIAZi8dgyjzIlbftygY0pNppI90F6Isk76Js/cVldLFrnqk8WHsG0gENqT/iCxCPFlY6KePMOg0ftcvLqZglzwXPAW3nni8e6Ju0+qxDf5rM4DdxqJUsjwlCSgsyvecnmeewyzpO1yfa6CUC+8YbC0TYCt8duuyW3zPEU1WKsC8ITNjlcrqbBzzbITPQ=="
       }
      },
      {
       "enunciado": "Descobre o número seguinte:\n3, 6, 9, 12, …",
       "dica": "Quanto aumenta de um número para o seguinte?",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "YwXk7MxXLCV7vw5a",
-        "ct": "IYPjXKFQk5i6qhNQS610o9MsT5YuLdvK8P1Mi1HJEoKLPiHbUiZ5Ln4T6IB28rG1UL1KGkwA1G5Qccz3s6NGUWU8mRs/MEvFNhNUXEUU3324BzDjMgqhBQNYCv6uuANYyT30iq5xBg2AYwlH/x6tMaijFqs9kepWAVpWChh60dxAtrjZCPodf+luTBkwy0ehfTG5hU1pOIovcz7qXGllWoT0MiaEsv/Kv53sc4D7vFtvMazRBql242kUoL/Zrnhs2UMEEHMBwW3eYvdjx8zhGUmBWVosNqbWAVjpQ7bSxu8kDgTm7SWSGKCzamjJq3ddDHJFBMvrj/sda+uNOLNfOQ=="
+        "iv": "NoV+9HV6WsiVX39C",
+        "ct": "umCK+QCyaPq5LpS4YgKglV9PsoSYUOOczwZZl99iQTVKKMchfv2sXfdm3nU1wXAw8ozIvvAMgqfUwFearQiXPIgLewTPNsugeBcF4ERxmJedSV5Lb6jzXDdqU1wPJys26dDAJkpnko1jHkmGslVhpWhD12DUjbi/102wc5TF0QnS57JftlKXM+ZFDcxL4Ii3BwBfbffB6Ip/WMbELMeU5a8DzuSxI2QvO2IPsb5nQT/tSfbUjiTL9CcIbAkNbayjAfcuP2pM2Sn0kA2cEV/syIbWCrlhsyBeDGGhRF8iHZdkxF+R8d/Cm9PJu8Yj9KgYkExlbdPeUlSqkCui2GIUpQ=="
        }
       ],
       "professor": {
-       "iv": "QZQKGdxRyay2OVeA",
-       "ct": "deElEb2BOOAnfvUMI5ujpoUNfwpaeu4w9Ss53j7mfynKc1THemmdt3PUuwV/ZwvTH2VvPnAWKpOfzA01eeV2NLHQtc3GQ6to/yfgJ/8gHunaGhiXKiTaK298oK/ijfUGktFU38Y6xM5clK0Z+Z1QliWDpjtqbD8WK2Ggt1fiJzmVjUYhgXF6xa5A5LUJkCtYC+4LH8Lk0l2NGBdlTQwWYXjwwQGusKJChXdZAr6gM78U73tWN5EJqc2CPUrg5DUuColM+jKcy1FHQHE4hPG9D4sOBhW8rMBWVGGax+JVf3P7IsuiucfO6rxyCzrtllT72BtjH5e+pXvlu/xCCdDItg=="
+       "iv": "j6c5jYceSFpOQVUB",
+       "ct": "okKxlu7uzp87ZRjOnWXUG1mQVJkvOlG745zZFx2K+EkoV4qNOQbc68uNR7SZ0Q+9grZZ2kQEKJEze0pGRMnj/F0NvELOgt1+Nt702R8hCz9MeOIQ9UUNeck0/ULb3/YlulqLgZw+C+loiWGpboMPkZkeu1InQZD9t16574asdligurwG5wAUL7p3EdUuUE6A7NCMLK9hnPRJPa90Bubg3kTCPbqkkINfHm2CFoFYguPkp0AUwAFpySKLibIF0tkGAx1v4FYrCsWCkGowJu2c74LGYnOcVnCIDtGk7bblhM6z4vd4MoiEIYdBhKHTvni8Jrn3R0qvmSH31CcdrQp7Gg=="
       }
      },
      {
       "enunciado": "Quanto é 25% de 20?",
       "dica": "10% de 20 é 2.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "LbGkkkRt7HiqySPB",
-        "ct": "5S6unqyWNJByXaKFzX+cK8u9Jz72eSRmOgDQtoYT7350wJrJNQRE4NW+7iUrwX5ykKjCBRFKRC3nz6JImQ8/B+CgH/Zki1lSUD7R62IHnNyqilBPHG7s34nHhEyNf2m5sQ3HBEyFumLculYHkC+aVgnTiNIXbEyTN+6pbi5JoJqyaMXCo9oSJFyvsdHITltkWveV5YlCE1Q1mEoxg7MsFWGR4IZklHk357TR45LEVcz1EFP21TK8dRhCod+fugZsmATzUqi631pwgxefxrkA7g4HE5XnK1SkTYdFK+DMBdq2AA6C3geJJaLw6qLVLzj+oifZT4J2O7g7saPTkEO/j+MRr2G8ySCThdCEpHVi8w=="
+        "iv": "lEdurcHvvhoHrlLi",
+        "ct": "egucIVv/DfB0PezpjnlZgj+gzfWTc6JTBJ/TV+qMKJa33AogdVrdOXjQUsgec9vheS/mRL88MLBA8VfLWWlo7J2MQSyX3dUiIJRlh5X7i+XJ2BRGaeAJAhgEy2/QbNO8aDWKW6BrkcnoZlgqJzLtch4N/CgRxa3c50q2/2g45Xj8D3RGyHkuBn8qk0/CSwgjl+uo7RvlD1E4dCsva+u2fzxxIwZu3EguFw4zM8Wx5xLpNKK2IhjXGtUdL5B4H8wyvG3V/P3ZlchjbW8yViYw7ngVBVqVrTs1Rsnrq+XPlUnBYat5a7DUKEKT/D7GsFmsIJA0PLnG0PlDxj0WDB6AzSGnlawzUjFY8CFjfkJoYQ=="
        }
       ],
       "professor": {
-       "iv": "iqjEVYz9IJO65l3g",
-       "ct": "jOnQcuXh2OViBx1drr6pZtXVl6YYG6yBUx0QrzHz+4h6zNjaeeQHCRKjeW8die38AOHgxf9DNqw6QK6wIC7y8wpFTqtV0Vkd1DIzYgnY8svGCCkWvOINsyfP2Prxtr4JGkh4RAa0VzNlFz+RdjG0eefJZ6GiAAr0woblrTrHWzcmWcmb6LyR1ienBGBLL5iWqIOsbHy51gPBcvBaRqwPspYPq6dalRYmQIhQru0qlL+LxH207dOo3glkQv2Ys2MUU9PWXaKwTBqri5msN+UrVVT9aNzNcP/wjx1WgcEK05MIf5+EorStKxAO92LPY7jKw1VPb+s6M9NiQY7nouW+H11L+F603hYvUNL426I2Wg=="
+       "iv": "vN8YcGatMDgJ4f//",
+       "ct": "2c4oZh0D7O/sGrJGw0W1gL5oTCmwXEfqOBit9G+l0t1QDrCQ0PLKHhxiKjtc5Zj6/LQ0NxHVxjlnTtsND51r0TNUPILWGXq5tsFoCqV/Cg9whdqHNmDbRKp5iYCZV9MvMoI0mx9wDCifCQ84mTztL+IcOotYxiGihd/NOMNnCEAZX9kCyMxzW+xm5YoiuCAkHPNVdX18TrndJEM6nPnBIZWioQ331B38UKw9ZsydFRfctbocFAkG7s6IpXplB8wFyS6AOsgTcFnZIPONjqbBuFSAHqJo9gWBUoo9Qcm8sGnIaLgou6d/Xz58qtlOBuryEeIOk8/aditBgRvoAN2B4EJEoBfxQwGBG/05xcQJ3Q=="
       }
      },
      {
       "enunciado": "A média de 4 testes é 15.\nAs outras notas são 19, 9 e 14.\nQual é a nota que falta?",
       "dica": "Se a média de 4 testes é 15, a soma das notas é 4 × 15.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "vxS6NPYXZttiUZMo",
-        "ct": "45iojzkpJT/b5MnOQ+DGh/ZLfadCl3CGvhm44leKNOSNqO61tTD+HI0pF0O/kEKl/XuLNywTDKXyV9C67zuhxaFo9nJ9PgeZAAFxN4XRGSJhtqMg+CSx3Ef7KL3Wx+z1F1dTYCT3ugztKBWHo5tbiBJ+hxRf8Lc33HV6GtFDlLWEDqEUXDe7zeXIpLPeQK4BYbqX7Dd7oRVv5OPjybbJXjXkj9/PSN5O/IuBtadcG7ltAHPTLWcMkihDTyPVXsTJuHCEm+YL5xXGDY2vwdXqk6We8Hiwh6kQSJ+Ofy8fhQbzuzUms5IDmm4jPUGXLk59wvVJ6cv1xx2GOD5+/g=="
+        "iv": "k4xAH8yq1ChUe26G",
+        "ct": "YSi+2dW0Mp40QO92mTWpyBbSeI0CFxmJofd9ehgb+g3SwBB2/J3rW4o1DCYIHp6+9VUJD6gl59sAU4RBL2F3ZFi/+XVj25WyW/3xwWvEbux7y2XW2tTE9v9pDleLADWUZC6Ry+ccJBx/e+SyLWGvEGjGBmqoeupFv5ev4Qbgi6Icwo22kO4u/LNIaP164SaNPTBU88s+A5iRr2fy9BZnI15+GF6sS+HZjJ3szAChtJiDHgx+MpjGlrrFCixYp+J3qBPj/WZmHtAvQpiARo6L28aEu/uJ6RsdWBQ0sc2ARLjkkyLngVTToIB/sVP0j6FmTU32H+FFaEVoKo3Nag=="
        }
       ],
       "professor": {
-       "iv": "dHHKKgfRxMwmf/0n",
-       "ct": "rzRj+ZEl+gKKdFJpufijWWm0Qsn8cgsvaQjyaM++wto5FpS0rtkVXg8FXKke//D5+dZga6zi3Lf3ozZ3VQ37Z3fVt0Azc7LW4zjx/SWymelmPQ3cvBRWIESKvRsqUhDT+tQVdG1KZ6/LbFUuCo4DOU9w2lUFyhMjMPk9vbiu5rZRkFYqp8rvE0/+CNjOQIrLs8/oFydmf/GAe/hAc+G9fTrkWZrE6SetD9WIB/IwPF4tPCnQTZ+C+zRn93RF7ZS2CJM1D8IuIPTECAE6Umf6MDg/MC1mAOuThVrDcYbjCmfv5ddIhN1+IhkrfhzkqJG/dHh1KodxoX8s8zn/cg=="
+       "iv": "E9205vOr66VtoJis",
+       "ct": "zZ4z5a6f1L9jSircZUnMPgrdxCIc1nHuyqk/Hcs2V9t6E4kEbnAU/2+mRvtc8BjBjaUaPkzSpWYemkry8xZBfWrnEsrlLTq+M2EKRpyQKdAiKwNGuCrS2EiLZzEhcuVaffuCtY/Z5oRMdK9KtwZlM6qrUPsjQkMIoRjk6tnSmMrZJNoE/nYv6ACt4WMbsZTSuxR2+OFSQ5g3gf/q3s72tzjfummk2/Mc7EQcsDaQhRJcpRlNjMae0WMUVe2U35TK9vLn6rg5FphuDOoe7S78fE+uyniITSkeAVgW2SFqpGgjNfMWJa8koDY/yIMZUpWzNvnX2Xpq4GGiCfR1Nw=="
       }
      },
      {
       "enunciado": "Dois ângulos são suplementares.\nUm mede 108°. Quanto mede o outro?",
       "dica": "Ângulos suplementares somam 180°.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "GP06j+O3FJon87Mo",
-        "ct": "t0fWqWetUx7urK6t+obdzbSncUJO21ekwk8Jp0Z8W/4nrWapZFhw1pcqHavj6KZtfRTjm0v1AJ+UHPLIq7iKnGFAXXx7vYD4uUMM8U/jrxXi/MFHxuui9P27GTeBZUbox486qQBjqCA3oqyx3NIyOAOxyxOBBsJNcENtVudNKwlLN3qGjv5pbmUWeFvA29Ehf2UMAWn2hljaVvNWiq97JvLAmYs+DWRPRCo8CrrOI5nlJCz36I9K99JY3qWan1uJ6yWmp+EjutcjIIknSBIU8k4e82Y64COSZqH6rGRGM0gvSRSY9ZdBOL5PunGAi2pU3KKW"
+        "iv": "m0y8UDHkyDaHdbUu",
+        "ct": "C1oTxxmFebTSTy8I8jnZWNb0+HrLShXuXZ4Z/gUg2Gm6lqcJNvv58Y82mK8dJ894tYWs3XSpzvX8V8YZnkbtkdDHGifHy4ZU+zR61wqHXn/p8RNwtaCHYnUZY86oZ0TC6FlrN2UKGAb65vW6G5q9QVMBzwNUr1crl9WhsYsJPWTVuE9ajm693tJHoYpgqfIIyfiZAC89hyHyIovuLDme5Y0/DpIXNTWMhhkuYPtgZARjMDj+s0eXwb2cKPQVTOgXcnMMyz968hOMQB7ypZGg6QAOPjieNImHrfRj0zUTepwfhOAjU75MMPI2PbWg9JuCI91V"
        }
       ],
       "professor": {
-       "iv": "x13EzVv633emCMhB",
-       "ct": "4yZzS6PPI1ggnAkybIi4pqlFEMBtuHzAtxwJ9l5o/wM0PZoe8+dD/QOL5ML/K1xus1Q3a+hk/usttpT1oEUcOM+UIiOpeHJ7RphryfRsMwzly3OfxkOptq9CEDBj6Nt4O7eWwqgsSjFGYwN3Sdorzj45gYfgEeM5Oh1m5493MYnEN/O7vnJSuDZUVVbmJORcsdBVOkrFUgHVkoavQwVSoieCq7mJQrVddugDosRSWPo/l9PeinJbztGUGgKewmfQdcClXldGigY9rESnPXmrl2D8VIoduLB4Mxarxz4fDVue4Rpiuutuy9KpwAiyMNSMQM5V"
+       "iv": "MML2lHe4ZW7qZoQE",
+       "ct": "WGpHfYvm/BRM/cAnqob1do/SiJPwfNUYVS1QUvlKC1lkxXW51bo0r/tQ4Not0UFHkOPQ908WEYaSK61JLgY0qH6Tmh2PiHx8CWShbt2Vl5pZxIhaZ5o2AHta6aM/j/76/lvZzzOhXd7oRWmUb+B03pXXCpJQ6CUngggU9XD6MZMi+pyhZBUqS/aMt5cGj3yy2p/zc7fXu/FPOuKAf+tFC0MttnC/WJVOj/hQy+FlpnOjtav6duAouBkfev+Fl1e3iEsazC+8EHKpMWdiHIZagz9VYfgNCEOYmc20yGmcs+ItasUp5Hj72kvdFO296vuDvv/S"
       }
      }
     ],
@@ -1307,76 +1620,91 @@ window.JOGO = {
      {
       "enunciado": "Resolve a equação:\n3x − 5 = 2x + 12\nQual é o valor de x?",
       "dica": "Passa os termos com x para um lado e os números para o outro.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "W4varcIXlfz0sIjj",
-        "ct": "A191GcElKJi89AMFRaSb6ztqHY21WYbT3mfQUf5VrzAziMxJAg++B1Naa9b4Z8JH+fgB7teolGynvjriYUKv9+i8lCeBzSzaUUolvbUWFHrc3hiHCsURQQiBQe2Qqmr2ERwKNkbIg+J791O1R79cHIeyrMMlFX0YQlxlF3WlWEP+SRWt8TfiaSHZ2OnxZFBjl1d7OZGFksi+CHOI8Zp6U8fek7TlyjsJVGuhRTWOgAUdkc5MtKz7xlm6PUBLvvwg/puLjBRnoKIWKCISmbwr30nfV0ml0PmgNjoduAehXqyq6pdG2jMT+FVuVMJZOw=="
+        "iv": "zf1Btw9Ztk1pRhYg",
+        "ct": "6K4iyvTNMmrRgsJ/KLyZ5ZFCPYlVZiqXPdjX7/yASayv2GaGK0jWjzonXiIiHmd4YuFe/6q7XeLoA1NDrkDFvHj71P0HcOE077VAgWbzx37dRQrgrqbbF2sz6CVPV6l1iTT/76zr3/T6oYB8l6VqkEa0V6ab8rh2IuFY/tt9mzY3JqW3pyjlHF2sy+gzqdLn9akOMOL1cQ/edvzm4r9Ae7z1jt3gIEkmohA9KvNkXye4vubI/dq9SthMi0nIGZWOaekaHZWIgPWysjjDfZgZvrJJf3uXTX5Zw3/DDqHaVEHGYTWM6d8t3kPrXlg/iw=="
        }
       ],
       "professor": {
-       "iv": "miGzhybSqhuCO6bE",
-       "ct": "RxGXgOylW8/UswIZdJuE26yPWCujHZN2GONIdjCHveJarJrZJXpl9+1JTOWLplvyYP2jV3tSi7Ldxt+CI7K4A16AZ9eK60XCu/9brLc5H0uw8D/gbpiWTXY5Q3AcqdIfVgb3jP3GyhMJx9Yvgw69qjhdWapNREKpGtp/O17yaas9S7PUVBfu+ZWOebhJNvvbBUzdr4pusCIKUiwfI0P3AbcGXG5XCls2tX1xaZOjHV6CzLqSZMLyypguViqUc6gEJtOOM9J5VzQ1R+2sfRWzXMMYrwP1Bxwwq10hVM2dpOaEJAvfcssZTe7wSLoJxA=="
+       "iv": "LQaSA3svvMO/LpLO",
+       "ct": "ggr1fNTloe4XN5IFI5SbU7/2f0inRFyPLaj4jphCE2dXr2VR6uxgddOz6WRuRHLrvtVkhPsKuRdAZDMA3nx/jGQkXxH7dDaTgcPPu08RniBhgMXkmLqNteaQPSjHJcd4dBQtwR2QlZAPWcDRpjsivggLPh8u4B4Tf8wisZcyK+FYE6+BCl65vSwWOOT4aWvMg8oIwxqL4jiHwSfMrjWJS2sPGIEoY4wdM4Wj0UXguUwXm4XdqDHyR+erXVhfT5g2THoQOlqjKePeNoio7pkTVCMDQI48l4mts7C9AyLZFBLmt2t43xKWQM19WSOMsQ=="
       }
      },
      {
       "enunciado": "Descobre o número seguinte:\n5, 9, 13, 17, …",
       "dica": "Quanto aumenta de um número para o seguinte?",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "AGgxb42ILrOvpfUE",
-        "ct": "I/tSF65j93j5WseJ1Qob7sbR2mGOhtTQ7xSATt/5VbtQ855GFqLpMvYTLln47iFqhdzfGh1d3a1ELtMdaz18/PkOMapfFiJNXr4fA4DolN73U1iMTo9GfAkNXv36Li28viT0Ps/n3FwpX+Jfc8Xh7PJY+9s0vzHmGiSNnpN8Isn5qx7pYKNihQATvSYgThgw/uHd3f4vR1WyXuMZ165kgyRwEhOzSKB/R5YRlLrwViIKL6PjufgUZ6ZNP4jRFSrMLxPgwYYvKWvpbna4z3uEQgku/OcKJZZYbWPPps4n6cCMnJiKsKcrZUMvQhuB/APN8bNv5JN2SCjSHlZnqI4+Gg=="
+        "iv": "VcOf9n+DnSI5XON0",
+        "ct": "KIzTfNSUwwnV85yKWo255evEbESzfU2QFmsgWgcfGKVEVl/FYJKUXwZwuLfxL4fThR2oDSS2Ed8TZ1fns8N/DABxHbNWt13Cn9wQF7VhdmFJCB52OOQ3X1hCBqo6QaGWt+L2Yx/erL+IPu42paZk1Vrv7pz4+358hvHBcxSiFyy8bk5hejANmlRK6TGEUUQ0AfKyXlhB2ARTuaOkScLu+PIKZIiCNqskT4jR6ADIvcjS2XaZ1Oi2bsZfllKN89MALbmhSr0k5l76/Gjbj2EXJ2gkL/k78hly6UWLJFzPLL0VRHS52pUrYTuGIqWZInwpnzo4pso7Zw2vP4T5fFGeKg=="
        }
       ],
       "professor": {
-       "iv": "XYqCboSkjpozFXbq",
-       "ct": "M7MQv4nbewfw8dzK6DvyhDlBzgeE602ZShtw2+7jloH8dCL7gjwy2aYXSkfClLUWZMo4TWolnFxoXB3gnIVcUv8bOglAFLnjSH3CLBQrnhafPGLiUoBb4vHQYEEz4//Oa7IXNK4G4TSPP7cyNHRCmBhtdZZaRVHhe/hv3iVud7VSxDV3sQilv3IuSdofIsfOoDRZvyboGLjvytW9SEnq8/JlN+sdIhph2KgUoW/pffEoDkP6uo5rNeMM+oarDaeDLyH//zIM+2Rp0qhaoOiDvY6e1MZ246G5HFzQQao6L2CgZAp827rcnCG4MgPEkNY27Eq3LxNHRW6doyjZffmOsw=="
+       "iv": "oA6uAfsVnfm4ex2P",
+       "ct": "+syh+v7zKACisXdE8I6Nug5m/Fpqsm1Xtjm9MYbEcSgQWALP3ytKbCuidiAdZXkrkD135Gbvo5RMQyZjQGgid+rHL4J3kjP9BH4K+zfB2q0rNDjYyxCE/HCO0eH4VMO8gfo3lShIHy0R9+XlB3LKiE/CnltWDiCSel2fZ6BIfWcjNFbGH08M8yfHw9p7y6KVa6/60xmgDHAWUG1ksEF9kUMW4pb4bbbEtmyxgsC61RB5o0qkgs9jSWKFp6+v+ZgLxNe1jUINxInbfVFj1RPsszk0ZkhTL0RsD41kEFQGZVwHtMNn4CAxrArIP1CYCbEd2PuIsx8qpzBajFo0uTkbbQ=="
       }
      },
      {
       "enunciado": "Quanto é 40% de 140?",
       "dica": "10% de 140 é 14.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "b9GheJPhDKjHxUrz",
-        "ct": "DfrMCjfEDqds2AOaqzu6/OHl7bgyXb3MlCYKzXeO08FsFzqE5ygn8+6uh2AWPfRM5MAkGGWMq2zrvTZFMcA8rwTD1+hhgxKAOw/AKUQMdB3Z1pknl6nRzoOH4KVR/NFvtvREzXjEdi6tTlaXs6u3QnPgyCEuPkD5h1qPHsTv4XMoy23n/8pEXb4ton5FGPGYEBlV9gQkp/sQKA/9G/3n4O5U35fiuQjG6u/YfH/+eFVQS17tZO2Yt/dHzb27u2w76c2crbEABOmVP6s2DBMt0Cl31oI6fA0so5GIikrYoaP/ZCydORVOYIFyio2jWJYslZThhC5bh6hehUD1YAD/pa08"
+        "iv": "bMwKCgghvKY/3rJE",
+        "ct": "d2LDU7/RM+cOchgBGGF5dnklxkNyST1fIOUeAwyNnasFAzclKKpFAZSRNB4XhGSoFEXOU8wHadtWx6oDMe3scXvfikUI0CRIJXNN2y/YlqJdDfCCpSCTig/wQEiVJC2mNlf5m0CJE8UnnCaKlFQH4HYYT/CL7bL0dpJy3FkaBNipEVAep8/mDECE4zQ9iTQDAGqby4cKt86wekiuyLGVHfSGMP/XZXSrnfbMVtP0Age84t/h+oada7EbwPs2fy5qaVRZoy7yB1UC8UjEfgK0UGN23nLkNqPiwWHh28Se3IjD0I3c9BqtJ9klHNkR3qUgJz5hPyl3mLLrxsfjT6RB4bmq"
        }
       ],
       "professor": {
-       "iv": "38TUPQHfTaszLU+Y",
-       "ct": "uwMJ30HvWPRKMFohqzj9zmmRp+eCixotexOtu2vGkOkQbdjA2mxB1C3QLBzlnWchTBJhByZjHoFH6TaV2f0R6cZnFz8R3b8JS8Z5wDQLWgHdW5CM+yWa9kLzJjBDfw0XaG8h9nxqJlLpcaAgpgPJ1w34HSG+hIoR9nxWkpRqfDOzUWX1czyA3Zv5o7S4+czVYPGDt/GpEwk9jMr9Vp8nlobbQJet8ImpDG3xshxqtvFwbuFSgs/MHknto3GPqEENG3ZNAiVNT0mzW30VhT/bR4l0Z67OwMW+l1zo+3Ei8w3GZQI2WUPuB+Hxg0/ot+9NZsDnvvpc2Ng+sVDoJZqhdvqa"
+       "iv": "Eqn/D54kqDlXeP69",
+       "ct": "RMGtasliHf6/3f/mWTbarVKJnAZW4F0EfCLuxljItnRvD4mQZsjrMXh8nbqj/rD4NGtrAC2tzQyX+C6xfSPU3sYTt1rH7NQC0lYRg0dc8SteBlzJndFyDSAwTcQalYsdUpysb6a4/uu0JUvrVExxOA+/60U2GJbOpYpZ6v76rjNY5xi2ktT7rXn7df865XVdar8E6h/607KbgRMjcZm8Rbw0n6k0m7aR2MIlSZw93CrEC/FpDx2auE9VrEeo8+0WLta4+3uij5DVOjj03MtQtfzTf8srPaLzRgKVogd0fC1dlglwLwVpVqDPOuBvoRq+yqL7+oOOce11NOhGnHiUjVyb"
       }
      },
      {
       "enunciado": "A média de 4 testes é 12.\nAs outras notas são 14, 13 e 10.\nQual é a nota que falta?",
       "dica": "Se a média de 4 testes é 12, a soma das notas é 4 × 12.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "UqLO3zdXd+a92aIU",
-        "ct": "1W8y6oWpf0vyvgOCBzmX6d+WTgMT88YHKSHr/+26x9xtqedydIxD0KgFQJG1NAO+iJiTYS+1Eq/O7hnkOe0E2J22gGvAI5rlHmJHpKRG1hZ/Ya6oCY1E6HD2NZcePP+MiBYV2l+TNS6bF+CMEwIpU89AMeVK7SgzxbieYk3PB+zrFZjB8vY2yHtMw9zzO8ShesdvHqq/8XnRO+f5uOWtE4iYv/Qj/2q3zNXVEdTNstqaXZfR96EWJchRfFfL3Wnin2ybDhkKNR4FlKKB9qAuEf5hDlvI0tA/5y0ukslTw27lU1CgoEkofpVhIq67nw63fsOAdOb73w=="
+        "iv": "pLdOJpYX2+iDJ1w/",
+        "ct": "tfuOIYMiGcfkXwgNfAr0V8RjlnxJn1LzqVsFQtjr/f5wj0tvLnHT5S4LoM0jjQezZsCHR09VnI5D+42frw4ergvfgbeaNP6+WdaBYR3qYjiaJtLtMFs/z/ZFVW12In0KH4oAlXXH7lF/O802iXR+Ne6A/3L9rlmTdSRINvLDxbrMop7FC38ZUV8Sp+ynLGOKXlk9PjTRmPdusW2Qx5lD5x8hi22C+q3tgpIluTFQcQ92dqFAJCjEtFvz/GkepoDTCBBqkQA33wb16SpOwLotRUPOlGo92+KtwP92gky3sVZ8KOzRUmOu+T9x5Wi3Lppg9v2P+LSwYQ=="
        }
       ],
       "professor": {
-       "iv": "brcZ79PlkdlhKgVl",
-       "ct": "IUSOoKjFrsPOGOFcxkQTQWsNjIvKDSkr2nA/viUCsNmzrcUAlfciIPGjyHyl75lgg7k/JwXHXd3DhfzHl4SFvkmpKt7igr6MEegDGfkdJPp6sA+LAbQDk8KCFUZHw/qNn0aaEW1a5uH9iRLbTiWUlEZng9ngmX+t3vuzS6Fma63U5Ic9oj80xADKRXIBefcN4Dnq7Fl1xuHqBshnrt2EH+dw7KhfuYHVCvrvgqx1JRSbg5F0NiqNurK/si4ZhFCP8qadjStCVxb52gJsoOojBhARjJWoi3E7To6TCDf6VgkT7xXMFbOt62PNhhycl7xiauhG8/A+lA=="
+       "iv": "7Up8uhA3/FMFlseP",
+       "ct": "ghcdDVEDNfSYAbrS69yUueSr/P9ZJTiNDj+I2FL8zFSs6GOQXiQ1EHWXTy+fr6iDIzBA7A7BPTYPSXTapxNaq7P6LDlulTYHXZKRnACPds7GVuttiqe7cuoVzfBPY8nP4S8dp/RRTNZ5IFzkFPI0PdXR0XGjdAeyN9qvCjd9zmXPlnFFBtYY3jz2R61vYouD+p/xfT9d411e7tN1ljviEoxdZFWGdvlTGyQ9X8NgvpkiaRMZyPmXwNqRXpo+O9n5DhJiPVtfwSUr+rABKO1S0Vu3U5SqXlFomkDAKSfEg0ahAPvlPKcik09J2WSTSU/O7/WnYl6Sxw=="
       }
      },
      {
       "enunciado": "Dois ângulos são complementares.\nUm mede 72°. Quanto mede o outro?",
       "dica": "Ângulos complementares somam 90°.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "a9rEqiMuDEfORuGs",
-        "ct": "gEJfmxvitrs5nAB3oPv0bpDFIRTFuifpGL0b75g9avOvBlZ9n8GrUWlpZBokZirqbKJWzde0iIcnQ5PKrkHOI1PKycSv/p8TJ0Kti12uFeMZfz9moEY+ByVLt3PD/v+SKvGiuT7kzBUsHn/F6K+bDXUGJE1Pni5KQA7z2qhVuov7KhEIRH7AXEo20cRAgeC12yYE8eciXMXEs3WKSLnFw7YVIC7bD442eY39FZLaBl3m/g4GMlprAb66OXLIvPmWLpJhD2mhPcufM/P46Wq11xGSE7wQah0503o73Ct+llW0X1Z72guEWwR4fr0MmEvHbq3V0VEwKiFnB8kCDXKMvTIq18RROfY="
+        "iv": "BftCCRRnVwcM7dsx",
+        "ct": "y9tcLrCgovYOdKj/UIwnGHw3STWO9v6ELb9Y32wGpRLfb47LlW8a/hSMwOrYhedRgNpghr6/HxinDVrh9GexVw0RfRDTdUCriN4HfUWNrR1QKDehQNZOG2FBRyCPdNzrdwrWZnppWAj2hG9q2JKhE0sX8WWTP/HLvr3MhpIlcmPMH7r+pSOp3ovRUk1FEZq+K7zelWP3Qm64DwdZFXLNDdcM95oSWwWYQJ6qEJL1P+eIMEBayMu2lD5ShnX41VK6hu9SjTL3tLy4bxeDzxktb09ouUq5qeypzFh/G7C7/Y2WqYNpQufz4bCTthBxi46GWn/ZtQspDVh8ucHVYe66xvkv1NwJiIQ="
        }
       ],
       "professor": {
-       "iv": "jWCqTD5hXIHKlW6B",
-       "ct": "Z7UKrZuyl+genox+cVtIiDVvZelGO5q3oAjDC7DwcjbPMevbh58BpUFSOOqXtD9LA8ZL8gRPvlU/2kLGPRDTiDDfyHu56FISElEBEuMVDHEGZSzIWr0d7WPLWWEVmK/b9Dd/FhhPrCbxiHnNgRrPf7nKjpsFVpmhvsAb+StdR5PyIqsJRb0XVlDzZiCWUI4GVzmtK2Qi/EDuwBE7YEWTinKCUt7LXZPgQndp4hK1wivuSklEgL8Qlw4jecSqBxbFPqZLBcVCdBm+Qk8YNCyIFs8rvG3XkvDx0mNT+QHJ0OjD72X5+bLYrCWvwEbAr9Mc2B2uuyX1rbQO7Y4GHpyh6HyOwU+tgGY="
+       "iv": "tRLK0coEAh7fCDV8",
+       "ct": "OscBbqK3HP+vg6Qpui404rYgb17yDFAhlC7l2H/46dyZ6F3//ZAWmgtjCCY2BYPq2Z6Ydcb9PrHRmkbr1dqP3fRWzH0D8IdP6hrpqFyQtpoaEDf+qxM2fmsbE9SEPJV9IfVtSgmcarOIKhtDYKjGfmXzrFf605M7MrA9JDsAEbzeULSY65wkPhlMTiTQcRWvOATg61RZZfhhInJGrdjodb6CSYqLqyc6SkpW6S0qEVHbB3ebTWnotXlx/WqEbJMAoQeoNc/ObS9l9ILIoBD8LNq+Zhl5NSILAqq7pdH/3emzZJcZpIwuskP+OkqlyQjsQmfJEuRE4/W+PKPTMRtd0V3mrSRqcKo="
       }
      }
     ],
@@ -1384,76 +1712,91 @@ window.JOGO = {
      {
       "enunciado": "Uma camisola custa 180 €.\nEstá com 50% de desconto.\nQuanto custa agora, em euros?",
       "dica": "Calcula 50% de 180 e tira ao preço.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "49ds6uv6NX5X27SY",
-        "ct": "lLhn/np6nHi+lHIQcsgBOLzQlriftv+lePUMVQMDRvhgQcglH1naLCDb84P18P+uljmbtvOOW/A6IAHnk6lMNs9gUpuTDmd8SMSfaXsjTAajVZbMhENPEz/O+XYN7+QhMSX6wqNxaf1LdYsQIcXT2jsHEf5e76q1v/G95RTJP0UGQvq/j27JMMjnakm8vkKFUxwaGevoYLSQ7c87EYLB6AGkpHi0L7zlyf7T8fu2yJ4tqXUauqSyaZZj6pIGDf9giujE+GMUie74vF3zIQUf3hXuVdwd26kptO1cDv/UCH1hgldSyc1nD8aNZ9S0uA=="
+        "iv": "VfhgPrMn7cyMMpZw",
+        "ct": "gAyyVU3k8fuk61TvZeMxt6+msf6BMuvzep7N5yIwL63bcke+4qJkaHqSh1iAqSdKau0diK1h8AauGn0OEapJ8UrOZAgVWCr/x9HaClWFxAc06EDkZ3ngKnPpX6n0ZDropvi9ggFgRZ1rjbTs/iULW+8Dvm444zDbD7yL5VkJgzBdkL89/NBLHmJshB6Ap2hWj2hJcs2sy5ehAzxU7mKuqS3Wa7gy5W/y5M+fBGHmrCaSCQhyjYJ3+kqls5qsVK9g4AjczBunfKyFqDEWnHfcP/DsyVo/Mp8nBPYWKAJhU0Zf6rkDDZPe0UWHZUHbTg=="
        }
       ],
       "professor": {
-       "iv": "5ycOBI7OWZNupjqL",
-       "ct": "NSY/05G0IxCydOc765d2dx8mOQD/MqEy8lqfYIszjhGWqniXKeUZD17Wjec+w71iOoKAb5c4xl8rvN0UI0omReYP5Zqx84l1BhSkMGhldBl3qJBPZkMTV6pMq6o7/CCIfD/YiJFaTrx9P0Ox71kzJpMWzOn3AbnB7UOhkTXPdFQul3CJlym0XG2IENzZXptDycNJx7FOjkhNxT5nSIkbzycEX8OMcFeTiRUq1LNm9XFE4guDlvK6XAObjGG6ebDHxjY+FJ3EqXxFZgGByu6qfYlabMuZd83LQ+++hNpB9yC9IDHkDmTbZyR3elgmrQ=="
+       "iv": "AccF7p2rFj/Ij0F+",
+       "ct": "SXHNXHvGxPQHFcY3fJoN594kJSvV++FfnNT7k9qaPs7ZgqqGM2RKIK5ixyQ0s0XG16x4Iip+7ijOViqEOWA58QUy8dsX+K5Nxm+Oy/af2aC0nI2r5ffDJO7m1y7TCijpem6Q3CK/C9Y+XIvap2WrJSNWwjVtZwyInB4uN0JkSUU1Z1oaTTUIy0WpF57SjbNXYeNxU7Fc2yw6lFww09TBRBTBT80dQmOVyjmtYuXht7xs8e9oy+fI0+nMPV/y/GZF6Nz2rBpuMpS8ArDUwYBmWMFoe1eDCmSyOL4S055GYUTyPXKsLYyGKF/fhmsAxQ=="
       }
      },
      {
       "enunciado": "Calcula:\n7² + 5³",
       "dica": "5³ = 5 × 5 × 5",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "E5yWGqYfL6NGnBMK",
-        "ct": "ZKOAOriOr6C96NrR+YEdeaqXhCVBTOf8LnRsqErdVRQzD3EYrsD4ZK8Ut9TySiMcQiQjbw0CxK9O/31r59d36yY5yuZIkkoFon7/aCy1yKjGyAUXXItDlzbgj/kAuDxptyn30XYLR/PDMFdWRMaDv1xip7hVgwPpEIvnYTKGARUOhyyACJ+bMsa4q3DY4oqDctxOLSRLpvsH7cVmz98IZW9dI2G12lonLLn/b7ELL2W+Gg8J3nDLtbY8sOFg5BNo9nnlps7G1GIvGAiGID8QWHK73K6ygAJicU2QHqAcpvQj1Bzar5w0UG/A9cXNbmrK13c637bXoRGAzJKhK5AJ+w=="
+        "iv": "L4j5TSWzy4Pdg3Vd",
+        "ct": "Y/kaJPfeZB+zjX+QKDugVOGiDRty8VsjEwId4WKYsmbIqNRMgZblnnXb4xx2/GM2pUDLbprO4piAK4H2XBVsQastKbR0TKjEqMCmuen6HF0gKp6AnB5D+37bK1SV/iNKbxjNwuhkkB0fKMkwjMYGpsnRj2TjP1OU4KIqt/fK8P3K2UWnwV1UtBOdY8KJafQYO6T8u7QcQjbVAO1gU3B7/Mx3WUGoueprKwynFKIvEwMOBwWlc0qctuAMcsuaB8K5tp4fPVNWI9cV+skpkD4ZmRV3q4UcYacFfRLuqlOSK4L13SXNeb1cxIytYzAB1X5O0sHTCTK0a7Dj3cCfYBRLKw=="
        }
       ],
       "professor": {
-       "iv": "N5KoIhxaFXvDkG7D",
-       "ct": "SZfheXh74rrcoPjZtrLQSSnBQAzhTt/lX/NnkAfccFbS7g0uNt5DxhOqbX1L138qMKligOgtP6xDSz59n/XnQ47Wn+Pj/c79B+nLIl/0PiVFjtRFomFfU8+HnKqRGkBEZSgod2Wm7iFY/nHjAVM4vdqMnniDP3vb0gENEEJF9fxQbQ1+lhIaKNwOrmL9k2if8B2AfF3ffvmBRzExffVN24PgFKjUIvJfpHm6juL1QKNxcRr4P150fYoujsP0rvvp67xMS6e3pNtnr55Xwjm8PeEH1/EL8UgQe9Ea0srYgvmumt+7dxiZWxkEk/2pT4zHq11nkgCSZ85FTl22j0b1lA=="
+       "iv": "kswWBI8pqzHODdj4",
+       "ct": "DdI4/1HiJByGbTDH3aNwDy/R94bJmLqoQx/5aB/c4zYa3W7QsmtFk/qFN60pbp1eIeDWNyB7q2mRnDYf2IVF5uAiIKJnELqckG1zp0ziRlZwUrBYtnmTEqouiwvJu89vZALbaEeJiQ/5SpC3zBgAS1y1KphvmwZvzp6YRVDzNWIKjUjxEVCakr8MExjdrJY84xSkCYP3jw7KTiGXcNZF/kiXxJVvaPofsENeyzCXPHWe6UYCHXdbPGApdMcKDM2Vxe3zxzj2b9146VasgeBXuWxbyzoQnuNB/Vvp2d46oxGm/4CVkhDaJT0qcYdHoRyohS2mTLemOJub2RMelTk9kw=="
       }
      },
      {
       "enunciado": "Um cubo tem 2 cm de aresta.\nQual é o seu volume, em cm³?",
       "dica": "Volume do cubo = aresta × aresta × aresta.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "bDnqQpdxhYsBn5gv",
-        "ct": "VVoXm6yLUUfhHsUFeARUNgPWK29iVQjeiaL0zF+L3/TVio+O6v9hdQGD0nonApNLglYgyUYw1abPOsQQanbPYBEv3dO6pgaEGKgmQ6qRf5a5Prbp2Hv4iTuIIjixpJ3fK+Q2E8OVxV9A5o2aT9wlQy90RKg6M0b0tvAwmEX6PACNs1xQ3UyBTxN5jvLqKYEo+U2s9LtXki+00A8we/Lr4owHlW05S4qCwwNzhaTSbQPHEYZZSIxjwxCk5a/gYSXxf2kqLcX1DiUBeDorn7FJATQOJdxRi+XEqxb1qQLptoJd8kmnVNZt7RySp0+a+e4/0FmCcwZbP6Y8O6l80KHcNpgjno+OAugdP5auUHnKjw=="
+        "iv": "We1e16Z7tG0+N3G+",
+        "ct": "/+ezUIc4vllcjsuZeDlfxB/jrZFKWcXYASURD6su1PYazT67nAZlRpqR8VMoaiYoALAYEOXUNXq5g57dFr2PheOSmhYnflVQXtU7cefi57hThd96XUeZ+63LN8tpnXB5gekBNqXCMrjnToKs+vbkqrCTO0SatkXrewmkHDCcCw0A4fl5qPQ/inxA4eNyfyCTZACmdif9RS8ZylHrkXDRDN+ezHIRJxWW+ETuOqBJ2j25ov9yD93mJu2HYAM8umYntezxfA70ueT5Jnq9QV6mLMQ3K2MgKtX6jVrWTCJOyXnqfntA5oPAPY6uwMBtxyrLl7lAERIjoAQOGSlZI0bjaqse8ALefwlSX7GQIhtTQQ=="
        }
       ],
       "professor": {
-       "iv": "8TaFlM62JsHatEgK",
-       "ct": "YGM31MLOFYEKaUvLp5+QMrP5PHTOJamPKF1o7lZLAEC5YUdZjNY7kw9cyeYqn/LIZ6lQXh9mNKd3PpadJ8b8hd56fukj/03uwwYl6aeYUZooXOK0iKjv8CZWOgYKMlKS5AXtBW4wEicb0aSIVeydnkPln3WLbw8RZUIVzETytB9hdgzyuT/ot1NMoh34/np4QxFGIlhAFRW58axEvfRoxkFFRkN7viO0I8iaTt7Gkb4/fLDOnN3Cot4XDhIl/KwhEWnviTJsyTrHc1Xu1cP+bxwn4t6QYzL31ACoqQpluPgsbjQ7HoWrVbydh3VxcYs3iEpnAypYZIP6XKmx1ogW5DMK9R4m+EL2vK6JSzpg1w=="
+       "iv": "S+7YbfJP9PIqc9Fm",
+       "ct": "MPlyFnK1Yl3+LrkXaH8ueu+A+WVjIeJEo5qlIsVDVdhna1y9/VJXhOc0DOAoIJDfK28Xzjg/iocgh6QWkhNfeF8+qm8uqnuQuF/GnoJoCJ+5BppVy37f0qiqGwbImQ60UzHGg64NzEdbkKKjwusla6ZqdkywU1HKF7l5g2112/x3Qz6nse3WhuvYHsCnYM/KVNBAc/wrv2bq83q+JlpmHP/dDhlT603dvau26T40aJnw8jIH0lBXAd6v8ZURtTp4mk6dEosP0zyDJ5YxFPd762TD5YMd3FSLKYs41mUwAqhp7suAL79taVeffVtvJXoGZT3LxSnKifZVwtiR0hB3mJbLhidrrT4mCurwSz7+aQ=="
       }
      },
      {
       "enunciado": "Qual é o máximo divisor comum de 8 e 12?",
       "dica": "Escreve os divisores de 8 e procura o maior que também divide 12.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "q+uqMd4yAs1QiR82",
-        "ct": "RB4d3YbCumn8IAN/f+17aHY7crn+el6Qp8Pv4ziyekbsfBQKeuGIUkT7HhEy0X+MKPyEBNj0IFKCcFINr9/+YG/5v2Hy1obNSzQLH8b3Ygj6jk6xyGLIzQPRVE6doKesfeK9aJtmIcBgBGyUBkWNdJoyq733qLLlmgdBbhJkAlrK9WKnhqcSkSLGn3zPW57SL8K3pSU/zuIOdkclgT88IFeBIjB5LR8TFnM/E68STumu6phUT0W2sEcq8XHlo+ErvGKQT2oOVD/MJ2Xsef3x3vFnwjEO5g3TnAyOyRv/GzXZxJzpt/3g3vgvcl1vrRjV0HmeBuIDk0epiI9hoQ=="
+        "iv": "hwzNgF9yDo1uK/oJ",
+        "ct": "nFKzJK9O0YWdguZ141BZto1HAPMlcO74wGuYCSrGNu2T90BXAfR08wu0IJdRurBjQCRvTeaSA3T4jHqezu5Dm5bI30CZVKjx4il6aBVtVA1DSHiNJLMUuMVzd1VIGklhK+i2gx2fD1tejjDixvrb0dC/ozlZRlB06NDGUH1p/DOu2EhQWRRmi1SPArNefi5/yDPWJf+Ff8zx9YpURATpmljKk033Jz9PPJ70f89ukLOMyhlg7/RhEh+kNt1RCs1fNbQ2ll/Qy8jOTqPxUiCEAgHeJb7HeITDpHi7ky66ZjPmhqWbMwOAWBehwix9GB49JzHt1Hti+TFu/nBDeQ=="
        }
       ],
       "professor": {
-       "iv": "5Hn+35PvlXuE8SpF",
-       "ct": "xHtjYeUzzefIZ+WGgbieRSFaj71Zi78fFsC7xmdZMTkunNeHu28Trna32caDmJgUlGZU6yL2sNWSXF6m47Qo23mCjVpHEma+xwoxlvy1Z97G6vBCPtztEwXKvzNRP1UV06cniphbRDyTM2A4EppgImyWWZU8hmrrGCvipbAEsnRMgKLDTPTmVqadI7UlpcY4jkeSDnjyOLYtFkrQJxc4yyHADy5x9cCRb19Ovbc5mIe/GqVDmOWjVKxNybm29afq723XgJ+QVPE31Y01IsinZNytAr0vjjhrybXq9vvUJqCJHj7p2z8pTmcadTzMgEIWuiCVtX/9uP9OtvmItA=="
+       "iv": "yRUGgLEV3YXV1H6L",
+       "ct": "LmPe3hCNEhoupJ2ZuZ9n9qqoaQNNhamM6KtLorj+zTTo0YdTGYuyv2aeU5GM+3XT5wBoZ2zfzV0AucQ3wPVl+xswySljwTWtBQDF2dRVd5idOyZBVhtD0c7CuG/EKqCa8b33jiS3W/SX9B1R03Sem5qPVikfvqB7V9BmqAGGmQ3E1VnbaHF11eq+op+q7PRR/9FIHmvawwV8hkdIUWPp9nqaKjuByEM7GzOyYb0WSXr0nrsMsseCP2nbyU8UnNA93L+3gz1273j3i/AA7ibiJK7ePYIpcOCV3ELcTt+7VwU2/cazEtJ4IqF2eFU/3ldOJyPgXbBJwxjJFOaiIA=="
       }
      },
      {
       "enunciado": "Calcula 7/8 × 2/9.\nEscreve o resultado como fração irredutível.",
       "dica": "Multiplica os numeradores e os denominadores, e depois simplifica.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "CgBmJy2e21IgoM9j",
-        "ct": "AQEiPYDRn9xB7jC7yZFhKSCoWXFwBw5kpvv9KVBAmlMAhaXSGVSQ0uzAdYTCFx+8tdp+QJ5zJSJFp/oCSm37VsFdn9kBxvXDmqSmt7kpObx8mne+1EJwzJfVRZGIfPGMVI+eRwpxnY3kdVZ164vTLTwCksTk0FgUUk65PwlwMcbo6YwAoPd9Jtg+lgeFaxwc+BZ8vtRjQlfTDvjEZsS+URgMJWt7BqoLAWVzFW+7O4IPK59lJgPyjrLAYfhlAaJY6+5IodnMWirKwzwKK79ksjS6dCCQOKApHIfixPE7luRqkYuBgVKE0VwFydclng2DTWjI"
+        "iv": "lIFdmSHdYkWHpB3G",
+        "ct": "F5uxD8CzmDg7bD+bqhddYUqfHAysbskSI1//cuEqkCkbVLVNYLFnEBjx5g1I7rlVIHO/5GyE/hXe0j0dV0Rn1ZS4c7vVAxqIc80v+v2ZfOafsaS0cKrmL6V9dNgaIt5dSpXbpKJC45DLXg64Olg957Hk4c26LJbracuIFLyAHCC0rlOquMbf0XANtZOpOvz7ffPm8p4wluFPfKseElHTZHGpnYdlFRU2kqnxE0D3zKcz8yBjAG/iGr6ME7mj+8IiYdxmXlF49dbxxofyG3XuqGUOjr1JSUuwyakdLU2fgPU1fhvoXnkmU8zaUivaVUs3r6p0"
        }
       ],
       "professor": {
-       "iv": "bs/ShB6t3lTXYMYZ",
-       "ct": "W5UcHDx6DOkuyyF8MpIzp0AUXtPKdWdDLoLi2/UzG3tvIc5kZT2z1dfCekVEOKLw/do7z3eYoWl51bRfowlMRFSwl6NLvILB9hG1AAxa0x3bFIckWjhBKstjUngv1bf9nLjQA6UFhff8kN78GqLxvdJR6KfdJbsSu0J/dImxKbrFMcq8VxwxwWVwooJ8Ux7lcMZP35t3iyAKc3+JMO6bTedJeJ7+1XoUs3MkohJFemUocf7uiYB/SKXz67sNLblTN0B9Oz07IvUXWGsgXpuhM8Yb2SzMUvTL7orUneV0ZkZDn6Jo/D516gXyzmt+z62wLC3e"
+       "iv": "+Dwev90mkoWm3zIW",
+       "ct": "X6Zbuin7h3cyKuCJE9PzHopneLKO/+Bl1bef+2cHhEf9T44vIPfnXqYMO/uRcfer6GnxpglAP5+ICKXAoiNicE/weexor2LVZraEf5A6JTZmITkC1KEzBOGH6NxOQzcVXwOfLdzwY1U24yxws7Eyxl7rPzsx9rd2KzYEo6oI9oYgd6tMDisJe6pqpeV0XpRDJYHziUUstKfo/zxGddVmv6JZCQLAdJ+IUgr3WgR92ZYQRF/w6WIgCeWcWHy8Rt2DPZk2lKlwSNXLBSkJISgEmK9dxOhRqIeTlRmIR/tspXsvFrq3BlFpRwSIoXvYgn9CDUMP"
       }
      }
     ],
@@ -1461,76 +1804,91 @@ window.JOGO = {
      {
       "enunciado": "Uma camisola custa 160 €.\nEstá com 20% de desconto.\nQuanto custa agora, em euros?",
       "dica": "Calcula 20% de 160 e tira ao preço.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "HKE+McvZjuHfiWJ4",
-        "ct": "56hSyj+5yxbi9LC2g/oM/D/BEE1zvGCbM3xHCBd6O8BNG0ZJv/93ue7hdXAQfZxvBkHDRB21FTs1kXeFEy58SUIDZBb0aBvtzVuPVHrN9WOLgWtxjPpGrItrsF5EukbUx88KrKpeJR5mPQSebPmkA9U5C270wVEAkIsbZecbjIEt5jvH/+0UgU8zbAHNEp4AbK8UenvCmTLVZ/wHXEIrThn6Q6YH2DjFdWRSQFCtloE1Z+2U/nLE3iE9y1hOH4LUM3NNexkzAHuMqH26y5ASa6cQshJEj1+JsAISUhFX5WXNNCsgHQvvRkiNKmxXCw=="
+        "iv": "xnChlNF1og+XnhxF",
+        "ct": "ghNJMOakppZvax2FzcH5MUVaptSbFbEMEzNKwHkGTIvFqDk1Zg2xw4cU0baZ3wdToE4GtKRACdycurLh3VRlbWVHjAsZdH7MNU0pN8d8ekArTFQsB89sA5HQ43niJIm65Y/MC9Vtu7XOF6w0Umicu35lzxUSjC0G7o2dV79O046C15HTHddJzJUrndwaXtB5aNjIOKj+nVK2SjjLnBhtVq8VD0wpn9V9WKncwQTAvKt2pH4r4eR+HSA829Jkh92JRP55CLIpVO49SBQBITBj+8mK7H99FORw4RzSg7eYZnlWt8jweCrWy1pTSu/qBg=="
        }
       ],
       "professor": {
-       "iv": "W1D7RsfuqZLkI2jO",
-       "ct": "wCUzSPQtqTBwD4wiBeAuxWPPPVtWMjYo1R3APZTRv7OYHqj5UOxexqtYy5YKMPLZDK1Tp91yiADEsBQ2r000F30ZeqMF320tJOW3Tv12rJuvyDk3tBMTxQ9Vvtv0PEKWOMlehF/VwCY3H8tV/cxMdJ/iHU+9PB729b9GpP1NlP6a2SjW1a4dc8Vs/UlZlr2tzijkjsrxNCUO7FrZbH9wCGVwTT+suLlZGT0aiupNBsvJfPTg59lzK+czNB6xFEG4076Fhr4zWUfNsJ93oYGZNht1pOAtMtbIrZFmlr+AKwv92k7KQTfKlORSil3hXw=="
+       "iv": "Mop5RiWPQ3r6ORFM",
+       "ct": "31AorMX33s345pOB1/MryZngKtugtfApEx31rTMrQ4DEMWfJkACVLYkqOBdw11ydcZqSaswivsg7qlg1/U+E+FZI4GsYUdGdPduufYF7lewHHQ31VYN8bmKDP2tWHy4am0nDoMFXoT6M3OMvKrKjKOvEny0fsqRjrnh2HM9lwE3GMwfut4MOY1mBreBnYT39HATWzIp+q/nI7wvA3a+TAZriJ3HYJDXOuFkxpHUeaaOvUEfPkQ4iYny7Hd/EW80NwaGlMqhgMdxGTuQ3HR/BohAkdq9UfORWY/Ao780S+PpZ8H/ZCr1sIAdYdFEANA=="
       }
      },
      {
       "enunciado": "Calcula:\n9² + 4³",
       "dica": "4³ = 4 × 4 × 4",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "s2S/2sfzI3EPAB1d",
-        "ct": "1qlyWZ9fU7fAZbEYDQINhRrW14D6XQobXENVndmvfiZ7Nxu+P/Ld/I6CLj62PbGLdjbRYeNfpo+G4l48SIOMKHQZmlkgBl0qJHHR/vOpTCA3dwBVD+AurbHLLFnjWQSkFmFyx6Fy5+Y6eWyLVJUcU/pB4AdcGtT9nMc/BZTemY81PFe0HtvTz/lEknDZWNIif2PWvMarn3U3ZT5Y87gCjQox6dzLRzVT6K9ySOoknj8q+k0Rp5kR7A+18RmVNbVIC/Vy4ZI0ljVB8PHsATyV1E4LvlkjLE3tre9aMpVIpjWBaGFXasldNw6GKZ6DajM6huTDFmy6V363i2kttI7ptw=="
+        "iv": "SWzyW6b86qfpk0cf",
+        "ct": "TRRhJootoS1UI3ms0eTrg2rd98aNa9etilyra3z5mRRqubRGUKcWOqYMa21V/mGH0PhVkT6JKPHX9oCYjd9LWhIzm0VmckHwTB4alXy3YF08hBTOJk6z3GIjXczpjKcn3JCV0yiU14B+XKchJezgC32Td4dBb/JZ3h9nu8pUpyl6OtwE+WkOBqAVzbsA6AL+Mw4gdxVk5iJeyWC5ZNyUoBlGSi5EoMGgQqPPLxbTHzGtA7vdzx7Ew6wh+zYbnuFay5iFzI4SffVgVPyqul7r+mRr6qC3763PrAMTrg/oeqOdrtfx082rc8g7HfE1yp7eCvLCmiA3TxV29iAeTNMDcA=="
        }
       ],
       "professor": {
-       "iv": "qsBtP6IQbXIhoVVC",
-       "ct": "hlEofOeTZLfz2ZTYF7IBuQZAPZNKpzsrZ/NBbh4+uDTk2MORub8t+ozlIbeNbnapzNqRNHcrv8Yqz5tu4/KhLxOG2vFZ/Butj9QnAt8IEQYKrfT7/VYOPsZ9ZIWSv9W/G8bXrYLHN5f1mvnT0opjS+/B0t0kTLb4XNrIHh3n330jr0f6obCdu8T07Njzw3fV6uyxvTYkDQ8Tf7XhvhlWLvYvuvIFcrnPj6NJaIwLqLrM2g0bcIDQYzMlCaOg8SYfmpxFBQTD3wMur9Awfo3dJ6VY+UDvk2q2UJJqVQd0UNVOxAbqkmFAgjulNt55svf1mmrSRPCbGJYomKfJErjtFA=="
+       "iv": "SFXuC0v3uBGe7rUL",
+       "ct": "ORHO6dD6ekZGyR00II8Vrvk1ZnQzUw1wg7z9Ahtn980PK3ep2IFYR2lehHyG6DP6g3PTnNtGAokGGPJsV34nz7fehuHbjpz1U6nlxpGUqjPo2/vFPVjd2KHYW07H1NRsfopLSGLD+Fit1l8+CNf+FvuacbhHAbLOFXxDhN89dnAyNpd/PNpJciq3HBIuyKqWJRwOUfHT3QsNAD3Sx7Egbl+RYZS9+l/EDy8Yv3NVxkf5WVTB75llgFeyM1GBeTgdw4cV+SyDdu5kIxs2h5o/iDhLOYIczb/IwJHmUC1/bLy+QDj9gQXhmGrY720yiTcvmzPysRQ/aH+Z/HDNJxHGug=="
       }
      },
      {
       "enunciado": "Um cubo tem 7 cm de aresta.\nQual é o seu volume, em cm³?",
       "dica": "Volume do cubo = aresta × aresta × aresta.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "ohz5iSsELv7FF8q1",
-        "ct": "g6VJdaghqwjcLVRYdl3x/z0rFysGe2WLYxBF0WG9Wq18dDDrse7FFqyluwJVw+cCFEKX1Kp2xj5D5oeOTNJaYhBvi6GjVMEe0fOYbOTYCwCR4qQYmh5onvXbv9mFQkZP8AoPWl3aL02M83CgR6eBLrm99R6K8faLHwrRtEMgJD4FcET6nWpySdBnTasXR4XJuRTgGMrxytAAC0fPPqthyI57zf/XuZLRd7FLrPLmc2TdzMaPyP1Jn4Si6uXg+PCUW5sT7b9oLgufRglkW8AXjoHMT23317mGSS0qMxAIDeNlFtJrB6p6dGJPlOMNgOyrI7PkuwfQVOIA4yw9DdUFQwEn"
+        "iv": "R85W3yndjHFqjLKa",
+        "ct": "Eq08rvsgwJSLRP3/TyfpFWXu/IelCVCrf3wcqzt8z+eW+BHEx/E4D6L/Mt7JAtZRuMJE0ALZNb41J94nWyMqe60CHzIlwp778lVMHcXGsjKgqyd3z305g+uFZFFSzYYUhYdW5Bb3UiYDQRA2IclC882Zg/Kra4LBWe2I+8g/Jap8ysTkWuSLqgduMmG+fu3P5h1pZSDGYx8Vk31UqwF5Smx/D/YN6zR3G7GrUd7gtC1Ny4lTCtIIISqQ0R7MrcurjE3sInkkrUavnXzvdyhU76y7H7EbVb1zq0gQ6mPx4Kp/SKgd578jWgBYBTO6Sah6ryKa0BQhSA5BPdRiG5vMSR8U"
        }
       ],
       "professor": {
-       "iv": "luyrIszPmmdWqAUl",
-       "ct": "ckxplWEKf1Y9qH3OE0cuJCBK8oVDLe34PwpghLCdkFtrCkl8DrP0JwILMEZaFzGtTp/6C1b5/DpkIVJbc1VczKy6nCCJCASe91YoEXgmA7Jo6JUrA78xA+uP63+Bbx3lnmJmMXHFVcQ3x8SjKuXBK4372Up+GsTksrLU3ecNC4prNRe+12zFOW29WHKI31mk7bkHexrpwCAa2x9bsnoDR2hOlnJ+8ssXWzNJ3F4wrNlll/1VDAoK/77wfsyrfJdsetsaMxBAL6MbQtlM+qb6+khyDUQNvLUfUJxGarz+WJdfJFUACj1AjKvp6pHHax5uZZ1AmojdEpUbyX/IVeE9Wq+v"
+       "iv": "MCRW0J/RmeMgTC2a",
+       "ct": "Gzxl2E2erzNd6boliqZejMmE+UuUQ/kPFJKGqBwnpTZ4mMO49iulSZJh5ndbtEGuk8Rj0Il/t4/v9HglXZy+uwiaancBSFWMNmUqnS1a1KmpBzFy83xykJFErp9E2x2rB4zd5/D+W/6g+9uEwAyFu0X5Roy4pya2dcqH53YrH4yHPZpO810ruiNgP8rMLpaJcA6nHYOx30fEoxz/XhKirxDdnWr9W9VSU86fD3bNqGseDXuMZAAoIlft9ikFTTLE8mq0l/1K+3sJ+tHwh+xT8Hv0eXq7c/HlViAcrd7amrgnHaw+t6VHVqm13d9jWF0NcX2782vkIunHF0heGIPaOe44"
       }
      },
      {
       "enunciado": "Qual é o máximo divisor comum de 20 e 50?",
       "dica": "Escreve os divisores de 20 e procura o maior que também divide 50.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "MJ6YMqsNMc7xIISe",
-        "ct": "8oyKRGoeKaeryB4fuNikASKKG5oPQQdB4sVE33v+/tfb4/vkBH8usBlVonKgjVErXQVPMvIvdiSY/rPbvnu1XDUdmC4lDmhcoGurE8rR0b9Z90/c84Kb4T8yMP0CGttnswR5L113bwQo4ELxSWy1Q4iCyVnIfqyGgSwye5E06WZHueLfc4pME1jwlRcxdc1xZ6WmKZV42Hdc5YFzWCa3s8h9RONGi6vzPHSmDT3QaZlcOP/tgfqM0xmkuEyHCz11OZoaUrO5zj5C06SPOWqzYo+sTgUcwjQs7mAW3wd6kWtg0uJy7UToJCrT94u2S0n0Mxj8FdcP+w=="
+        "iv": "Q4wegEeP4zbNsO9U",
+        "ct": "Meaj29wflOpHjsZjrefyvNgA/0kmZ9Mnf9oYtFDmixY46BZaR9WxqEDm3eecSR+Qe4tn8X3H+QfArO/SNbUP3FYN630/ZDFjVN6RTjfRikWxaTSrpubdFlJ/+aIoi3aFFWfaJS0NHdjJO775jB03WPsVC11dorKCdpy96M06w2ONj2vKLBLyNcWHb6jw9vuR4HjMqNIvzYPjEOvFfiOwutv0Km9rU7FzecImanjk/LlXWnGoz46BJ14dRmSWgCXLbANzIdMoWTDH/Hdnw1szaCHMPYAoAKe6N4ccZBg+RFEfOMfiAWy882kJzae5yOWp6xfARwKnBw=="
        }
       ],
       "professor": {
-       "iv": "F7GIU4O/HnLR8Q2U",
-       "ct": "EdXwyjdYvtD9QgRzohC9sUUfqVhiFA1OlBt4mQR6FFP2T2Dvzm4Akp/vad6mk2RhWCGnCNjKDgLYvH0iHeJLTuG0FvSf4ngEVyBSqC9IkEBluiFskUaX9yHs/tFSsg3ckQEM3e2gR9goKClsbC46ylOhQQYbEo7Ws1RjupYKkfAHvW+t23y8l3DWwrMKvMdG0XbhLMz0CKwbNTOzObwipc6Z8nbo/RiGKW5Qk4GP3yd4fsvitIg19iWXoNyn77x3eLcBebFemQsve1XoP/cyMEqUYb3w9Afjihi6+9eid7FuoIElz9A/z2HxmHASQaayIeHPozifVA=="
+       "iv": "RCvvRlVKlyVnVpAc",
+       "ct": "wUwU2zY4LJQJN6mbKK0Mt8VBA4ATyUQZyDIGGeCm9tKfzcKQQ4em75tYyi6URVEt859k0qGfI8u5vNyf6zdlPj9BSN+Uo8hnscrcXWrN3eNcKJZH93/qOcSIynFJaFtbPCh3FMFo9n/NVYL8nGBtW819ZN2MbJ0BAUcgLapKzobqSiPm7kC7ucR0BroITHQdcIifqPExWU3KgO6GhG+o3eOKdOSVBcwep+m2I6uD+lr0tn83MH3tzPo2DKnhl/J0hBw+zHVlb1q7ipYgV+/97P9bCs82rCdNOEIOxvPTFKc4BEY/uDuXjUOZdSGXZnmbwMklywSA8g=="
       }
      },
      {
       "enunciado": "Calcula 3/5 × 9/10.\nEscreve o resultado como fração irredutível.",
       "dica": "Multiplica os numeradores e os denominadores, e depois simplifica.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "syaJEy0IvVT4POlM",
-        "ct": "mPUmkleIJxyC3jLE+5G6YAdK4RCUzvN3XypicAX4hQe1zGK8+4H1BsbcGT4er/qSwByg/KpX6pv/aE21klMst3bkHn7qq9UzH2HhG4xp+wdukD4p77ht1JqT5AY2UNRl8YyArLHztWqx5bJ/IEy+/ybZgwzTYZG++ADrpEWrQYpNz3KF3xMXz6EKWSF4DeuY1q4zX9gL7/DpW574Iy5ZBeygt8TVkBmtYljEKywcO6CxQhZeYkdM6CtZFmYlGLNOaRfGcpSklRLufoaPuhB/hn738HNR92eVjVU6KhHb7sQYLzA9O41TgcSzTsAVnD58ELV0oP+5/VXTuUxbB6hb9si/bi0hyY0="
+        "iv": "huKp9DeFk1vVj974",
+        "ct": "U4xYSg+HduJQ1lQ0Bbt1ZblgBsxm2L+phn+4BtE/eZcIp7iFeC0xMTwX97bYunJGGOeY3wLW9mui5suQPdR/IhuP84+boW/cz8x7Q6oVc8cw//KuUdI35uMb9nnDxCQHutCjJIEfoz/BGGQ2sh4OECKVvqp1VKKL4B9grhfKvM7GiEfEvO4qoteOSeL3eaE1NwTpxhwcsI7J5SA51E4vOKhFYOMivLT1gjvFzN172I/nhjEqvWPewXPktxmCczc7w+vX6fu2m2Yg3LyezCJX2MOU0GYvzwyOdNRy10iLYPNlg2FsJcpFQZU8rbRtk2q8rqdBE0GQzEni374xDcTbwEuIAUwGuW0="
        }
       ],
       "professor": {
-       "iv": "eu+5B1ebuC+RQzAP",
-       "ct": "wcyPbeFEFXnyfOghacaIw9EMgkLgBq8DB8Dqn7v/zQDBr1NrLDoLco15+EkmDti8A4CEYHXqA8lGgdh8DP+sk2cK3HBGY7EKGZYlT2DvjfWQRgU/do7vr6xABmlZsvJTd7FUf5D0Bz/IEvp+P0f5IPgQuHJh0emj8rzBORjBahHCfDBWXeTsdAnnD2yrekFfi5q+46BUHPbtjs7oXFX9kxN5fPf9HVVr1m3P6GYjJmGiUJpzp7bkXG6WWWmC6jcoU46VPDs/uHDXBQ+fJUzTb3wx1JrRvVFHCCO/CKtWYbjqYml9uX8E43HFPwJ6k9TnPmpKA9QTaIlkZd4OtqK+1Yz591mwM1E="
+       "iv": "mcQIcm4JvgItLd0O",
+       "ct": "3rOdA+/6I89BLbyNAM1VZClQLMwnKaY7597uKUcTGIGoKCDMi3IQhZJsCYf5n+oW0i6Wv2BgqKl4SL+TSdMUl5Jr4eowJ+3t4fW2+AmQld3IAnhOR+IHVdLpdkpcuhSdr96LFLB188vMVuq43OzDj58Lq8DdS2ouYdc5VJHr1DIHtnYYHykhL/QcguhVa/DaaXIupMrbgXzkDBC6jr07D5O1NHt/zrTPWOda74C84uJFST5LytSbOwlcNwfsWrCZxnEjthyGzTayACjH6gNEb40daNoBw42gKtKi3YmOEt68B71sm4+o6vJP9t6gP757E8baArefIB0O8owLlYg2lQzGK/VqU0c="
       }
      }
     ],
@@ -1538,76 +1896,91 @@ window.JOGO = {
      {
       "enunciado": "Uma camisola custa 120 €.\nEstá com 25% de desconto.\nQuanto custa agora, em euros?",
       "dica": "Calcula 25% de 120 e tira ao preço.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "ajz6tMLxEcMpm7jM",
-        "ct": "mHIwTHnXGyQde97zJocIqHzq1FuGhBVDUZcJHLDvF6zSPvPBiuOGvBBEt9hqxjhuWX5WYtZuotJitzOm0KxtEeOy46kfIZULoPavEjZrRcsGNMs6o8pNbp/q3jDvmYwIvb2JFsDEDBMyCj5Kk3SWj7zVzvxJ3lSdf7033iXLGUVqcSftpOfLT4PLK2NatEuS7QXrz1wu8e45DmQlnQekx5QStCRvfCViLNu6ubUHnTWwHYcEfW80W1fMj1RFAydHfq0RwVq7ErK0SzP56KPPgAtFM5cXX7agmTn2mGe5XxgH+EiBeHKXqIcdluSekA=="
+        "iv": "eLbBUan3YMdZIGJW",
+        "ct": "0KT7rC9paIjjSRx3Clr3Wlo+mSAd8Z19OyHL/0b/A0mG4YswF4/ARWVwzGVxf3itzOOx216kd0o2/GZasrKa22j+XbRXn/Mz3FHQ4oQz2dN/m2w9NVDjQDNCAkUnNhv+ZvpuR5OkGudPZCntHPbpk/spFJemGzt6YOzQo4gflHgoXs4bcC1xy1smJ/zsHmx8qgNL/FblSpCIEo34EX0exhlmE3CqguSHMHpBSMZ1C0pakGhljf92ON3OGZvjAuEymlTPX5h7QjhEuvwUikEwX+Pyi0WR3VnqKdRCicIMjIc1VLyx2NECWPJxtSz47Q=="
        }
       ],
       "professor": {
-       "iv": "dgRXagdsQiwE/4Mk",
-       "ct": "hWiEamNEQdXuUb7fn9FK3Pmq1xA95Og5RFbPi7RKmlDjxb8dVEEq4nqf5B7Kiw5eUqrjhDSpeGYh40kiskaFAL7VfNNitj0325Q10fgJA+xwjT+Wz1WUDKjdXWEQT87VrYGnd3AhRWJmt7ZCPEVo7/Xc/HuzKIQAoIkIrBB07+slcODq/TByMMMstIjQUCvueAbcnIHHSsEcIMZbvWZpV4e24uPNRKHXu0Ja+8qahfjgCevgvy7gtwEyrlAmG3Txy7/ShjMtlrpelswnQKj1j+PR8kk05RU4rnm4RXOQnCd+asDd/bZIpxDjqz0l1Q=="
+       "iv": "N8hvxU15gz+qQM4Z",
+       "ct": "RJepSlBuBin/UMWfcT855Bc41rrrWlb8m7MC46GysSUVftH5nCPDYfSMObJCHeNclOzrMgXmoio45aMEcy2hgBj0zYPISMfyZ9g6vM4t1aaNDPRaLQtPO2d+ToKdRBmhMDqIh4GyTgrgXzkdwCixjBWfKW//zQJHP+gbSUJpBX08AvokVuBarTyD3588lMrqJ6yNM+kUFgZ2sYnrCBAVuYc7XYDz6xGaTL4eNqDjbwq5ktK5OZoqpBdu1d4kommi4+QwpxE1z6D7oJl6nDe3E9QYuas7VfUQkj3YEly+cKDxubsJ7fLvUr/EkZUqgg=="
       }
      },
      {
       "enunciado": "Calcula:\n6² + 2³",
       "dica": "2³ = 2 × 2 × 2",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "Zts/wmPK5i41tYUh",
-        "ct": "Y3PO12Xv/DenPFQp7aMYh6f+OkzIAld9PRZ4yFJ/Rb36ZSPefvEZNMRfYbvwIIIu33nN8zs+dqxra5kX5Agwef0ssfxw1/Dn1Gy3JWUmMkTESK97jcukxR2jvBhueHBmqgcg5tAN9C9VbEkzmmJsR20BBYpaHiuvdIa+BNsn5UC3yNmiM5Y3qhjTSIs2r4Y8KRr+52mUlrlWcxEsY6H1lxLXl56wTkDTLBy+JoqABBpkNbttmmgZvRUyOOlwb2QMl4CRTT5WB9NzX5KpW3x71GpMYc9rNs7ljuFkag0EAMbHuEZRTnY6Bk/vqih2SSBD1WJtIvZw4EZ05PhkBJjeJNQA"
+        "iv": "kKkQ9zIO3VQj2Oi+",
+        "ct": "1PjW02n0v37K3JDSQju28uoHdF4EjWmTYU4kGZZnYAzMYSbb8g2StNX3/uyhgsDzw207uZem46jVaAXCSnrDMfiRGMiX7UjfwUh+5nixVgEif27Mv6kJ1d+cQCYkYlNBsNMgAtJSbr3UoMF7KaR3Yx7u7YEa+QoU1AzxmeAwpkLUdy5cu1cEHQSUYdCCEV7GHaaBQVMa5/oT20pf4hCIzWmkoY/wTrW3Nj5MoUDd6ALPt0ZDTkS3dPVw/aVPgk3iUW2ufHdlx/taofgPoISERaS25JAzPsw4zY77bRaayaATl+ZEEK8yCjKpuG89L1MpbHSf44AeB/GMMbw3RBiOBP8a"
        }
       ],
       "professor": {
-       "iv": "v31EfDyBlsCrfQHH",
-       "ct": "ANYZDSm0tZ0Zn58LQOdgejJoiZmzabysO7d+nLwWdOZqs+lZ29yYHZg6nSj4OTLi/GGj6qfzLHwrpv0POZpS1ABlsQfo1e6XhV8sXndsdVdVIJcguRH4MkH8M/wUEKx5LW8gp6VdM8yFdMONQB6ClLvAhs7kskEkHL9LbA/I9oZHxkfMpNfSUwJpRutyntmVB3Gh+Uzy4eNqCqK1fWWaU3IPLss4wZ9MP1l2/XFefHlS8N7/6on99piD/jHTAlVak0gUzUEyuL51xRAP2TkPSbEAXy+KfmhXDGde7yP7HionY4eAo/7m0Upqm1i0e8PuoOy2zM/VDbN9YbilqF6i6qv0"
+       "iv": "0nFIlRM6MKdBdPLk",
+       "ct": "SmThrHCKFftsXWyLeDpjAQnpzhrlBb6qgHf3IM/4w+3UAABAJRK9wYRaclAhsfJQEboEW818shKN479qTTniuDX3m9d9WYdcZ7WjBNSATg1tvcHGpcS6tEm586Q7E4HFVRizGrt/X1h9e8yoBRTdsvk8mpj4w7tes+hABdc6udMO7d6+CgwthoX4oqhIwrufxWAYWjieOmPCNFk66xZSe+FjlclcBHu6agdWEWb6yDrUTRQ2wFhoaQMiPdsJKxvptu8FALVHU1Ulym2UbLiAPwoEcbKiNR24JZDz/avPYmV9wUbcG/6OF3cTz0HWcbmoeAKtzeieKvfG61rGg3Mot6co"
       }
      },
      {
       "enunciado": "Um cubo tem 4 cm de aresta.\nQual é o seu volume, em cm³?",
       "dica": "Volume do cubo = aresta × aresta × aresta.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "WgHBg3cLuyyjdGR6",
-        "ct": "ufRgh9bW5F3QIBe2OAXnBQ5MDO/1BG9bHhwzizU7NKNCQzvJYPYaUjJfzmrRrY2CDxMuc+L2G9y1Ff5cpUrviMhvR+PhIeSZZQVWfV+Dmnw2LsoCaUwqD3Iavl5lOpwb1QssopGUNt7CRmmKOTJjF6F6meSWjroCgsWi0Mdw8j3WkgflgZ+7gYJGF6/FmVt0k8TRVyMpdWqq84kNtunXHgfYLigQ/42ZLWdM1lHU7EUJpcHog2Qy1KSeSBJcjgdF+EWGxsx+2K//lYkA0EMzpVM5oYMxlt597zJ/5JXGZrGAkNOOqqCCFsBa/0vlvKBy"
+        "iv": "MRmBSpDQCvHUgydJ",
+        "ct": "gOV7EbTz0TQEmqpWwFVCg9WeLCxnc8nP7Ux+hMb2AwINdte2Nc6t6oOMgS1rSX4twYjqca0FYy2jS6Kz5XEmz3zHuDvPzDk7yA5uec0G7SLB6qbMD28S3HbgAn9jCaoKyDkZdJN7dKFEtos/uJgrtr0F2x6/O7tQopJuQiBl3iLZUiBSaZbzsf7Mby35b77F64QqtXTq5JuVIDPLQ3FzSMWx5o5CZLp51eeEhUhArsQzRBetuYj/Ajot4X46mX9u75I952jMej8WbZ2VLrsxjj+to6O/EKJqMrarFNrALohuKN254kQl6l1q1wLS0Yqh"
        }
       ],
       "professor": {
-       "iv": "ezdla75Ob2sN0HII",
-       "ct": "KZSVSBZOkvpEVLjhz+/S0gkgZw6y1TyCftSwalEnznMsZGhSXvmKZWUtOZKrZjmbx9JXMgwjOwt/S2TS2yhZEy7kXhXBF05+ieERDx9MkMYoNDWneJzxbll1WuT+0jHynQ2Y+vr4b2q7FByY7GpaMToWTVi7lJX56owgGWkmPGRE70WK2EwKkAnFlX6k45XSCJK/2DcihKStczJ7OSn8REZv30ShUN/5NP46+7IVSskg+qpzKmaIoT1IRgC6UaEZ7k00nt641NjK3hgcphY6BXnRIXDrJg+D2OWm+aLJTKjc/yuL67/YNjke72kevR37"
+       "iv": "QWOTgTJKz2Ry1xeL",
+       "ct": "LmrbBxUccc3OSl5S0vRWQpVqq03QxgSb4jVi/4wArqOkv3FwWgV+/Zrsrfo6e42CrprL7zVd88L2H/FLGMs9a+X0a/LyIkPHAUCIrijDUAuuaf3f+fwICERk9XDrit9YbBkx2PERK1E3y2DNeGJ031lTOSaD7Vl2I7kWg8JmFrXmGNrZFqHu7UZbUG4WhyL7NEYp/JoS3Ez2Grk0CT8buLURgSKWv2QfEJnWMxWd2BQetrljTJ3AN+GwgetaU9UyhuZUwbm1In9sEB8eWQXbqvs1ogdJFja9h6xlbOG48972AMan7EYaaUP5X9tUQmuk"
       }
      },
      {
       "enunciado": "Qual é o máximo divisor comum de 15 e 25?",
       "dica": "Escreve os divisores de 15 e procura o maior que também divide 25.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "EMxB10asf8Nl1kzU",
-        "ct": "8AqhDegljFCkzfBwrUzjxjDQy23TTkLgJ44QKV8H0eaCru43QPHjDvcP7kkF4DQmYIUL8iw8UXu0RX//elPjXG0//nLVC+rHloxBXdu3SpXu/Aexyo5MAAF/Pa1xbDn9eGOSyURnP/XUYC/sRP0xUCbHgSQ7rmi4de6prTou4l9gjmtDuFv+c/g5XyCd0Jp791nMKJ10jS1Myy3HoHt96JtO70R6SQQK3NKdlyQ40X6wd7OuwjL3b8GrlXkCe4yWXyO5QyCriBwPeAeDOn0CQQXAtsXNCTojbuW7MMun41bHQYCGAzOFK/E+JDBLA+Fn3HiHakT2u/k1bwF//w=="
+        "iv": "oklg42wWNlCX1HGx",
+        "ct": "Tr0ap/V4HsKO6SYZj64a3+U0AhtjC07HC5I1YMvf6l3JfKPUUcuOvCs/+o6w11aZMOA9Pa7IUTVr+CnwobMoLshRGhNgxfNUN9J+FeI3CQZu04GGub3l5Iz4k2uKNhsPTdy/7sd6Y0opA8iqsEWHKK9+4GtC9xljD5Q96k01VYYCWYear85GSCnpIsjRVtB62dgQ0BmQKdHwScpjsqOU3beEXL+h2n4t/Ldzc2iXplhLO8q/8PXdbUhQhn/ikmq5b9e8ITR2ZnhQK1z2T7348wt5elAvNuaet+fgxeXuM3Ea+Up8cPUYfHq7wekzoEUAO331io2SBQUX81uRkg=="
        }
       ],
       "professor": {
-       "iv": "Z5iWCcUayWQbaqGf",
-       "ct": "uDROQtmr7wQf5YBgWVote2NPdk4LUHdWu7b7NHoAWlGY5QyS52NGVlcb0VKUujzT8ceU9SKdc6o4Egn6RCg9uCr7pfNK5kqgQhu8rbOBxfulyQzw7ar+vNt4UhwhVFbEKLtmqtor7mIQUgPsS/c5sMBmVlQ4OrwAMw3K2OMIc4gjcdd0epLHo+hYT+/PDiBtMme6Mohdce268AHxYXwJp/K2t7UTpdTc1SzmP8+BDs1XOjB0+uDKVflc1DgPGiwmQR99p5ziMJkQ/LWjpBBbSbVdI9JvmUYXuxbS7qNQpboOT4z+7XrzxFXcq9ycZ+HO3xoqD5daq5HQZFay+g=="
+       "iv": "WSTiMTLvILpetf7w",
+       "ct": "2AgAeM7/mEgBy8fzDOV18tyXY8SpdQoDliXxUZF9u/SqiZOg+SKmPU99QIno8DAd/Q0gYQqPJZULZ7MaRu5lBP855oCKR5uLp1GCQ3op821bSPbePRjoKNS9rAEm1VaiR/W9RzWXc1VOawbxWQcaZqPxWAMTgoQMEnKiV8+CYqxYIZt9nI4JPujD1h4Zne2KfKbhmxYgvTcTvGODflnRFg4bPVHymkPRnj/gtOoGOPGNiBSP6CkFPR4FqJNofjJOS7TmKENFs7dJimifNAVvZwQOkUrwIsuu0JApQcGUdXr9TUb3NeoV90X4pjJvJGKV9iaj9VneORdW2r6pYw=="
       }
      },
      {
       "enunciado": "Calcula 4/9 × 3/8.\nEscreve o resultado como fração irredutível.",
       "dica": "Multiplica os numeradores e os denominadores, e depois simplifica.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "+Yj9hKRVeGS/KxKt",
-        "ct": "QUS0LChP9v4QQ0iU3BDf8a0HVMDvhVN/QrQoKlfms2DT04RTU7tumSNDTU+NBXsyU2RC+V4rclQN7xdKK7S4jcJJtz9vtBo75vUg2n1Gk5BI2+wQLBaSiMe2hVX07bZI6cXxd1a3W9f3qzYnjof+x60Uaq01HHE6DQ2/JIwRA261buJSp3JYs4Mm6LkQg7SXOO80ozjbl6Q4wKieIw8UcMbdJcG0IAcfMQRCfWaTDclEe6ZdWfvrBo/VeoRwm6JWrr2vnojJbMft2WCnHZSvPv2oPBErCknFT2jVE8r5FdcBaX8cBk8VTCr0rDi1NXSEXZDyzZceP5PlaTl3WAA="
+        "iv": "H2UqmCusktiQD4lJ",
+        "ct": "zopwr804J7UUF7PwLEbB2FKRS+AgnV82I34HESJ/bfWZ5UadvmJesCxa6SVqB7RliJ9bRQMBSCxcUYym0/EaN3Ynk3Pus79csppvVCy2wVaimhHJCa14mqaZlrU8hXpXLk/OYGqx8W+wEZkiGCCUNI9Sg1ClJ8Ljl1iQ5zPEra7FlhEk/Jq6Y4NVnLdFkObbDPhu2B/ZRIXrLf1/El+IBDrp5nVTdPlQM048LMTDE6lCp6DMW9RkzoFSwgG/3nul9DwWMrKfi+t7u7anLBmQLvNjzhBUOodvF1OrlNUVV5hliz3a4lBNNa6/+YeWu9xjeU+EtekCXtTIfyrmHdA="
        }
       ],
       "professor": {
-       "iv": "xp9FK645Fg1wJDYb",
-       "ct": "nTr8zLElESf7fg5zt8qtlCul9XsyZ0fA7OJXNsBytYp09nORMpF7HDrgE1I7GBoAFa2KGedFa1FkchrYwvVUW8k3M+GXNSInnCDi3G+AFgjdX/oakRcFCzAuQJND+pyAJA+/sbgirjyuOUIRJC9cTfu9EUJ8XHA+QQz+8Lhh6qwVoU1fDUuFQkakbEWS4aCqEYHh4eNNzPDQCCR1MioF1uE/OcABykOim0OyM/C5Z2DiuyUpNRbj8tXRYDn+qqyHtB7TjSdDIK2X+1cnmDzkaQknv5JaxWSvLaG7lgjBKhleqtidyTWrvZlvd575b6jf9B2Tdx03B+4pntPyCbI="
+       "iv": "6TUqdDQX/ZD/PIm3",
+       "ct": "JYUVYiqXYm7mTysYRgSvWXaerZ4uoW8cgJWl0XEL/pWRBnQd1iL7IvAWxMKIJWkSTAn07f4dslNJ/gpj1Bnpw39cFNgIqcZgit49hVI8cat5a8PZc38ntftNwQ84bte5Kn4I0Mz2+MJ6ySB3bRXzYKkkmSllN1gcGrsaHxV83jXlEaYIl1R9XNGuE2NvvODGaa3dkbZTcHpp2SmSr5dmkZORuEOIkUO3k6R3GZusEMejieOvxNY2APYN56IbiEQxGa3Q5oUPLFFeT7rZmC4pJMXTy31a6aO8CJhsA/rGkvV4ZJL4eNePwsS6A9goB78xDXO0Co35vwT8LPQNroM="
       }
      }
     ],
@@ -1615,76 +1988,91 @@ window.JOGO = {
      {
       "enunciado": "Um bolo foi dividido em 24 fatias iguais.\nA turma comeu 1/4 do bolo.\nQuantas fatias sobraram?",
       "dica": "Primeiro descobre quanto é 1/4 de 24.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "c0uq4OqA+Bt58kkq",
-        "ct": "2qSbOAmPm02GKfBLUhwDi0fRqsDgfgwKpu7JawfkEQP5LQlYXo8ceiBH7/Bz8F3lkIqzQQT8yR63usByHuodbrNzF2VsvGu89MkfoG3XPbrBQlazjv3pd9voIqgfXJLbPcbnLzUApIq5RxeSI337DC0Nd66JyB1nC/yfwpaK1MfY57Qm5dgMx1rrC90UQfcDk7S1DCEGxpk98TryxQKPc4w3V8ShTocN5Ijzld4nBeh0lNCVcc2hqWSknXHkXl8Dd+BXVFky+d9PTCc+s8wWqXOHkhWyoTif6Gr+/wdLlrKQmCBHOUyIZ5t/ChYPtw=="
+        "iv": "DkmOfmy7AH5jUTYO",
+        "ct": "3TJzj0n9r+ndgbTFieDdHQ8qyTYG2nuozr+23Uss2OdHNVXM+MUCn4ilNZHoyFrio29i7sqJe6IqJrpeZbKWpjjdweOgbKBh1apnZOHnzI5SHm3U2Vp0o9/EZjoq7BZ7J5aTkNfYMO+UB1nD9dzzlaSYChnzlCUrVuM6wDiZ44PcO1sIMfFo6uiOkEVvUkfInf1Bie8uujolPWJ8Ivo2GDRjRH410IHTkKgnqJbe2AcWFidOJA+OpEuKAWBAFZo8U/7LdWzGmXem42XPuu/y0nQ+hQ0gxLk70zZxABVV0fBqnImi4hLgSoSE3UKFdw=="
        }
       ],
       "professor": {
-       "iv": "FbuUtFg6YeMTjOsS",
-       "ct": "0f4+TEHH9YFcVH5sJPHJvoYxkCctfafMEb41uBYDzL7W5yNs6bqRWP1YnIyBY/QFMQF4Sr3tYj9E9Jy1EDcqBPpFW67NwBR2jsApnNuV84mEjekRFWom1Mhae5H1Lbf6rl6sd9lRIICRljEd+UJWO0Xe9CGOQN4qlj/ysj5L1sehfUnDvZTg39mtiANJdNL1D8uD1OZsxeF1mG7mGzRDNKMlks4UlVamnzeAs9I0nWgJEYVwMd5R58a7RFqEC5Uh2CZUqPtK6HNgyTNmvSlpXp39E+NlT/KlmyBBmtdjMOHeVzmHFIqFZ+rNjKqRUg=="
+       "iv": "C6mxXcoR4U7I2veq",
+       "ct": "k3Pt417cxp4lYLrPUOJg2NQn+Nz/OVT6P6AYE24jaPQP7XdEkm80d0JKROnREEGS6MXXLQugsNVxJ/dqupz/KHDk1XLk6WI6q9R/pK3dKcK077SrGnISwUb0tdDhubvGej2DQouAK2CX/i88zm1LN85eBDE+s6FhtK5khd0De1dly3wxyokcgmC/cTXso5fyrQXuyMVoSPnNaCbT3ougUfehmwON5jo08MVwcswoZp6R8DVc41BJosEZldt2Ldf7McDgB68CmgnADvql0IDcJG0ygSC6qTtrTvcdOOXiKjDjpIV3zJdWIDvGT1D34w=="
       }
      },
      {
       "enunciado": "Qual é o mínimo múltiplo comum de 8 e 10?",
       "dica": "Escreve os múltiplos de 10 e procura o primeiro que também é múltiplo de 8.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "5r+fe/5Y3xOflvZX",
-        "ct": "4rCZ5vBXGyvMMQxqn+2MDDL1J5MkGkWO7WO/mB457KlBPt/ESMLOtS+Lfmnwo9VTB8/0IXI8tTgzcxgnvy63fKN8NFDmCwv9C9JpgC4e8IfiM3ZGRwj1BOn4EmcmIeko09H7CIEMNQs4hcRajxrDU0tATp0y59vTxV1f3POsnNrprlpyh7xWHv3foR+5tmi3rbFDCbsxsZQtW3oHGFdJwWeAS/kTVp7le4oyubK3k4hDPaodz2YWBx/NQvaBebO3u4UFmNBMVc0MFk54kSrnVCDpKulap4/PXe/+VUIPpd4c5H95zS0xC2wnbVT/mMIJoYrH42vhcBG1chdmMdi24g=="
+        "iv": "q1MRxnoB/a2D1cnj",
+        "ct": "rNmUdzTyMXP8nkUHN0sarWYuHY4rCfDYwY4PgXnvndOVIpxLeXzRZlh4c7FdHsfgfd2P7M+KNeA1EAWRlF8ewNld/Ccrsn3gHBFqHE8bt+3pyRc6bkon6/Nt2SaeX5tTun+LWOwnwDApaE6x302v8REVz4AEZCfd7oRTTbxubMRa2k0MJoVqT4I5MjfKSf+tLOxMaOJCHj82LgJmTuKYMiA/Z7B7vxEIyDP6k4PWd1DKUPbK+zmAF+dwfWlKTgwj6eHeRU2IX8Yt2GLL5jehP4Tc3X/s1VLpq7Xnt75m5tP5qJYi+2jnD40XivAPccHismUFGFpZTSDg4embsGlYSg=="
        }
       ],
       "professor": {
-       "iv": "/mLCiTez7lDD1Hto",
-       "ct": "0THDweyk3dOtOqMi5kEvnTrZs4n3Arn6hLKy3Oaq0jk1vXLHmsl/6TJkjvuBKyMoQbFIBazMjhKLCuHd0YccmYlElMDdB6Si3TZsaCpEiE4NWsjln4iDLc4KKtgNFBPZVXYcyQm3AsDL2x9v19eOb0oxpKccDY299bFSy1ewDn5EITGLyEiPmmi2DuSJOldSU/uhCP+t2WxqiyUT+ZgGW+/ltpcILwGSBxEUvF1s1B43TZmAKWlPnMh1OXPgyBZYpgn3j9T0wLo140QBP5275wkeRFoxGqTOZNzcK3GMuswz0X/9Yo/UOzX+XFkCslDdstLFkMa7vH+Nv1unPCZk2A=="
+       "iv": "pg0bC++uF2LdQi7R",
+       "ct": "YOEu0TKi9slTfiRiGqIv0Hd0mZNDzdtOzMOzr5DNO2lWEas0eQ5yRO9eR5z+sGNcm9qLi351orypezjLjxxmbtybvNFf+jc2mGhaY9BIB6K2mhPekyeUnbm7ZwBPL0B4bhlAX3U6KAtu/VA6gj8LvoeNyKWq2QOTSm7ghBzNAQNJhzdco+nGN7JW+1NS+4PAGy5D8ZRndSgcewVXKKVtp5tZAyYkyPzWequOI1w7J6TQsUWJGBAxJdu9IYTHphbg07ogOiYVe0htuR+SGElCDIjUHfhzhy043wn64sNVI6e45qh89bv5dj6NF9X8kSmFAze71SoICdmNhLg56LQaQg=="
       }
      },
      {
       "enunciado": "Um retângulo tem 14 cm de comprimento e 3 cm de largura.\nQual é a sua área, em cm²?",
       "dica": "Área do retângulo = comprimento × largura.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "/7aBWDWg+JobT9/v",
-        "ct": "vJ+VWPZuyJJvbObCdkcP/1/WJJej0hULtMpFrwZUMYMZEF1zMSs30avVB8rrnBJyW0/kSzr30xU313KsZsQSsY1Tm79HyZV+HTI3u9tCAgct2x33OHx3uP84dS7oK+R+Yluu8T+xSDwJ8hFOv+P0uoIEqvZjbo8Qzl0F00Ehvh3JlsPHOmV4ML7KA938xyDo6XbuNiHuuPCW43GgqNQHZsFcbuSuCYc/PKeXChBknTZ1AYc4MfmFq7UrQE0EoPbHRdKWJ9FFbZyKsU/q9bx0X4RMBcK/xyzh7GpVV9BraBMf9ZoaJkOtReVgXljcj6p5itJbaVACgsK2rl85RDKqi0jN1pvqqLTwptzarMU+RQ=="
+        "iv": "TJ7Bk46CMWXHxhiH",
+        "ct": "jpLvmUwSwI4g1+66ZudhrqwsydMf3TapQ2UHAJUY35qgvNoWycQYsGFW60YqXyGdNWzUksrUUhsqyUDVpOLOUz2EDx6+Q6ZtDtcA3hpPc/15E656DxljuJvbfkBkXTRPHNHvuN1azm/JO1hG4lBZ1EPtXt5X8eaj06nn8YXvNbhZl1/Ms94aj+Yhhuv4zWYPNUUODTI/oJpg2v87l5cP51eZUp9c0GVVxO02Zlwghet8xFeUyDqIfQbq/2px6Dkd7FtHVPvvi1twBOiSm1d6FsNF0a0j6auepJ0f55dvX2wSMl+cBY3lYpTI0cPMi7s2h6WlHgIVRhKC+amzf3KbBT0+wb/37ldC2ZL0qoAVJA=="
        }
       ],
       "professor": {
-       "iv": "wal2iKSboJTf9WDq",
-       "ct": "nJQ0MARtlxVADLnO/UtAKvrD/rjR+3iAgb1gMs2/XmDIsPvTJY3O6WgeZRFwgoEDkEJhu2+QYzKC79oqrhmrNT+6C87mZdndtQZOwffeJPu0v040sf7wEaUrpt0zXrKAnuyNmZjvL2idO4cjisoxD+XavwUMwjhj5WNgu0NGDckOO3pQUalDjI7JdrS6kuGhXwcKipZGSVWu7f2Mz4fgmLEEf4adxG3iU5MtK/TbTeDyrLm85ICy8rvWafnP4bhL6+UibSvfUqbwz7gOVR+/Nq9AzANjfpD41GBUZGDzw2X4dYE/crOw10Uj4ILRpHDEG9p7O23zylCqVJ8CQi8LlYkGPjEn517iCY6VAw844w=="
+       "iv": "ZeZj6+Gq68vjbBRc",
+       "ct": "JcPXeM4dndp2buAmpnk2WKydBPymIXt7gs3hWjoxXc52Jh6owxthfZOvfGs8WbC8XPBemhCZq4QHZUx2Bl9sMXn99WSZpT0zBIhjpPGSeHV5XRys7MPbc+NXG7utfHAcE+zGDJjgN3Ra8FGxQ3yawYkZcBYnTyAV2AtkSR449VUDSx6vACmGEBAOlAPiEy8tXlPM+jEwHjQ8N1mIMeDHzGgMwlVkwFLBtJJyqWRUhhJjrKTKd1o0z/1MX2Ki1BARZKKcpABIlOZ1cDkyCvqJJkSW7l7TIuiQ+TUQCpVLuMumfV+iMvB3IXMuhKRBlWv3lQP1DEp+4g5gC++UjxBGBTWzf8Zoyi8BSl20q6dm1A=="
       }
      },
      {
       "enunciado": "Calcula:\n6 + 4 × 9 − 9",
       "dica": "A multiplicação faz-se antes da adição e da subtração.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "kWs8hv73dWrVKROw",
-        "ct": "Q2UbE+Ee9p8nSjN1KiarLpUfeZS1mYnt+Ay3/yuXhN7F41JaXU5Gwm8LdlXBkGx1ko0oNvAisCqX0Dj4uAl0C8losiMtp9qqV1irLKe/7Mcwb6GVcDYuo0NvAJJIR+J3DoobEx70mUgH6gWLpUnQ2NvFr6pptgnhIwPXMBr/Eo40ZmFZtm6NaW4fCQ7m3TKdCBnTM+J3W9Y2GUXp5MUR/cXL6+MbENOFd+TMPgwolUv8OxzAeLHwiQlc4os572WLw1kKy1oryYIvX5zO+dgT3Tx/qvPG2zk4pIIbEozjC/NzxVzQe7IJ4K+HhDopqj0SOSiBoy/s3qIGc50iQA=="
+        "iv": "Q1C4xdhu9z05GLXz",
+        "ct": "p2Z4xvPt1/2rTRNnvx51KRIzWDza3G/+pYd77CRiKgKm+D+Dp8N0BmZUFxFQ0NCABpFvZCjQTtx7mJJMwvHanDmKS4o3MJw7hcgcA3zTusypIAtxr6cMT60KCxY4Lzi7tJCTHgi7hjIMG79LfzULHdIDCB+4VCzcu2LbxUj58HTV4T2t14pXPm83fBK97rAJw8uK6vAvAdrIHsnEkM26/k9GyJlcEw2p6E1tki572VHpDB3fEx0PaVkvyc7JwyAIDxFA6x3O0ra3TiKX1vrrGnug3QcgNzHYJcFRLtmD39jiNORSXgQrNWZfO92YLVvhdj42wC2nUbVAEnpzMA=="
        }
       ],
       "professor": {
-       "iv": "XHPnGGf8v60JP3TW",
-       "ct": "IfB2KDzi/A08YCNZ8Z7As3fLyWLEuI2zLs1gZSiztHgKqzn+haL4DW2mLYQ5UxFXIH74zO7Zia5fizqdB0TEFCs9IsfEihGIU3XfXQgE0Hm08ARBdbZULwg6TYC00TRo6lCd2afhBQpXlkSihlGD/74FmKhI5OHdQUXlyl9zkz2YgYUnKHfgwKI6FXeuMdtjnsvJkYqoWjH3UObgrefE98fUrEAfkp7vZ8WpAeahiEwSfchXCBxyFWgng+g2JKY23jFLCK1GUF8d7jnN6xWWnWgdIYlXaCWzuDXIlonAtHTAIZ8uYHzd55vMbbM2Eqxkd+J2Um/lFegYGQ6ToQ=="
+       "iv": "wBLl20ANv8z5kqxp",
+       "ct": "BHAxVPEKDMUXvUQbrKhJz/SW0v3UuOtdZhGhQ/GHu87eFeIqUkopB7v7R2GGmVjZNXgPOmOCA9y7IqxEvAa9HA76FaP2ecJ+vPjcBWik/bFWJhA3Aqs+jbjRpwTheRb92n7CGkrf1Lhp/W25FuQWmc8xaHSq4wbcNl91tjUE98jWwdB10V/BwHHPRP/61hbL84kVPjSZqFDaZS36VikXB/e9vVR4b4vuf905wSty5gW7wj25hjRsmuQlrmwndkV2FwJNUY5piBfXrNBSMx01nYxISzGe64lgeGwcn2eRJjs23ehowZ9H8gxrseUqzNVj5mHmJ9AGL4NAyqquFQ=="
       }
      },
      {
       "enunciado": "A soma dos ângulos internos de um triângulo é 180°.\nDois ângulos medem 65° e 60°.\nQuanto mede o terceiro?",
       "dica": "Soma os dois ângulos que conheces e tira a 180.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "4ei7U1+tE/CE32F2",
-        "ct": "+G+iyqlcdEhLxUYVarRnuDpRfAZCYp7hJx6LWoCwneUFmi2H2CK0yRgPWlDAkNeULVQNZKc7pOkE5nz2P1uZ+LFjcmCxWTy3tsbZj91e3JksVzBJlTfee9SI+G0SisG5xNlWh3HYZ8hvUqJBdDd4n2hyF7kv5tt3HxheNUFJYi0x4cFeduDX+qILTBzR10XhiPFOMfOl/GX+nBfXF/1wHExnsLvwTWnuREMd4Dqi2OrX09ORXQr6YDDp1X7Xu5sUIJg8nh/z847Q9bVBIbgzHx5bkfggcF2Z7DstJ0f0ESRXlRyL5NNI7qqX8LA5v4Zs/OGK"
+        "iv": "VF9EMOidFYFsJlrr",
+        "ct": "s5g36ilSOd9LfhoFkFpg9aDsrz8Jf1myTfRHfJDGfgLs2WFJRNdphiS8G4c8uBqCW++NWmBux88HOop2M0yqe2e8z6hQ+D5DGOXTDy/4aJ7Eqp/Kstu8/xgAN2Fk+lD/iH82PUZyvKG5cmQWlW1IqjVf4CpOnjpmaZ18vuoIiPqbUFCA2j3+nlyJVpKIi3+4Vc/qCgt2biluN5pSS0DXZgDbMeTu913D2GY0JEUfifSdb1siiEGUoEHt/fup1afnqLRA02WxCg4gdL+K4tYcV7h0k9gG86WDHTAoaSvC0Lxn66W+0sCI+X5TBKJWsB3frALZ"
        }
       ],
       "professor": {
-       "iv": "XiAEg1rpH5LSTagU",
-       "ct": "Ew7Den3W3hMNZwqHn9Z35EUL3iX/W/qmkaQFbeHUrE7XCMEGWBDKVl4Y0TnGx5luRhQRVBaaheULsWf2G+H4+5NMhPgTqj1qXDONRnJNSSrmQy+HEoFSE/y4bmVpwF3k9jv3GhwrfCqsInK4mwI9Ti2dvmBsx7OdWGSvvvTwNmpg5xX61dT9B9TxC9J5tjN+lSCX7Vsaijl0HUSVdJLw9KdamWsA5E8sQoOOpjjOtpDWqwO670vZuBoGplZuEh/87CzljHaSl2VOoOL6dt8Phpv7SjA802tGEAibny3oV2NhanGhnIa7IsXlNvsUSVrsLiHL"
+       "iv": "H+RNt1uB8gCmo0hf",
+       "ct": "gwT2kqFapjcrGCMhMttc1wBEC7jtLVqzgEHvwf9o9otPd9Dv7kgWbr09ntoospWWYwsarT4OTC4WcAzVdWv/JRtjfnPB+uXrUrssYeJgauoLo/usPug75K07WKN//F+2sFG94QeSyVGiYkkZYgz00zh2srcEkSRSXuOFFb77ygCPIrbwuYhux8eVKDrjzAhTsWcazNLAnj171yIVFIdpNcCNwYulbKIrt4zXDKIi/H1REukhqySx6o0Ag97Oe7Bnq+74Lwx/gAffFFr3t9vMS1FzsFMuGyjntesxWaaHowztvm7+jn+Wge2Mifpp824xmFMg"
       }
      }
     ],
@@ -1692,76 +2080,91 @@ window.JOGO = {
      {
       "enunciado": "Um bolo foi dividido em 21 fatias iguais.\nA turma comeu 1/3 do bolo.\nQuantas fatias sobraram?",
       "dica": "Primeiro descobre quanto é 1/3 de 21.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "xV5tXIYgjhWxrdzZ",
-        "ct": "tEAdSSsmwhUhcpeKSTIYUmnaIhtt+E+Z6Iy7cyCK08RBUWPTQYsM4VsSlDDFnzFZ3qHZE4E2mstjRQQmnJ4AiuKZM5Z3+1ZP67TCFgQHdWDaARA7Anni9/QEUSVek+Y6aVlZNRHfjIAOvDR6rv63DJZwFDj6NzG/Yc1OUiRuYjGs+lDZ712fftmQo14OML0uPDTnXFFNO9hJmGRw8uDqsURPBOvYYIY1ZsFzu2REYLe7iT2ByTmAQQEc+hISAP6kU8CLrs5qX+DHlqRmdsuRDfPM2Mq4MrN3+Vc/0cg+lSr20ynobZcNU/971TjNrw=="
+        "iv": "u3/Tncg0ZldCB+CM",
+        "ct": "s5q3A32gq7UX5fIhmHhvBmTPUVHsFFtdvgF0UCbaQq9vV6ViPV31YHAjZNr2ee0GXfb/rybFO4az7/Vwca9nY0JohKr5cuGdoKOKdTgu4AZuBpAq9SlxOi/D2L0XcXWciEfrSBDXzmwcG3eofayYqVbQrP2Yu9RvdKM0SArgefTCjrtD6HSXJwxR16RrKhEXvsW5Rj5G6AcN3kV8VbRX83CeAADjxbWvN+Gk+S8SwsX5xiX1ZWiN9XHup6+epPMF5F6VVVu/WX/64/IOAGQBqYZIHWTduUHDU6Bk9+maudHaHxDTyHm9wThMMShIig=="
        }
       ],
       "professor": {
-       "iv": "aRyA+niMLYA9IwnL",
-       "ct": "VUqaZHxSVr0oolbWr/tcqrLWCRUCEP8E5QiM5gd4fOmG3K4MvfihNlyM/6hBaphWu7UJY4jiFRTFfFxt5Elhd63mPvyr/LC2s9ZC1kFlKPEgtIpuPhEFsBLSNid6ShV4ca0aSWl5EXGw7mBI5E5Hgyx+F1aDDLJ1gMiM8D8kpiBN4ga2O+VjTdooAb5KKTLIuoUR2IjqF3Urk3Th9dwuu81PyZkvCy+PhcgbZreXjZniflhpa3yGsXQwgZmqxTWAuqdZ2tHl3czDIIjhguP74+q+pFSm4+Li+CWW4LER0VTdrtE0gsRy8SbvyDxBBA=="
+       "iv": "oYdZzeY9l+VoLIYU",
+       "ct": "0EeoNETybfyrV9eOuybcwZp0fyyLOS4WhD090/JdBOS/wJ0dC8lKW3idvJuU+KK9/lFsH0njg9Z2GgfJwleePOSf68lhfOXpc8OE/0CNTTcZQmi4zdKNND95lVqi52rMKBEkOX+4w57krw61FS3spRJn4hCt6XhgiJmGijaLUSlczLD6HGfSy+kACm6bAN6F33q/Px1d+mtbBbQf38ASYlK0KsyjwdCwBhkQo44nJaGNgpz+43joyrkeevJ7HhjH+mKAKhg2Qj4p6vBg9TIJUkvno1UJ8oVezdUjZrSbHAfFfRfcVet18owwm//6cg=="
       }
      },
      {
       "enunciado": "Qual é o mínimo múltiplo comum de 6 e 12?",
       "dica": "Escreve os múltiplos de 12 e procura o primeiro que também é múltiplo de 6.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "HCuT2HUh86baOz7h",
-        "ct": "WdBAGq3Sh0W7rDAYDV1BQ1V2et6Mr+lv9Hl9vtL+4uJhVUKoeZw9ySyjkAZ9ZN2C+HJzRYYvUH4wt89ISLYLIV4bTjH7399TbaowxCrZga8LuDxiIcKYaMgTKOSb8PPXX/2Jwk+8aFESIGHBnZSTWgMdqsDV6VAKa6Sf5blKLEl/eQrnT0H1LTBoyFw3kCCC7Kb1m7o6v2RgfFXmQXUtCznh75E9d70Ec9yAAkcOymhMYotxXr82EBrIaiqUs5hth5iSMGG+Ql2tC/weRVdSUBDWJdVqBotXWZnpC8JoBD1VIi4JgembXmJpNPiLPKgbpDEHJ8N1RrkH0AXX3JlEiQ=="
+        "iv": "4KyQ9MEAic1N8DX1",
+        "ct": "GlWbkRDVxDwyW7XkHTrrfZIANNfFNWTRyqhP48phixqcWbTGNoktB1GvMiKq4jC6SSfj9WfG4WFhAfCJ98NSejRgyCgSTZJiE69q6+LsJMT7VhdSFmznruZSQK88uFKlx5bBrTzASTIJyO0fBy4oXt9YQt20rlCEu4KDuhOOTWezOvfpNMT1V83evoGF/CBkZN+lRgC8UA+sP36Im5r7hKhMSVymCKmUQUTTCKkWEC+1HtZhYq5XrBNlYqYStzzMSM+/gT1zEk4fBTwGALbf9Z4tLKxrOPoGpSv/pZ+gwV8nVwFasvJwP+nCho78nXawEyhmKcuUtUyaGPLl9d0OUQ=="
        }
       ],
       "professor": {
-       "iv": "FJYYvCS7ahx4sg9c",
-       "ct": "kuiHYxBnV48LFV+nhABz/lTAh+8D/6Q/q1uckssSvuklls9wwZN3BS33ZMtpmeyHT0djV8f42UGbsh/En57QdaZx0nkCBj2G44rTUwu5nlmevvZB0Nee8GT8EBcAu+p/bVcXcIVV2jgeS5XRiHA7MDkK/5swz70b/d1UV5r9mR52Y4idd3CLETstWeWEfRyO/A5QW9vnv3u198QtPUW3v8Xm6N9bEXdFq9mqzz7WbPvCuje6IZZsCmYEV4BsNIigdE4t4g0VKM1IVUm5B+Ij4HNzd2Iq+ot+iaZIoGp4LOglonmVNwwWmW8ntQoMagCcsAdz3zjjtx46mpp9vMj30Q=="
+       "iv": "62iOyJAwf4I1IUKA",
+       "ct": "Wk/MYC34PI98L/EbG7fPvf8DgjJDesapmvnqonJgldDm3T+WFeOvcQA0rWHjloNU+bRqWQFZvTaoN3YThROIJUiTDnv6v067rpWPHCuECvtIgVnJ+Au80BmTodpZ13LIrEcf8XjoSpiyVlIsxUDutoNnP/bShMVmRo85Oa+/Y+KYqvzESDXvDRgJNFQZflPETxYlBZNbABJ2b6KFfN8a7kyWNmQDiCukN7Y+vfZZwFWkdmMd6jVLh611MYhlVAjW3qkbMadCwG/rSM5o19Yc+LFWjlLLg+gKkfxXKmjekrnkC5GLpMn2y10hmzZyAUC1f42lCJymbIWpg+GQSHzwug=="
       }
      },
      {
       "enunciado": "Um retângulo tem 7 cm de comprimento e 3 cm de largura.\nQual é a sua área, em cm²?",
       "dica": "Área do retângulo = comprimento × largura.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "doz7ibQqXnQTMUw7",
-        "ct": "IuhCCEDbkUcnY7kX8wJWfpFVMqjC8n09jCvlIw6jUbYaj708q4amMmsSzVsxPYtRsoafTUd31SClWnLShJdY638ew2WP/2TGgCD6y1zb15MpBJcklO5RDXBuSz4t9Tdhm0DBzB0euTyBXtR8XjWhTzCj5MS8WzErRd+bXy8C1UacCAvwHXKQxsXSjhkvNMrrDTR2NQcmio91XLPmEb2eCoUxpyEgz0wQ+Kmu6u7kwsAMjYF7cTqQ3AtNzUXbfFbfFTyEmp6R987cGR6zfHpQ7HeTBISbtA3NkMImQSo4GON8OFlG+2zSI33ky1RlIJwwGVcFoCTkRh6IHgC7Z8rPBwwQ"
+        "iv": "mBQlJfam2Mfxk29j",
+        "ct": "8etaC/EOanKtYssW7R/XS82ipL+S8cJI44OD2jpqvF5nKAZN1EVvOOKuN8QDDkciULIRy+usyyXFgr1wwiggL0y+5wGBLgAL9AaMprRgcFHaRrFQwU98tNMyY6yTmc2smamt6LPa0lHyFQSpIB6Lv4SUk83LHBPwYNXPS61G4f0o0p7TD1dXH3nQZC2NWHAHwYeOzwCb6kgP3vz7RSkJMZ6Tg0hvzE3mwEmbo/xlEZD3VOd3JnbeS87T1V2oktbJKmQNUUzGhSyn2hRJW9ASlrc0BrwgyRMI3Z/Ib3LnnHdXcyeNiWywjSVGY7z/iUiMNwL8tO1ZPb5321A7wHJ24tsC"
        }
       ],
       "professor": {
-       "iv": "oNJqhx0abYPYCaWx",
-       "ct": "ZLvLnzxBL/iu/8GGvwxL2CBlIKJn0FQNOsIh5SL3A76T/szwPMLS0/VlPusXsVtkvEjvO+mDUuYw1SJxfvSToZV8jMc6kewssCetfgpLq7JRVEqF3qE2OlRCuzbQjgDyjYXt09GV4GJcjLNFeNlLH8wjARyY0Do1TRgtaUZazwNM7MOb5YZyesAuTtWFQ+WghCjDQHyYCOfYWLFIBWrOXUTBFJy23ab56s9ydICM6jfw9aVHhcDouVfKK6ZiYAg0PrBrmOgXorM/UnesqRaHhHju4cnAvpeQ7UF4Me7BxhbL21cB231lQ5nJZ/qykOyp5+OoQCbqSgjfR9VDFFF6DwcY"
+       "iv": "JvR0ZAw6sqQmcJba",
+       "ct": "hNGMXZoclZ1Lqg+jBerCJJO3EnsV9An/Xl32o2e7c8HDvMa4ZQ65kEoRpNHAFWzerJsSAmE4X9vyPpAJH5J7YEvutylJmKiySZRxjTW+0PBvmEPyAIj2m7TiL93LZEDA5v30dTfodebv6k4mfmbba1eYHGALhahxDw7V+PN/n8iHAHm0r5lhJ+K1n6QbV0nQj9EcfiNZQFwqO1AsdIEDwzdYpce1zg8LE5DFd2ZkLhLUbzmtsWBI3I1fIg7h/kanxg+G1f7JjFPcoT35K3LaSllKBeMF5+2at+DN/9d4K2YnynuIwM/lWugo/ReGIN6WIv/W/cvM9xVv3ZftLDY+tR5j"
       }
      },
      {
       "enunciado": "Calcula:\n11 + 8 × 8 − 8",
       "dica": "A multiplicação faz-se antes da adição e da subtração.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "4/aqjltQAUxAiDq8",
-        "ct": "K/ZHSqLjFGnWlNnoy0KmlrYM/AknrnnFkKY5LISF/m/01RW6jaWZbiux3RnWblCJZ4KMjyb8b786DW/HqmtxxQ3nkQjkwKbJsEojueBrl3vQqyQtwxDR4ZMWDTxh2YtI1Du5Zcr1l2/Ai3/cR1SVznw53fMhKbhUgj+lzZlMfC/YliVhLVJcVIYzfU6sHHVYHooFlZW47LVz2t+mRmV4GEOJUcOzTjLWxJjaDAodMhFCJy8QnzL8/aYdyyO2n/eZcBrE5wgjqI3ID90a3ESI8coeLBJ6H8xPYhUYWmMM4h4JcEaO4Nu7zD+oJxaCxcIxTaufjIgTtA=="
+        "iv": "78jB8jzpuFvwfofh",
+        "ct": "KgUtSjlW/pRadyvddEv3L5KbH8RiqNyeVuG0olhWYYiargSzQfgfMjjRBw1U3UpjNX7FxkYg+m3/+bL+kR0++J5kY5jV1hiVV36g37SRN7kqgya3/tkNqIKSGZpo5oLQtKA6i8IiMDZu0tseDQjzJyuQrr7VMffu+oKxFSlp480szWClFrHAN3UaTRi36xdIrwKJLuf/j8DKDnuwwh0Gtan6LO/C3tJeAcCYAHLaxmUKI083JQogqZGhnc8zQy87Gejmx4PyPXWSJQDJT2sZjzeZnHzqrkoNweG7UU0vcugIx4Fn0v4X5fpRLEYz9MAu3Ibv9Ksa/Q=="
        }
       ],
       "professor": {
-       "iv": "525rF9KbJqOKl+sY",
-       "ct": "qOBpzkhvDn7eVbT4KPOp9E3I+DryoNxC4fIq8X5mzoqHuQP93t2P82fdzp3U8cfJrDz1SogHHzvpYewHtPAoe8IkFQ2mvWUCdHlCC07xz4U2UrglIa9arnmYSCEt+Wxz47DJqJBQ1TwNVXzBbOUM69zcioOGM/znCZMU8qUhuE3n8Ar07R/BG/svkvkWlxFWJ5MhV7Z+TQ6c8bvHTCUM6neCdqFkHMKZMiQJFJhXJMRw/I2aARweNcduMRw4L2LqEMl52wkBblkQyIOsymKfWpN3BzUU57Qa8u76XHNfa+jvW1/mtNeq1WIeEbVmKQH/a/47812xvg=="
+       "iv": "Lf3MBUhL3f7NYsYZ",
+       "ct": "LGzbbszauDdl0PPODlNHmwPFm9wjrpF82VwcUHXkJmWjx0USI1d22VqajNwejZG9dVwIydjUpTEFZ+o6pcF+gbzjtSJgR7yH3rb144SzKdNU9WH48T20651cH72CcN3OMClb1YBMCvxjjRs7kFLbHvKsueBMDCYiMnqVSTRDQIbL+oIYmmXRnQ4AgQGTuHE/8ZxDFgF/YQ+NSLhlCns+AUgv/K/bFx8v0LCUXy/KeNvFmMmdHDt8hzhW+svip2c4vP088G/pjuKTAb4A+XUq8rZyFsy5ezJzkVAPwghGcah/kN8Hp15IHKrYsDlZroxGu+WwL0HZbA=="
       }
      },
      {
       "enunciado": "A soma dos ângulos internos de um triângulo é 180°.\nDois ângulos medem 50° e 55°.\nQuanto mede o terceiro?",
       "dica": "Soma os dois ângulos que conheces e tira a 180.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "/AgR+omDUJsxZwAA",
-        "ct": "OIGOUmRbmyeB8gJauK6qpL+3A7EhA/J+xkWjDwCFV0ksapruea3/it+w/y3bfqOJPTYurwMC0cd0/gyY5M33il8meJE6EgfheFtLesp5p7yS74nAgnixEpvGMv7Lk0v+CzB2FpH4gDM6G4ZetdOMB05H08Im8RbjeR8BIwmCPxQrGspMDA5LMroGjR96g7/ue6ejkwOnBHCQ7pl5mwx+UKCxq+hBuuSCoZY4KA0R50h/ZEBl1HG2vIFuqFfonAGEP4s0ZlBE1qBy96wFWu1rE8dyaziGt7HgoT/qJGH8j0Mgmo2yzLMLAAPm89ZW2+AoM3QJGSfN7azFjH05Po6Ob+M0UQ9Vuqs="
+        "iv": "ZVaQmkJR+9PGVrwt",
+        "ct": "lTBK8NqHjMVlrNyhsT2+gfErzWjaVOJ70CJvFbN7ZDnWGQ7xA17SJ5xdOOT3p3yHRTb00QkqOhG33btIcKUupy6okvLnHdkIf+mBgjVbXR5aJkRPmIyZSOjCISglFQvdKzpb7V1ZaAzC630iS8ul604l5oQqK8FCC/lVjwTXdyHZcGiIGVWwjmnkbrerezOW+5vcYOm7vUmyp7T6mPocCe0qKhV8jau12PyyVCORylh4DG9T+ZBngiG5p2kM6FqZPWd8os8OXPIfGbpgI+fX5ki9P4tLDr7Q9VhfPSzPMzdl9j+VLB0B68NUX29yYwLACkher8PmEkv1So0gbV2Ky3KMfqCJDyM="
        }
       ],
       "professor": {
-       "iv": "F2SjT7yEv859M7pw",
-       "ct": "6VZLejNS0S78SgG+/hjGedzg8yXYz+LbJdTRhHaIT+fpPqIk9BxBjaBhbp5q9nYfpWTBR/zJg6LFu/fz2YJeqWFjSLlrX8+rLqx1XX0dET4eaUJQKA/ieBnXryBHKcKp2RKXKqoXRH0vUq2shPCIj1/mWi0MXyhOHeLrWyJBx+p5BzVfSOwU1+sOQ6lKBg9Nfcq0aB9axdrZkg5gm02lI6HcrnLZuo4peZGGi3IAaxk4Zxhj8DOaNQhULoh84maduapbRPl5tTa5SlIQyprxRLPq5EK8ECHgvs8JrGDBnoJkmJlCcdK+/dtq5CwmbHmdscUNPO7Ye8MMEOdwe3pfsb0EziSBV2k="
+       "iv": "jtO0ftrNHMzj+5C7",
+       "ct": "ToD6DU8hkza0hBwNfPxia/We0UCl2eB/lOmLvmklIgvbvEQYq8lOC4xUsUjYZ/Zjvrv81mEsTZNqbCdiCUAgd3FOo+KjLqQbdoRUwoTpYWBDtofNqEIwMHqXG/Extx/SqZhyYAyKe7bCS85ERUNj2uW3JVxJ8nkSN/hpoYp2RPKXlzLpB1erV62N2QjZ1kAPw1KQ2JAVSO3opemnVUk1zm11vxgb+FNpHKgv+NATuIt52Vwwh/RfdzTji2bpDjwAwYViumJV3NF1JuUfkdbGGs6/SsDEk8Qhl4clW7gs4GrD9OlkXlxn03dqvCizaBw3UHjZs+9gQR78o1Rg6mgRR2F8sblfZ5k="
       }
      }
     ],
@@ -1769,76 +2172,91 @@ window.JOGO = {
      {
       "enunciado": "Um bolo foi dividido em 32 fatias iguais.\nA turma comeu 1/8 do bolo.\nQuantas fatias sobraram?",
       "dica": "Primeiro descobre quanto é 1/8 de 32.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "6JnnEtAcKNOdeiqS",
-        "ct": "FofS2TOqSufeTySaX8oQ4wC2jUoMMa8fLkUr2q9xhItqCMg4PX+lI/3L8/q8C5BXvwq1M6FqoOnFPE2WUVZ3hICxAeK7A2GtDx6E68VrVqAKz9qAfa6tpaJf7fm/tBklVuXCt5eodINWEkRYEUlq+b84Do1gvXpjbkgIMWwJ3w6NBiNAOXdX9XgOhk0O3VFaSC7M/5Kom7MMHIWlEX3UDYwNU2y4kP5Fh1y/UCVu6BQyVgwhs2rqoAf1lCorPfoRiVg1Sq7O53sc0Beqfw/JFxSZPe1gwHvdhgUKxIdydBK3idWrz+jpPaVF655exQ=="
+        "iv": "9Q9DB09IYXhMvR/V",
+        "ct": "U7wPcRZivmpseOSQnCEa/bSsD7ig2iQEloGwpmCC7fVirTZ6zJOtw8U3N66SvBwKYDcxbjyMDfXM7hXX9tn+2V+Aho9LtbR+D2M3hTZQ3KNybtOmc5trvRFpwZWqq8z4zohgyL/m+z2zaLE6Jc2LU22a5nRYSXKYiA96XAUSyhANjo3v/eOqKU2wagkryoeBqt+vULfIiMMqFNX5BtBdQrU6jCnCKqRv3X0boBo0t/cWw1bZjoMTFV6Ec/Do8WOOWwtiL9N0H11ZsdzPRonKKAk1LGnnqMs6eWR5CWtS0n3uCxxvjO5gPRLFqSb3jQ=="
        }
       ],
       "professor": {
-       "iv": "2HF/IriB8DpFmKeH",
-       "ct": "s6Xd9QGfld6LWBm84nqo81G0qmyW2swK44sDsLR7oTDYfn2NB96vqxVanb7t7gHLboN4i7a0fxqHCds/GOtX1SA5wIH98AD9LZU5LfQi3CrQo329p0nwZaAjxsfvfqNLrMQIO4sij4l0zLvXybavQSdeEEZ4iPmMhgQDWky80wOmbYS6cXIGB4q/EwFY55MtzbDfY/+tq/nxTL7ESVqP7j7Iz2GAvklH1v5/DPe0joOGfKsKuOAx3NA5iFP2g+A0EQEh7d0RCSZe9K/XcECezW7P/Eitf7+InLVW38A86WIp5/TO8kIxlxvMF98moQ=="
+       "iv": "PPSijd6+ADsK3Kjt",
+       "ct": "V2whPo62nk+ooer4OHXkP1oEW+hdIapmhQiWugFAryN+7B25i+R+lqHndzixEQPwidMKNCD8nYzmG821N39l9gFUjCo4dUaCPyJmv1vGBPJFVmD2WOnOdXK3vD1nK8lRKLUOi8kDRgXCZ3iilohJ14HODugNapQOk9YGdxgLC4toPl7wavtVHb+nvH7UHSXofTSzhQiDZD8E1rZyLpOztd69ZFIX45uOvO6woxwr9cZz4Ja2fy7Vip15yeuGzSQBYR0PfZwkhJLdTERu3Wj8fWqCW91YFHZyjNMc3pq8QXIiZswLvXoteJ2URw9CxQ=="
       }
      },
      {
       "enunciado": "Qual é o mínimo múltiplo comum de 9 e 15?",
       "dica": "Escreve os múltiplos de 15 e procura o primeiro que também é múltiplo de 9.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "Iu2aklu0PXxYiTQg",
-        "ct": "BaOShyRF/GzTPBUoDXnNn9eub16x/N0LB89GjXS8+5POf8aZyVBmsdZOc+QecTgqEwILU5jxchGnI42RyGzueVWy2pgU4wnwutcQbZe6KbM+iJ2JLpVZ35PRnuA0nWdQZNN0qML7fzQQnZwNdZv3hci++XfIf7m9cDstVyGHTy01fC2JB6hnxYeXDMbUuOkQM8zni1Od1ceOVWWYM3LwjAgxJObVwU3Q3yuYsJDJdzBqURClszwVdW1/bmCvxASo43wMmd6qDY3MH2X4EdP9lucEq6Kjzmd1tSaG103iVx2eviZxvYW0WyNMRxjBcsmJ9ti2i6swhF+mEuVXIsoFtRNo"
+        "iv": "jgdr1FrA/Bd7ywbq",
+        "ct": "c2K/nCWRlG1NFUfod7IOvZgGr8Mj+8IGCspFLQ7UK6grBdXYYWLnkVENZe0hbdfHpIQIQg6pnyEpk+v0EY7z2raAat6utIlRNrA+dUGVS+90EdjbLOOx/lbk+FyQ+dRXtEw8JK2pqmtr4AbzNY5y/P5T2mO+rTgqsgYXgVjjOVWs0NVj7aBrGZFyGqvbXyMnENrFhBmF4IZxTDQgZ1LIUEilLUx+RJPYwGhBKT4wExC2D+LJz8AbvoMiwmeaTbLnyZj1Znwy1cyMUOb5HAsj/G14d35KtNmnj4Z+KGy0wMhlrmeUR8ZLUNqk6TtYfsmnIfZUcz/A1/bCR1qCoFYV+4gW"
        }
       ],
       "professor": {
-       "iv": "r7JJo6BBf2THoDRt",
-       "ct": "FeQwzdkYyPNqXC9Fq5iU0yjR8iojUFNehyEJH4+QGQ/MHw4Gx1uLPZTsKQv6rtY51XFweHlrIiW90K7kF8//yl4S7ysyNvEO3KrTCZ+CnPrIK6OGcsBSUVYeuLi0Ntm4hmfIjBmn/2dK+htyzM2tc5EpY7Px9ExScw9JMoKrstdmIz5Z6O3LJ4OutH+OI2Un7r648JPakbBfTOAvREJ7Gt/muAcik2VTnif5zIOQ2r5jpN3J4EW/Ae3tw+reR8NpF0QzV1h7naaZTdAr9mgmLfrLBqhITcG7CIOIGB+sRz4UVn0AMNmDmYOrtgf1RE1YVNilnAxiQuZHNv06rX+KqjLP"
+       "iv": "Z9KeIwpqCBcj3oNV",
+       "ct": "tHjf6mJacr17keNvwlRDJtpdRJNLrH+neHIbivS8Z97geDo/Auzn5v442ZXokjA0CYqFAef+/enmfRkHJ8C7+IEqPdqpdw9ImW66wamH2gtq+OJaGhWBZrFZHXgD+96dWWwHyPx/dOTURpozK6tEo1+lskcs73iTt6aStvx9T4y0CXSHHh/vSz9irC530z5Bo7vm695pGQ34SsgwzQ7IyrvYLV3ALW1J8jSAiP8kEqcOTV+I2lX55Yk9do3MhTQILWQK1f+6c8ruJAPp6d2HcprpLblCsxIBlWd8bjVmIlEsxs/GbIH5i9naCoOeoFD3RagNDIg6GwxLkXF2Kg9JMG2c"
       }
      },
      {
       "enunciado": "Um retângulo tem 9 cm de comprimento e 4 cm de largura.\nQual é a sua área, em cm²?",
       "dica": "Área do retângulo = comprimento × largura.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "jDBq1R3nRZi0UgkJ",
-        "ct": "01FCGCuYsg/TE4QM9i29O/5HFlYzfhfB7wjTJl5VkXf25Q+qMmsMGVjHwuiKj6RKrjvQ6VmI5QFuWECyMoX1x0+PEvOBsYrEWUQqGAsCF6ew1NyvHKqmH4ZKEy9C7nrL2Y19mESH9HoT2g45We6sM1RLvcvcvWiACFDt5yd6cCW8NjEWO1a0HjkoP5b2d3Y0ePtRqGFoFCe93kPMBOktIxLh7YjmnIYTMNWfFPI+9wCFNHpe+uBJJwx04wSQPpWgqmKDRic0UexXc5wB78raUwg2J8i4UP57oR11Wx/2NHnLQZcMSxyMX1d102TvhDBo"
+        "iv": "4DXLB7JijnIxAXhC",
+        "ct": "8nVumB0Zu+BJ64C0U6PEwVKdWsw0A/CIFF0uAZB3BiRG8wZI1/QSLKnKJi6Q+uzm9hZRSKNdJ+5az84NDrFdkZk+Gbo5whdtfzIzifNkbmOG26pJQeNjLZ0/Gu0kvEMDJWRXh4IWFjsUSJHeA37cOTDJtZPksnr8yBg7gLjllNLZjPd71IGdSuFxA+55t8wLg33Xp7DQo7d7+SrYi6xvUEbhmQEsdLNPP2lrq7EMt7Sbc7jHs8AxLfJaVkSICzN2icuYYsnIuaIBFjym+aeCNF28mnxDoD0pXw7s0+P7Tm9B6BwbY/NswlzdeoguPZE7"
        }
       ],
       "professor": {
-       "iv": "mmQP9IafjwkUaLdS",
-       "ct": "5C2yBKVoP2oPHaVmXRRVzv6k34FkMBfaHRDwck6/5n03TKOPW5Mxyh68jDr9XazH7Nog4ZmV+gZWETZFaDsHvQcl+mfjU9g0lkj58bezvSQNanZDBi9jsYAf/HAnt7qnlzBNZ8YJXGLllCdX0xY5r0eNpA4o68p8HJoJaQMCrYB0dsJ9ZdVp+Ga5fvw02ZBmkA88kISQeC5vDvCpGfG3kzw1r0C0+th3eO7ZTTHRrcxs4xGPN2fW82IXE2iEI/u9L9+Xruim44ubzKybj2/PWIp5SUalQIeYh5MExXiuPXjXp6rWkiIFxST7WAtP9gZM"
+       "iv": "XRhssuVBPSIUQJMP",
+       "ct": "MOppc0eu6a6nEmqvEYu8COMxi1E4zwTHhIEM4HIqxhagHngzAEceCQ2gXLUOHPVY1IBS3IGeiO9mDQ27UArveAN/JbiWC3UoBpmtdmpFu9r7YShUhy95L3RpTRVMQdZjHU6O5Ng1Bz2GQ1SeC2/+nMSm2AXeKvJkVEf7V5k7lJmJoVipiwVo/edR9l4ea69xTcG5DkcrMja73VK67+nfQzowULrrDnWX8vd9yF+hA/9tEGs9gIl/ZiRSIJX3oghcRxmyvH2QCLlO7CFdaETNLfFyiVKUTTBO10WD39GIX1wboTDObUAQqOIAI5F92L2g"
       }
      },
      {
       "enunciado": "Calcula:\n5 + 6 × 7 − 10",
       "dica": "A multiplicação faz-se antes da adição e da subtração.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "nFFf+P4zxzGIs33L",
-        "ct": "CnKjwkOXmzU4hvexz6tYP06ajpsdD1fRBGIvB545i17l/wUBg5JaEgTN9IBam70Tpv/fe7AqQCMoBposL9CWY6mcVZfBmbmaxpV/e1vIaSPf+8wZm0T3aK5SSEsHuRmEtMnZLEy6S3SV9als7GRjk1j8FrUBeP1vOGXXtbk3xOndxhIAA4gvlepXgW49EtGR3wvKwzIspXWaIOEmJj7XhYagWXN08CA+oYPdwFXy+eNn5N9hU6hFj6bOLSjJKO+555TYqrPk5AIILdwLHxsRfopRAQZqOiiGJtN6+pz8hNRVmEaFeQw3CtQKqEbX9tiPnXBXnsq1U8m7Jir+Lg=="
+        "iv": "LfXSLN4RxGvPKtQc",
+        "ct": "WXrUaGsergQODwDf/Qj1Uwusa6NpI4yvJkCLFei5p0uq0DlB7PYBvBrkg7swx6rg+djDsDx6HOTeynjYZF8A07/3SgtqcmmK6P5IQcTNOnCK2iPLZ/KLPhNjpbDIB/Jq2gaQ4zdc/z1epwQf/FP01U12omwLy6/paXEjYlJCWHstVodsAhD3tH2h5Qk7AXZmiI/psBnOVRUR+4dgfY8+oziCKa4Z8zuA76ZQ029+m0KJ2bMkISJSldvd1kKQv8hTJvcTanwkGooDBDvHUQnV4rk6VCpEuaCAx9svVyR6DieTsaRZSpkqql7E4DW1u8u8Eu5cBZDHN0jUmj3JRA=="
        }
       ],
       "professor": {
-       "iv": "c2LCMdcntKgg4Z+m",
-       "ct": "h119mXoQggDAyNhf4VxKZwuS0uI5bDOq35vlOKn1lKW+hsa2GWuEKHYAxNhgVkcZ6yaQB24RHlDopWxQlW6p3EbSuZQz3Ap8NRtOIkuHnBKMBTx/Yfq7VqP93RFTe5Wsm3oDE0E6zT97Xjopq72yTBMy4pVmIbLCsuJ4uPHU0OVsBamt6Bdhl+827YgI15b0r453Vx+RIAfnaA8ldffL5+h5mAP4FX4P/mUNzG0teRNaytgKbEBCeEuXX8CmEefjHCEY84e+j/wUzvjKwLql9lctg5bDHkYzYw7UaikE2lSX1XQj+4m/ftf20lL5Jf9clrzAV8y1xOh6YjfbwQ=="
+       "iv": "GOO+N/558mXOxc6E",
+       "ct": "9nTf+QT5mzk8sd1dPx6hEUq34P3hhivuQHxw0FycpauaEURjdlt1on+lahWO0j29Pxkbw5ZT/baVGNuxbnEimRZ4RaKUW8bqgI7AzWB3q+Z4F4F3jMgyhmfhBKox6Ffs5VEQK7QuvN71KNt0hj30x0uLHwowGvMsP6HopibGBhQQU6HhQo3sfwW7QgH28NSgS3WUBvGUNS0RbOMfZS56BgI8sFxqa3s7Jay0ugcTYwsl3mvLp6lmkbqZHSJgy4xYVOPMPt6fxtMRuRT7A2beBoQ/e9dnSnzqjeWi7qVyr+VD2L/Eayck7vsZB1FUnc7GjCWIA0DVGIhJvCVezQ=="
       }
      },
      {
       "enunciado": "A soma dos ângulos internos de um triângulo é 180°.\nDois ângulos medem 35° e 95°.\nQuanto mede o terceiro?",
       "dica": "Soma os dois ângulos que conheces e tira a 180.",
+      "imagens": [],
+      "descricaoImagem": "",
+      "fonte": "",
       "numerica": true,
       "fechos": [
        {
-        "iv": "Od5WSvblV5U8cMUG",
-        "ct": "ds5yTsPTYar6eLhtuz2YXUr8PgE0EESJEEblT6kWvcYgfve6rbSEyvQfzUbLqHub1PK3RCWYgsfeUhmaxg/58xX4mO/IwR5nlaGFvEMbU4PMV3x3Ngel4YO0fWw19z7na1Bdn+Z4VV0+6xfkct1nrcDcsQO7tRYsaISZZ/RG6r/rS6XvftIPy8MQPf28BW4QS1LP3nosKBe2zgH7Z8r9lTN650uJr/R+EHxDaLrcS6yAr/i6FDWiNn69keFhbXBX6+SKFAlBuFBPWYlyUMUQP2LSa/ESDakub78Vc8BRLPszIqUNqa93Xr/Qy3G6Cg1hr8UtDnMgtADlu10bxrM="
+        "iv": "+uzHbOzhlfN17kxz",
+        "ct": "XT4k9N+svsofsDLPz4OMxvbzm4G/20KF5Brv78yAi1R+YHY1BMWQIVGkNDCA5dVKfRpEYzfV93z1TVgudWxTr1veeV69NRoK3/ZqOqTEgH9tuI2WIWSYy2G25BQyqJxlsnlLrQM5KJa+tek+eoPQcOewTX5KAJu7KQvHBeorBUoqqRYKAJnY1LSNJ09j2g2f+OCW8d3mc9kZnENiWTjI5K8gG6yAE5Vid9XqwhQyySu1MCMCnvRAC7v2j0MWO0dH+VBBmVDeUAkZfHfI8NHnRSZWSMrmgCtbEmat36QlNIS3oovDm+09gJYRTOjNPS0E9jqYhQusFqef7e8NSTo="
        }
       ],
       "professor": {
-       "iv": "WLX0lswph/a/pe4U",
-       "ct": "lf9CPvTgXxnaKpKOMV3N1R29VLB2vmq+qHQz/lYYLAYxXeXeabqC91ApHoB0LePeblzyDXOnuysvXM/l+QQR17uhzP13l+0jBEE8Ce9zw58Zz9izk5sXuyCRaolsGtsSH4sM1r5dARCKfLiu3ZMFTkgASCxkvWR0RRzGip2fjDZ6DrXQmFK0+h05v5YkUB6/PBy0tXGqvPUtlJEt602x1SSDqIxIz9RuN8Zi+gB4VEWXXd8EOjuNWdtqRLvp1GH/1+44Ser4LPtQkaUjGAsJkM1X14K8u5Q7MWySSuwWcf8DDgPqfLwUhWmJMmVLV0BGiux7G/TWDVtvG7Wg964="
+       "iv": "xVCwwGQSeb5hJf9J",
+       "ct": "+mUdGp1OFwkYrAefZei+s1JwrAgvipvvva3S5ENaLZG6yIIGwnPE9035yxU2WfGF8rdEeJy7fsiOS/Gyv16hDOhNuiO+6/5vnVke1JAjsR69jM0liEIbP7XmB2UBnXvYO+TTRFErYTBaY80zxkRGe+9MpIwQB2hFewACxtxpUWxkiEdYni4vbA/OMKxvMbHL1ClizPnJ5SyAPkqz8xTAQfS5RgCGmb+44JbErv8yAQF7zYRw0JY61hhNtV33YcBl4u0GA/9hWpNP1QeQ2MSMRzomYIxlj7a8/k4oT3RTSXY8L0kanj/M3MkgIST2nSndMULfDMjem4vS3UgQpiI="
       }
      }
     ]
@@ -1847,7 +2265,7 @@ window.JOGO = {
  ],
  "entradas": [
   {
-   "h": "dYXk6GvK46M0ajaV1X+DCtea5gSHDYQMHRwAvJCQuoE=",
+   "h": "f1kOb7YQj2fmWbHbyi41a3Z5sPB7bd1sX5zoMfAJjh8=",
    "evento": "teste-8b",
    "turmaIndice": 0,
    "turma": "8ºB",
@@ -1855,7 +2273,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "u7uggcX9NVKL9AIbICw+xU24/aQS/dLCdCCxGObn7yM=",
+   "h": "QNxBmpAAF3ZuOwa374hOkfbbwlXpIVjY7tEPI9IhykQ=",
    "evento": "teste-8b",
    "turmaIndice": 0,
    "turma": "8ºB",
@@ -1863,7 +2281,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "JALgwp+9hq9ewihK69yNZK9/ZOKJJVYnXut4P7KWQMk=",
+   "h": "O/30DJO0b4fh1NwBt5OaWGCAldPQy33VamuqeKAo2RI=",
    "evento": "semana-ciencias",
    "turmaIndice": 0,
    "turma": "8ºA",
@@ -1871,7 +2289,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "kqX0+ZQJtMyloGqS9q8sAgzrmSDOPhT4gLxPdZMMaHE=",
+   "h": "Jhh/QJ/6k/9JncvttFM6dhDg9tes/p+aGHuHsvchX/Q=",
    "evento": "semana-ciencias",
    "turmaIndice": 0,
    "turma": "8ºA",
@@ -1879,7 +2297,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "2X20/L/h4BIrtRoyAP1qWjVv8xf4gNlLZ76aG3X6DcY=",
+   "h": "A9CYJPRXuWThm2Ecn1aPXWtP9SaVyJv8cR0OKfMrHXo=",
    "evento": "semana-ciencias",
    "turmaIndice": 0,
    "turma": "8ºA",
@@ -1887,7 +2305,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "7zSXjMAeaKaY6H+xui8wiQItTF+tZk8oBMyvexf1nMc=",
+   "h": "8CiWU7pnCubocygLlxkatfDhw+kbeIvKQbLdWM5P+DU=",
    "evento": "semana-ciencias",
    "turmaIndice": 0,
    "turma": "8ºA",
@@ -1895,7 +2313,7 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "/rVNHEZ7w34YbQYF7pUA7yDajG6zkjwDwR+2N++UY8I=",
+   "h": "15rLy+uXyIRlZiN6ucG4Vcp50fsuTjgI8q2RJdsV2mQ=",
    "evento": "semana-ciencias",
    "turmaIndice": 1,
    "turma": "8ºB",
@@ -1903,7 +2321,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "7HiKa1DKWWkEgZUhRR0oqWY+wns/xDKEgnhucFJh/Ak=",
+   "h": "G0KD9GvstIVz9dlTzdPCqm7ovk+cbuzUrg9O0F7vI9o=",
    "evento": "semana-ciencias",
    "turmaIndice": 1,
    "turma": "8ºB",
@@ -1911,7 +2329,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "xD+S/RC9g2usZATt9O3+y7K7T/BPCXcKfOmUOdLAmOs=",
+   "h": "DaP+v9el1xk4vJOEAKzAaafwNtt6Yd2/RYfXKbXLvD0=",
    "evento": "semana-ciencias",
    "turmaIndice": 1,
    "turma": "8ºB",
@@ -1919,7 +2337,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "uufcF2L5eoz1nG3TfFObOHxBjLdg4HvGEh7OIBeBSEc=",
+   "h": "ONF/4dC+MfNi2YCg3XJQkjvhj6YzRPD5VoKxLMhiELA=",
    "evento": "semana-ciencias",
    "turmaIndice": 1,
    "turma": "8ºB",
@@ -1927,7 +2345,7 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "/ZLMyQ3ePfHA5FXzkyw3a/TCAFyHpvjEeBwRU8Mw4kw=",
+   "h": "04YzhTEttRbuSBa7K4FtC4MmA1OkIf8SGGzGbbHTvaQ=",
    "evento": "semana-ciencias",
    "turmaIndice": 2,
    "turma": "7ºA",
@@ -1935,7 +2353,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "ptOwOrS+fkxY9lS+2E58gqXpQ2el3HFpxBmVa4l2BaI=",
+   "h": "x0d2i60fUQPco4VT2Pw2TXSQ+q6TJqUmEx9MptGFDqI=",
    "evento": "semana-ciencias",
    "turmaIndice": 2,
    "turma": "7ºA",
@@ -1943,7 +2361,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "zIVDjLDwQzIvg7ilT1maeCy767PFNRU8bDIIhImCK/4=",
+   "h": "T8oJP4WgYL08niQJi5pDUl+lL1lTquyuKgvErIDn5xQ=",
    "evento": "semana-ciencias",
    "turmaIndice": 2,
    "turma": "7ºA",
@@ -1951,7 +2369,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "dKycHnNfbe/a36YNq5nSOwQSzebyvz/DtMcZ5oQBPyE=",
+   "h": "UyK4iv3NEf1beJQwpeqO0/ug+Px6n7hzaTHB9UTh8lw=",
    "evento": "semana-ciencias",
    "turmaIndice": 2,
    "turma": "7ºA",
@@ -1959,7 +2377,7 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "Ae/gSD1VevrUUw+ywLYo24Q0sHheCbEW/lWd+8XfzH0=",
+   "h": "y6SSfpF8m0jqIN7pQukhGZ7Dl308C80+9o3B4Ghj0VY=",
    "evento": "semana-ciencias",
    "turmaIndice": 3,
    "turma": "7ºB",
@@ -1967,7 +2385,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "MNGlrDLSjxGe2trE9ureCOZOSeO8j9WPXB6TUOeScRY=",
+   "h": "U54r28Vru7miOVRUxPkz0H7AuKmyMfLP0XbHoOTn02w=",
    "evento": "semana-ciencias",
    "turmaIndice": 3,
    "turma": "7ºB",
@@ -1975,7 +2393,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "4G6gnE2ybPXpb5dwe59Ltgpvjj0sdbgW+7miPHHEBY0=",
+   "h": "cuLvG9n1TA/NpnOi4u+X+smX+U1T0cddelpBl/mjA68=",
    "evento": "semana-ciencias",
    "turmaIndice": 3,
    "turma": "7ºB",
@@ -1983,7 +2401,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "APWnxmuD2DI6ClsYfxmaGpCjtBX7rHg2XO+d5a22fWk=",
+   "h": "CqRhOwIlDhR20pMg/Ucs2AlP+XlTvu3P5TAr83XdXZ8=",
    "evento": "semana-ciencias",
    "turmaIndice": 3,
    "turma": "7ºB",
@@ -1991,7 +2409,7 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "DvDT/OcYUvFp1rI+XceixdERdom+MdAvtYYG0FH4HI8=",
+   "h": "mqdRo2iaSyTfPshtApFftOqRLawv5nxwKOye4mVYclU=",
    "evento": "semana-ciencias",
    "turmaIndice": 4,
    "turma": "6ºA",
@@ -1999,7 +2417,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "SOCHZsehTJWK0pMHNPktGriEkIyIcI7OSk8kuwpHhT8=",
+   "h": "QjsAIrWcwqEBKmFyF4PVYnvP44be9bJwIwyx/V3Bpec=",
    "evento": "semana-ciencias",
    "turmaIndice": 4,
    "turma": "6ºA",
@@ -2007,7 +2425,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "dFrZ7bl8fZG7sK95G+CHctdnHhJAgssfU/hUNRpWdac=",
+   "h": "gPNEaWd0WLbLjZpDVsKVDRMA4YBDa8QgVyJq5GU/OMg=",
    "evento": "semana-ciencias",
    "turmaIndice": 4,
    "turma": "6ºA",
@@ -2015,7 +2433,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "OsurkvTXgeKjYMQTDXItlT0557RxfhQ2Q24MHtk+koM=",
+   "h": "ow68k2qOqte42mFZ4eSFKFFOEHE8TZF/NPt/sL6P+cA=",
    "evento": "semana-ciencias",
    "turmaIndice": 4,
    "turma": "6ºA",
@@ -2023,7 +2441,15 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "Sc8Z2hJwOWctqc7bsSbYMrWp5wAbj2pt1dt+b2wxQ9o=",
+   "h": "4GGWzdGNfDp/jqbsndaZfq2Q09qMtFvpmO2j4yXaI3w=",
+   "evento": "semana-ciencias",
+   "turmaIndice": 4,
+   "turma": "6ºA",
+   "ano": "6",
+   "grupo": 5
+  },
+  {
+   "h": "b16q5gnNJ2oiPh7UMvWrEEQwsU2RStp8fMUPAaU9Yeo=",
    "evento": "semana-ciencias",
    "turmaIndice": 5,
    "turma": "6ºB",
@@ -2031,7 +2457,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "3zDI5iPbLE+ruHExFBfkl98qHzBTSxt7ME18sVNlmz8=",
+   "h": "RR3ro43I6gUsYLUMaJqFv5oUy3fQE48If48YX13vdgc=",
    "evento": "semana-ciencias",
    "turmaIndice": 5,
    "turma": "6ºB",
@@ -2039,7 +2465,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "6rYVcSDEkbQfFUnd47AE2lU5RKOpTrvx7NpSrN3wLg8=",
+   "h": "KfoIrj+DFsXV5p1qSQZjIWrxLoK+2TGJ7OIcz4Tq7sU=",
    "evento": "semana-ciencias",
    "turmaIndice": 5,
    "turma": "6ºB",
@@ -2047,7 +2473,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "JbeFCU5SfzTL6101l2dzB2GUPXBIpDKVasz7k4xvA5g=",
+   "h": "BAReNZ3jthKuQZ2JyRus6/mlHOmQmW7y82YSUealGgs=",
    "evento": "semana-ciencias",
    "turmaIndice": 5,
    "turma": "6ºB",
@@ -2055,7 +2481,15 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "aceTE7sRfazfvDp+e8bjv4S+OfvYf0AsxzmMuzhoJ+I=",
+   "h": "Xy2hmyZDfD2ju3qxfzjCzCW8mzmP+toIib7eujU9ZiY=",
+   "evento": "semana-ciencias",
+   "turmaIndice": 5,
+   "turma": "6ºB",
+   "ano": "6",
+   "grupo": 5
+  },
+  {
+   "h": "xe2wc6Fbqk4ueQsNe12Py8pPdzvlvnxa9mxgTxAYE2c=",
    "evento": "semana-ciencias",
    "turmaIndice": 6,
    "turma": "6ºC",
@@ -2063,7 +2497,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "w4i8h3bf2sXYvnbsE5tt8DQT+3Y/3xQPKdaT70ab7rw=",
+   "h": "DozXmgVbgTyedN7wFHwWiwpGzE0sD5PpB7vSlny8fWE=",
    "evento": "semana-ciencias",
    "turmaIndice": 6,
    "turma": "6ºC",
@@ -2071,7 +2505,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "qYk4NskMC04TzlC1lBNg+vI86BxGKNCUX2fkohPOn3c=",
+   "h": "AWTyu6XSqcK/zZbFIZvcXoM0lHD4BB7mwOP/qMEdCXc=",
    "evento": "semana-ciencias",
    "turmaIndice": 6,
    "turma": "6ºC",
@@ -2079,7 +2513,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "cue0uHpAiDEzeq37/o+cieb5gxAIzPsObBLzPRuzHcw=",
+   "h": "bmKyAZoSHzxDRDo61ZBr9nakFpl6LlJJomhCFDHod34=",
    "evento": "semana-ciencias",
    "turmaIndice": 6,
    "turma": "6ºC",
@@ -2087,7 +2521,15 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "uq31bhxYM2i9GJWlHv3SUG0SPGOZd+scdqqpGlxp5bU=",
+   "h": "0XyXH330W5mMLwYaTLyrPr+Q9z8aBj7/Qj6k5kqyZsE=",
+   "evento": "semana-ciencias",
+   "turmaIndice": 6,
+   "turma": "6ºC",
+   "ano": "6",
+   "grupo": 5
+  },
+  {
+   "h": "BcJPlrKG5h3BwDyQXaiGeQc2yldgdIQo9buXUGPYLFQ=",
    "evento": "semana-ciencias",
    "turmaIndice": 7,
    "turma": "5ºA",
@@ -2095,7 +2537,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "NFPxzf5DH73eFWTtMUuUR+AtXWPRiwJUa/Zv9RGP9vY=",
+   "h": "msFSuS1IonFBQ2zAJnB29i7k03u/QOcNvvUbKsXbTIw=",
    "evento": "semana-ciencias",
    "turmaIndice": 7,
    "turma": "5ºA",
@@ -2103,7 +2545,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "bLOaZzplqTf0jgzbRyGD61FmUi5raN3BRgXbeTCcWYA=",
+   "h": "BN1rGqrLBFpf/rCGWT+gX2raWvbQSzt3xIG4bY5jiNg=",
    "evento": "semana-ciencias",
    "turmaIndice": 7,
    "turma": "5ºA",
@@ -2111,7 +2553,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "cv2rzkumbDt7mbpeQ+f3voKYaMQIEHKpAAZ+C4HC73o=",
+   "h": "sjkK2h/mu52Aa0KrnPh4r8NRBrmcSzyAM4djX8H+QHI=",
    "evento": "semana-ciencias",
    "turmaIndice": 7,
    "turma": "5ºA",
@@ -2119,7 +2561,15 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "1bIi1J9+QlO1PBVV2oe74jyS+EJSyNhKotp14LeCiPk=",
+   "h": "Yi1W/pw36wWV3uu3+TRryIc04Lq7dPOPKrkV/Ej8aDg=",
+   "evento": "semana-ciencias",
+   "turmaIndice": 7,
+   "turma": "5ºA",
+   "ano": "5",
+   "grupo": 5
+  },
+  {
+   "h": "JOVBIgP70H/ZWM+rDVybt9fGFspIrPa+o321vQHEmrI=",
    "evento": "semana-ciencias",
    "turmaIndice": 8,
    "turma": "5ºB",
@@ -2127,7 +2577,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "Q2rv21SA/p7rV/YuOyXFtsmoIW0EFtS0+rsSh0awYX0=",
+   "h": "C81YQPnYPR+v4QQHmXLXnHUgbW6/QsO97/KoTaKnGb0=",
    "evento": "semana-ciencias",
    "turmaIndice": 8,
    "turma": "5ºB",
@@ -2135,7 +2585,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "F4wB3oARNrIhhoR16RBoSWrHZ8nTDr5JMnrZcwY52xw=",
+   "h": "c2+IDroKgnwxdD5rC/tOE+vCk93Y+X7zlp438J2UcCY=",
    "evento": "semana-ciencias",
    "turmaIndice": 8,
    "turma": "5ºB",
@@ -2143,7 +2593,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "bjIQFGpJeclgEhjDu3o15dCaCJU0n9bMCIUtMugXZC0=",
+   "h": "tuaJaFtkqQk8jKQUmHzdLXrIX96gLYrFclFdXoo8NEU=",
    "evento": "semana-ciencias",
    "turmaIndice": 8,
    "turma": "5ºB",
@@ -2151,7 +2601,7 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "nuoCK/+9xabj2DHZfhEo9gvBMXletrGZjWlqV2+DDJI=",
+   "h": "x4ocTPMI/QHcHYFcuo7Pw9wC4eiHpEO1gljEF4uVOTI=",
    "evento": "semana-ciencias",
    "turmaIndice": 9,
    "turma": "5ºC",
@@ -2159,7 +2609,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "TiRiVcukb3ot/SUacfQzaarkcmgkuOnB9tnMFN9njJc=",
+   "h": "Zt3hpesFGjeHNVdGU4n6wRhKi+MmEss3gp2Cgk4nOQY=",
    "evento": "semana-ciencias",
    "turmaIndice": 9,
    "turma": "5ºC",
@@ -2167,7 +2617,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "3I/Z98+4xfG8UuIezHmk01SPW0CNDqmX6OHHipWw7cw=",
+   "h": "MU21X6BBmlGIBfnDDkOPbg0ADN/tXZD4/8POHdHRtro=",
    "evento": "semana-ciencias",
    "turmaIndice": 9,
    "turma": "5ºC",
@@ -2175,7 +2625,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "Ul42+Qvy5XfIon3WDaz/NEmFdGXsAdqqsoDTB6uYl4M=",
+   "h": "NIw6ik06oukBKAbacCz35s3rGiuKDWEyfAddYfTEX3s=",
    "evento": "semana-ciencias",
    "turmaIndice": 9,
    "turma": "5ºC",
@@ -2183,7 +2633,15 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "MMzni8BSUFvcp5gfWymSsj/Vt1mTBTVkxiU7wy7BxSg=",
+   "h": "3EzrU8INhlN/OKH8YbC6uf4ZwYB1oadyXrv46cMWihI=",
+   "evento": "semana-ciencias",
+   "turmaIndice": 9,
+   "turma": "5ºC",
+   "ano": "5",
+   "grupo": 5
+  },
+  {
+   "h": "cFpN0LTgqEiyekVQMJGtt27x8DhUxAykwKRPXR/x1yA=",
    "evento": "dia-matematica",
    "turmaIndice": 0,
    "turma": "8ºA",
@@ -2191,7 +2649,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "jCKnyUrjJddxyiearg2zWhVTWYDjq7bCIyx9phz6ZnU=",
+   "h": "0yRarpnWi1Arwn4IWlRCEY3wtXkVlBUApsCYjHYizLA=",
    "evento": "dia-matematica",
    "turmaIndice": 0,
    "turma": "8ºA",
@@ -2199,7 +2657,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "MBVp6/XrZXQvPnLcKZTNRgZI21fRNb+ehS1hLuI9R1g=",
+   "h": "SnFsDjriev1n4kH0OFEiq6X3lnukvbRJaEvrV0U3Lew=",
    "evento": "dia-matematica",
    "turmaIndice": 0,
    "turma": "8ºA",
@@ -2207,7 +2665,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "wCG23UgHQtP43T20M87atYQQQXRlhuK5cp5dq2C4pBs=",
+   "h": "axRmfAFFeb9FWQ9Q7QqLsL++yuodX7xeNa61JhaGTcI=",
    "evento": "dia-matematica",
    "turmaIndice": 0,
    "turma": "8ºA",
@@ -2215,7 +2673,7 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "k0WVn117Jf2zvSNGfZQ1ak3Y8Zx6WOB/PtddoRFEbiE=",
+   "h": "NYLvBNz33Kav7jkysVAd1TwPv4XvRML3CJ8dFQdD48I=",
    "evento": "dia-matematica",
    "turmaIndice": 1,
    "turma": "8ºB",
@@ -2223,7 +2681,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "hLd8FrpnnhQuhosDPQNSuv4r4fgT8JPBS6Avzccx8zM=",
+   "h": "WvUmEAoZQadJsN/Rm8nFkCrYPXHFLFE3YTf7CaFO6bE=",
    "evento": "dia-matematica",
    "turmaIndice": 1,
    "turma": "8ºB",
@@ -2231,7 +2689,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "j5kZqXJ6HF3xnTNydKy3wPKbsyExuOUJY2MLcRcnYgE=",
+   "h": "QEaVRsrTpSAlb8AQb47QyjbhSWDnYfjknhOqt+2vhqs=",
    "evento": "dia-matematica",
    "turmaIndice": 1,
    "turma": "8ºB",
@@ -2239,7 +2697,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "erPVUrcaFRhN31sWl/EtNi7zHBdx6nb2amTQ5BJHgoc=",
+   "h": "iEuqlQfWn1xB8wqPQQzlpQQq9ZPhb7H1ear3n1YB6SE=",
    "evento": "dia-matematica",
    "turmaIndice": 1,
    "turma": "8ºB",
@@ -2247,7 +2705,7 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "fSz3wygIZGnabpafH8cYCDsiGTNJ1fKjby+DBShOMp0=",
+   "h": "zNgp9L9qrsHMDIazvpCQPM0vhuK0/Q/T0nsYnW/kzJY=",
    "evento": "dia-matematica",
    "turmaIndice": 2,
    "turma": "7ºA",
@@ -2255,7 +2713,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "B0cED5S6PMdm3T7tr0G+7XkDqHByzibQc2r03DmnK04=",
+   "h": "6aY83QyyblonCYA0oWOKBAeMdeY1tGVXDoTQqvuVbRI=",
    "evento": "dia-matematica",
    "turmaIndice": 2,
    "turma": "7ºA",
@@ -2263,7 +2721,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "hdjYmt2SnRC118fwoPf+kl3c1y1B+h9UezYDGgrc2n0=",
+   "h": "vz7zmL/voUdBs6D6kin1EOqh+zBQ+pG+jEHfJrEXS2s=",
    "evento": "dia-matematica",
    "turmaIndice": 2,
    "turma": "7ºA",
@@ -2271,7 +2729,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "ip8x9zOZkkJ+odEBByAHxJWw4k0J2pwGHYcWFgZUQvs=",
+   "h": "Jd3ao05I1IEpoDzjZx/B7PGJ1yLO5V9D56Ievs4hOhA=",
    "evento": "dia-matematica",
    "turmaIndice": 2,
    "turma": "7ºA",
@@ -2279,7 +2737,7 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "Z9+KCXHDbZbo9TTr7VBhXgZ+Yt7BH8VQP9xiy15dHP4=",
+   "h": "3PaTLYOrKNwRFEeBtkGjGcADCcODTWc1jBQL3OkCF0s=",
    "evento": "dia-matematica",
    "turmaIndice": 3,
    "turma": "7ºB",
@@ -2287,7 +2745,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "UgYGS6cR7F29+KqZGY20Pv5T5Nt2kD66mA13pByKABQ=",
+   "h": "qO+q8FtFKxZnluZyEdOsMaBzCxZjY+4mhLNdLnr0fe0=",
    "evento": "dia-matematica",
    "turmaIndice": 3,
    "turma": "7ºB",
@@ -2295,7 +2753,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "ofdHoaFm/7CwAFJ7CK2luuvSDPV1WMkxST0aKoXX5UQ=",
+   "h": "zVoYV2pM9+A86XClpX+ALHKqy3L1/l7J8379g9Lbg3w=",
    "evento": "dia-matematica",
    "turmaIndice": 3,
    "turma": "7ºB",
@@ -2303,7 +2761,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "hGCJMY1cBVGFUCUllysy6Syq07IOb0FBlKxBQEY7QRA=",
+   "h": "a+1Vlp83r9z6WePgG5JpnSvGPYwb3oVcgGm5yCUlhDE=",
    "evento": "dia-matematica",
    "turmaIndice": 3,
    "turma": "7ºB",
@@ -2311,7 +2769,7 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "yPBq2SdIZJkD2eCXCmXmlJg1mAIhlt4sBeD+ZPQ5xSg=",
+   "h": "IU/9b6ppd71GOs2wDBmdSFFeXRKIAYinsaM9wMEHn7M=",
    "evento": "dia-matematica",
    "turmaIndice": 4,
    "turma": "6ºA",
@@ -2319,7 +2777,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "CW4vfwF6EIh9PRcAYFi+DbnGXGBadj6j6tlXRd5tHbE=",
+   "h": "t9Vm7vki3XAjpBSdu31x7WStWDcnXLt+4NkTu611Wk4=",
    "evento": "dia-matematica",
    "turmaIndice": 4,
    "turma": "6ºA",
@@ -2327,7 +2785,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "pu+FcirJPx4hQm3oihjeT20g2ckX7/alw0XgdPfFgOw=",
+   "h": "b/0dKiTm3x9BTVKYLVVmJ6WXCo3lOOcT5PnffWzx7iY=",
    "evento": "dia-matematica",
    "turmaIndice": 4,
    "turma": "6ºA",
@@ -2335,7 +2793,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "QE2NzVAuJLvRnQkagM333wzoGjcYJ98WlQc1IjM+8bE=",
+   "h": "g+5s0oAX2rxwQKjtk0h7n5AQrJdMKTvmvYcItAwefTQ=",
    "evento": "dia-matematica",
    "turmaIndice": 4,
    "turma": "6ºA",
@@ -2343,7 +2801,15 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "Uf6PIhAcwNOkHcI2kJapnWbRvu9Qlpiiquaygkc3EmI=",
+   "h": "egjZLXO3H/dafLHvlpnjlzfgp7K0BAeEBWnX8Q1FzF4=",
+   "evento": "dia-matematica",
+   "turmaIndice": 4,
+   "turma": "6ºA",
+   "ano": "6",
+   "grupo": 5
+  },
+  {
+   "h": "3VgKepLT/ZcV1LzNQqQTroTO4pwgsy+8v3ncTFDsjaU=",
    "evento": "dia-matematica",
    "turmaIndice": 5,
    "turma": "6ºB",
@@ -2351,7 +2817,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "4fe3PKGL21I7ipL6Lw0mamsdH2kWLGqNC63wY5GGHzI=",
+   "h": "zgm5kyYRB0Qn4jeirxw3UDvbWY+XtUvnTSmUN5aH27k=",
    "evento": "dia-matematica",
    "turmaIndice": 5,
    "turma": "6ºB",
@@ -2359,7 +2825,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "XLmiAFX4jVORsLGzDzBLwxjhOUOXNQQYzyrIrrBAT7c=",
+   "h": "whHMqKhebE+tI1q9d99gdUFFXRV2ypmt4rm0YNk1h/0=",
    "evento": "dia-matematica",
    "turmaIndice": 5,
    "turma": "6ºB",
@@ -2367,7 +2833,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "hipJ7lZ3lGbg8LNVvWuzGvLFCCzgD/V1o4TxFRT8BXQ=",
+   "h": "Ds3RNpTopS+TJqYuM6jLacnGW4aPh32nfemnco9oliU=",
    "evento": "dia-matematica",
    "turmaIndice": 5,
    "turma": "6ºB",
@@ -2375,7 +2841,15 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "PdaHn3WfeokdCMSFloAdyvZmzgUnqzVAnhxHZ/eMUe4=",
+   "h": "57mIg17if9X5FB7cCLkVajOjUUQgwWGP+eYyebH51KA=",
+   "evento": "dia-matematica",
+   "turmaIndice": 5,
+   "turma": "6ºB",
+   "ano": "6",
+   "grupo": 5
+  },
+  {
+   "h": "RfDaLw4SqXM4cC+153p8SJzknqccuQ6qK3QDKpB1eZA=",
    "evento": "dia-matematica",
    "turmaIndice": 6,
    "turma": "6ºC",
@@ -2383,7 +2857,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "WderdDmO2YrAO2BSHLaDXJvkKi3c2BW/9UcRKEQWyDU=",
+   "h": "2B7GWxwm/prxN4CrQHkfN2HX7aU63eQEiG1zX79RWiw=",
    "evento": "dia-matematica",
    "turmaIndice": 6,
    "turma": "6ºC",
@@ -2391,7 +2865,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "XWExWCPZTKAXJYkT3A+ZvswNNTo/JLBnTWlspyx/SZ8=",
+   "h": "ZhPVNhCpzfkeej2bXs/WIopE+9px8sQhtl8PeHwwdMk=",
    "evento": "dia-matematica",
    "turmaIndice": 6,
    "turma": "6ºC",
@@ -2399,7 +2873,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "zzrqbAr4HAQEdNiKfjgXVuRPnFcCAW8RJ+PPi6kPgOo=",
+   "h": "biiL5ieBPIKcJxWqC072heJ918t0TLTAKMWwMyv8Uoc=",
    "evento": "dia-matematica",
    "turmaIndice": 6,
    "turma": "6ºC",
@@ -2407,7 +2881,15 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "phvenS+51v5Smvl9kC+rjlwqCI01ijPTf3X6PAQNlpk=",
+   "h": "nDGHRKHaYQQCCBLIrQJP5IIz5I3R6XrEnK9ANenfOuc=",
+   "evento": "dia-matematica",
+   "turmaIndice": 6,
+   "turma": "6ºC",
+   "ano": "6",
+   "grupo": 5
+  },
+  {
+   "h": "eQ1TshWOl68d7ygQ+qLWqgjw9OAJdPrTDA44fm23jSk=",
    "evento": "dia-matematica",
    "turmaIndice": 7,
    "turma": "5ºA",
@@ -2415,7 +2897,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "bX7JgPV+QQRIsV59bp7pvKzuWOR0vdxrLwnkfPQJGJc=",
+   "h": "6Uuoq7jLtg15Ib7NAq+zsWPqdJ7lmloQYVRYMICzMws=",
    "evento": "dia-matematica",
    "turmaIndice": 7,
    "turma": "5ºA",
@@ -2423,7 +2905,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "4qzJHLb6JEjVCIfrhuBCc7M59Oya3YXwYY3LrbW8Hx8=",
+   "h": "wFQ/TNqF3XtZlGtAGUpJC3bA3CZWNBJvL7edY+1731A=",
    "evento": "dia-matematica",
    "turmaIndice": 7,
    "turma": "5ºA",
@@ -2431,7 +2913,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "SPr4HaVgS7vZ4iDoZOO7XGKvyScLUXoqpgNvbvNKpNg=",
+   "h": "Mb7xKrnpM58NFdca1mzJenAwYvZS4PKrIIFiSGLPUFc=",
    "evento": "dia-matematica",
    "turmaIndice": 7,
    "turma": "5ºA",
@@ -2439,7 +2921,15 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "Y4T6FBaQrtrzixxCU+QXSC/V1pNXxhT63sCK9zr8t2E=",
+   "h": "Hk6hspOlhrgvXNk+QP7saabY5Ylt0Awt2jcSYWUsxbY=",
+   "evento": "dia-matematica",
+   "turmaIndice": 7,
+   "turma": "5ºA",
+   "ano": "5",
+   "grupo": 5
+  },
+  {
+   "h": "0YKwQrn72yAxGm/Cq3qQC3CsZour/7+v3o3I9L3+c78=",
    "evento": "dia-matematica",
    "turmaIndice": 8,
    "turma": "5ºB",
@@ -2447,7 +2937,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "9Gv5LEA8yINtZiTZ5cigqtHmG6KTa+2LdmdIGRdn09E=",
+   "h": "J0ZrB4PW6kZmEIty7Dil8a3snJTrPAN9BAGtlkGp6Ps=",
    "evento": "dia-matematica",
    "turmaIndice": 8,
    "turma": "5ºB",
@@ -2455,7 +2945,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "0/FB1AusdjRkksCo2NAtnfmHO/H2VCkK0ZC/UkMeQ9c=",
+   "h": "dCOBocLBHIfZ0yZSxX2asuCo/jcTQbj3up994SMuZSU=",
    "evento": "dia-matematica",
    "turmaIndice": 8,
    "turma": "5ºB",
@@ -2463,7 +2953,7 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "BhPor9FXo69JTC5B6KSb5eh/skmKtt6lOzfoe9c6q38=",
+   "h": "p9vYAqUMvXrkg97KObXNNFGMF/uS5MCIOdAqxJeNuwU=",
    "evento": "dia-matematica",
    "turmaIndice": 8,
    "turma": "5ºB",
@@ -2471,7 +2961,7 @@ window.JOGO = {
    "grupo": 4
   },
   {
-   "h": "rQPPh9eHdi8X0Zu3g2J18DXyXezZEKTrNpRldGZjbFI=",
+   "h": "STi1defyU57I8w+q6DfmrBp0fkFSPqdxilGoSiRZtJs=",
    "evento": "dia-matematica",
    "turmaIndice": 9,
    "turma": "5ºC",
@@ -2479,7 +2969,7 @@ window.JOGO = {
    "grupo": 1
   },
   {
-   "h": "dYzUYBTomTFY6zqU7/OheqR1BFNnhEBf3/UO+x/Kjnw=",
+   "h": "pwCUhAxyqA8a6WuX7TlFHqqpC1zLjr2mAUcHHEhlt54=",
    "evento": "dia-matematica",
    "turmaIndice": 9,
    "turma": "5ºC",
@@ -2487,7 +2977,7 @@ window.JOGO = {
    "grupo": 2
   },
   {
-   "h": "p1bPmoNBwlgikYZupGss4suAH5kovAGlOzGNUaCrH3g=",
+   "h": "ZExnv+iSyjTAhuohiptPcGH5OT73pUlB7Cx8MbE1pAY=",
    "evento": "dia-matematica",
    "turmaIndice": 9,
    "turma": "5ºC",
@@ -2495,12 +2985,20 @@ window.JOGO = {
    "grupo": 3
   },
   {
-   "h": "FQpznrJKMyODYEqPkWWr756/aaoSn+ZsyPbbZGmk3SA=",
+   "h": "KnUoi9ukl8ShcEH76aG7lcWw8QhlErPnc+OKN36CV8s=",
    "evento": "dia-matematica",
    "turmaIndice": 9,
    "turma": "5ºC",
    "ano": "5",
    "grupo": 4
+  },
+  {
+   "h": "lDunchHlZcN26uwjO9Il/Zt6COe86N5O5OJ0jlxyWaI=",
+   "evento": "dia-matematica",
+   "turmaIndice": 9,
+   "turma": "5ºC",
+   "ano": "5",
+   "grupo": 5
   }
  ]
 };
